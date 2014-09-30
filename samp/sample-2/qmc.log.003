@@ -1,0 +1,33 @@
+C This is DSQSS ver.1.1
+
+P D       =            1
+P L       =            4
+P BETA    =       0.1000000000000000
+P NSET    =          100
+P NMCSE   =           10
+P NMCSD   =          100
+P NMCS    =          500
+P SEED    =     71314416
+P NSEGMAX =        10000
+P NVERMAX =        10000
+P NCYC    =            5
+P ALGFILE = algorithm.xml
+P LATFILE = lattice.xml
+P OUTFILE = qmc.log.003
+R anv    = 1.5300000000e-03 1.3592555895e-04
+R ene    = -8.9261573899e-02 2.5141528670e-03
+R spe    = 9.3540198495e-03 1.3709425593e-04
+R len    = 1.0476794202e-01 6.7212622232e-05
+R xmx    = 2.6191985505e-01 1.6803155558e-04
+R amzu   = 4.1215000000e-02 1.0481887938e-03
+R bmzu   = 4.1215000000e-02 1.0481887938e-03
+R smzu   = 2.6764500000e-01 1.4638108388e-03
+R xmzu   = 2.6764500000e-01 1.4638108388e-03
+R amzs   = -5.8500000000e-04 1.1279071305e-03
+R bmzs   = -4.9151418281e-04 1.1263547857e-03
+R smzs   = 2.3556500000e-01 1.2240365207e-03
+R xmzs   = 2.3505191043e-01 1.2223070843e-03
+I [the maximum number of segments]          = 13
+I [the maximum number of vertices]          = 9
+I [the maximum number of reg. vertex info.] = 3
+I [the index of replica exchange ]         = 0

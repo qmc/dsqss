@@ -1,0 +1,274 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<title>DSQSS: dla.hpp ソースファイル</title>
+
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript">
+  $(document).ready(initResizable);
+</script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="text/javascript">
+  $(document).ready(function() { searchBox.OnSelectItem(0); });
+</script>
+
+</head>
+<body>
+<div id="top"><!-- do not remove this div! -->
+
+
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  
+  
+  <td style="padding-left: 0.5em;">
+   <div id="projectname">DSQSS
+   &#160;<span id="projectnumber">1.1</span>
+   </div>
+   
+  </td>
+  
+  
+  
+ </tr>
+ </tbody>
+</table>
+</div>
+
+<!-- 作成： Doxygen 1.7.6.1 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search",false,'検索');
+</script>
+  <div id="navrow1" class="tabs">
+    <ul class="tablist">
+      <li><a href="index.html"><span>メインページ</span></a></li>
+      <li><a href="namespaces.html"><span>ネームスペース</span></a></li>
+      <li><a href="annotated.html"><span>クラス</span></a></li>
+      <li class="current"><a href="files.html"><span>ファイル</span></a></li>
+      <li>
+        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <img id="MSearchSelect" src="search/mag_sel.png"
+               onmouseover="return searchBox.OnSearchSelectShow()"
+               onmouseout="return searchBox.OnSearchSelectHide()"
+               alt=""/>
+          <input type="text" id="MSearchField" value="検索" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><img id="MSearchCloseImg" border="0" src="search/close.png" alt=""/></a>
+          </span>
+        </div>
+      </li>
+    </ul>
+  </div>
+  <div id="navrow2" class="tabs2">
+    <ul class="tablist">
+      <li><a href="files.html"><span>ファイル一覧</span></a></li>
+      <li><a href="globals.html"><span>ファイルメンバ</span></a></li>
+    </ul>
+  </div>
+</div>
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+  initNavTree('dla_8hpp.html','');
+</script>
+<div id="doc-content">
+<div class="header">
+  <div class="headertitle">
+<div class="title">dla.hpp</div>  </div>
+</div><!--header-->
+<div class="contents">
+<a href="dla_8hpp.html">説明を見る。</a><div class="fragment"><pre class="fragment"><a name="l00001"></a>00001 <span class="comment">//######################################################################</span>
+<a name="l00002"></a>00002 <span class="comment">//####  MPI Header Files</span>
+<a name="l00003"></a>00003 <span class="comment">//######################################################################</span>
+<a name="l00004"></a>00004 
+<a name="l00005"></a>00005 <span class="preprocessor">#ifdef MULTI</span>
+<a name="l00006"></a>00006 <span class="preprocessor"></span><span class="preprocessor">#include &lt;mpi.h&gt;</span>
+<a name="l00007"></a>00007 <span class="keywordtype">int</span> N_PROC; <span class="comment">// the total number of processors</span>
+<a name="l00008"></a>00008 <span class="keywordtype">int</span> I_PROC; <span class="comment">// the processor id of the current processor</span>
+<a name="l00009"></a>00009 <span class="preprocessor">#endif</span>
+<a name="l00010"></a>00010 <span class="preprocessor"></span><span class="comment">//#include &lt;iostream.h&gt;</span>
+<a name="l00011"></a>00011 <span class="preprocessor">#include &lt;iostream&gt;</span>
+<a name="l00012"></a>00012 <span class="preprocessor">#include &lt;stdio.h&gt;</span>
+<a name="l00013"></a>00013 <span class="preprocessor">#include &lt;math.h&gt;</span>
+<a name="l00014"></a>00014 <span class="preprocessor">#include &lt;stdlib.h&gt;</span>
+<a name="l00015"></a>00015 
+<a name="l00016"></a>00016 <span class="comment">//######################################################################</span>
+<a name="l00017"></a>00017 <span class="comment">//####  Global Variables</span>
+<a name="l00018"></a>00018 <span class="comment">//######################################################################</span>
+<a name="l00019"></a>00019 
+<a name="l00020"></a><a class="code" href="dla_8hpp.html#a8329f90c6b2bbe8e6456ee9c5bbb5335">00020</a> FILE* <a class="code" href="dla_8hpp.html#a8329f90c6b2bbe8e6456ee9c5bbb5335">FERR</a> = stdout;
+<a name="l00021"></a>00021 
+<a name="l00022"></a>00022 
+<a name="l00023"></a>00023 <span class="comment">//######################################################################</span>
+<a name="l00024"></a>00024 <span class="comment">//####  Graphics Header Files</span>
+<a name="l00025"></a>00025 <span class="comment">//######################################################################</span>
+<a name="l00026"></a>00026 
+<a name="l00027"></a>00027 <span class="preprocessor">#ifdef GRAPHIC</span>
+<a name="l00028"></a>00028 <span class="preprocessor"></span><span class="preprocessor">#include &lt;eggx.h&gt;</span>
+<a name="l00029"></a>00029 <span class="preprocessor">#endif</span>
+<a name="l00030"></a>00030 <span class="preprocessor"></span>
+<a name="l00031"></a>00031 <span class="comment">//######################################################################</span>
+<a name="l00032"></a>00032 <span class="comment">//####  Random Number Generator Header Files</span>
+<a name="l00033"></a>00033 <span class="comment">//######################################################################</span>
+<a name="l00034"></a>00034 
+<a name="l00035"></a>00035 <span class="preprocessor">#include &quot;<a class="code" href="random_8h.html">random.h</a>&quot;</span>
+<a name="l00036"></a><a class="code" href="dla_8hpp.html#aa3347a6aad7b9179bedb4605d8e8aa41">00036</a> Random <a class="code" href="dla_8hpp.html#aa3347a6aad7b9179bedb4605d8e8aa41">RND</a>;
+<a name="l00037"></a>00037 
+<a name="l00038"></a>00038 <span class="comment">//######################################################################</span>
+<a name="l00039"></a>00039 <span class="comment">//####  Local Header Files</span>
+<a name="l00040"></a>00040 <span class="comment">//######################################################################</span>
+<a name="l00041"></a>00041 
+<a name="l00042"></a><a class="code" href="dla_8hpp.html#a858234155202d4c21bfa0c9c280d770a">00042</a> <span class="keyword">inline</span> <span class="keywordtype">void</span> <a class="code" href="dla_8hpp.html#a858234155202d4c21bfa0c9c280d770a">abort</a>(<span class="keywordtype">char</span>* s=<span class="stringliteral">&quot;&quot;</span>) { printf(<span class="stringliteral">&quot;%s\n&quot;</span>,s); exit(0); }
+<a name="l00043"></a>00043 
+<a name="l00044"></a>00044 <span class="preprocessor">#ifdef DEB</span>
+<a name="l00045"></a>00045 <span class="preprocessor"></span><span class="keywordtype">bool</span> <a class="code" href="dla_8hpp.html#a117352cc494cc62c6b2f1882786a332c">DEBUG</a>=<span class="keyword">true</span>;
+<a name="l00046"></a>00046 <span class="preprocessor">#else</span>
+<a name="l00047"></a><a class="code" href="dla_8hpp.html#a117352cc494cc62c6b2f1882786a332c">00047</a> <span class="preprocessor"></span><span class="keywordtype">bool</span> <a class="code" href="dla_8hpp.html#a117352cc494cc62c6b2f1882786a332c">DEBUG</a>=<span class="keyword">false</span>;
+<a name="l00048"></a>00048 <span class="preprocessor">#endif</span>
+<a name="l00049"></a>00049 <span class="preprocessor"></span>
+<a name="l00050"></a><a class="code" href="dla_8hpp.html#a7b753516364a2829bb1960a2ed85d77c">00050</a> <span class="keywordtype">bool</span> <a class="code" href="dla_8hpp.html#a7b753516364a2829bb1960a2ed85d77c">ALERT</a>=<span class="keyword">false</span>;
+<a name="l00051"></a>00051 
+<a name="l00052"></a>00052 <span class="preprocessor">#include &quot;<a class="code" href="name_8h.html">name.h</a>&quot;</span>
+<a name="l00053"></a>00053 <span class="preprocessor">#include &quot;<a class="code" href="io_8h.html">io.h</a>&quot;</span>
+<a name="l00054"></a>00054 <span class="preprocessor">#include &quot;<a class="code" href="array_8h.html">array.h</a>&quot;</span>
+<a name="l00055"></a>00055 <span class="preprocessor">#include &quot;<a class="code" href="link_8hpp.html">link.hpp</a>&quot;</span>
+<a name="l00056"></a>00056 <span class="preprocessor">#include &quot;<a class="code" href="parameter_8hpp.html">parameter.hpp</a>&quot;</span>
+<a name="l00057"></a>00057 <span class="preprocessor">#include &quot;<a class="code" href="algorithm_8hpp.html">algorithm.hpp</a>&quot;</span>
+<a name="l00058"></a>00058 <span class="preprocessor">#include &quot;<a class="code" href="objects_8hpp.html">objects.hpp</a>&quot;</span>
+<a name="l00059"></a>00059 <span class="preprocessor">#include &quot;<a class="code" href="lattice_8hpp.html">lattice.hpp</a>&quot;</span>
+<a name="l00060"></a>00060 <span class="preprocessor">#include &quot;<a class="code" href="measure_8hpp.html">measure.hpp</a>&quot;</span>
+<a name="l00061"></a>00061 
+<a name="l00062"></a>00062 <span class="comment">//######################################################################</span>
+<a name="l00063"></a>00063 
+<a name="l00064"></a><a class="code" href="classSimulation.html">00064</a> <span class="keyword">class </span><a class="code" href="classSimulation.html">Simulation</a> {
+<a name="l00065"></a>00065 
+<a name="l00066"></a>00066 <span class="keyword">private</span>:
+<a name="l00067"></a>00067 
+<a name="l00068"></a><a class="code" href="classSimulation.html#a536b8efc2a23443e0cfecb277da7d029">00068</a>   <span class="keywordtype">int</span> <a class="code" href="classSimulation.html#a536b8efc2a23443e0cfecb277da7d029">ISET</a>;
+<a name="l00069"></a><a class="code" href="classSimulation.html#a52d325972abccee96e15b358e9479dfe">00069</a>   <span class="keywordtype">int</span> <a class="code" href="classSimulation.html#a52d325972abccee96e15b358e9479dfe">IMCSE</a>;
+<a name="l00070"></a><a class="code" href="classSimulation.html#abf117113549613e750d29817452d705e">00070</a>   <span class="keywordtype">int</span> <a class="code" href="classSimulation.html#abf117113549613e750d29817452d705e">IMCSD</a>;
+<a name="l00071"></a><a class="code" href="classSimulation.html#a073d2da2e2d5f1366ae25fa3e007ed17">00071</a>   <span class="keywordtype">int</span> <a class="code" href="classSimulation.html#a073d2da2e2d5f1366ae25fa3e007ed17">IMCS</a>;
+<a name="l00072"></a><a class="code" href="classSimulation.html#a03b32d49144cf491e230f193528a9c44">00072</a>   <span class="keywordtype">int</span> <a class="code" href="classSimulation.html#a03b32d49144cf491e230f193528a9c44">ICYC</a>;
+<a name="l00073"></a>00073 
+<a name="l00074"></a><a class="code" href="classSimulation.html#a389ae996aaefe0b45ec0668de6dac289">00074</a>   <span class="keywordtype">int</span> <a class="code" href="classSimulation.html#a389ae996aaefe0b45ec0668de6dac289">ISETstart</a>;
+<a name="l00075"></a><a class="code" href="classSimulation.html#a7454d1a16f69bfb388ee74a9eaf9c69a">00075</a>   <span class="keywordtype">int</span> <a class="code" href="classSimulation.html#a7454d1a16f69bfb388ee74a9eaf9c69a">IMCSDstart</a>;
+<a name="l00076"></a><a class="code" href="classSimulation.html#a966055057a7f4acff2ba8e007469354b">00076</a>   <span class="keywordtype">int</span> <a class="code" href="classSimulation.html#a966055057a7f4acff2ba8e007469354b">IMCSstart</a>;
+<a name="l00077"></a>00077 
+<a name="l00078"></a><a class="code" href="classSimulation.html#a3ba8c08b3815c2abb108046c32e4b87d">00078</a>   <span class="keywordtype">double</span> <a class="code" href="classSimulation.html#a3ba8c08b3815c2abb108046c32e4b87d">AMP</a>; <span class="comment">// the average mean path of the worm per cycle</span>
+<a name="l00079"></a><a class="code" href="classSimulation.html#a40433973e4274a81dcfbc8bf2e6835f9">00079</a>   <span class="keywordtype">bool</span> <a class="code" href="classSimulation.html#a40433973e4274a81dcfbc8bf2e6835f9">EndOfCycle</a>; <span class="comment">// set to be true when the cycle ends</span>
+<a name="l00080"></a>00080 
+<a name="l00081"></a>00081 <span class="keyword">public</span>:
+<a name="l00082"></a><a class="code" href="classSimulation.html#a928495140935d9d6ce0a100550473140">00082</a>   <span class="keywordtype">int</span> <a class="code" href="classSimulation.html#a928495140935d9d6ce0a100550473140">np</a>;
+<a name="l00083"></a>00083   <a class="code" href="classSimulation.html#a934fee6f68aa93d5eb03fe0a778bdc07">Simulation</a>(<a class="code" href="classParameter.html">Parameter</a>&amp; P0);
+<a name="l00084"></a>00084   <a class="code" href="classSimulation.html#a64bd15ebce28bcb42aaa0231780933fe">~Simulation</a>();
+<a name="l00085"></a>00085 
+<a name="l00086"></a>00086   <span class="keywordtype">void</span> <a class="code" href="classSimulation.html#a251c1e3e56296c54d6171a2cb0fef64e">calc</a>();
+<a name="l00087"></a>00087 
+<a name="l00088"></a><a class="code" href="classSimulation.html#ad2ee3579867faad60b53b3ee69deb4f8">00088</a>   <a class="code" href="classParameter.html">Parameter</a>&amp; <a class="code" href="classSimulation.html#ad2ee3579867faad60b53b3ee69deb4f8">P</a>;
+<a name="l00089"></a><a class="code" href="classSimulation.html#a539f9bd253ab4fd5b7e054f2594ba517">00089</a>   <a class="code" href="classAlgorithm.html">Algorithm</a> <a class="code" href="classSimulation.html#a539f9bd253ab4fd5b7e054f2594ba517">ALG</a>;
+<a name="l00090"></a>00090 
+<a name="l00091"></a>00091   <span class="comment">//Algorithm alg[8];</span>
+<a name="l00092"></a>00092   <span class="comment">//Algorithm* alg;</span>
+<a name="l00093"></a><a class="code" href="classSimulation.html#a522685dfd547dce7d7507ba82ef23038">00093</a>   <a class="code" href="classLattice.html">Lattice</a> <a class="code" href="classSimulation.html#a522685dfd547dce7d7507ba82ef23038">LAT</a>;
+<a name="l00094"></a><a class="code" href="classSimulation.html#a9b567d039399e7f41d84ac5ff5ccbc7c">00094</a>   <a class="code" href="classMeasurement.html">Measurement</a> <a class="code" href="classSimulation.html#a9b567d039399e7f41d84ac5ff5ccbc7c">MSR</a>;
+<a name="l00095"></a><a class="code" href="classSimulation.html#ae532b8f92291413ca8671886cf84a284">00095</a>   <a class="code" href="classWorm.html">Worm</a> <a class="code" href="classSimulation.html#ae532b8f92291413ca8671886cf84a284">W</a>;
+<a name="l00096"></a>00096   
+<a name="l00097"></a><a class="code" href="classSimulation.html#a5ec086b5984fc1a9e705ac7864bffc2c">00097</a>   <a class="code" href="classVertex.html">Vertex</a> <a class="code" href="classSimulation.html#a5ec086b5984fc1a9e705ac7864bffc2c">V4REF</a>;
+<a name="l00098"></a>00098 
+<a name="l00099"></a>00099   <span class="keywordtype">void</span> <a class="code" href="classSimulation.html#a2640efff1e7b6f9c11615048ba43b0fd">reset_counters</a>();
+<a name="l00100"></a>00100   <span class="comment">// === edit rep sakakura ===</span>
+<a name="l00101"></a>00101   <span class="comment">//void Set();</span>
+<a name="l00102"></a>00102   <span class="keywordtype">void</span> <a class="code" href="classSimulation.html#a614cfe7992438ee53cfd9440848c39e7">Set</a>(<span class="keywordtype">int</span> index);
+<a name="l00103"></a>00103   <span class="comment">// === edit rep sakakura ===</span>
+<a name="l00104"></a>00104   <span class="keywordtype">void</span> <a class="code" href="classSimulation.html#a614cfe7992438ee53cfd9440848c39e7">Set</a>();
+<a name="l00105"></a>00105   <span class="keywordtype">void</span> <a class="code" href="classSimulation.html#ae5cc367fde8543dc44b660055f7694bf">set_NCYC</a>();
+<a name="l00106"></a>00106 
+<a name="l00107"></a>00107   <span class="comment">// == edit sakakura ==</span>
+<a name="l00108"></a>00108   <span class="comment">//void CalcRepEx();</span>
+<a name="l00109"></a>00109   <span class="keywordtype">void</span> <a class="code" href="classSimulation.html#af74c8e214d7baad751c4f397851d1344">RepChangeF</a>(<a class="code" href="classAlgorithm.html">Algorithm</a>&amp; A0);
+<a name="l00110"></a>00110   <span class="keywordtype">void</span> <a class="code" href="classSimulation.html#a3dea8b90b84f7608ca8130b79e5f536b">RepChangeB</a>(<span class="keywordtype">double</span> h0);
+<a name="l00111"></a>00111   <span class="comment">// == edit sakakura ==</span>
+<a name="l00112"></a>00112 
+<a name="l00113"></a>00113   <span class="keywordtype">void</span> <a class="code" href="classSimulation.html#a948f644fec100a1ad661e30ff9f4a314">Sweep</a>();
+<a name="l00114"></a>00114   <span class="keywordtype">double</span> <a class="code" href="classSimulation.html#a646ba83afbaf2013960493daa6268ff5">Cycle</a>();
+<a name="l00115"></a>00115   <span class="keywordtype">bool</span> <a class="code" href="classSimulation.html#aecd8949a46b7afbc028fa1ef3bada17c">PlaceWorm</a>();
+<a name="l00116"></a>00116   <span class="keywordtype">double</span> <a class="code" href="classSimulation.html#a21c85af3fce569db26807c9c42a7a685">MoveHead</a> ();
+<a name="l00117"></a>00117 
+<a name="l00118"></a>00118   <span class="keywordtype">double</span> <a class="code" href="classSimulation.html#a988e9323691b9b6a9b8c6b851296df6c">UP_ONESTEP</a>();
+<a name="l00119"></a>00119   <span class="keywordtype">double</span> <a class="code" href="classSimulation.html#a2fd1efbcb77c172b01ce0cb41a2731e7">DOWN_ONESTEP</a>();
+<a name="l00120"></a>00120   <span class="keywordtype">void</span> <a class="code" href="classSimulation.html#a434b035308434bbeb9b857f22b9f0db1">Check</a>();
+<a name="l00121"></a>00121   <span class="keywordtype">void</span> <a class="code" href="classSimulation.html#accd2600060dbaee3a3b41aed4034c63c">dump</a>();
+<a name="l00122"></a>00122   <span class="keywordtype">void</span> <a class="code" href="classSimulation.html#accd2600060dbaee3a3b41aed4034c63c">dump</a>(<span class="keyword">const</span> <span class="keywordtype">char</span>*);
+<a name="l00123"></a>00123 
+<a name="l00124"></a>00124 <span class="preprocessor">#ifdef GRAPHIC</span>
+<a name="l00125"></a>00125 <span class="preprocessor"></span>  <span class="keywordtype">int</span> g_win;
+<a name="l00126"></a>00126   <span class="keywordtype">void</span> g_init();
+<a name="l00127"></a>00127   <span class="keywordtype">void</span> g_draw();
+<a name="l00128"></a>00128   <span class="keywordtype">void</span> g_clear();
+<a name="l00129"></a>00129 <span class="preprocessor">#endif</span>
+<a name="l00130"></a>00130 <span class="preprocessor"></span>
+<a name="l00131"></a>00131 <span class="preprocessor">#ifdef CHAINJOB</span>
+<a name="l00132"></a>00132 <span class="preprocessor"></span><span class="keyword">private</span>:
+<a name="l00133"></a>00133   <span class="keywordtype">bool</span> isChainjob;
+<a name="l00134"></a>00134   <span class="keywordtype">bool</span> isEnd; <span class="comment">//true-&gt;exit(0); false-&gt; read cjob.bin </span>
+<a name="l00135"></a>00135   <span class="keywordtype">char</span> CJOBFILE[32];
+<a name="l00136"></a>00136   ofstream* cjobout;
+<a name="l00137"></a>00137   ifstream* cjobin;
+<a name="l00138"></a>00138   <span class="keywordtype">void</span> BinaryIO();
+<a name="l00139"></a>00139   <span class="keywordtype">void</span> read_cjob();
+<a name="l00140"></a>00140   <span class="keywordtype">void</span> write_cjob();
+<a name="l00141"></a>00141   <span class="keywordtype">void</span> end_cjob();
+<a name="l00142"></a>00142   <span class="keywordtype">void</span> end_job();
+<a name="l00143"></a>00143 <span class="preprocessor">#endif</span>
+<a name="l00144"></a>00144 <span class="preprocessor"></span>
+<a name="l00145"></a>00145 };
+</pre></div></div><!-- contents -->
+</div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>全て</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>クラス</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>ネームスペース</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>ファイル</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>関数</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>変数</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(6)"><span class="SelectionMark">&#160;</span>型定義</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(7)"><span class="SelectionMark">&#160;</span>列挙型の値</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(8)"><span class="SelectionMark">&#160;</span>フレンド</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(9)"><span class="SelectionMark">&#160;</span>マクロ定義</a></div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+  <div id="nav-path" class="navpath">
+    <ul>
+      <li class="navelem"><a class="el" href="dla_8hpp.html">dla.hpp</a>      </li>
+
+    <li class="footer">DSQSSに対してThu Jul 12 2012 14:28:53に生成されました。
+    <a href="http://www.doxygen.org/index.html">
+    <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.7.6.1 </li>
+   </ul>
+ </div>
+
+
+</body>
+</html>

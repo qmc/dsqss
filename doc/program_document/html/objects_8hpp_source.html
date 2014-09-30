@@ -1,0 +1,1056 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<title>DSQSS: objects.hpp ソースファイル</title>
+
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript">
+  $(document).ready(initResizable);
+</script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="text/javascript">
+  $(document).ready(function() { searchBox.OnSelectItem(0); });
+</script>
+
+</head>
+<body>
+<div id="top"><!-- do not remove this div! -->
+
+
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  
+  
+  <td style="padding-left: 0.5em;">
+   <div id="projectname">DSQSS
+   &#160;<span id="projectnumber">1.1</span>
+   </div>
+   
+  </td>
+  
+  
+  
+ </tr>
+ </tbody>
+</table>
+</div>
+
+<!-- 作成： Doxygen 1.7.6.1 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search",false,'検索');
+</script>
+  <div id="navrow1" class="tabs">
+    <ul class="tablist">
+      <li><a href="index.html"><span>メインページ</span></a></li>
+      <li><a href="namespaces.html"><span>ネームスペース</span></a></li>
+      <li><a href="annotated.html"><span>クラス</span></a></li>
+      <li class="current"><a href="files.html"><span>ファイル</span></a></li>
+      <li>
+        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <img id="MSearchSelect" src="search/mag_sel.png"
+               onmouseover="return searchBox.OnSearchSelectShow()"
+               onmouseout="return searchBox.OnSearchSelectHide()"
+               alt=""/>
+          <input type="text" id="MSearchField" value="検索" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><img id="MSearchCloseImg" border="0" src="search/close.png" alt=""/></a>
+          </span>
+        </div>
+      </li>
+    </ul>
+  </div>
+  <div id="navrow2" class="tabs2">
+    <ul class="tablist">
+      <li><a href="files.html"><span>ファイル一覧</span></a></li>
+      <li><a href="globals.html"><span>ファイルメンバ</span></a></li>
+    </ul>
+  </div>
+</div>
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+  initNavTree('objects_8hpp.html','');
+</script>
+<div id="doc-content">
+<div class="header">
+  <div class="headertitle">
+<div class="title">objects.hpp</div>  </div>
+</div><!--header-->
+<div class="contents">
+<a href="objects_8hpp.html">説明を見る。</a><div class="fragment"><pre class="fragment"><a name="l00001"></a>00001 <span class="preprocessor">#ifndef OBJECTS_H</span>
+<a name="l00002"></a>00002 <span class="preprocessor"></span><span class="preprocessor">#define OBJECTS_H</span>
+<a name="l00003"></a>00003 <span class="preprocessor"></span>
+<a name="l00004"></a>00004 <span class="comment">//######################################################################</span>
+<a name="l00005"></a>00005 
+<a name="l00006"></a>00006 <span class="preprocessor">#include &lt;stdio.h&gt;</span>
+<a name="l00007"></a>00007 <span class="preprocessor">#include &quot;<a class="code" href="name_8h.html">name.h</a>&quot;</span>
+<a name="l00008"></a>00008 <span class="preprocessor">#include &quot;<a class="code" href="xml_8h.html">xml.h</a>&quot;</span>
+<a name="l00009"></a>00009 <span class="preprocessor">#include &quot;<a class="code" href="algorithm_8hpp.html">algorithm.hpp</a>&quot;</span>
+<a name="l00010"></a>00010 
+<a name="l00011"></a>00011 <span class="keyword">class </span><a class="code" href="classBareSegment.html">BareSegment</a>;
+<a name="l00012"></a>00012 <span class="keyword">class </span><a class="code" href="classBareVertex.html">BareVertex</a>;
+<a name="l00013"></a>00013 <span class="keyword">class </span><a class="code" href="classSegment.html">Segment</a>;
+<a name="l00014"></a>00014 <span class="keyword">class </span><a class="code" href="classVertex.html">Vertex</a>;
+<a name="l00015"></a>00015 <span class="keyword">class </span><a class="code" href="classWorm.html">Worm</a>;
+<a name="l00016"></a>00016 <span class="keyword">class </span><a class="code" href="classSite.html">Site</a>;
+<a name="l00017"></a>00017 <span class="keyword">class </span><a class="code" href="classInteraction.html">Interaction</a>;
+<a name="l00018"></a>00018 <span class="keyword">class </span><a class="code" href="classUniformInterval.html">UniformInterval</a>;
+<a name="l00019"></a>00019 <span class="keyword">class </span><a class="code" href="classRegisteredVertexInfo.html">RegisteredVertexInfo</a>;
+<a name="l00020"></a>00020 
+<a name="l00021"></a>00021 <span class="comment">//######################################################################</span>
+<a name="l00022"></a>00022 <span class="comment">//####  Object Declarations</span>
+<a name="l00023"></a>00023 <span class="comment">//######################################################################</span>
+<a name="l00024"></a>00024 
+<a name="l00025"></a><a class="code" href="classBareSegment.html">00025</a> <span class="keyword">class </span><a class="code" href="classBareSegment.html">BareSegment</a> {
+<a name="l00026"></a>00026 
+<a name="l00027"></a>00027 <span class="keyword">private</span>:
+<a name="l00028"></a>00028 
+<a name="l00029"></a><a class="code" href="classBareSegment.html#aa59633d9130e5e1424441ffb4e98ce0e">00029</a>   <span class="keyword">static</span> <span class="keywordtype">int</span> <a class="code" href="classBareSegment.html#aa59633d9130e5e1424441ffb4e98ce0e">lastID</a>;
+<a name="l00030"></a><a class="code" href="classBareSegment.html#a822ccefdec65568c49234e264d9a1cef">00030</a>   <span class="keywordtype">int</span> <a class="code" href="classBareSegment.html#a822ccefdec65568c49234e264d9a1cef">IDX</a>;
+<a name="l00031"></a><a class="code" href="classBareSegment.html#a2995013a095dc25b14720ad90af19b09">00031</a>   <a class="code" href="classVertex.html">Vertex</a>* <a class="code" href="classBareSegment.html#a2995013a095dc25b14720ad90af19b09">_v</a>[2];
+<a name="l00032"></a><a class="code" href="classBareSegment.html#aa0ccb5ee6d882ee3605ff47745c6467b">00032</a>   <span class="keywordtype">int</span> <a class="code" href="classBareSegment.html#aa0ccb5ee6d882ee3605ff47745c6467b">val</a>;  <span class="comment">// the local state (0, 1, 2, ... , NX-1)</span>
+<a name="l00033"></a><a class="code" href="classBareSegment.html#a491110ee321c8825ec0fbf370ca098ec">00033</a>   <a class="code" href="classSite.html">Site</a>* <a class="code" href="classBareSegment.html#a491110ee321c8825ec0fbf370ca098ec">ONSITE</a>;
+<a name="l00034"></a>00034 <span class="keyword">public</span>:
+<a name="l00035"></a>00035 
+<a name="l00036"></a><a class="code" href="classBareSegment.html#a02fd73d861ef2e4aabb38c0c9ff82947">00036</a>   <span class="keywordtype">void</span> <a class="code" href="classBareSegment.html#a02fd73d861ef2e4aabb38c0c9ff82947">init</a>() {
+<a name="l00037"></a>00037     <a class="code" href="classBareSegment.html#aa0ccb5ee6d882ee3605ff47745c6467b">val</a> = 0;
+<a name="l00038"></a>00038     <a class="code" href="classBareSegment.html#a2995013a095dc25b14720ad90af19b09">_v</a>[0] = 0;
+<a name="l00039"></a>00039     <a class="code" href="classBareSegment.html#a2995013a095dc25b14720ad90af19b09">_v</a>[1] = 0;
+<a name="l00040"></a>00040   };
+<a name="l00041"></a>00041 
+<a name="l00042"></a><a class="code" href="classBareSegment.html#ae099821b76842236b9b8c75c3a516492">00042</a>   <span class="keywordtype">void</span> <span class="keyword">set</span>(<span class="keywordtype">int</span> x, <a class="code" href="classVertex.html">Vertex</a>&amp; v0, <a class="code" href="classVertex.html">Vertex</a>&amp; v1) {
+<a name="l00043"></a>00043     <a class="code" href="classBareSegment.html#aa0ccb5ee6d882ee3605ff47745c6467b">val</a> = x;
+<a name="l00044"></a>00044     <a class="code" href="classBareSegment.html#a2995013a095dc25b14720ad90af19b09">_v</a>[0] = &amp;v0;
+<a name="l00045"></a>00045     <a class="code" href="classBareSegment.html#a2995013a095dc25b14720ad90af19b09">_v</a>[1] = &amp;v1;
+<a name="l00046"></a>00046   };
+<a name="l00047"></a>00047 
+<a name="l00048"></a><a class="code" href="classBareSegment.html#a2cbca32f7a7a84d3e7fad192ca34fbea">00048</a>   <a class="code" href="classBareSegment.html#a2cbca32f7a7a84d3e7fad192ca34fbea">BareSegment</a>() {
+<a name="l00049"></a>00049     <a class="code" href="classBareSegment.html#aa59633d9130e5e1424441ffb4e98ce0e">lastID</a>++;
+<a name="l00050"></a>00050     <a class="code" href="classBareSegment.html#a822ccefdec65568c49234e264d9a1cef">IDX</a>=<a class="code" href="classBareSegment.html#aa59633d9130e5e1424441ffb4e98ce0e">lastID</a>; 
+<a name="l00051"></a>00051     <a class="code" href="classBareSegment.html#a02fd73d861ef2e4aabb38c0c9ff82947">init</a>();
+<a name="l00052"></a>00052   };
+<a name="l00053"></a>00053 
+<a name="l00054"></a><a class="code" href="classBareSegment.html#ac5594d340b9a0c4e8018d849f9618597">00054</a>   <a class="code" href="classBareSegment.html#ac5594d340b9a0c4e8018d849f9618597">~BareSegment</a>() {
+<a name="l00055"></a>00055     <span class="comment">//    printf(&quot;*** Destroying BareSegment\n&quot;);</span>
+<a name="l00056"></a>00056   };
+<a name="l00057"></a>00057 
+<a name="l00058"></a><a class="code" href="classBareSegment.html#ae0c063cfb2479f614be43b9d2f92ba63">00058</a>   <span class="keywordtype">int</span> <a class="code" href="classBareSegment.html#ae0c063cfb2479f614be43b9d2f92ba63">id</a>()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> <a class="code" href="classBareSegment.html#a822ccefdec65568c49234e264d9a1cef">IDX</a>; };
+<a name="l00059"></a><a class="code" href="classBareSegment.html#ae6eb44fe1972fbaad3c2267678950381">00059</a>   <a class="code" href="classVertex.html">Vertex</a>&amp; <a class="code" href="classBareSegment.html#ae6eb44fe1972fbaad3c2267678950381">V</a>(<span class="keywordtype">int</span> i) { <span class="keywordflow">return</span> *<a class="code" href="classBareSegment.html#a2995013a095dc25b14720ad90af19b09">_v</a>[i]; };
+<a name="l00060"></a><a class="code" href="classBareSegment.html#a4586cfd4b76d82fa2504823166e6ca27">00060</a>   <a class="code" href="classVertex.html">Vertex</a>&amp; <a class="code" href="classBareSegment.html#a4586cfd4b76d82fa2504823166e6ca27">bottom</a>() { <span class="keywordflow">return</span> *<a class="code" href="classBareSegment.html#a2995013a095dc25b14720ad90af19b09">_v</a>[0]; };
+<a name="l00061"></a><a class="code" href="classBareSegment.html#ab5ed5bec1cfe54a48a31900c0abb7565">00061</a>   <a class="code" href="classVertex.html">Vertex</a>&amp; <a class="code" href="classBareSegment.html#ab5ed5bec1cfe54a48a31900c0abb7565">top</a>()    { <span class="keywordflow">return</span> *<a class="code" href="classBareSegment.html#a2995013a095dc25b14720ad90af19b09">_v</a>[1]; };
+<a name="l00062"></a><a class="code" href="classBareSegment.html#a4845cd750bc7a851c604c7b848180440">00062</a>   <span class="keywordtype">void</span> <a class="code" href="classBareSegment.html#a4845cd750bc7a851c604c7b848180440">setV</a>(<span class="keywordtype">int</span> i, <a class="code" href="classVertex.html">Vertex</a>&amp; v) { <a class="code" href="classBareSegment.html#a2995013a095dc25b14720ad90af19b09">_v</a>[i] = &amp;v; };
+<a name="l00063"></a><a class="code" href="classBareSegment.html#a92465ca0e1071a9e98b0218a0a5ab5e6">00063</a>   <span class="keywordtype">void</span> <a class="code" href="classBareSegment.html#a92465ca0e1071a9e98b0218a0a5ab5e6">setBottom</a>(<a class="code" href="classVertex.html">Vertex</a>&amp; v)   { <a class="code" href="classBareSegment.html#a2995013a095dc25b14720ad90af19b09">_v</a>[0] = &amp;v; };
+<a name="l00064"></a><a class="code" href="classBareSegment.html#a635362aae790e5f25a11ec05b07a73e2">00064</a>   <span class="keywordtype">void</span> <a class="code" href="classBareSegment.html#a635362aae790e5f25a11ec05b07a73e2">setTop</a>(<a class="code" href="classVertex.html">Vertex</a>&amp; v)      { <a class="code" href="classBareSegment.html#a2995013a095dc25b14720ad90af19b09">_v</a>[1] = &amp;v; };
+<a name="l00065"></a><a class="code" href="classBareSegment.html#aafabadb78034330e508ebff9c58e0839">00065</a>   <span class="keywordtype">int</span> <a class="code" href="classBareSegment.html#aafabadb78034330e508ebff9c58e0839">X</a>() { <span class="keywordflow">return</span> <a class="code" href="classBareSegment.html#aa0ccb5ee6d882ee3605ff47745c6467b">val</a>; };
+<a name="l00066"></a><a class="code" href="classBareSegment.html#add2578ea6b65ad27a905a6d2048748bb">00066</a>   <span class="keywordtype">void</span> <a class="code" href="classBareSegment.html#add2578ea6b65ad27a905a6d2048748bb">setX</a>(<span class="keywordtype">int</span> x) { <a class="code" href="classBareSegment.html#aa0ccb5ee6d882ee3605ff47745c6467b">val</a> = x; };
+<a name="l00067"></a>00067   <span class="keywordtype">double</span> <a class="code" href="classBareSegment.html#acdc37b746192b6817020c82895ddc16e">topTime</a>();
+<a name="l00068"></a>00068   <span class="keywordtype">double</span> <a class="code" href="classBareSegment.html#a70f36a1813076bcf547563bfee659ef7">bottomTime</a>();
+<a name="l00069"></a>00069   <span class="keywordtype">double</span> <a class="code" href="classBareSegment.html#a35b40d9678428ee6772554f8a60bd55d">length</a>();
+<a name="l00070"></a>00070   <span class="keywordtype">void</span> <a class="code" href="classBareSegment.html#accd2600060dbaee3a3b41aed4034c63c">dump</a>();
+<a name="l00071"></a>00071   <span class="keywordtype">bool</span> <a class="code" href="classBareSegment.html#ae1ee541bb22588b6a71650c807efca90">check</a>();
+<a name="l00072"></a>00072 
+<a name="l00073"></a><a class="code" href="classBareSegment.html#a15578aee087e72c2491081ad4a510a46">00073</a>   <span class="keywordtype">void</span> <a class="code" href="classBareSegment.html#a15578aee087e72c2491081ad4a510a46">dump_id</a>(){cout &lt;&lt;  <a class="code" href="classBareSegment.html#a822ccefdec65568c49234e264d9a1cef">IDX</a> &lt;&lt; endl;};
+<a name="l00074"></a>00074 
+<a name="l00075"></a><a class="code" href="classBareSegment.html#a933f66b0e5b5234204b21e43a79197f9">00075</a>   <a class="code" href="classSite.html">Site</a>* <a class="code" href="classBareSegment.html#a933f66b0e5b5234204b21e43a79197f9">getONSITE</a>(){<span class="keywordflow">return</span> <a class="code" href="classBareSegment.html#a491110ee321c8825ec0fbf370ca098ec">ONSITE</a>;};
+<a name="l00076"></a><a class="code" href="classBareSegment.html#ae17cfa78e955d8aca494f699b454eb84">00076</a>   <span class="keywordtype">void</span> <a class="code" href="classBareSegment.html#ae17cfa78e955d8aca494f699b454eb84">setONSITE</a>(<a class="code" href="classSite.html">Site</a>* on_site){<a class="code" href="classBareSegment.html#a491110ee321c8825ec0fbf370ca098ec">ONSITE</a>=on_site;};
+<a name="l00077"></a>00077 
+<a name="l00078"></a>00078 };
+<a name="l00079"></a>00079 
+<a name="l00080"></a>00080 <span class="keywordtype">int</span> <a class="code" href="classBareSegment.html#aa59633d9130e5e1424441ffb4e98ce0e">BareSegment::lastID</a> = 0;
+<a name="l00081"></a>00081 
+<a name="l00082"></a>00082 <span class="comment">//######################################################################</span>
+<a name="l00083"></a>00083 
+<a name="l00084"></a><a class="code" href="classSegment.html">00084</a> <span class="keyword">class </span><a class="code" href="classSegment.html">Segment</a> : <span class="keyword">public</span> <a class="code" href="classLinked.html">Linked</a>&lt;BareSegment&gt; {
+<a name="l00085"></a>00085 
+<a name="l00086"></a>00086 <span class="keyword">public</span>:
+<a name="l00087"></a>00087 
+<a name="l00088"></a>00088   <a class="code" href="classSegment.html">Segment</a>&amp; <a class="code" href="classSegment.html#aaf0811aac1205c37d5cfd5bf1ce774a7">cut</a>( <a class="code" href="classVertex.html">Vertex</a>&amp; <a class="code" href="classBareSegment.html#ae6eb44fe1972fbaad3c2267678950381">V</a>, <span class="keywordtype">int</span> side);
+<a name="l00089"></a>00089   <span class="keywordtype">void</span> <a class="code" href="classSegment.html#af139f30d28b7dc61f5051c0d595af368">erase</a>();
+<a name="l00090"></a>00090   <span class="keywordtype">void</span> <a class="code" href="classSegment.html#a277571fe541fcc160810b255e95b0485">absorbNext</a>();
+<a name="l00091"></a><a class="code" href="classSegment.html#a768425876c1e05988a6f293bcd17ca99">00091</a>   <a class="code" href="classSegment.html">Segment</a>&amp; <a class="code" href="classSegment.html#a768425876c1e05988a6f293bcd17ca99">prev</a>() { <span class="keywordflow">return</span> (<a class="code" href="classSegment.html">Segment</a>&amp;)<a class="code" href="classSegment.html#a768425876c1e05988a6f293bcd17ca99">Linked&lt;BareSegment&gt;::prev</a>(); };
+<a name="l00092"></a><a class="code" href="classSegment.html#af7333ef3963f1e8c2e96640fbaff268b">00092</a>   <a class="code" href="classSegment.html">Segment</a>&amp; <a class="code" href="classSegment.html#af7333ef3963f1e8c2e96640fbaff268b">next</a>() { <span class="keywordflow">return</span> (<a class="code" href="classSegment.html">Segment</a>&amp;)<a class="code" href="classSegment.html#af7333ef3963f1e8c2e96640fbaff268b">Linked&lt;BareSegment&gt;::next</a>(); };
+<a name="l00093"></a><a class="code" href="classSegment.html#ab19245848b220a02e0fbac842dca5caa">00093</a>   <span class="keywordtype">bool</span> <a class="code" href="classSegment.html#ab19245848b220a02e0fbac842dca5caa">operator==</a>(<a class="code" href="classSegment.html">Segment</a>&amp; s) { <span class="keywordflow">return</span> <span class="keyword">this</span> == &amp;s; };
+<a name="l00094"></a>00094 
+<a name="l00095"></a>00095 };
+<a name="l00096"></a>00096 
+<a name="l00097"></a>00097 <span class="comment">//######################################################################</span>
+<a name="l00098"></a>00098 
+<a name="l00099"></a><a class="code" href="classBareVertex.html">00099</a> <span class="keyword">class </span><a class="code" href="classBareVertex.html">BareVertex</a> {
+<a name="l00100"></a>00100 
+<a name="l00101"></a>00101 <span class="keyword">private</span>:
+<a name="l00102"></a>00102 
+<a name="l00103"></a><a class="code" href="classBareVertex.html#aa59633d9130e5e1424441ffb4e98ce0e">00103</a>   <span class="keyword">static</span> <span class="keywordtype">int</span> <a class="code" href="classBareVertex.html#aa59633d9130e5e1424441ffb4e98ce0e">lastID</a>;
+<a name="l00104"></a><a class="code" href="classBareVertex.html#af180e926633cde08a05ccbc3af397ee4">00104</a>   <span class="keywordtype">int</span> <a class="code" href="classBareVertex.html#af180e926633cde08a05ccbc3af397ee4">ID</a>;
+<a name="l00105"></a><a class="code" href="classBareVertex.html#ab09204f9461f6d4a04a1dcbd2f72ee0b">00105</a>   <a class="code" href="classVertexProperty.html">VertexProperty</a>* <a class="code" href="classBareVertex.html#ab09204f9461f6d4a04a1dcbd2f72ee0b">_VP</a>;
+<a name="l00106"></a><a class="code" href="classBareVertex.html#a8dc7c4d857a14ea0b1f9d9eb8b252595">00106</a>   <span class="keywordtype">double</span> <a class="code" href="classBareVertex.html#a8dc7c4d857a14ea0b1f9d9eb8b252595">TIME</a>;
+<a name="l00107"></a><a class="code" href="classBareVertex.html#a3f239bed43d2a9b39c97b1a4b3061145">00107</a>   <a class="code" href="classArray.html">Array&lt;Segment*&gt;</a> <a class="code" href="classBareVertex.html#a3f239bed43d2a9b39c97b1a4b3061145">_s</a>;
+<a name="l00108"></a><a class="code" href="classBareVertex.html#a0de3779c094ee4a740704bf1b0c8f70d">00108</a>   <a class="code" href="classInteraction.html">Interaction</a>* <a class="code" href="classBareVertex.html#a0de3779c094ee4a740704bf1b0c8f70d">ONINTERACTION</a>;
+<a name="l00109"></a>00109 
+<a name="l00110"></a>00110 <span class="keyword">public</span>:
+<a name="l00111"></a>00111 
+<a name="l00112"></a><a class="code" href="classBareVertex.html#a02fd73d861ef2e4aabb38c0c9ff82947">00112</a>   <span class="keywordtype">void</span> <a class="code" href="classBareVertex.html#a02fd73d861ef2e4aabb38c0c9ff82947">init</a>() {
+<a name="l00113"></a>00113     <a class="code" href="classBareVertex.html#ab09204f9461f6d4a04a1dcbd2f72ee0b">_VP</a> = 0;
+<a name="l00114"></a>00114     <a class="code" href="classBareVertex.html#a8dc7c4d857a14ea0b1f9d9eb8b252595">TIME</a> = -1.0;
+<a name="l00115"></a>00115     <a class="code" href="classBareVertex.html#a3f239bed43d2a9b39c97b1a4b3061145">_s</a>.<a class="code" href="classArray.html#a5fd83b4910658540977272a168cfbdae">init</a>();
+<a name="l00116"></a>00116   };
+<a name="l00117"></a>00117 
+<a name="l00118"></a>00118   <span class="keywordtype">void</span> <a class="code" href="classBareVertex.html#abafb84985de1e12e8a567608536dd47a">init_WORM</a>();
+<a name="l00119"></a>00119 
+<a name="l00120"></a>00120   <span class="keywordtype">void</span> <a class="code" href="classBareVertex.html#ab268e56c3e42b5a09d7de270ab3255c0">init_TERM</a>(<a class="code" href="classSegment.html">Segment</a>&amp; <a class="code" href="classBareVertex.html#a98eb474ad998a9410dfa9314f5fde041">S</a>);
+<a name="l00121"></a>00121 
+<a name="l00122"></a>00122   <span class="comment">//Used when PlaceWorm</span>
+<a name="l00123"></a><a class="code" href="classBareVertex.html#a0d3b8c38f2b6289aa931aee833d0c49b">00123</a>   <span class="keywordtype">void</span> <a class="code" href="classBareVertex.html#a0d3b8c38f2b6289aa931aee833d0c49b">init</a>(<span class="keywordtype">double</span> <a class="code" href="matrix_8h.html#a0f57174a41569bfcf47a55eb2e60e35c">t</a>, <a class="code" href="classVertexProperty.html">VertexProperty</a>&amp; VP) {
+<a name="l00124"></a>00124     <a class="code" href="classBareVertex.html#a8dc7c4d857a14ea0b1f9d9eb8b252595">TIME</a> = <a class="code" href="matrix_8h.html#a0f57174a41569bfcf47a55eb2e60e35c">t</a>;
+<a name="l00125"></a>00125     <a class="code" href="classBareVertex.html#a3f239bed43d2a9b39c97b1a4b3061145">_s</a>.<a class="code" href="classArray.html#a5fd83b4910658540977272a168cfbdae">init</a>(1,VP.<a class="code" href="classVertexProperty.html#ad2e978411f291e4018c6291e9d4a6deb">NLEG</a>); <span class="comment">// koko !!!</span>
+<a name="l00126"></a>00126     <a class="code" href="classBareVertex.html#a3f239bed43d2a9b39c97b1a4b3061145">_s</a>.<a class="code" href="classArray.html#a46c36a9a7be294d4f647798d07c79c7e">set_all</a>(0);
+<a name="l00127"></a>00127     <a class="code" href="classBareVertex.html#ab09204f9461f6d4a04a1dcbd2f72ee0b">_VP</a> = &amp;VP;
+<a name="l00128"></a>00128   };
+<a name="l00129"></a>00129 
+<a name="l00130"></a><a class="code" href="classBareVertex.html#a63d4bea466306d9dff0e8bc09567e290">00130</a>   <span class="keywordtype">void</span> <a class="code" href="classBareVertex.html#a63d4bea466306d9dff0e8bc09567e290">init</a>(<a class="code" href="classInteraction.html">Interaction</a>* O_I,<span class="keywordtype">double</span> <a class="code" href="matrix_8h.html#a0f57174a41569bfcf47a55eb2e60e35c">t</a>, <a class="code" href="classVertexProperty.html">VertexProperty</a>&amp; VP) {
+<a name="l00131"></a>00131     <a class="code" href="classBareVertex.html#a8dc7c4d857a14ea0b1f9d9eb8b252595">TIME</a> = <a class="code" href="matrix_8h.html#a0f57174a41569bfcf47a55eb2e60e35c">t</a>;
+<a name="l00132"></a>00132     <a class="code" href="classBareVertex.html#a3f239bed43d2a9b39c97b1a4b3061145">_s</a>.<a class="code" href="classArray.html#a5fd83b4910658540977272a168cfbdae">init</a>(1,VP.<a class="code" href="classVertexProperty.html#ad2e978411f291e4018c6291e9d4a6deb">NLEG</a>); <span class="comment">// koko !!!</span>
+<a name="l00133"></a>00133     <a class="code" href="classBareVertex.html#a3f239bed43d2a9b39c97b1a4b3061145">_s</a>.<a class="code" href="classArray.html#a46c36a9a7be294d4f647798d07c79c7e">set_all</a>(0);
+<a name="l00134"></a>00134     <a class="code" href="classBareVertex.html#ab09204f9461f6d4a04a1dcbd2f72ee0b">_VP</a> = &amp;VP;
+<a name="l00135"></a>00135     <a class="code" href="classBareVertex.html#a0de3779c094ee4a740704bf1b0c8f70d">ONINTERACTION</a> = O_I;
+<a name="l00136"></a>00136   };
+<a name="l00137"></a><a class="code" href="classBareVertex.html#a6b82d4b99704bd468e144e4b74b0bc1f">00137</a>   <a class="code" href="classBareVertex.html#a6b82d4b99704bd468e144e4b74b0bc1f">BareVertex</a>() {
+<a name="l00138"></a>00138     <a class="code" href="classBareVertex.html#a3f239bed43d2a9b39c97b1a4b3061145">_s</a>.<a class="code" href="classArray.html#a215cee23ec0da9386f44a7108d8c5b57">setLabel</a>(<span class="stringliteral">&quot;BareVertex::_s&quot;</span>);
+<a name="l00139"></a>00139     <a class="code" href="classBareVertex.html#aa59633d9130e5e1424441ffb4e98ce0e">lastID</a>++;
+<a name="l00140"></a>00140     <a class="code" href="classBareVertex.html#af180e926633cde08a05ccbc3af397ee4">ID</a>=<a class="code" href="classBareVertex.html#aa59633d9130e5e1424441ffb4e98ce0e">lastID</a>; 
+<a name="l00141"></a>00141     <a class="code" href="classBareVertex.html#a02fd73d861ef2e4aabb38c0c9ff82947">init</a>();
+<a name="l00142"></a>00142   };
+<a name="l00143"></a>00143 
+<a name="l00144"></a><a class="code" href="classBareVertex.html#ab53c83a43d05f631497196ace68fcb65">00144</a>   <a class="code" href="classBareVertex.html#ab53c83a43d05f631497196ace68fcb65">~BareVertex</a>() {
+<a name="l00145"></a>00145     <span class="comment">//    printf(&quot;*** Destroying BareVertex (%d)\n&quot;, this);</span>
+<a name="l00146"></a>00146   };
+<a name="l00147"></a>00147 
+<a name="l00148"></a><a class="code" href="classBareVertex.html#a89f52073f277db570768a03e323ea03c">00148</a>   <span class="keywordtype">int</span> <a class="code" href="classBareVertex.html#a89f52073f277db570768a03e323ea03c">NBODY</a>()<span class="keyword"> const </span>{ 
+<a name="l00149"></a>00149     <span class="keywordflow">if</span> (<a class="code" href="classBareVertex.html#a8d6f4521b27f32080d7477cf8ee8a274">isTerminal</a>()) <span class="keywordflow">return</span> 1;
+<a name="l00150"></a>00150     <span class="keywordflow">return</span> (*_VP).NBODY; 
+<a name="l00151"></a>00151   };
+<a name="l00152"></a>00152 
+<a name="l00153"></a><a class="code" href="classBareVertex.html#af4e0d0ded90cee82c5aff7860a75f710">00153</a>   <span class="keywordtype">int</span> <a class="code" href="classBareVertex.html#af4e0d0ded90cee82c5aff7860a75f710">NLEG</a>()<span class="keyword"> const </span>{
+<a name="l00154"></a>00154     <span class="keywordflow">return</span> 2 * <a class="code" href="classBareVertex.html#a89f52073f277db570768a03e323ea03c">NBODY</a>();
+<a name="l00155"></a>00155   };
+<a name="l00156"></a>00156 
+<a name="l00157"></a>00157   <span class="keywordtype">bool</span> <a class="code" href="classBareVertex.html#a8d6f4521b27f32080d7477cf8ee8a274">isTerminal</a>() <span class="keyword">const</span> ;
+<a name="l00158"></a>00158   <span class="keywordtype">bool</span> <a class="code" href="classBareVertex.html#a33c9208baae9b09a874bfcbba9611c59">isTail</a>() <span class="keyword">const</span> ;
+<a name="l00159"></a>00159 
+<a name="l00160"></a><a class="code" href="classBareVertex.html#ae0c063cfb2479f614be43b9d2f92ba63">00160</a>   <span class="keywordtype">int</span> <a class="code" href="classBareVertex.html#ae0c063cfb2479f614be43b9d2f92ba63">id</a>()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> <a class="code" href="classBareVertex.html#af180e926633cde08a05ccbc3af397ee4">ID</a>; };
+<a name="l00161"></a>00161 
+<a name="l00162"></a><a class="code" href="classBareVertex.html#ab8e4e3e2a7bf18888b71bdf9dda0770b">00162</a>   <span class="keywordtype">int</span> <a class="code" href="classBareVertex.html#ab8e4e3e2a7bf18888b71bdf9dda0770b">size</a>()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> 2*<a class="code" href="classBareVertex.html#a89f52073f277db570768a03e323ea03c">NBODY</a>(); };
+<a name="l00163"></a>00163 
+<a name="l00164"></a>00164   <span class="keywordtype">bool</span> <a class="code" href="classBareVertex.html#a0757ddb5fa3cf27ba383415646971d13">isKink</a>();
+<a name="l00165"></a>00165 
+<a name="l00166"></a><a class="code" href="classBareVertex.html#a98eb474ad998a9410dfa9314f5fde041">00166</a>   <a class="code" href="classSegment.html">Segment</a>&amp; <a class="code" href="classBareVertex.html#a98eb474ad998a9410dfa9314f5fde041">S</a>(<span class="keywordtype">int</span> i) {
+<a name="l00167"></a>00167 <span class="preprocessor">#ifdef DEB</span>
+<a name="l00168"></a>00168 <span class="preprocessor"></span>    <span class="keywordflow">if</span> ( <a class="code" href="classBareVertex.html#a3f239bed43d2a9b39c97b1a4b3061145">_s</a>[i] == 0 ) {
+<a name="l00169"></a>00169       printf(<span class="stringliteral">&quot;BareVertex::S&gt; Error with i= %d\n&quot;</span>, i);
+<a name="l00170"></a>00170       printf(<span class="stringliteral">&quot;  The segment pointer is not set ( _s[i]=0 ).\n&quot;</span>);
+<a name="l00171"></a>00171     }
+<a name="l00172"></a>00172 <span class="preprocessor">#endif</span>
+<a name="l00173"></a>00173 <span class="preprocessor"></span>    <span class="keywordflow">return</span> *<a class="code" href="classBareVertex.html#a3f239bed43d2a9b39c97b1a4b3061145">_s</a>[i];
+<a name="l00174"></a>00174   };
+<a name="l00175"></a>00175 
+<a name="l00176"></a><a class="code" href="classBareVertex.html#a048a0e76331f88f3e5a3d91b77d8930b">00176</a>   <span class="keywordtype">void</span> <a class="code" href="classBareVertex.html#a048a0e76331f88f3e5a3d91b77d8930b">setS</a>(<span class="keywordtype">int</span> dir, <a class="code" href="classSegment.html">Segment</a>&amp; s) { <a class="code" href="classBareVertex.html#a3f239bed43d2a9b39c97b1a4b3061145">_s</a>[dir] = &amp;s; }; 
+<a name="l00177"></a>00177 
+<a name="l00178"></a>00178   <span class="keywordtype">int</span> <a class="code" href="classBareVertex.html#a0c4008a4756ed8a7ae8dc5b34100773e">X</a>(<span class="keywordtype">int</span> i);
+<a name="l00179"></a>00179 
+<a name="l00180"></a><a class="code" href="classBareVertex.html#a4b87946890b3b3476f46a9208e52ff01">00180</a>   <span class="keywordtype">double</span> <a class="code" href="classBareVertex.html#a4b87946890b3b3476f46a9208e52ff01">time</a>()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> <a class="code" href="classBareVertex.html#a8dc7c4d857a14ea0b1f9d9eb8b252595">TIME</a>; };
+<a name="l00181"></a>00181 
+<a name="l00182"></a><a class="code" href="classBareVertex.html#acd2ceab987abdc16c17101e97db10ada">00182</a>   <span class="keywordtype">void</span> <a class="code" href="classBareVertex.html#acd2ceab987abdc16c17101e97db10ada">setTime</a>(<span class="keywordtype">double</span> <a class="code" href="matrix_8h.html#a0f57174a41569bfcf47a55eb2e60e35c">t</a>) { <a class="code" href="classBareVertex.html#a8dc7c4d857a14ea0b1f9d9eb8b252595">TIME</a> = <a class="code" href="matrix_8h.html#a0f57174a41569bfcf47a55eb2e60e35c">t</a>; };
+<a name="l00183"></a>00183 
+<a name="l00184"></a>00184   <span class="keywordtype">int</span> <a class="code" href="classBareVertex.html#ae47d008095673061722c8c5ab1a01d2b">which</a>(<a class="code" href="classSegment.html">Segment</a>&amp; s);
+<a name="l00185"></a>00185 
+<a name="l00186"></a>00186   <span class="keywordtype">void</span> <a class="code" href="classBareVertex.html#a47cbdd3b2353867017c68bba4a31f137">replace</a>(<a class="code" href="classSegment.html">Segment</a>&amp; Sold, <a class="code" href="classSegment.html">Segment</a>&amp; Snew);
+<a name="l00187"></a>00187 
+<a name="l00188"></a>00188   <span class="keywordtype">bool</span> <a class="code" href="classBareVertex.html#ae1ee541bb22588b6a71650c807efca90">check</a>();
+<a name="l00189"></a>00189 
+<a name="l00190"></a><a class="code" href="classBareVertex.html#a7610f8ffeaae43a3af398cc3b9f0ca6c">00190</a>   <span class="keywordtype">void</span> <a class="code" href="classBareVertex.html#a7610f8ffeaae43a3af398cc3b9f0ca6c">setProperty</a>(<a class="code" href="classVertexProperty.html">VertexProperty</a>&amp; P) { <a class="code" href="classBareVertex.html#ab09204f9461f6d4a04a1dcbd2f72ee0b">_VP</a> = &amp;P; };
+<a name="l00191"></a>00191 
+<a name="l00192"></a><a class="code" href="classBareVertex.html#ae3775081dae5d62a47eee5c62fa49995">00192</a>   <span class="keywordtype">int</span> <a class="code" href="classBareVertex.html#ae3775081dae5d62a47eee5c62fa49995">type</a>() {
+<a name="l00193"></a>00193     <span class="keywordflow">if</span> ( <a class="code" href="classBareVertex.html#ab09204f9461f6d4a04a1dcbd2f72ee0b">_VP</a> == 0 ) { 
+<a name="l00194"></a>00194       <span class="keywordflow">return</span> <a class="code" href="namespaceSTYPE.html#a6af3477d2e74163c155b0d0a2e4265ae">VTYPE::UNDEF</a>; 
+<a name="l00195"></a>00195     } <span class="keywordflow">else</span> { 
+<a name="l00196"></a>00196       <span class="keywordflow">return</span> <a class="code" href="classBareVertex.html#aa25baa44795d12b3c58a54b1de379c35">property</a>().<a class="code" href="classVertexProperty.html#a4a716406d3d9d4fdbbe46f100e648f3b">id</a>(); 
+<a name="l00197"></a>00197     }
+<a name="l00198"></a>00198   }
+<a name="l00199"></a>00199 
+<a name="l00200"></a><a class="code" href="classBareVertex.html#aefa8641ce4aace27611b432185e74744">00200</a>   <span class="keywordtype">int</span> <a class="code" href="classBareVertex.html#aefa8641ce4aace27611b432185e74744">category</a>() {
+<a name="l00201"></a>00201     <span class="keywordflow">if</span> ( <a class="code" href="classBareVertex.html#ab09204f9461f6d4a04a1dcbd2f72ee0b">_VP</a> == 0 ) { 
+<a name="l00202"></a>00202       <span class="keywordflow">return</span> <a class="code" href="namespaceVCAT.html#a0a5dba6a1474034dbc50e8de3560f059">VCAT::TERM</a>; 
+<a name="l00203"></a>00203     } <span class="keywordflow">else</span> { 
+<a name="l00204"></a>00204       <span class="keywordflow">return</span> <a class="code" href="classBareVertex.html#aa25baa44795d12b3c58a54b1de379c35">property</a>().<a class="code" href="classVertexProperty.html#a9399ebe315b5f8caca433b72e97de4d8">VCAT</a>;
+<a name="l00205"></a>00205     }
+<a name="l00206"></a>00206   }
+<a name="l00207"></a>00207 
+<a name="l00208"></a><a class="code" href="classBareVertex.html#aa25baa44795d12b3c58a54b1de379c35">00208</a>   <a class="code" href="classVertexProperty.html">VertexProperty</a>&amp; <a class="code" href="classBareVertex.html#aa25baa44795d12b3c58a54b1de379c35">property</a>() {
+<a name="l00209"></a>00209 <span class="preprocessor">#ifdef DEB</span>
+<a name="l00210"></a>00210 <span class="preprocessor"></span>    <span class="keywordflow">if</span> ( <a class="code" href="classBareVertex.html#ab09204f9461f6d4a04a1dcbd2f72ee0b">_VP</a> == 0 ) {
+<a name="l00211"></a>00211       printf(<span class="stringliteral">&quot;BareVertex::property&gt; Error.\n&quot;</span>);
+<a name="l00212"></a>00212       printf(<span class="stringliteral">&quot;  Vertex property has not been set.\n&quot;</span>);
+<a name="l00213"></a>00213       exit(0);
+<a name="l00214"></a>00214     }
+<a name="l00215"></a>00215 <span class="preprocessor">#endif</span>
+<a name="l00216"></a>00216 <span class="preprocessor"></span>    <span class="keywordflow">return</span> *<a class="code" href="classBareVertex.html#ab09204f9461f6d4a04a1dcbd2f72ee0b">_VP</a>; 
+<a name="l00217"></a>00217   };
+<a name="l00218"></a>00218 
+<a name="l00219"></a>00219   <a class="code" href="classVertexInitialConfiguration.html">VertexInitialConfiguration</a>&amp; <a class="code" href="classBareVertex.html#aade87bd6b03d4844d472412c6bc36039">getInitialConfiguration</a>( <span class="keywordtype">int</span> inc , <span class="keywordtype">int</span> xinc );
+<a name="l00220"></a>00220 
+<a name="l00221"></a>00221   <span class="keywordtype">void</span> <a class="code" href="classBareVertex.html#accd2600060dbaee3a3b41aed4034c63c">dump</a>();
+<a name="l00222"></a><a class="code" href="classBareVertex.html#a82fdae06ca22ff01ae6f33d9832e006e">00222</a>   <a class="code" href="classInteraction.html">Interaction</a>* <a class="code" href="classBareVertex.html#a82fdae06ca22ff01ae6f33d9832e006e">getONINTERACTION</a>(){<span class="keywordflow">return</span> <a class="code" href="classBareVertex.html#a0de3779c094ee4a740704bf1b0c8f70d">ONINTERACTION</a>;};
+<a name="l00223"></a><a class="code" href="classBareVertex.html#acb2c1062afef35ca2d5c8bc3feeebeb0">00223</a>   <span class="keywordtype">void</span> <a class="code" href="classBareVertex.html#acb2c1062afef35ca2d5c8bc3feeebeb0">setONINTERACTION</a>( <a class="code" href="classInteraction.html">Interaction</a>* on_interaction ){<a class="code" href="classBareVertex.html#a0de3779c094ee4a740704bf1b0c8f70d">ONINTERACTION</a>=on_interaction;};
+<a name="l00224"></a>00224   
+<a name="l00225"></a>00225 };
+<a name="l00226"></a>00226 
+<a name="l00227"></a>00227 <span class="keywordtype">int</span> <a class="code" href="classBareVertex.html#aa59633d9130e5e1424441ffb4e98ce0e">BareVertex::lastID</a> = 0;
+<a name="l00228"></a>00228 
+<a name="l00229"></a>00229 <span class="comment">//######################################################################</span>
+<a name="l00230"></a>00230 
+<a name="l00231"></a><a class="code" href="classVertex.html">00231</a> <span class="keyword">class </span><a class="code" href="classVertex.html">Vertex</a> : <span class="keyword">public</span> <a class="code" href="classLinked.html">Linked</a>&lt;BareVertex&gt; {
+<a name="l00232"></a>00232 
+<a name="l00233"></a>00233 <span class="keyword">public</span>:
+<a name="l00234"></a>00234 
+<a name="l00235"></a>00235   <span class="keywordtype">void</span> <a class="code" href="classVertex.html#a4bcd6ce7d04c38f8c4ff908d1fc50f86">reconnect</a>(); <span class="comment">// reconnect the segments attached to the vertex</span>
+<a name="l00236"></a>00236   <span class="keywordtype">void</span> <a class="code" href="classVertex.html#af139f30d28b7dc61f5051c0d595af368">erase</a>();  <span class="comment">// remove from the linked list and push back to the pool</span>
+<a name="l00237"></a><a class="code" href="classVertex.html#af28a23f11980227d38cf19f0a469022b">00237</a>   <a class="code" href="classVertex.html">Vertex</a>&amp; <a class="code" href="classVertex.html#af28a23f11980227d38cf19f0a469022b">prev</a>() { <span class="keywordflow">return</span> (<a class="code" href="classVertex.html">Vertex</a>&amp;)<a class="code" href="classVertex.html#af28a23f11980227d38cf19f0a469022b">Linked&lt;BareVertex&gt;::prev</a>(); };
+<a name="l00238"></a><a class="code" href="classVertex.html#ae065499472da3b8fcff3ea36efd64d2b">00238</a>   <a class="code" href="classVertex.html">Vertex</a>&amp; <a class="code" href="classVertex.html#ae065499472da3b8fcff3ea36efd64d2b">next</a>() { <span class="keywordflow">return</span> (<a class="code" href="classVertex.html">Vertex</a>&amp;)<a class="code" href="classVertex.html#ae065499472da3b8fcff3ea36efd64d2b">Linked&lt;BareVertex&gt;::next</a>(); };
+<a name="l00239"></a><a class="code" href="classVertex.html#a609b0b146a69322b0f51bc69eb7ee2ff">00239</a>   <span class="keywordtype">bool</span> <a class="code" href="classVertex.html#a609b0b146a69322b0f51bc69eb7ee2ff">operator==</a>(<a class="code" href="classVertex.html">Vertex</a>&amp; v) { <span class="keywordflow">return</span> <span class="keyword">this</span> == &amp;v; };
+<a name="l00240"></a>00240 
+<a name="l00241"></a>00241 };
+<a name="l00242"></a>00242 
+<a name="l00243"></a>00243 <span class="comment">//######################################################################</span>
+<a name="l00244"></a>00244 
+<a name="l00245"></a><a class="code" href="classWorm.html">00245</a> <span class="keyword">class </span><a class="code" href="classWorm.html">Worm</a> {
+<a name="l00246"></a>00246 
+<a name="l00247"></a>00247 <span class="keyword">private</span>:
+<a name="l00248"></a>00248 
+<a name="l00249"></a><a class="code" href="classWorm.html#a26f31122920178408824a042b9af4f4b">00249</a>   <span class="keywordtype">int</span> <a class="code" href="classWorm.html#a26f31122920178408824a042b9af4f4b">x_behind</a>; <span class="comment">// the local state just after a passage of the worm head</span>
+<a name="l00250"></a><a class="code" href="classWorm.html#ae71aec326cc6662e506dc1df6a6f882b">00250</a>   <a class="code" href="classVertex.html">Vertex</a>*  <a class="code" href="classWorm.html#ae71aec326cc6662e506dc1df6a6f882b">_vorg</a>; <span class="comment">// the vertex sitting at the creation point</span>
+<a name="l00251"></a><a class="code" href="classWorm.html#add66ebb4db5f1c1178169b66202d1033">00251</a>   <a class="code" href="classVertex.html">Vertex</a>*  <a class="code" href="classWorm.html#add66ebb4db5f1c1178169b66202d1033">_vcur</a>; <span class="comment">// the current vertex</span>
+<a name="l00252"></a><a class="code" href="classWorm.html#ab2b5bdeb00880664b2ab719e72ae36de">00252</a>   <a class="code" href="classSegment.html">Segment</a>* <a class="code" href="classWorm.html#ab2b5bdeb00880664b2ab719e72ae36de">_scur</a>; <span class="comment">// the current segment</span>
+<a name="l00253"></a>00253 
+<a name="l00254"></a>00254 <span class="keyword">public</span>:
+<a name="l00255"></a>00255 
+<a name="l00256"></a>00256   <a class="code" href="classWorm.html#a7ffb6cc78e565726058a4f2cbb85c8d2">Worm</a>();
+<a name="l00257"></a>00257 
+<a name="l00258"></a>00258   <a class="code" href="classWorm.html#a4fd2950fb8e381bd1e1abeb04d97644f">~Worm</a>();
+<a name="l00259"></a>00259 
+<a name="l00260"></a><a class="code" href="classWorm.html#ae33eb0f681402081c433f00bbbfa115b">00260</a>   <a class="code" href="classVertex.html">Vertex</a>&amp; <a class="code" href="classWorm.html#ae33eb0f681402081c433f00bbbfa115b">getNextVertex</a>() { 
+<a name="l00261"></a>00261     <a class="code" href="classVertex.html">Vertex</a>* _v = &amp;(<a class="code" href="classWorm.html#ab2b5bdeb00880664b2ab719e72ae36de">_scur</a>-&gt;<a class="code" href="classBareSegment.html#a4586cfd4b76d82fa2504823166e6ca27">bottom</a>());
+<a name="l00262"></a>00262     <span class="keywordflow">if</span> ( _v == <a class="code" href="classWorm.html#add66ebb4db5f1c1178169b66202d1033">_vcur</a> ) _v = &amp;(<a class="code" href="classWorm.html#ab2b5bdeb00880664b2ab719e72ae36de">_scur</a>-&gt;<a class="code" href="classBareSegment.html#ab5ed5bec1cfe54a48a31900c0abb7565">top</a>());
+<a name="l00263"></a>00263     <span class="keywordflow">return</span> *_v;
+<a name="l00264"></a>00264   };
+<a name="l00265"></a>00265 
+<a name="l00266"></a><a class="code" href="classWorm.html#ad6319e7ec31afaaebd1ac404473671d1">00266</a>   <a class="code" href="classVertex.html">Vertex</a>&amp; <a class="code" href="classWorm.html#ad6319e7ec31afaaebd1ac404473671d1">origin</a>() { <span class="keywordflow">return</span> *<a class="code" href="classWorm.html#ae71aec326cc6662e506dc1df6a6f882b">_vorg</a>; };
+<a name="l00267"></a>00267 
+<a name="l00268"></a><a class="code" href="classWorm.html#adde80f60a029f38728bad68a9e5e6bfd">00268</a>   <a class="code" href="classVertex.html">Vertex</a>&amp; <a class="code" href="classWorm.html#adde80f60a029f38728bad68a9e5e6bfd">getCurrentVertex</a>() { <span class="keywordflow">return</span> *<a class="code" href="classWorm.html#add66ebb4db5f1c1178169b66202d1033">_vcur</a>; };
+<a name="l00269"></a>00269 
+<a name="l00270"></a><a class="code" href="classWorm.html#a3e7b40e17a549f9a3a3e1060e46d5c57">00270</a>   <span class="keywordtype">void</span> <a class="code" href="classWorm.html#a3e7b40e17a549f9a3a3e1060e46d5c57">setCurrentVertex</a>(<a class="code" href="classVertex.html">Vertex</a>&amp; v) { <a class="code" href="classWorm.html#add66ebb4db5f1c1178169b66202d1033">_vcur</a> = &amp;v; };
+<a name="l00271"></a>00271 
+<a name="l00272"></a><a class="code" href="classWorm.html#a2076fa4ed4d8fcc3950f24e3b27e0616">00272</a>   <a class="code" href="classSegment.html">Segment</a>&amp; <a class="code" href="classWorm.html#a2076fa4ed4d8fcc3950f24e3b27e0616">getCurrentSegment</a>() { <span class="keywordflow">return</span> *<a class="code" href="classWorm.html#ab2b5bdeb00880664b2ab719e72ae36de">_scur</a>; };
+<a name="l00273"></a>00273 
+<a name="l00274"></a><a class="code" href="classWorm.html#af89b0d9ce60f43a5fda7357e488c7f16">00274</a>   <span class="keywordtype">void</span> <a class="code" href="classWorm.html#af89b0d9ce60f43a5fda7357e488c7f16">setCurrentSegment</a>(<a class="code" href="classSegment.html">Segment</a>&amp; s) { <a class="code" href="classWorm.html#ab2b5bdeb00880664b2ab719e72ae36de">_scur</a> = &amp;s; };
+<a name="l00275"></a>00275 
+<a name="l00276"></a><a class="code" href="classWorm.html#a11b3461316d78b599c15a8fb70966ce8">00276</a>   <span class="keywordtype">void</span> <a class="code" href="classWorm.html#a11b3461316d78b599c15a8fb70966ce8">setXBEHIND</a> () { <a class="code" href="classWorm.html#a26f31122920178408824a042b9af4f4b">x_behind</a> = <a class="code" href="namespaceSTYPE.html#a6af3477d2e74163c155b0d0a2e4265ae">STATE::UNDEF</a>; };
+<a name="l00277"></a>00277 
+<a name="l00278"></a><a class="code" href="classWorm.html#adee2815f94c07317b6b5113688d8ab94">00278</a>   <span class="keywordtype">void</span> <a class="code" href="classWorm.html#adee2815f94c07317b6b5113688d8ab94">setXBEHIND</a> (<span class="keywordtype">int</span> x) { <a class="code" href="classWorm.html#a26f31122920178408824a042b9af4f4b">x_behind</a> = x; };
+<a name="l00279"></a>00279 
+<a name="l00280"></a><a class="code" href="classWorm.html#a7ad113040e0afa79a96d1b8bf1209db0">00280</a>   <span class="keywordtype">int</span> <a class="code" href="classWorm.html#a7ad113040e0afa79a96d1b8bf1209db0">getXBEHIND</a>() {
+<a name="l00281"></a>00281 <span class="preprocessor">#ifdef DEB</span>
+<a name="l00282"></a>00282 <span class="preprocessor"></span>    <span class="keywordflow">if</span> ( <a class="code" href="classWorm.html#a26f31122920178408824a042b9af4f4b">x_behind</a> == <a class="code" href="namespaceSTATE.html#a6af3477d2e74163c155b0d0a2e4265ae">STATE::UNDEF</a> ) { 
+<a name="l00283"></a>00283       printf(<span class="stringliteral">&quot;Worm::getXBEHIND&gt; Error.\n  x_behind = %d\n&quot;</span>, <a class="code" href="classWorm.html#a26f31122920178408824a042b9af4f4b">x_behind</a>); 
+<a name="l00284"></a>00284       exit(0); 
+<a name="l00285"></a>00285     }
+<a name="l00286"></a>00286 <span class="preprocessor">#endif</span>
+<a name="l00287"></a>00287 <span class="preprocessor"></span>    <span class="keywordflow">return</span> <a class="code" href="classWorm.html#a26f31122920178408824a042b9af4f4b">x_behind</a>; 
+<a name="l00288"></a>00288   };
+<a name="l00289"></a>00289 
+<a name="l00290"></a><a class="code" href="classWorm.html#ab8793223406709ac01b2af4dc90d119a">00290</a>   <span class="keywordtype">bool</span> <a class="code" href="classWorm.html#ab8793223406709ac01b2af4dc90d119a">atOrigin</a>() { <span class="keywordflow">return</span> ( <a class="code" href="classWorm.html#add66ebb4db5f1c1178169b66202d1033">_vcur</a> == <a class="code" href="classWorm.html#ae71aec326cc6662e506dc1df6a6f882b">_vorg</a> ); };
+<a name="l00291"></a>00291 
+<a name="l00292"></a><a class="code" href="classWorm.html#a94bb4a6bfde432559cc38c8e0d6140a4">00292</a>   <span class="keywordtype">bool</span> <a class="code" href="classWorm.html#a94bb4a6bfde432559cc38c8e0d6140a4">getUORD</a>(){<span class="keywordflow">return</span> ( <a class="code" href="classWorm.html#add66ebb4db5f1c1178169b66202d1033">_vcur</a> == &amp;( (*_scur).top() ));};<span class="comment">//up -&gt; false 0, down -&gt; true 1</span>
+<a name="l00293"></a><a class="code" href="classWorm.html#acb261e8b5561b216113c15f3b98cc95e">00293</a>   <span class="keywordtype">bool</span> <a class="code" href="classWorm.html#acb261e8b5561b216113c15f3b98cc95e">getV</a>(){printf(<span class="stringliteral">&quot;top,bottom = %d, %d &quot;</span>,(*_scur).top().id(),(*_scur).bottom().id());};
+<a name="l00294"></a>00294 
+<a name="l00295"></a>00295   <span class="keywordtype">void</span> <span class="keyword">remove</span>();
+<a name="l00296"></a>00296 
+<a name="l00297"></a>00297   <span class="keywordtype">void</span> <a class="code" href="classWorm.html#accd2600060dbaee3a3b41aed4034c63c">dump</a>();
+<a name="l00298"></a>00298 
+<a name="l00299"></a>00299 };
+<a name="l00300"></a>00300 
+<a name="l00301"></a>00301 <span class="comment">//######################################################################</span>
+<a name="l00302"></a>00302 
+<a name="l00303"></a><a class="code" href="classSite.html">00303</a> <span class="keyword">class </span><a class="code" href="classSite.html">Site</a> : <span class="keyword">public</span> <a class="code" href="classRing.html">Ring</a>&lt;Segment&gt; {
+<a name="l00304"></a>00304 
+<a name="l00305"></a>00305 <span class="keyword">private</span>:
+<a name="l00306"></a>00306 
+<a name="l00307"></a><a class="code" href="classSite.html#aa59633d9130e5e1424441ffb4e98ce0e">00307</a>   <span class="keyword">static</span> <span class="keywordtype">int</span> <a class="code" href="classSite.html#aa59633d9130e5e1424441ffb4e98ce0e">lastID</a>;
+<a name="l00308"></a><a class="code" href="classSite.html#af180e926633cde08a05ccbc3af397ee4">00308</a>   <span class="keywordtype">int</span> <a class="code" href="classSite.html#af180e926633cde08a05ccbc3af397ee4">ID</a>;
+<a name="l00309"></a><a class="code" href="classSite.html#a867bc236a47fc231f1a58af3618e7620">00309</a>   <span class="keywordtype">int</span> <a class="code" href="classSite.html#a867bc236a47fc231f1a58af3618e7620">MTYPE</a>; <span class="comment">// classification of sites used in measurements</span>
+<a name="l00310"></a><a class="code" href="classSite.html#a2084a02bdb1809ce8c6eac6561cd7a5f">00310</a>   <a class="code" href="classSiteProperty.html">SiteProperty</a>* <a class="code" href="classSite.html#a2084a02bdb1809ce8c6eac6561cd7a5f">_SP</a>;
+<a name="l00311"></a><a class="code" href="classSite.html#abebccdd11a9496de8dc57cbb323ae394">00311</a>   <a class="code" href="classVertex.html">Vertex</a>* <a class="code" href="classSite.html#abebccdd11a9496de8dc57cbb323ae394">_vterm</a>;
+<a name="l00312"></a>00312 
+<a name="l00313"></a><a class="code" href="classSite.html#af101f4e969fd68ad45ce7ff6ef077381">00313</a>   <span class="keywordtype">int</span> <a class="code" href="classSite.html#af101f4e969fd68ad45ce7ff6ef077381">NCI</a>; <span class="comment">// the number of connected interactions</span>
+<a name="l00314"></a><a class="code" href="classSite.html#a55deff9653a1addcbb3ecd478433e3f2">00314</a>   <a class="code" href="classInteraction.html">Interaction</a>** <a class="code" href="classSite.html#a55deff9653a1addcbb3ecd478433e3f2">ConnectedInteraction</a>; <span class="comment">//Interaction* ConnectedInteraction [ NCI ];</span>
+<a name="l00315"></a>00315 <span class="keyword">public</span>:
+<a name="l00316"></a>00316   
+<a name="l00317"></a><a class="code" href="classSite.html#ab98cf909381f98656bd338c42ef945b3">00317</a>   <span class="keywordtype">void</span> <a class="code" href="classSite.html#ab98cf909381f98656bd338c42ef945b3">setNCI</a>(<span class="keywordtype">int</span> ni){ <a class="code" href="classSite.html#af101f4e969fd68ad45ce7ff6ef077381">NCI</a> = ni;  <a class="code" href="classSite.html#a55deff9653a1addcbb3ecd478433e3f2">ConnectedInteraction</a> = <span class="keyword">new</span> <a class="code" href="classInteraction.html">Interaction</a>* [ni]; };
+<a name="l00318"></a><a class="code" href="classSite.html#ab7d53116d3612709142776a7d446e494">00318</a>   <span class="keywordtype">int</span> <a class="code" href="classSite.html#ab7d53116d3612709142776a7d446e494">getNCI</a>(){ <span class="keywordflow">return</span> <a class="code" href="classSite.html#af101f4e969fd68ad45ce7ff6ef077381">NCI</a>;};
+<a name="l00319"></a><a class="code" href="classSite.html#a00cc87139c22444a7ca9df822b4a8f9b">00319</a>   <span class="keywordtype">void</span> <a class="code" href="classSite.html#a00cc87139c22444a7ca9df822b4a8f9b">setCI</a>(<span class="keywordtype">int</span> nth, <a class="code" href="classInteraction.html">Interaction</a>* CI){ <a class="code" href="classSite.html#a55deff9653a1addcbb3ecd478433e3f2">ConnectedInteraction</a>[nth] = CI;  };
+<a name="l00320"></a><a class="code" href="classSite.html#acde2f1059d779f1a0b53965d40cbef0b">00320</a>   <a class="code" href="classInteraction.html">Interaction</a>** <a class="code" href="classSite.html#acde2f1059d779f1a0b53965d40cbef0b">getCI</a>(){<span class="keywordflow">return</span> <a class="code" href="classSite.html#a55deff9653a1addcbb3ecd478433e3f2">ConnectedInteraction</a>;};
+<a name="l00321"></a>00321   
+<a name="l00322"></a><a class="code" href="classSite.html#a0aba4689ff61873ed996b3604f6bfb04">00322</a>   <span class="keywordtype">void</span> <a class="code" href="classSite.html#a0aba4689ff61873ed996b3604f6bfb04">init</a>(<a class="code" href="classSiteProperty.html">SiteProperty</a>&amp; SP, <span class="keywordtype">int</span> mt) { <a class="code" href="classSite.html#a2084a02bdb1809ce8c6eac6561cd7a5f">_SP</a> = &amp;SP; <a class="code" href="classSite.html#a867bc236a47fc231f1a58af3618e7620">MTYPE</a> = mt; };
+<a name="l00323"></a>00323 
+<a name="l00324"></a>00324   <a class="code" href="classSite.html#a8304e90f3ff06a31fe58c4f453147362">Site</a>();
+<a name="l00325"></a>00325 
+<a name="l00326"></a>00326   <a class="code" href="classSite.html#aa54971e96a9e254d71fc713e96dc1065">~Site</a>();
+<a name="l00327"></a>00327 
+<a name="l00328"></a><a class="code" href="classSite.html#a4a716406d3d9d4fdbbe46f100e648f3b">00328</a>   <span class="keywordtype">int</span> <a class="code" href="classSite.html#a4a716406d3d9d4fdbbe46f100e648f3b">id</a>() { <span class="keywordflow">return</span> <a class="code" href="classSite.html#af180e926633cde08a05ccbc3af397ee4">ID</a>; }; 
+<a name="l00329"></a>00329 
+<a name="l00330"></a><a class="code" href="classSite.html#ae3775081dae5d62a47eee5c62fa49995">00330</a>   <span class="keywordtype">int</span> <a class="code" href="classSite.html#ae3775081dae5d62a47eee5c62fa49995">type</a>() { 
+<a name="l00331"></a>00331     <span class="keywordflow">if</span> ( <a class="code" href="classSite.html#a2084a02bdb1809ce8c6eac6561cd7a5f">_SP</a> == 0 ) <span class="keywordflow">return</span> <a class="code" href="namespaceSTYPE.html#a6af3477d2e74163c155b0d0a2e4265ae">STYPE::UNDEF</a>;
+<a name="l00332"></a>00332     <span class="keywordflow">return</span> (*_SP).STYPE; 
+<a name="l00333"></a>00333   };
+<a name="l00334"></a>00334 
+<a name="l00335"></a><a class="code" href="classSite.html#acdf12fe31cd0f961cef9989accca0403">00335</a>   <span class="keywordtype">void</span> <a class="code" href="classSite.html#acdf12fe31cd0f961cef9989accca0403">setProperty</a>(<a class="code" href="classSiteProperty.html">SiteProperty</a>&amp; sp) { <a class="code" href="classSite.html#a2084a02bdb1809ce8c6eac6561cd7a5f">_SP</a> = &amp;sp; };
+<a name="l00336"></a>00336 
+<a name="l00337"></a><a class="code" href="classSite.html#a3e8e377af51747b2ceeab407f0b260b2">00337</a>   <a class="code" href="classSiteProperty.html">SiteProperty</a>&amp; <a class="code" href="classSite.html#a3e8e377af51747b2ceeab407f0b260b2">Property</a>() { <span class="keywordflow">return</span> *<a class="code" href="classSite.html#a2084a02bdb1809ce8c6eac6561cd7a5f">_SP</a>; };
+<a name="l00338"></a>00338 
+<a name="l00339"></a><a class="code" href="classSite.html#a33b3c88e4f553812e75c92d63c4f2557">00339</a>   <span class="keywordtype">void</span> <a class="code" href="classSite.html#a33b3c88e4f553812e75c92d63c4f2557">setBeta</a>(<span class="keywordtype">double</span> b) { <a class="code" href="classSite.html#abebccdd11a9496de8dc57cbb323ae394">_vterm</a>-&gt;<a class="code" href="classBareVertex.html#acd2ceab987abdc16c17101e97db10ada">setTime</a>(b); };
+<a name="l00340"></a>00340 
+<a name="l00341"></a>00341   <a class="code" href="classSegment.html">Segment</a>&amp; <a class="code" href="classSite.html#a0e0ac0a0baad3dcf043d2304ccb897ef">findS</a>(<span class="keywordtype">double</span> <a class="code" href="matrix_8h.html#a0f57174a41569bfcf47a55eb2e60e35c">t</a>);
+<a name="l00342"></a>00342 
+<a name="l00343"></a>00343   <span class="keywordtype">void</span> <a class="code" href="classSite.html#a2a5479f9b478b922a0d0ebf2d58829a8">merge</a>(<a class="code" href="classSegment.html">Segment</a>&amp; S1);
+<a name="l00344"></a>00344 
+<a name="l00345"></a><a class="code" href="classSite.html#ab10f24379cda198299beb5ccfa230161">00345</a>   <span class="keywordtype">int</span> <a class="code" href="classSite.html#ab10f24379cda198299beb5ccfa230161">getMTYPE</a>() { <span class="keywordflow">return</span> <a class="code" href="classSite.html#a867bc236a47fc231f1a58af3618e7620">MTYPE</a>; };
+<a name="l00346"></a>00346 
+<a name="l00347"></a><a class="code" href="classSite.html#accd2600060dbaee3a3b41aed4034c63c">00347</a>   <span class="keywordtype">void</span> <a class="code" href="classSite.html#accd2600060dbaee3a3b41aed4034c63c">dump</a>() {
+<a name="l00348"></a>00348 <span class="comment">//    printf(&quot;Site::dump&gt; Start.\n&quot;);</span>
+<a name="l00349"></a>00349     printf(<span class="stringliteral">&quot;Site(%2d) type= %d | &quot;</span>,<span class="keywordtype">id</span>(),<a class="code" href="classSite.html#ae3775081dae5d62a47eee5c62fa49995">type</a>());
+<a name="l00350"></a>00350     <a class="code" href="classSite.html#accd2600060dbaee3a3b41aed4034c63c">Ring&lt; Segment &gt;::dump</a>();
+<a name="l00351"></a>00351     printf(<span class="stringliteral">&quot;\n&quot;</span>);
+<a name="l00352"></a>00352   };
+<a name="l00353"></a>00353   
+<a name="l00354"></a><a class="code" href="classSite.html#a5f4ed33c14a7920f435c56d780b85d1b">00354</a>   <span class="keywordtype">void</span> <a class="code" href="classSite.html#a5f4ed33c14a7920f435c56d780b85d1b">idclear</a>() { <a class="code" href="classSite.html#aa59633d9130e5e1424441ffb4e98ce0e">lastID</a>=0; };
+<a name="l00355"></a>00355   <span class="comment">//void idclear() { cout &lt;&lt; &quot;dddd &quot; &lt;&lt; endl; };</span>
+<a name="l00356"></a>00356 
+<a name="l00357"></a>00357 <span class="preprocessor">#ifdef CHAINJOB</span>
+<a name="l00358"></a>00358 <span class="preprocessor"></span>  <a class="code" href="classVertex.html">Vertex</a>&amp; getVterm(){<span class="keywordflow">return</span> (*<a class="code" href="classSite.html#abebccdd11a9496de8dc57cbb323ae394">_vterm</a>);};
+<a name="l00359"></a>00359 <span class="preprocessor">#endif</span>
+<a name="l00360"></a>00360 <span class="preprocessor"></span>
+<a name="l00361"></a>00361 };
+<a name="l00362"></a>00362 
+<a name="l00363"></a>00363 <span class="keywordtype">int</span> <a class="code" href="classSite.html#aa59633d9130e5e1424441ffb4e98ce0e">Site::lastID</a> = 0;
+<a name="l00364"></a>00364 
+<a name="l00365"></a>00365 <span class="comment">//######################################################################</span>
+<a name="l00366"></a>00366 
+<a name="l00367"></a><a class="code" href="classInteraction.html">00367</a> <span class="keyword">class </span><a class="code" href="classInteraction.html">Interaction</a> : <span class="keyword">public</span> <a class="code" href="classRing.html">Ring</a>&lt;Vertex&gt; {
+<a name="l00368"></a>00368 
+<a name="l00369"></a>00369 <span class="keyword">private</span>:
+<a name="l00370"></a>00370 
+<a name="l00371"></a><a class="code" href="classInteraction.html#aa59633d9130e5e1424441ffb4e98ce0e">00371</a>   <span class="keyword">static</span> <span class="keywordtype">int</span> <a class="code" href="classInteraction.html#aa59633d9130e5e1424441ffb4e98ce0e">lastID</a>;
+<a name="l00372"></a><a class="code" href="classInteraction.html#af180e926633cde08a05ccbc3af397ee4">00372</a>   <span class="keywordtype">int</span> <a class="code" href="classInteraction.html#af180e926633cde08a05ccbc3af397ee4">ID</a>;
+<a name="l00373"></a><a class="code" href="classInteraction.html#a54d94820e48b80cca9a3b2c57c5ea662">00373</a>   <a class="code" href="classInteractionProperty.html">InteractionProperty</a>* <a class="code" href="classInteraction.html#a54d94820e48b80cca9a3b2c57c5ea662">_IP</a>;
+<a name="l00374"></a><a class="code" href="classInteraction.html#a3f12d42d985eec8e443bc5767486241c">00374</a>   <a class="code" href="classSite.html">Site</a>** <a class="code" href="classInteraction.html#a3f12d42d985eec8e443bc5767486241c">_s</a>;
+<a name="l00375"></a>00375 
+<a name="l00376"></a>00376 <span class="keyword">public</span>:
+<a name="l00377"></a>00377 
+<a name="l00378"></a><a class="code" href="classInteraction.html#a02fd73d861ef2e4aabb38c0c9ff82947">00378</a>   <span class="keywordtype">void</span> <a class="code" href="classInteraction.html#a02fd73d861ef2e4aabb38c0c9ff82947">init</a>() {
+<a name="l00379"></a>00379     <a class="code" href="classInteraction.html#a54d94820e48b80cca9a3b2c57c5ea662">_IP</a> = 0;
+<a name="l00380"></a>00380     <span class="keywordflow">if</span> ( <a class="code" href="classInteraction.html#a3f12d42d985eec8e443bc5767486241c">_s</a> != 0 ) { <span class="keyword">delete</span> [] <a class="code" href="classInteraction.html#a3f12d42d985eec8e443bc5767486241c">_s</a>; }
+<a name="l00381"></a>00381   };
+<a name="l00382"></a>00382 
+<a name="l00383"></a><a class="code" href="classInteraction.html#abd5ac8f4d572f6ef90040b841e3d2daf">00383</a>   <span class="keywordtype">void</span> <a class="code" href="classInteraction.html#abd5ac8f4d572f6ef90040b841e3d2daf">init</a>(<a class="code" href="classInteractionProperty.html">InteractionProperty</a>&amp; IP) {
+<a name="l00384"></a>00384     <a class="code" href="classInteraction.html#a02fd73d861ef2e4aabb38c0c9ff82947">init</a>();
+<a name="l00385"></a>00385     <a class="code" href="classInteraction.html#a54d94820e48b80cca9a3b2c57c5ea662">_IP</a> = &amp;IP;
+<a name="l00386"></a>00386     <a class="code" href="classInteraction.html#a3f12d42d985eec8e443bc5767486241c">_s</a> = <span class="keyword">new</span> <a class="code" href="classSite.html">Site</a>* [(*_IP).NBODY];
+<a name="l00387"></a>00387   };
+<a name="l00388"></a>00388 
+<a name="l00389"></a>00389   <a class="code" href="classInteraction.html#a452d3263d8810d8771df00c536306bd3">Interaction</a>();
+<a name="l00390"></a>00390 
+<a name="l00391"></a>00391   <a class="code" href="classInteraction.html#a6f5e175e63e5ffa1155ee26984b00697">~Interaction</a>();
+<a name="l00392"></a>00392 
+<a name="l00393"></a><a class="code" href="classInteraction.html#a4a716406d3d9d4fdbbe46f100e648f3b">00393</a>   <span class="keywordtype">int</span> <a class="code" href="classInteraction.html#a4a716406d3d9d4fdbbe46f100e648f3b">id</a>() { <span class="keywordflow">return</span> <a class="code" href="classInteraction.html#af180e926633cde08a05ccbc3af397ee4">ID</a>; };
+<a name="l00394"></a>00394 
+<a name="l00395"></a><a class="code" href="classInteraction.html#a368c7483982558680af147ac398bfcca">00395</a>   <span class="keywordtype">int</span> <a class="code" href="classInteraction.html#a368c7483982558680af147ac398bfcca">NBODY</a>() { <span class="keywordflow">return</span> (*_IP).NBODY; };
+<a name="l00396"></a>00396 
+<a name="l00397"></a><a class="code" href="classInteraction.html#ae3775081dae5d62a47eee5c62fa49995">00397</a>   <span class="keywordtype">int</span> <a class="code" href="classInteraction.html#ae3775081dae5d62a47eee5c62fa49995">type</a>() { <span class="keywordflow">return</span> (*_IP).ITYPE; };
+<a name="l00398"></a>00398 
+<a name="l00399"></a><a class="code" href="classInteraction.html#a668e8785498d3e9d726ed99d3edee936">00399</a>   <span class="keywordtype">void</span> <a class="code" href="classInteraction.html#a668e8785498d3e9d726ed99d3edee936">setProperty</a>(<a class="code" href="classInteractionProperty.html">InteractionProperty</a>&amp; ip) { <a class="code" href="classInteraction.html#a54d94820e48b80cca9a3b2c57c5ea662">_IP</a> = &amp;ip; };
+<a name="l00400"></a>00400 
+<a name="l00401"></a><a class="code" href="classInteraction.html#ac929f04449d488399477c6bd97043a3f">00401</a>   <a class="code" href="classInteractionProperty.html">InteractionProperty</a>&amp; <a class="code" href="classInteraction.html#ac929f04449d488399477c6bd97043a3f">property</a>() {
+<a name="l00402"></a>00402 <span class="preprocessor">#ifdef DEB</span>
+<a name="l00403"></a>00403 <span class="preprocessor"></span>    <span class="keywordflow">if</span> ( <a class="code" href="classInteraction.html#a54d94820e48b80cca9a3b2c57c5ea662">_IP</a> == 0 ) {
+<a name="l00404"></a>00404       printf(<span class="stringliteral">&quot;InteractinProperty::property&gt; Error.\n&quot;</span>);
+<a name="l00405"></a>00405       printf(<span class="stringliteral">&quot;  The property not defined.\n&quot;</span>);
+<a name="l00406"></a>00406       exit(0);
+<a name="l00407"></a>00407     }
+<a name="l00408"></a>00408 <span class="preprocessor">#endif</span>
+<a name="l00409"></a>00409 <span class="preprocessor"></span>    <span class="keywordflow">return</span> *<a class="code" href="classInteraction.html#a54d94820e48b80cca9a3b2c57c5ea662">_IP</a>; 
+<a name="l00410"></a>00410   };
+<a name="l00411"></a>00411 
+<a name="l00412"></a><a class="code" href="classInteraction.html#a42a6e3212d8b6431c4c5dbf21504af63">00412</a>   <a class="code" href="classSite.html">Site</a>&amp; <a class="code" href="classInteraction.html#a42a6e3212d8b6431c4c5dbf21504af63">site</a>(<span class="keywordtype">int</span> i)  { <span class="keywordflow">return</span> *(<a class="code" href="classInteraction.html#a3f12d42d985eec8e443bc5767486241c">_s</a>[i]); }; 
+<a name="l00413"></a>00413 
+<a name="l00414"></a><a class="code" href="classInteraction.html#a55f43bdab4c644bdb484c6322b6c9870">00414</a>   <span class="keywordtype">void</span> <a class="code" href="classInteraction.html#a55f43bdab4c644bdb484c6322b6c9870">setSite</a>(<span class="keywordtype">int</span> i, <a class="code" href="classSite.html">Site</a>&amp; s)  {
+<a name="l00415"></a>00415 <span class="preprocessor">#ifdef DEB</span>
+<a name="l00416"></a>00416 <span class="preprocessor"></span>    <span class="keywordflow">if</span> ( <a class="code" href="classInteraction.html#a368c7483982558680af147ac398bfcca">NBODY</a>() == 0 ) {
+<a name="l00417"></a>00417       printf(<span class="stringliteral">&quot;Interaction::setSite&gt; Error.\n&quot;</span>);
+<a name="l00418"></a>00418       printf(<span class="stringliteral">&quot;  Initialize before using!\n&quot;</span>);
+<a name="l00419"></a>00419       exit(0);
+<a name="l00420"></a>00420     }
+<a name="l00421"></a>00421 <span class="preprocessor">#endif</span>
+<a name="l00422"></a>00422 <span class="preprocessor"></span>    <a class="code" href="classInteraction.html#a3f12d42d985eec8e443bc5767486241c">_s</a>[i] = &amp;s; 
+<a name="l00423"></a>00423   };
+<a name="l00424"></a>00424 
+<a name="l00425"></a><a class="code" href="classInteraction.html#accd2600060dbaee3a3b41aed4034c63c">00425</a>   <span class="keywordtype">void</span> <a class="code" href="classInteraction.html#accd2600060dbaee3a3b41aed4034c63c">dump</a>() {
+<a name="l00426"></a>00426     <span class="keywordtype">int</span>* sid = <span class="keyword">new</span> <span class="keywordtype">int</span> [<a class="code" href="classInteraction.html#a368c7483982558680af147ac398bfcca">NBODY</a>()];
+<a name="l00427"></a>00427     <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i=0; i&lt;<a class="code" href="classInteraction.html#a368c7483982558680af147ac398bfcca">NBODY</a>(); i++) {
+<a name="l00428"></a>00428       sid[i] = <a class="code" href="namespaceSTYPE.html#a6af3477d2e74163c155b0d0a2e4265ae">STYPE::UNDEF</a>;
+<a name="l00429"></a>00429       <span class="keywordflow">if</span> ( <a class="code" href="classInteraction.html#a3f12d42d985eec8e443bc5767486241c">_s</a>[i] != 0 ) sid[i] = <a class="code" href="classInteraction.html#a42a6e3212d8b6431c4c5dbf21504af63">site</a>(i).<a class="code" href="classSite.html#a4a716406d3d9d4fdbbe46f100e648f3b">id</a>();
+<a name="l00430"></a>00430     }
+<a name="l00431"></a>00431     printf(<span class="stringliteral">&quot;Interaction(%2d) = (&quot;</span>, <span class="keywordtype">id</span>());
+<a name="l00432"></a>00432     <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i=0; i&lt;<a class="code" href="classInteraction.html#a368c7483982558680af147ac398bfcca">NBODY</a>(); i++) printf(<span class="stringliteral">&quot; %2d&quot;</span>, sid[i]);
+<a name="l00433"></a>00433     printf(<span class="stringliteral">&quot; ), type= %2d | &quot;</span>, <a class="code" href="classInteraction.html#ae3775081dae5d62a47eee5c62fa49995">type</a>());
+<a name="l00434"></a>00434     <a class="code" href="classInteraction.html#accd2600060dbaee3a3b41aed4034c63c">Ring&lt;Vertex&gt;::dump</a>();
+<a name="l00435"></a>00435     <span class="keyword">delete</span> [] sid;
+<a name="l00436"></a>00436   };
+<a name="l00437"></a>00437 
+<a name="l00438"></a><a class="code" href="classInteraction.html#a5f4ed33c14a7920f435c56d780b85d1b">00438</a>   <span class="keywordtype">void</span> <a class="code" href="classInteraction.html#a5f4ed33c14a7920f435c56d780b85d1b">idclear</a>() { <a class="code" href="classInteraction.html#aa59633d9130e5e1424441ffb4e98ce0e">lastID</a>=0; };
+<a name="l00439"></a>00439 };
+<a name="l00440"></a>00440 
+<a name="l00441"></a>00441 <span class="keywordtype">int</span> <a class="code" href="classInteraction.html#aa59633d9130e5e1424441ffb4e98ce0e">Interaction::lastID</a> = 0;
+<a name="l00442"></a>00442 
+<a name="l00443"></a>00443 <span class="comment">//######################################################################</span>
+<a name="l00444"></a>00444 
+<a name="l00445"></a><a class="code" href="objects_8hpp.html#ab1ca7e71887bb2726043a57140b7bf03">00445</a> <a class="code" href="classPool.html">Pool&lt;Vertex&gt;</a> <a class="code" href="objects_8hpp.html#ab1ca7e71887bb2726043a57140b7bf03">TheVertexPool</a>;
+<a name="l00446"></a><a class="code" href="objects_8hpp.html#ad63cad901b00e2ab131820e06912a75c">00446</a> <a class="code" href="classPool.html">Pool&lt;Segment&gt;</a> <a class="code" href="objects_8hpp.html#ad63cad901b00e2ab131820e06912a75c">TheSegmentPool</a>;
+<a name="l00447"></a>00447 
+<a name="l00448"></a><a class="code" href="objects_8hpp.html#a7e9f609bd12089deadc2fa0b12b81c2b">00448</a> <a class="code" href="classInteraction.html">Interaction</a> <a class="code" href="objects_8hpp.html#a7e9f609bd12089deadc2fa0b12b81c2b">TerminalOfWorldline</a>;
+<a name="l00449"></a><a class="code" href="objects_8hpp.html#ae325b12a82aa0c72194eef3a8f46dc9f">00449</a> <a class="code" href="classInteraction.html">Interaction</a> <a class="code" href="objects_8hpp.html#ae325b12a82aa0c72194eef3a8f46dc9f">TailOfWorm</a>;
+<a name="l00450"></a>00450 
+<a name="l00451"></a>00451 <span class="comment">//######################################################################</span>
+<a name="l00452"></a>00452 <span class="comment">//###########  Member Functions  #######################################</span>
+<a name="l00453"></a>00453 <span class="comment">//######################################################################</span>
+<a name="l00454"></a>00454 
+<a name="l00455"></a>00455 <span class="comment">//######################################################################</span>
+<a name="l00456"></a>00456 
+<a name="l00457"></a><a class="code" href="classBareSegment.html#acdc37b746192b6817020c82895ddc16e">00457</a> <span class="keyword">inline</span> <span class="keywordtype">double</span> <a class="code" href="classBareSegment.html#acdc37b746192b6817020c82895ddc16e">BareSegment::topTime</a>() {
+<a name="l00458"></a>00458   <span class="keywordflow">return</span> <a class="code" href="classBareSegment.html#ab5ed5bec1cfe54a48a31900c0abb7565">top</a>().<a class="code" href="classBareVertex.html#a4b87946890b3b3476f46a9208e52ff01">time</a>(); 
+<a name="l00459"></a>00459 }
+<a name="l00460"></a>00460 
+<a name="l00461"></a>00461 <span class="comment">//======================================================================</span>
+<a name="l00462"></a>00462 
+<a name="l00463"></a><a class="code" href="classBareSegment.html#a70f36a1813076bcf547563bfee659ef7">00463</a> <span class="keyword">inline</span> <span class="keywordtype">double</span> <a class="code" href="classBareSegment.html#a70f36a1813076bcf547563bfee659ef7">BareSegment::bottomTime</a>() { 
+<a name="l00464"></a>00464   <span class="keywordtype">double</span> <a class="code" href="matrix_8h.html#a0f57174a41569bfcf47a55eb2e60e35c">t</a> = <a class="code" href="classBareSegment.html#a4586cfd4b76d82fa2504823166e6ca27">bottom</a>().<a class="code" href="classBareVertex.html#a4b87946890b3b3476f46a9208e52ff01">time</a>(); 
+<a name="l00465"></a>00465   <span class="keywordflow">if</span> ( <a class="code" href="classBareSegment.html#a4586cfd4b76d82fa2504823166e6ca27">bottom</a>().isTerminal() ) t = 0.0;
+<a name="l00466"></a>00466   <span class="keywordflow">return</span> <a class="code" href="matrix_8h.html#a0f57174a41569bfcf47a55eb2e60e35c">t</a>;
+<a name="l00467"></a>00467 }
+<a name="l00468"></a>00468 
+<a name="l00469"></a>00469 <span class="comment">//======================================================================</span>
+<a name="l00470"></a>00470 
+<a name="l00471"></a><a class="code" href="classBareSegment.html#a35b40d9678428ee6772554f8a60bd55d">00471</a> <span class="keyword">inline</span> <span class="keywordtype">double</span> <a class="code" href="classBareSegment.html#a35b40d9678428ee6772554f8a60bd55d">BareSegment::length</a>() { 
+<a name="l00472"></a>00472   <span class="keywordflow">return</span> <a class="code" href="classBareSegment.html#acdc37b746192b6817020c82895ddc16e">topTime</a>() - <a class="code" href="classBareSegment.html#a70f36a1813076bcf547563bfee659ef7">bottomTime</a>();
+<a name="l00473"></a>00473 }
+<a name="l00474"></a>00474 
+<a name="l00475"></a>00475 <span class="comment">//======================================================================</span>
+<a name="l00476"></a>00476 
+<a name="l00477"></a><a class="code" href="classBareSegment.html#accd2600060dbaee3a3b41aed4034c63c">00477</a> <span class="keyword">inline</span> <span class="keywordtype">void</span> <a class="code" href="classBareSegment.html#accd2600060dbaee3a3b41aed4034c63c">BareSegment::dump</a>() {
+<a name="l00478"></a>00478   <span class="comment">//  printf(&quot;\nBareSegment::dump&gt; Start.\n&quot;);</span>
+<a name="l00479"></a>00479         fprintf(<a class="code" href="dla_8hpp.html#a8329f90c6b2bbe8e6456ee9c5bbb5335">FERR</a>,<span class="stringliteral">&quot; Segment [%3d] : &quot;</span>, <span class="keywordtype">id</span>() );
+<a name="l00480"></a>00480   <span class="keywordtype">double</span> bt = 0.0;
+<a name="l00481"></a>00481   <span class="keywordtype">int</span> bid = -1;
+<a name="l00482"></a>00482   <span class="keywordflow">if</span> ( <a class="code" href="classBareSegment.html#a2995013a095dc25b14720ad90af19b09">_v</a>[0] != 0 ) {
+<a name="l00483"></a>00483     bt = <a class="code" href="classBareSegment.html#a70f36a1813076bcf547563bfee659ef7">bottomTime</a>();
+<a name="l00484"></a>00484     bid = <a class="code" href="classBareSegment.html#a4586cfd4b76d82fa2504823166e6ca27">bottom</a>().<a class="code" href="classBareVertex.html#ae0c063cfb2479f614be43b9d2f92ba63">id</a>();
+<a name="l00485"></a>00485   }
+<a name="l00486"></a>00486   <span class="keywordtype">double</span> tt = 0.0;
+<a name="l00487"></a>00487   <span class="keywordtype">int</span> tid = -1;
+<a name="l00488"></a>00488   <span class="keywordflow">if</span> ( <a class="code" href="classBareSegment.html#a2995013a095dc25b14720ad90af19b09">_v</a>[1] != 0 ) {
+<a name="l00489"></a>00489     tt = <a class="code" href="classBareSegment.html#acdc37b746192b6817020c82895ddc16e">topTime</a>();
+<a name="l00490"></a>00490     tid = <a class="code" href="classBareSegment.html#ab5ed5bec1cfe54a48a31900c0abb7565">top</a>().<a class="code" href="classBareVertex.html#ae0c063cfb2479f614be43b9d2f92ba63">id</a>();
+<a name="l00491"></a>00491   }
+<a name="l00492"></a>00492   <span class="keywordflow">if</span> (bt &gt;= tt) bt = 0.0;
+<a name="l00493"></a>00493   fprintf(<a class="code" href="dla_8hpp.html#a8329f90c6b2bbe8e6456ee9c5bbb5335">FERR</a>,<span class="stringliteral">&quot; &lt;%3d&gt;(%8.3f)---&lt;%3d&gt;(%8.3f)&quot;</span>, bid, bt, tid, tt);
+<a name="l00494"></a>00494   fprintf(<a class="code" href="dla_8hpp.html#a8329f90c6b2bbe8e6456ee9c5bbb5335">FERR</a>,<span class="stringliteral">&quot; X=%d&quot;</span>,<a class="code" href="classBareSegment.html#aafabadb78034330e508ebff9c58e0839">X</a>());
+<a name="l00495"></a>00495   fprintf(<a class="code" href="dla_8hpp.html#a8329f90c6b2bbe8e6456ee9c5bbb5335">FERR</a>,<span class="stringliteral">&quot;\n&quot;</span>);
+<a name="l00496"></a>00496 }
+<a name="l00497"></a>00497 
+<a name="l00498"></a>00498 <span class="comment">//======================================================================</span>
+<a name="l00499"></a>00499 
+<a name="l00500"></a><a class="code" href="classBareSegment.html#ae1ee541bb22588b6a71650c807efca90">00500</a> <span class="keyword">inline</span> <span class="keywordtype">bool</span> <a class="code" href="classBareSegment.html#ae1ee541bb22588b6a71650c807efca90">BareSegment::check</a>() {
+<a name="l00501"></a>00501   <span class="keywordtype">bool</span> ERROR = <span class="keyword">false</span>;
+<a name="l00502"></a>00502   <span class="keywordflow">return</span> ERROR;
+<a name="l00503"></a>00503 }
+<a name="l00504"></a>00504 
+<a name="l00505"></a>00505 <span class="comment">//######################################################################</span>
+<a name="l00506"></a>00506 
+<a name="l00507"></a><a class="code" href="classSegment.html#aaf0811aac1205c37d5cfd5bf1ce774a7">00507</a> <span class="keyword">inline</span> <a class="code" href="classSegment.html">Segment</a>&amp; <a class="code" href="classSegment.html#aaf0811aac1205c37d5cfd5bf1ce774a7">Segment::cut</a>( <a class="code" href="classVertex.html">Vertex</a>&amp; V , <span class="keywordtype">int</span> side ) {
+<a name="l00508"></a>00508   <span class="comment">//</span>
+<a name="l00509"></a>00509   <span class="comment">// before:   --(V0)---------[S0]----------(V1)---&gt; tau</span>
+<a name="l00510"></a>00510   <span class="comment">//</span>
+<a name="l00511"></a>00511   <span class="comment">// after:    --&lt;V0&gt;---[S0]---&lt;V&gt;---[S1]---&lt;V1&gt;---&gt; tau</span>
+<a name="l00512"></a>00512   <span class="comment">//</span>
+<a name="l00513"></a>00513   <span class="keywordtype">int</span> x = <a class="code" href="classBareSegment.html#aafabadb78034330e508ebff9c58e0839">X</a>(); <span class="comment">//int X() { return val; };</span>
+<a name="l00514"></a>00514   
+<a name="l00515"></a>00515   <a class="code" href="classVertex.html">Vertex</a>&amp; V0 = <a class="code" href="classBareSegment.html#a4586cfd4b76d82fa2504823166e6ca27">bottom</a>(); <span class="comment">//Vertex&amp; bottom() { return *_v[0]; }; Vertex* _v[2];</span>
+<a name="l00516"></a>00516   <a class="code" href="classVertex.html">Vertex</a>&amp; V1 = <a class="code" href="classBareSegment.html#ab5ed5bec1cfe54a48a31900c0abb7565">top</a>();   <span class="comment">// Vertex&amp; top()    { return *_v[1]; };</span>
+<a name="l00517"></a>00517   <a class="code" href="classSegment.html">Segment</a>&amp; S0 = *<span class="keyword">this</span>;
+<a name="l00518"></a>00518   <a class="code" href="classSegment.html">Segment</a>&amp; S1 = TheSegmentPool.<a class="code" href="classPool.html#ab9a7c933b10d42a302b840116eeb6019">pop</a>();
+<a name="l00519"></a>00519   <a class="code" href="classLinked.html#af47855e2c9ff890baffd29da4c981918">insert_after</a>(S1);
+<a name="l00520"></a>00520   S0.<a class="code" href="classBareSegment.html#ae099821b76842236b9b8c75c3a516492">set</a>( x, V0,  V);
+<a name="l00521"></a>00521   S1.<a class="code" href="classBareSegment.html#ae099821b76842236b9b8c75c3a516492">set</a>( x,  V, V1);
+<a name="l00522"></a>00522   S1.<a class="code" href="classBareSegment.html#ae17cfa78e955d8aca494f699b454eb84">setONSITE</a>( S0.<a class="code" href="classBareSegment.html#a933f66b0e5b5234204b21e43a79197f9">getONSITE</a>() );
+<a name="l00523"></a>00523   <span class="keywordtype">int</span> leg_below = 2 * side;
+<a name="l00524"></a>00524   <span class="keywordtype">int</span> leg_above = leg_below + 1;
+<a name="l00525"></a>00525   V.<a class="code" href="classBareVertex.html#a048a0e76331f88f3e5a3d91b77d8930b">setS</a>( leg_below , S0);
+<a name="l00526"></a>00526   V.<a class="code" href="classBareVertex.html#a048a0e76331f88f3e5a3d91b77d8930b">setS</a>( leg_above , S1);
+<a name="l00527"></a>00527 <span class="comment">// S1 は V1 の必ず下側なので０，２，４，．．．だけ調べればよい．</span>
+<a name="l00528"></a>00528   <span class="keywordflow">for</span> (<span class="keywordtype">int</span> l=0; l&lt;V1.<a class="code" href="classBareVertex.html#af4e0d0ded90cee82c5aff7860a75f710">NLEG</a>(); l+=2) { 
+<a name="l00529"></a>00529     <span class="keywordflow">if</span> ( V1.<a class="code" href="classBareVertex.html#a98eb474ad998a9410dfa9314f5fde041">S</a>(l) == S0 ) {
+<a name="l00530"></a>00530       <span class="comment">//printf(&quot; gotcha!\n&quot;);</span>
+<a name="l00531"></a>00531       V1.<a class="code" href="classBareVertex.html#a048a0e76331f88f3e5a3d91b77d8930b">setS</a>( l , S1 );
+<a name="l00532"></a>00532     }
+<a name="l00533"></a>00533   }
+<a name="l00534"></a>00534   <span class="keywordflow">return</span> S1;
+<a name="l00535"></a>00535 }
+<a name="l00536"></a>00536 
+<a name="l00537"></a>00537 <span class="comment">//======================================================================</span>
+<a name="l00538"></a>00538 
+<a name="l00539"></a><a class="code" href="classSegment.html#af139f30d28b7dc61f5051c0d595af368">00539</a> <span class="keyword">inline</span> <span class="keywordtype">void</span> <a class="code" href="classSegment.html#af139f30d28b7dc61f5051c0d595af368">Segment::erase</a>() {
+<a name="l00540"></a>00540 
+<a name="l00541"></a>00541   <a class="code" href="classLinked.html#a1fcb45e5d2428352eb36b487d1d4eea3">Linked&lt;BareSegment&gt;::remove</a>();
+<a name="l00542"></a>00542   TheSegmentPool.<a class="code" href="classPool.html#a16266a856a381253acfb30f16d454dc8">push</a>(*<span class="keyword">this</span>);
+<a name="l00543"></a>00543 
+<a name="l00544"></a>00544 }
+<a name="l00545"></a>00545 
+<a name="l00546"></a>00546 <span class="comment">//======================================================================</span>
+<a name="l00547"></a>00547 
+<a name="l00548"></a><a class="code" href="classSegment.html#a277571fe541fcc160810b255e95b0485">00548</a> <span class="keyword">inline</span> <span class="keywordtype">void</span> <a class="code" href="classSegment.html#a277571fe541fcc160810b255e95b0485">Segment::absorbNext</a>() {
+<a name="l00549"></a>00549 
+<a name="l00550"></a>00550   <a class="code" href="classSegment.html">Segment</a>&amp; S0 = *<span class="keyword">this</span>;
+<a name="l00551"></a>00551   <a class="code" href="classSegment.html">Segment</a>&amp; S1 = S0.<a class="code" href="classSegment.html#af7333ef3963f1e8c2e96640fbaff268b">next</a>();
+<a name="l00552"></a>00552   <a class="code" href="classVertex.html">Vertex</a>&amp; V1 = S1.<a class="code" href="classBareSegment.html#ab5ed5bec1cfe54a48a31900c0abb7565">top</a>();
+<a name="l00553"></a>00553   S0.<a class="code" href="classBareSegment.html#a635362aae790e5f25a11ec05b07a73e2">setTop</a>(V1);
+<a name="l00554"></a>00554   V1.<a class="code" href="classBareVertex.html#a47cbdd3b2353867017c68bba4a31f137">replace</a>(S1,S0);
+<a name="l00555"></a>00555   S1.<a class="code" href="classSegment.html#af139f30d28b7dc61f5051c0d595af368">erase</a>();
+<a name="l00556"></a>00556 
+<a name="l00557"></a>00557 }
+<a name="l00558"></a>00558 
+<a name="l00559"></a>00559 <span class="comment">//######################################################################</span>
+<a name="l00560"></a>00560 
+<a name="l00561"></a><a class="code" href="classBareVertex.html#a0c4008a4756ed8a7ae8dc5b34100773e">00561</a> <span class="keyword">inline</span> <span class="keywordtype">int</span> <a class="code" href="classBareVertex.html#a0c4008a4756ed8a7ae8dc5b34100773e">BareVertex::X</a>(<span class="keywordtype">int</span> i) {
+<a name="l00562"></a>00562   <span class="keywordflow">return</span> <a class="code" href="classBareVertex.html#a98eb474ad998a9410dfa9314f5fde041">S</a>(i).<a class="code" href="classBareSegment.html#aafabadb78034330e508ebff9c58e0839">X</a>();
+<a name="l00563"></a>00563 }
+<a name="l00564"></a>00564 
+<a name="l00565"></a>00565 <span class="comment">//======================================================================</span>
+<a name="l00566"></a><a class="code" href="classBareVertex.html#abafb84985de1e12e8a567608536dd47a">00566</a> <span class="keyword">inline</span> <span class="keywordtype">void</span> <a class="code" href="classBareVertex.html#abafb84985de1e12e8a567608536dd47a">BareVertex::init_WORM</a>() {
+<a name="l00567"></a>00567   <a class="code" href="classBareVertex.html#a02fd73d861ef2e4aabb38c0c9ff82947">init</a>();
+<a name="l00568"></a>00568   <a class="code" href="classBareVertex.html#a3f239bed43d2a9b39c97b1a4b3061145">_s</a>.<a class="code" href="classArray.html#a5fd83b4910658540977272a168cfbdae">init</a>(1,2);
+<a name="l00569"></a>00569   <a class="code" href="classBareVertex.html#a3f239bed43d2a9b39c97b1a4b3061145">_s</a>.<a class="code" href="classArray.html#a46c36a9a7be294d4f647798d07c79c7e">set_all</a>(0);
+<a name="l00570"></a>00570   <a class="code" href="classBareVertex.html#a0de3779c094ee4a740704bf1b0c8f70d">ONINTERACTION</a> = &amp;<a class="code" href="objects_8hpp.html#ae325b12a82aa0c72194eef3a8f46dc9f">TailOfWorm</a> ;
+<a name="l00571"></a>00571 }
+<a name="l00572"></a>00572 <span class="comment">//======================================================================</span>
+<a name="l00573"></a><a class="code" href="classBareVertex.html#ab268e56c3e42b5a09d7de270ab3255c0">00573</a> <span class="keyword">inline</span> <span class="keywordtype">void</span> <a class="code" href="classBareVertex.html#ab268e56c3e42b5a09d7de270ab3255c0">BareVertex::init_TERM</a>(<a class="code" href="classSegment.html">Segment</a>&amp; S) { <span class="comment">// initializer for a terminal vertex//katou</span>
+<a name="l00574"></a>00574   <a class="code" href="classBareVertex.html#a02fd73d861ef2e4aabb38c0c9ff82947">init</a>();
+<a name="l00575"></a>00575   <a class="code" href="classBareVertex.html#a3f239bed43d2a9b39c97b1a4b3061145">_s</a>.<a class="code" href="classArray.html#a5fd83b4910658540977272a168cfbdae">init</a>(1,2);
+<a name="l00576"></a>00576   <a class="code" href="classBareVertex.html#a3f239bed43d2a9b39c97b1a4b3061145">_s</a>.<a class="code" href="classArray.html#a46c36a9a7be294d4f647798d07c79c7e">set_all</a>(0);
+<a name="l00577"></a>00577   <a class="code" href="classBareVertex.html#a3f239bed43d2a9b39c97b1a4b3061145">_s</a>[0] = &amp;<a class="code" href="classBareVertex.html#a98eb474ad998a9410dfa9314f5fde041">S</a>;
+<a name="l00578"></a>00578   <a class="code" href="classBareVertex.html#a3f239bed43d2a9b39c97b1a4b3061145">_s</a>[1] = &amp;<a class="code" href="classBareVertex.html#a98eb474ad998a9410dfa9314f5fde041">S</a>;
+<a name="l00579"></a>00579   <a class="code" href="classBareVertex.html#a0de3779c094ee4a740704bf1b0c8f70d">ONINTERACTION</a> = &amp;<a class="code" href="objects_8hpp.html#a7e9f609bd12089deadc2fa0b12b81c2b">TerminalOfWorldline</a> ;
+<a name="l00580"></a>00580 }
+<a name="l00581"></a>00581 <span class="comment">//======================================================================</span>
+<a name="l00582"></a><a class="code" href="classBareVertex.html#a8d6f4521b27f32080d7477cf8ee8a274">00582</a> <span class="keyword">inline</span> <span class="keywordtype">bool</span> <a class="code" href="classBareVertex.html#a8d6f4521b27f32080d7477cf8ee8a274">BareVertex::isTerminal</a>()<span class="keyword"> const </span>{
+<a name="l00583"></a>00583   <span class="keywordflow">return</span> (<a class="code" href="classBareVertex.html#a0de3779c094ee4a740704bf1b0c8f70d">ONINTERACTION</a> == &amp;TerminalOfWorldline);
+<a name="l00584"></a>00584 }
+<a name="l00585"></a>00585 <span class="comment">//======================================================================</span>
+<a name="l00586"></a><a class="code" href="classBareVertex.html#a33c9208baae9b09a874bfcbba9611c59">00586</a> <span class="keyword">inline</span> <span class="keywordtype">bool</span> <a class="code" href="classBareVertex.html#a33c9208baae9b09a874bfcbba9611c59">BareVertex::isTail</a>()<span class="keyword"> const </span>{
+<a name="l00587"></a>00587   <span class="keywordflow">return</span> (<a class="code" href="classBareVertex.html#a0de3779c094ee4a740704bf1b0c8f70d">ONINTERACTION</a> == &amp;TailOfWorm);
+<a name="l00588"></a>00588 }
+<a name="l00589"></a>00589 <span class="comment">//======================================================================</span>
+<a name="l00590"></a>00590 
+<a name="l00591"></a><a class="code" href="classBareVertex.html#ae47d008095673061722c8c5ab1a01d2b">00591</a> <span class="keyword">inline</span> <span class="keywordtype">int</span> <a class="code" href="classBareVertex.html#ae47d008095673061722c8c5ab1a01d2b">BareVertex::which</a>(<a class="code" href="classSegment.html">Segment</a>&amp; s) {
+<a name="l00592"></a>00592   <span class="keywordtype">int</span> i;
+<a name="l00593"></a>00593   <span class="keywordflow">for</span> ( i=0; i&lt;4; i++) {
+<a name="l00594"></a>00594     <span class="keywordflow">if</span> ( <a class="code" href="classBareVertex.html#a3f239bed43d2a9b39c97b1a4b3061145">_s</a>[i] == &amp;s ) <span class="keywordflow">return</span> i;
+<a name="l00595"></a>00595   }
+<a name="l00596"></a>00596   printf(<span class="stringliteral">&quot;BareVertex::which&gt; ERROR. No such segment.\n&quot;</span>);
+<a name="l00597"></a>00597   printf(<span class="stringliteral">&quot;tried to find the segment\n&quot;</span>);
+<a name="l00598"></a>00598   s.<a class="code" href="classLinked.html#accd2600060dbaee3a3b41aed4034c63c">dump</a>();
+<a name="l00599"></a>00599   printf(<span class="stringliteral">&quot;in the vertex\n&quot;</span>);
+<a name="l00600"></a>00600   <a class="code" href="classBareVertex.html#accd2600060dbaee3a3b41aed4034c63c">dump</a>();
+<a name="l00601"></a>00601   exit(0);
+<a name="l00602"></a>00602 }
+<a name="l00603"></a>00603 
+<a name="l00604"></a>00604 <span class="comment">//======================================================================</span>
+<a name="l00605"></a>00605 
+<a name="l00606"></a><a class="code" href="classBareVertex.html#a47cbdd3b2353867017c68bba4a31f137">00606</a> <span class="keywordtype">void</span> <a class="code" href="classBareVertex.html#a47cbdd3b2353867017c68bba4a31f137">BareVertex::replace</a>(<a class="code" href="classSegment.html">Segment</a>&amp; Sold, <a class="code" href="classSegment.html">Segment</a>&amp; Snew) {
+<a name="l00607"></a>00607   <a class="code" href="classBareVertex.html#a048a0e76331f88f3e5a3d91b77d8930b">setS</a>(<a class="code" href="classBareVertex.html#ae47d008095673061722c8c5ab1a01d2b">which</a>(Sold),Snew);
+<a name="l00608"></a>00608 }
+<a name="l00609"></a>00609 
+<a name="l00610"></a>00610 <span class="comment">//======================================================================</span>
+<a name="l00611"></a>00611 
+<a name="l00612"></a><a class="code" href="classBareVertex.html#a0757ddb5fa3cf27ba383415646971d13">00612</a> <span class="keyword">inline</span> <span class="keywordtype">bool</span> <a class="code" href="classBareVertex.html#a0757ddb5fa3cf27ba383415646971d13">BareVertex::isKink</a>() {
+<a name="l00613"></a>00613   <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i=0; i&lt;<a class="code" href="classBareVertex.html#af4e0d0ded90cee82c5aff7860a75f710">NLEG</a>(); i+=2) {
+<a name="l00614"></a>00614     <span class="keywordflow">if</span> ( <a class="code" href="classBareVertex.html#a0c4008a4756ed8a7ae8dc5b34100773e">X</a>(i) != <a class="code" href="classBareVertex.html#a0c4008a4756ed8a7ae8dc5b34100773e">X</a>(i+1) ) <span class="keywordflow">return</span> <span class="keyword">true</span>;
+<a name="l00615"></a>00615   }
+<a name="l00616"></a>00616   <span class="keywordflow">return</span> <span class="keyword">false</span>;
+<a name="l00617"></a>00617 }
+<a name="l00618"></a>00618 
+<a name="l00619"></a>00619 <span class="comment">//======================================================================</span>
+<a name="l00620"></a>00620 
+<a name="l00621"></a><a class="code" href="classBareVertex.html#ae1ee541bb22588b6a71650c807efca90">00621</a> <span class="keyword">inline</span> <span class="keywordtype">bool</span> <a class="code" href="classBareVertex.html#ae1ee541bb22588b6a71650c807efca90">BareVertex::check</a>() {
+<a name="l00622"></a>00622 
+<a name="l00623"></a>00623   <span class="keywordtype">bool</span> ERROR = <span class="keyword">false</span>;
+<a name="l00624"></a>00624   <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i=0; i&lt;<a class="code" href="classBareVertex.html#ab8e4e3e2a7bf18888b71bdf9dda0770b">size</a>(); i+=2) {
+<a name="l00625"></a>00625     <a class="code" href="classSegment.html">Segment</a>&amp; S0 = <a class="code" href="classBareVertex.html#a98eb474ad998a9410dfa9314f5fde041">S</a>(i);
+<a name="l00626"></a>00626     <a class="code" href="classSegment.html">Segment</a>&amp; S1 = <a class="code" href="classBareVertex.html#a98eb474ad998a9410dfa9314f5fde041">S</a>(i+1);
+<a name="l00627"></a>00627     <span class="keywordflow">if</span> ( &amp;S0.<a class="code" href="classSegment.html#af7333ef3963f1e8c2e96640fbaff268b">next</a>() != &amp;S1 ) ERROR = <span class="keyword">true</span>;
+<a name="l00628"></a>00628     <span class="keywordflow">if</span> ( &amp;S1.<a class="code" href="classSegment.html#a768425876c1e05988a6f293bcd17ca99">prev</a>() != &amp;S0 ) ERROR = <span class="keyword">true</span>;
+<a name="l00629"></a>00629   }
+<a name="l00630"></a>00630   <span class="keywordflow">if</span> ( ERROR ) {
+<a name="l00631"></a>00631     printf(<span class="stringliteral">&quot;Vertex::check&gt; ERROR.\n&quot;</span>);
+<a name="l00632"></a>00632     <a class="code" href="classBareVertex.html#accd2600060dbaee3a3b41aed4034c63c">dump</a>();
+<a name="l00633"></a>00633   }
+<a name="l00634"></a>00634   <span class="keywordflow">return</span> ERROR;
+<a name="l00635"></a>00635 
+<a name="l00636"></a>00636 }
+<a name="l00637"></a>00637 
+<a name="l00638"></a>00638 <span class="comment">//======================================================================</span>
+<a name="l00639"></a>00639 
+<a name="l00640"></a><a class="code" href="classBareVertex.html#aade87bd6b03d4844d472412c6bc36039">00640</a> <span class="keyword">inline</span> <a class="code" href="classVertexInitialConfiguration.html">VertexInitialConfiguration</a>&amp; <a class="code" href="classBareVertex.html#aade87bd6b03d4844d472412c6bc36039">BareVertex::getInitialConfiguration</a>( <span class="keywordtype">int</span> inc , <span class="keywordtype">int</span> xinc ) {
+<a name="l00641"></a>00641 
+<a name="l00642"></a>00642   <a class="code" href="classVertexProperty.html">VertexProperty</a>&amp; P = <a class="code" href="classBareVertex.html#aa25baa44795d12b3c58a54b1de379c35">property</a>();
+<a name="l00643"></a>00643   <span class="comment">//  int NLEG = 2 * P.NBODY;</span>
+<a name="l00644"></a>00644   <span class="keywordtype">int</span> NDIM = P.<a class="code" href="classVertexProperty.html#ad2e978411f291e4018c6291e9d4a6deb">NLEG</a> + 2;
+<a name="l00645"></a>00645   <span class="keywordtype">int</span>* x = <span class="keyword">new</span> <span class="keywordtype">int</span>[NDIM]; <span class="comment">//edit sakakura</span>
+<a name="l00646"></a>00646 <span class="comment">//  int x[NDIM];</span>
+<a name="l00647"></a>00647   <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i=0; i&lt;P.<a class="code" href="classVertexProperty.html#ad2e978411f291e4018c6291e9d4a6deb">NLEG</a>; i++)  x[i] = <a class="code" href="classBareVertex.html#a0c4008a4756ed8a7ae8dc5b34100773e">X</a>(i);
+<a name="l00648"></a>00648   <span class="keywordtype">int</span> st = P.<a class="code" href="classVertexProperty.html#af590d1de58a684f9549e505207499da6">StateCode</a>(x);
+<a name="l00649"></a>00649 
+<a name="l00650"></a>00650 <span class="preprocessor">#ifdef DEB</span>
+<a name="l00651"></a>00651 <span class="preprocessor"></span>  <span class="keywordflow">if</span> ( st == <a class="code" href="namespaceSTATE.html#a6af3477d2e74163c155b0d0a2e4265ae">STATE::UNDEF</a> ) {
+<a name="l00652"></a>00652     printf(<span class="stringliteral">&quot;BareVertex::getInitialConfiguration&gt; Error.\n&quot;</span>);
+<a name="l00653"></a>00653     printf(<span class="stringliteral">&quot;  An forbidden state has been encountered.\n&quot;</span>);
+<a name="l00654"></a>00654     printf(<span class="stringliteral">&quot; x= (&quot;</span>);
+<a name="l00655"></a>00655     <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i=0; i&lt;P.<a class="code" href="classVertexProperty.html#ad2e978411f291e4018c6291e9d4a6deb">NLEG</a>; i++) printf(<span class="stringliteral">&quot; %d&quot;</span>, x[i]);
+<a name="l00656"></a>00656     printf(<span class="stringliteral">&quot;) \n&quot;</span>);
+<a name="l00657"></a>00657     <a class="code" href="classBareVertex.html#accd2600060dbaee3a3b41aed4034c63c">dump</a>();
+<a name="l00658"></a>00658     P.<a class="code" href="classVertexProperty.html#accd2600060dbaee3a3b41aed4034c63c">dump</a>();
+<a name="l00659"></a>00659     exit(0);
+<a name="l00660"></a>00660   }
+<a name="l00661"></a>00661 <span class="preprocessor">#endif</span>
+<a name="l00662"></a>00662 <span class="preprocessor"></span>  <span class="keyword">delete</span> []x;
+<a name="l00663"></a>00663   <span class="keywordflow">return</span> P.<a class="code" href="classVertexProperty.html#ac9aa4455317b6836acd466272352aaaf">getIC</a>(st,inc,xinc);
+<a name="l00664"></a>00664 }
+<a name="l00665"></a>00665 
+<a name="l00666"></a>00666 <span class="comment">//======================================================================</span>
+<a name="l00667"></a>00667 
+<a name="l00668"></a><a class="code" href="classBareVertex.html#accd2600060dbaee3a3b41aed4034c63c">00668</a> <span class="keywordtype">void</span> <a class="code" href="classBareVertex.html#accd2600060dbaee3a3b41aed4034c63c">BareVertex::dump</a>() {
+<a name="l00669"></a>00669   <span class="keywordtype">int</span> vt = <a class="code" href="classBareVertex.html#ae3775081dae5d62a47eee5c62fa49995">type</a>();
+<a name="l00670"></a>00670   <span class="keywordtype">int</span> vc = <a class="code" href="classBareVertex.html#aefa8641ce4aace27611b432185e74744">category</a>();
+<a name="l00671"></a>00671 <span class="comment">//  int n = size();</span>
+<a name="l00672"></a>00672 <span class="comment">//  double t = time();</span>
+<a name="l00673"></a>00673 
+<a name="l00674"></a>00674   fprintf( <a class="code" href="dla_8hpp.html#a8329f90c6b2bbe8e6456ee9c5bbb5335">FERR</a>, 
+<a name="l00675"></a>00675            <span class="stringliteral">&quot;    &lt;%2d&gt; ... vt=(%1d,%2d), nl=%1d, tau=%11.6f &quot;</span>,
+<a name="l00676"></a>00676            <span class="keywordtype">id</span>(), vc, vt, <a class="code" href="classBareVertex.html#ab8e4e3e2a7bf18888b71bdf9dda0770b">size</a>(), <a class="code" href="classBareVertex.html#a4b87946890b3b3476f46a9208e52ff01">time</a>() );
+<a name="l00677"></a>00677   <span class="keywordflow">if</span> ( <a class="code" href="classBareVertex.html#a3f239bed43d2a9b39c97b1a4b3061145">_s</a>.<a class="code" href="classArray.html#af4b57d21919c42d55af03391f91a1c08">size</a>() != 0 ) {
+<a name="l00678"></a>00678     <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i=0; i&lt;<a class="code" href="classBareVertex.html#ab8e4e3e2a7bf18888b71bdf9dda0770b">size</a>(); i++) {
+<a name="l00679"></a>00679       <span class="keywordtype">int</span> <span class="keywordtype">id</span> = -1;
+<a name="l00680"></a>00680       <span class="keywordflow">if</span> ( <a class="code" href="classBareVertex.html#a3f239bed43d2a9b39c97b1a4b3061145">_s</a>[i] != 0 ) <span class="keywordtype">id</span> = <a class="code" href="classBareVertex.html#a3f239bed43d2a9b39c97b1a4b3061145">_s</a>[i]-&gt;id();
+<a name="l00681"></a>00681       fprintf( <a class="code" href="dla_8hpp.html#a8329f90c6b2bbe8e6456ee9c5bbb5335">FERR</a>, <span class="stringliteral">&quot;[%2d]&quot;</span>, <span class="keywordtype">id</span>);
+<a name="l00682"></a>00682     }
+<a name="l00683"></a>00683     fprintf( <a class="code" href="dla_8hpp.html#a8329f90c6b2bbe8e6456ee9c5bbb5335">FERR</a>, <span class="stringliteral">&quot; X= (&quot;</span>);
+<a name="l00684"></a>00684     <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i=0; i&lt;<a class="code" href="classBareVertex.html#ab8e4e3e2a7bf18888b71bdf9dda0770b">size</a>(); i++) {
+<a name="l00685"></a>00685       <span class="keywordtype">int</span> x = -1;
+<a name="l00686"></a>00686       <span class="keywordflow">if</span> ( <a class="code" href="classBareVertex.html#a3f239bed43d2a9b39c97b1a4b3061145">_s</a>[i] != 0 ) x = <a class="code" href="classBareVertex.html#a3f239bed43d2a9b39c97b1a4b3061145">_s</a>[i]-&gt;X();
+<a name="l00687"></a>00687       fprintf( <a class="code" href="dla_8hpp.html#a8329f90c6b2bbe8e6456ee9c5bbb5335">FERR</a>, <span class="stringliteral">&quot; %d&quot;</span>, x);
+<a name="l00688"></a>00688     }
+<a name="l00689"></a>00689     fprintf( <a class="code" href="dla_8hpp.html#a8329f90c6b2bbe8e6456ee9c5bbb5335">FERR</a>, <span class="stringliteral">&quot;)&quot;</span>);
+<a name="l00690"></a>00690   } <span class="keywordflow">else</span> {
+<a name="l00691"></a>00691     fprintf( <a class="code" href="dla_8hpp.html#a8329f90c6b2bbe8e6456ee9c5bbb5335">FERR</a>, <span class="stringliteral">&quot; segments not defined.&quot;</span>);
+<a name="l00692"></a>00692   }
+<a name="l00693"></a>00693   fprintf( <a class="code" href="dla_8hpp.html#a8329f90c6b2bbe8e6456ee9c5bbb5335">FERR</a>, <span class="stringliteral">&quot;\n&quot;</span>);
+<a name="l00694"></a>00694 }
+<a name="l00695"></a>00695 
+<a name="l00696"></a>00696 <span class="comment">//######################################################################</span>
+<a name="l00697"></a>00697 
+<a name="l00698"></a><a class="code" href="classVertex.html#a4bcd6ce7d04c38f8c4ff908d1fc50f86">00698</a> <span class="keyword">inline</span> <span class="keywordtype">void</span> <a class="code" href="classVertex.html#a4bcd6ce7d04c38f8c4ff908d1fc50f86">Vertex::reconnect</a>() {
+<a name="l00699"></a>00699   <span class="keywordflow">for</span> (<span class="keywordtype">int</span> l=0; l&lt;<a class="code" href="classBareVertex.html#ab8e4e3e2a7bf18888b71bdf9dda0770b">size</a>(); l+=2) <a class="code" href="classBareVertex.html#a98eb474ad998a9410dfa9314f5fde041">S</a>(l).<a class="code" href="classSegment.html#a277571fe541fcc160810b255e95b0485">absorbNext</a>();
+<a name="l00700"></a>00700 }
+<a name="l00701"></a>00701 
+<a name="l00702"></a>00702 <span class="comment">//======================================================================</span>
+<a name="l00703"></a>00703 
+<a name="l00704"></a><a class="code" href="classVertex.html#af139f30d28b7dc61f5051c0d595af368">00704</a> <span class="keyword">inline</span> <span class="keywordtype">void</span> <a class="code" href="classVertex.html#af139f30d28b7dc61f5051c0d595af368">Vertex::erase</a>() {
+<a name="l00705"></a>00705   <a class="code" href="classVertex.html#a4bcd6ce7d04c38f8c4ff908d1fc50f86">reconnect</a>();
+<a name="l00706"></a>00706 <span class="comment">//if (ALERT) {</span>
+<a name="l00707"></a>00707 <span class="comment">//  printf(&quot;\nVertex::erase&gt; ### Erasing\n&quot;);</span>
+<a name="l00708"></a>00708 <span class="comment">//  dump();</span>
+<a name="l00709"></a>00709 <span class="comment">//}</span>
+<a name="l00710"></a>00710   <a class="code" href="classLinked.html#a1fcb45e5d2428352eb36b487d1d4eea3">Linked&lt;BareVertex&gt;::remove</a>();
+<a name="l00711"></a>00711 <span class="comment">//if (ALERT) {</span>
+<a name="l00712"></a>00712 <span class="comment">//  printf(&quot;\nVertex::erase&gt; ### Done\n&quot;);</span>
+<a name="l00713"></a>00713 <span class="comment">//  dump();</span>
+<a name="l00714"></a>00714 <span class="comment">//}</span>
+<a name="l00715"></a>00715   TheVertexPool.<a class="code" href="classPool.html#a16266a856a381253acfb30f16d454dc8">push</a>(*<span class="keyword">this</span>);
+<a name="l00716"></a>00716 }
+<a name="l00717"></a>00717 
+<a name="l00718"></a>00718 <span class="comment">//######################################################################</span>
+<a name="l00719"></a>00719 
+<a name="l00720"></a><a class="code" href="classWorm.html#a7ffb6cc78e565726058a4f2cbb85c8d2">00720</a> <span class="keyword">inline</span> <a class="code" href="classWorm.html#a7ffb6cc78e565726058a4f2cbb85c8d2">Worm::Worm</a>() {
+<a name="l00721"></a>00721   <a class="code" href="classVertex.html">Vertex</a>&amp; V = TheVertexPool.<a class="code" href="classPool.html#ab9a7c933b10d42a302b840116eeb6019">pop</a>();
+<a name="l00722"></a>00722   V.<a class="code" href="classBareVertex.html#abafb84985de1e12e8a567608536dd47a">init_WORM</a>(); <span class="comment">// ２本足なので初期化は TERM と同じでよい．</span>
+<a name="l00723"></a>00723   <a class="code" href="classWorm.html#ae71aec326cc6662e506dc1df6a6f882b">_vorg</a> = &amp;V;
+<a name="l00724"></a>00724   <a class="code" href="classWorm.html#add66ebb4db5f1c1178169b66202d1033">_vcur</a> = 0;
+<a name="l00725"></a>00725   <a class="code" href="classWorm.html#ab2b5bdeb00880664b2ab719e72ae36de">_scur</a> = 0;
+<a name="l00726"></a>00726 }
+<a name="l00727"></a>00727 
+<a name="l00728"></a>00728 <span class="comment">//======================================================================</span>
+<a name="l00729"></a>00729 
+<a name="l00730"></a><a class="code" href="classWorm.html#a4fd2950fb8e381bd1e1abeb04d97644f">00730</a> <span class="keyword">inline</span> <a class="code" href="classWorm.html#a4fd2950fb8e381bd1e1abeb04d97644f">Worm::~Worm</a>() {
+<a name="l00731"></a>00731   TheVertexPool.<a class="code" href="classPool.html#a16266a856a381253acfb30f16d454dc8">push</a>(*<a class="code" href="classWorm.html#ae71aec326cc6662e506dc1df6a6f882b">_vorg</a>);
+<a name="l00732"></a>00732   <a class="code" href="classWorm.html#ae71aec326cc6662e506dc1df6a6f882b">_vorg</a> = 0;
+<a name="l00733"></a>00733 }
+<a name="l00734"></a>00734 
+<a name="l00735"></a>00735 <span class="comment">//======================================================================</span>
+<a name="l00736"></a>00736 
+<a name="l00737"></a><a class="code" href="classWorm.html#a1fcb45e5d2428352eb36b487d1d4eea3">00737</a> <span class="keyword">inline</span> <span class="keywordtype">void</span> <a class="code" href="classWorm.html#a1fcb45e5d2428352eb36b487d1d4eea3">Worm::remove</a>() {
+<a name="l00738"></a>00738   <a class="code" href="classVertex.html">Vertex</a>&amp; v = <a class="code" href="classWorm.html#adde80f60a029f38728bad68a9e5e6bfd">getCurrentVertex</a>();
+<a name="l00739"></a>00739   v.<a class="code" href="classVertex.html#a4bcd6ce7d04c38f8c4ff908d1fc50f86">reconnect</a>();
+<a name="l00740"></a>00740 }
+<a name="l00741"></a>00741 
+<a name="l00742"></a>00742 <span class="comment">//======================================================================</span>
+<a name="l00743"></a>00743 
+<a name="l00744"></a><a class="code" href="classWorm.html#accd2600060dbaee3a3b41aed4034c63c">00744</a> <span class="keyword">inline</span> <span class="keywordtype">void</span> <a class="code" href="classWorm.html#accd2600060dbaee3a3b41aed4034c63c">Worm::dump</a>() {
+<a name="l00745"></a>00745   fprintf(<a class="code" href="dla_8hpp.html#a8329f90c6b2bbe8e6456ee9c5bbb5335">FERR</a>,<span class="stringliteral">&quot;\n&quot;</span>);
+<a name="l00746"></a>00746   fprintf(<a class="code" href="dla_8hpp.html#a8329f90c6b2bbe8e6456ee9c5bbb5335">FERR</a>,<span class="stringliteral">&quot;Worm:\n&quot;</span>);
+<a name="l00747"></a>00747   fprintf(<a class="code" href="dla_8hpp.html#a8329f90c6b2bbe8e6456ee9c5bbb5335">FERR</a>,<span class="stringliteral">&quot;  x_behind = %d\n&quot;</span>, <a class="code" href="classWorm.html#a7ad113040e0afa79a96d1b8bf1209db0">getXBEHIND</a>() );
+<a name="l00748"></a>00748   <span class="keywordflow">if</span> ( <a class="code" href="classWorm.html#ae71aec326cc6662e506dc1df6a6f882b">_vorg</a> == 0 ) {
+<a name="l00749"></a>00749     fprintf(<a class="code" href="dla_8hpp.html#a8329f90c6b2bbe8e6456ee9c5bbb5335">FERR</a>,<span class="stringliteral">&quot;  _vorg (the worm tail) is not defined.\n&quot;</span>);
+<a name="l00750"></a>00750   } <span class="keywordflow">else</span> {
+<a name="l00751"></a>00751     fprintf(<a class="code" href="dla_8hpp.html#a8329f90c6b2bbe8e6456ee9c5bbb5335">FERR</a>,<span class="stringliteral">&quot;  Tail:\n&quot;</span>);
+<a name="l00752"></a>00752     <a class="code" href="classWorm.html#ae71aec326cc6662e506dc1df6a6f882b">_vorg</a>-&gt;<a class="code" href="classLinked.html#accd2600060dbaee3a3b41aed4034c63c">dump</a>(); <span class="comment">//barevertex.dump()</span>
+<a name="l00753"></a>00753   }
+<a name="l00754"></a>00754   <span class="keywordflow">if</span> ( <a class="code" href="classWorm.html#add66ebb4db5f1c1178169b66202d1033">_vcur</a> == 0 ) {
+<a name="l00755"></a>00755     fprintf(<a class="code" href="dla_8hpp.html#a8329f90c6b2bbe8e6456ee9c5bbb5335">FERR</a>,<span class="stringliteral">&quot;  _vcur (the current vertex) is not defined.\n&quot;</span>);
+<a name="l00756"></a>00756   } <span class="keywordflow">else</span> {    
+<a name="l00757"></a>00757     fprintf(<a class="code" href="dla_8hpp.html#a8329f90c6b2bbe8e6456ee9c5bbb5335">FERR</a>,<span class="stringliteral">&quot;  The last visited vertex:\n&quot;</span>);
+<a name="l00758"></a>00758     <a class="code" href="classWorm.html#add66ebb4db5f1c1178169b66202d1033">_vcur</a>-&gt;<a class="code" href="classLinked.html#accd2600060dbaee3a3b41aed4034c63c">dump</a>();
+<a name="l00759"></a>00759   }
+<a name="l00760"></a>00760   <span class="keywordflow">if</span> ( <a class="code" href="classWorm.html#ab2b5bdeb00880664b2ab719e72ae36de">_scur</a> == 0 ) {
+<a name="l00761"></a>00761     fprintf(<a class="code" href="dla_8hpp.html#a8329f90c6b2bbe8e6456ee9c5bbb5335">FERR</a>,<span class="stringliteral">&quot;  _scur (the current segment) is not defined.\n&quot;</span>);
+<a name="l00762"></a>00762   } <span class="keywordflow">else</span> {    
+<a name="l00763"></a>00763     fprintf(<a class="code" href="dla_8hpp.html#a8329f90c6b2bbe8e6456ee9c5bbb5335">FERR</a>,<span class="stringliteral">&quot;  The segment ahead of the head:\n&quot;</span>);
+<a name="l00764"></a>00764     <a class="code" href="classWorm.html#ab2b5bdeb00880664b2ab719e72ae36de">_scur</a>-&gt;<a class="code" href="classLinked.html#accd2600060dbaee3a3b41aed4034c63c">dump</a>();
+<a name="l00765"></a>00765   }
+<a name="l00766"></a>00766 }
+<a name="l00767"></a>00767 
+<a name="l00768"></a>00768 <span class="comment">//######################################################################</span>
+<a name="l00769"></a>00769 
+<a name="l00770"></a><a class="code" href="classSite.html#a8304e90f3ff06a31fe58c4f453147362">00770</a> <span class="keyword">inline</span> <a class="code" href="classSite.html#a8304e90f3ff06a31fe58c4f453147362">Site::Site</a>() {
+<a name="l00771"></a>00771 <span class="comment">//printf(&quot;Site::Site&gt; Start.\n&quot;);</span>
+<a name="l00772"></a>00772   <a class="code" href="classSite.html#aa59633d9130e5e1424441ffb4e98ce0e">lastID</a>++;
+<a name="l00773"></a>00773   <a class="code" href="classSite.html#af180e926633cde08a05ccbc3af397ee4">ID</a> = <a class="code" href="classSite.html#aa59633d9130e5e1424441ffb4e98ce0e">lastID</a>;
+<a name="l00774"></a>00774   <a class="code" href="classSite.html#a2084a02bdb1809ce8c6eac6561cd7a5f">_SP</a> = 0;
+<a name="l00775"></a>00775   <a class="code" href="classVertex.html">Vertex</a>&amp; v = TheVertexPool.<a class="code" href="classPool.html#ab9a7c933b10d42a302b840116eeb6019">pop</a>();
+<a name="l00776"></a>00776   <a class="code" href="classSegment.html">Segment</a>&amp; s = TheSegmentPool.<a class="code" href="classPool.html#ab9a7c933b10d42a302b840116eeb6019">pop</a>();
+<a name="l00777"></a>00777   v.BareVertex::init_TERM(s);
+<a name="l00778"></a>00778   s.<a class="code" href="classBareSegment.html#ae099821b76842236b9b8c75c3a516492">set</a>(0, v, v);
+<a name="l00779"></a>00779   s.<a class="code" href="classBareSegment.html#ae17cfa78e955d8aca494f699b454eb84">setONSITE</a>(<span class="keyword">this</span>);
+<a name="l00780"></a>00780   <a class="code" href="classSite.html#abebccdd11a9496de8dc57cbb323ae394">_vterm</a> = &amp;v;
+<a name="l00781"></a>00781   <a class="code" href="classRing.html#ac94cf0e75ceced4953a73b93e8807889">add_head</a>(s);
+<a name="l00782"></a>00782 }
+<a name="l00783"></a>00783 
+<a name="l00784"></a>00784 <span class="comment">//======================================================================</span>
+<a name="l00785"></a>00785 
+<a name="l00786"></a><a class="code" href="classSite.html#aa54971e96a9e254d71fc713e96dc1065">00786</a> <span class="keyword">inline</span> <a class="code" href="classSite.html#aa54971e96a9e254d71fc713e96dc1065">Site::~Site</a>() {
+<a name="l00787"></a>00787   <span class="comment">/*</span>
+<a name="l00788"></a>00788 <span class="comment">  for(int iCI = 0; iCI&lt;NCI; ++iCI){</span>
+<a name="l00789"></a>00789 <span class="comment">    (*ConnectedInteraction[iCI]).dump();</span>
+<a name="l00790"></a>00790 <span class="comment">  }</span>
+<a name="l00791"></a>00791 <span class="comment">  */</span>
+<a name="l00792"></a>00792   <span class="keyword">delete</span> [] <a class="code" href="classSite.html#a55deff9653a1addcbb3ecd478433e3f2">ConnectedInteraction</a>;
+<a name="l00793"></a>00793   <span class="keywordflow">while</span>( ! <a class="code" href="classRing.html#a3f37b042a1e7cd4bd38fc564de81f0da">empty</a>() ) {
+<a name="l00794"></a>00794     <a class="code" href="classSegment.html">Segment</a>&amp; S = <a class="code" href="classRing.html#ae25b42aa10f9f14b23bb58506b6da94d">first</a>();
+<a name="l00795"></a>00795     S.<a class="code" href="classLinked.html#a1fcb45e5d2428352eb36b487d1d4eea3">remove</a>();
+<a name="l00796"></a>00796     TheSegmentPool.<a class="code" href="classPool.html#a16266a856a381253acfb30f16d454dc8">push</a>(S);
+<a name="l00797"></a>00797   };
+<a name="l00798"></a>00798   TheVertexPool.<a class="code" href="classPool.html#a16266a856a381253acfb30f16d454dc8">push</a>(*<a class="code" href="classSite.html#abebccdd11a9496de8dc57cbb323ae394">_vterm</a>);
+<a name="l00799"></a>00799 }
+<a name="l00800"></a>00800 
+<a name="l00801"></a>00801 <span class="comment">//======================================================================</span>
+<a name="l00802"></a>00802 
+<a name="l00803"></a><a class="code" href="classSite.html#a0e0ac0a0baad3dcf043d2304ccb897ef">00803</a> <span class="keyword">inline</span> <a class="code" href="classSegment.html">Segment</a>&amp; <a class="code" href="classSite.html#a0e0ac0a0baad3dcf043d2304ccb897ef">Site::findS</a>(<span class="keywordtype">double</span> <a class="code" href="matrix_8h.html#a0f57174a41569bfcf47a55eb2e60e35c">t</a>) {
+<a name="l00804"></a>00804   <a class="code" href="classRingIterator.html">iterator</a> p(*<span class="keyword">this</span>);
+<a name="l00805"></a>00805   <span class="keywordflow">while</span> ( (++p)-&gt;topTime() &lt; t ) {}
+<a name="l00806"></a>00806 
+<a name="l00807"></a>00807   <span class="keywordflow">return</span> *p;
+<a name="l00808"></a>00808 
+<a name="l00809"></a>00809 }
+<a name="l00810"></a>00810 
+<a name="l00811"></a>00811 <span class="comment">//######################################################################</span>
+<a name="l00812"></a>00812 
+<a name="l00813"></a><a class="code" href="classInteraction.html#a452d3263d8810d8771df00c536306bd3">00813</a> <span class="keyword">inline</span> <a class="code" href="classInteraction.html#a452d3263d8810d8771df00c536306bd3">Interaction::Interaction</a>() {
+<a name="l00814"></a>00814   <a class="code" href="classInteraction.html#aa59633d9130e5e1424441ffb4e98ce0e">lastID</a>++; 
+<a name="l00815"></a>00815   <a class="code" href="classInteraction.html#af180e926633cde08a05ccbc3af397ee4">ID</a>=<a class="code" href="classInteraction.html#aa59633d9130e5e1424441ffb4e98ce0e">lastID</a>; 
+<a name="l00816"></a>00816   <a class="code" href="classInteraction.html#a3f12d42d985eec8e443bc5767486241c">_s</a> = 0;
+<a name="l00817"></a>00817 }
+<a name="l00818"></a>00818 
+<a name="l00819"></a>00819 <span class="comment">//======================================================================</span>
+<a name="l00820"></a>00820 
+<a name="l00821"></a><a class="code" href="classInteraction.html#a6f5e175e63e5ffa1155ee26984b00697">00821</a> <span class="keyword">inline</span> <a class="code" href="classInteraction.html#a6f5e175e63e5ffa1155ee26984b00697">Interaction::~Interaction</a>() {
+<a name="l00822"></a>00822   <span class="comment">//  printf(&quot;*** Destroying Interaction\n&quot;);</span>
+<a name="l00823"></a>00823   <span class="keywordflow">while</span>( ! <a class="code" href="classRing.html#a3f37b042a1e7cd4bd38fc564de81f0da">empty</a>() ) {
+<a name="l00824"></a>00824     <a class="code" href="classVertex.html">Vertex</a>&amp; V = <a class="code" href="classRing.html#ae25b42aa10f9f14b23bb58506b6da94d">first</a>();
+<a name="l00825"></a>00825     V.<a class="code" href="classLinked.html#a1fcb45e5d2428352eb36b487d1d4eea3">remove</a>();
+<a name="l00826"></a>00826     TheVertexPool.<a class="code" href="classPool.html#a16266a856a381253acfb30f16d454dc8">push</a>(V);
+<a name="l00827"></a>00827   };
+<a name="l00828"></a>00828   <span class="keywordflow">if</span> ( <a class="code" href="classInteraction.html#a3f12d42d985eec8e443bc5767486241c">_s</a> != 0 ) <span class="keyword">delete</span> [] <a class="code" href="classInteraction.html#a3f12d42d985eec8e443bc5767486241c">_s</a>;
+<a name="l00829"></a>00829 }
+<a name="l00830"></a>00830 
+<a name="l00831"></a>00831 <span class="comment">//##########################katou#######################################</span>
+<a name="l00832"></a><a class="code" href="classUniformInterval.html">00832</a> <span class="keyword">class </span><a class="code" href="classUniformInterval.html">UniformInterval</a>{
+<a name="l00833"></a>00833 <span class="keyword">public</span>:
+<a name="l00834"></a><a class="code" href="classUniformInterval.html#af01cd48a6cc1d106236348149b5b2c5b">00834</a>   <a class="code" href="classInteraction.html">Interaction</a>* <a class="code" href="classUniformInterval.html#af01cd48a6cc1d106236348149b5b2c5b">I_n</a>;
+<a name="l00835"></a><a class="code" href="classUniformInterval.html#a337db225a8732862ab8b7015e4962cbb">00835</a>   <a class="code" href="classVertexInitialConfiguration.html">VertexInitialConfiguration</a>* <a class="code" href="classUniformInterval.html#a337db225a8732862ab8b7015e4962cbb">VIC</a>;<span class="comment">//</span>
+<a name="l00836"></a><a class="code" href="classUniformInterval.html#ace3848af52a6305203f253c53d440644">00836</a>   <a class="code" href="classVertexProperty.html">VertexProperty</a>* <a class="code" href="classUniformInterval.html#ace3848af52a6305203f253c53d440644">VP</a>;
+<a name="l00837"></a>00837 
+<a name="l00838"></a>00838   <span class="comment">//Segment* n_S[nbody]  </span>
+<a name="l00839"></a><a class="code" href="classUniformInterval.html#ac352e13c4906a5a3f8cb76bc57cca48e">00839</a>   <a class="code" href="classSegment.html">Segment</a>** <a class="code" href="classUniformInterval.html#ac352e13c4906a5a3f8cb76bc57cca48e">n_S</a>; 
+<a name="l00840"></a>00840   <span class="comment">//int x[nbody]</span>
+<a name="l00841"></a><a class="code" href="classUniformInterval.html#ae522cb6f40eae74a9814a73b31d8ea7e">00841</a>   <span class="keywordtype">int</span>* <a class="code" href="classUniformInterval.html#ae522cb6f40eae74a9814a73b31d8ea7e">x</a>;
+<a name="l00842"></a><a class="code" href="classUniformInterval.html#a1d54246868af1edf2ecdd7604edb37b9">00842</a>   <span class="keywordtype">int</span> <a class="code" href="classUniformInterval.html#a1d54246868af1edf2ecdd7604edb37b9">inc</a>;<span class="comment">//</span>
+<a name="l00843"></a><a class="code" href="classUniformInterval.html#a6bde9a3f5f4915ef8fa87465dc36857a">00843</a>   <span class="keywordtype">int</span> <a class="code" href="classUniformInterval.html#a6bde9a3f5f4915ef8fa87465dc36857a">xinc</a>;
+<a name="l00844"></a><a class="code" href="classUniformInterval.html#a66d5a059ae3a02c3ae25add0c1365608">00844</a>   <span class="keywordtype">int</span> <a class="code" href="classUniformInterval.html#a66d5a059ae3a02c3ae25add0c1365608">nbody</a>;
+<a name="l00845"></a><a class="code" href="classUniformInterval.html#add0b9456e87a2faf7f0016274f524af9">00845</a>   <span class="keywordtype">bool</span> <a class="code" href="classUniformInterval.html#add0b9456e87a2faf7f0016274f524af9">DefinedVIC</a>;<span class="comment">//Defined StateCode yes no</span>
+<a name="l00846"></a><a class="code" href="classUniformInterval.html#a9949930c2c306b88e2b0b856dc95f929">00846</a>   <span class="keywordtype">void</span> <a class="code" href="classUniformInterval.html#a9949930c2c306b88e2b0b856dc95f929">init</a>(<a class="code" href="classInteraction.html">Interaction</a>* Ia, <span class="keywordtype">int</span> xbehind){
+<a name="l00847"></a>00847     <a class="code" href="classUniformInterval.html#af01cd48a6cc1d106236348149b5b2c5b">I_n</a> = Ia;
+<a name="l00848"></a>00848     <a class="code" href="classUniformInterval.html#a66d5a059ae3a02c3ae25add0c1365608">nbody</a> = (*I_n).NBODY();
+<a name="l00849"></a>00849     <a class="code" href="classUniformInterval.html#ace3848af52a6305203f253c53d440644">VP</a>  = &amp;((*I_n).property().getVertexProperty());
+<a name="l00850"></a>00850 
+<a name="l00851"></a>00851 
+<a name="l00852"></a>00852     <a class="code" href="classUniformInterval.html#ac352e13c4906a5a3f8cb76bc57cca48e">n_S</a> = <span class="keyword">new</span> <a class="code" href="classSegment.html">Segment</a>* [<a class="code" href="classUniformInterval.html#a66d5a059ae3a02c3ae25add0c1365608">nbody</a>]; 
+<a name="l00853"></a>00853     <a class="code" href="classUniformInterval.html#ae522cb6f40eae74a9814a73b31d8ea7e">x</a>   = <span class="keyword">new</span> <span class="keywordtype">int</span> [<a class="code" href="classUniformInterval.html#a66d5a059ae3a02c3ae25add0c1365608">nbody</a>]; 
+<a name="l00854"></a>00854     <a class="code" href="classUniformInterval.html#a6bde9a3f5f4915ef8fa87465dc36857a">xinc</a> = xbehind;
+<a name="l00855"></a>00855     <a class="code" href="classUniformInterval.html#add0b9456e87a2faf7f0016274f524af9">DefinedVIC</a> = <span class="keyword">false</span>;
+<a name="l00856"></a>00856   }
+<a name="l00857"></a><a class="code" href="classUniformInterval.html#ac89a43d4c91fab72badc5e939cee379a">00857</a>   <span class="keywordtype">void</span> <a class="code" href="classUniformInterval.html#ac89a43d4c91fab72badc5e939cee379a">setVIC</a>(){
+<a name="l00858"></a>00858     <span class="keywordtype">int</span> st =(*VP).SCNK(<a class="code" href="classUniformInterval.html#ae522cb6f40eae74a9814a73b31d8ea7e">x</a>);
+<a name="l00859"></a>00859     <span class="keywordflow">if</span>(st &lt; 0){
+<a name="l00860"></a>00860       <a class="code" href="classUniformInterval.html#a337db225a8732862ab8b7015e4962cbb">VIC</a> = 0;
+<a name="l00861"></a>00861       <a class="code" href="classUniformInterval.html#add0b9456e87a2faf7f0016274f524af9">DefinedVIC</a> = <span class="keyword">false</span>;
+<a name="l00862"></a>00862     }<span class="keywordflow">else</span>{
+<a name="l00863"></a>00863       <a class="code" href="classUniformInterval.html#a337db225a8732862ab8b7015e4962cbb">VIC</a> = &amp;( (*VP).getIC( st, <a class="code" href="classUniformInterval.html#a1d54246868af1edf2ecdd7604edb37b9">inc</a>, <a class="code" href="classUniformInterval.html#a6bde9a3f5f4915ef8fa87465dc36857a">xinc</a> ) );
+<a name="l00864"></a>00864       <a class="code" href="classUniformInterval.html#add0b9456e87a2faf7f0016274f524af9">DefinedVIC</a> = <span class="keyword">true</span>;
+<a name="l00865"></a>00865     }
+<a name="l00866"></a>00866   }
+<a name="l00867"></a><a class="code" href="classUniformInterval.html#aab9d338ee32977716cca5330588d04bb">00867</a>   <span class="keywordtype">void</span> <a class="code" href="classUniformInterval.html#aab9d338ee32977716cca5330588d04bb">setx</a>(){
+<a name="l00868"></a>00868     <span class="keywordflow">for</span>(<span class="keywordtype">int</span> i_body = 0; i_body &lt; <a class="code" href="classUniformInterval.html#a66d5a059ae3a02c3ae25add0c1365608">nbody</a>; ++i_body){
+<a name="l00869"></a>00869       <a class="code" href="classUniformInterval.html#ae522cb6f40eae74a9814a73b31d8ea7e">x</a>[i_body]   = (*<a class="code" href="classUniformInterval.html#ac352e13c4906a5a3f8cb76bc57cca48e">n_S</a>[i_body]).X();
+<a name="l00870"></a>00870     }
+<a name="l00871"></a>00871   }
+<a name="l00872"></a><a class="code" href="classUniformInterval.html#a3de1c0739346f16f13dd6b7380c8e2cd">00872</a>   <span class="keywordtype">void</span> <a class="code" href="classUniformInterval.html#a3de1c0739346f16f13dd6b7380c8e2cd">setx</a>(<span class="keywordtype">int</span> i_body){
+<a name="l00873"></a>00873     <a class="code" href="classUniformInterval.html#ae522cb6f40eae74a9814a73b31d8ea7e">x</a>[i_body]   = (*<a class="code" href="classUniformInterval.html#ac352e13c4906a5a3f8cb76bc57cca48e">n_S</a>[i_body]).X();
+<a name="l00874"></a>00874   }
+<a name="l00875"></a><a class="code" href="classUniformInterval.html#a446af088933dcc220f1a2e2ee08dc005">00875</a>   <a class="code" href="classUniformInterval.html#a446af088933dcc220f1a2e2ee08dc005">~UniformInterval</a>(){
+<a name="l00876"></a>00876     <span class="keyword">delete</span> [] <a class="code" href="classUniformInterval.html#ac352e13c4906a5a3f8cb76bc57cca48e">n_S</a>;
+<a name="l00877"></a>00877     <span class="keyword">delete</span> [] <a class="code" href="classUniformInterval.html#ae522cb6f40eae74a9814a73b31d8ea7e">x</a>;
+<a name="l00878"></a>00878   }
+<a name="l00879"></a>00879 
+<a name="l00880"></a>00880 };
+<a name="l00881"></a>00881 <span class="comment">//######################################################################</span>
+<a name="l00882"></a><a class="code" href="classRegisteredVertexInfo.html">00882</a> <span class="keyword">class </span><a class="code" href="classRegisteredVertexInfo.html">RegisteredVertexInfo</a> {
+<a name="l00883"></a>00883 <span class="keyword">public</span>:
+<a name="l00884"></a><a class="code" href="classRegisteredVertexInfo.html#a6ab2df44ec357c6b007742ba6829a1ad">00884</a>   <a class="code" href="classVertex.html">Vertex</a>* <a class="code" href="classRegisteredVertexInfo.html#a6ab2df44ec357c6b007742ba6829a1ad">V_x</a>;
+<a name="l00885"></a><a class="code" href="classRegisteredVertexInfo.html#ae49f642cea6069e915ffd4e8993bdec9">00885</a>   <span class="keywordtype">int</span>  <a class="code" href="classRegisteredVertexInfo.html#ae49f642cea6069e915ffd4e8993bdec9">i_UI</a>;
+<a name="l00886"></a><a class="code" href="classRegisteredVertexInfo.html#aa96b6fe7055a789f17506832563b0eeb">00886</a>   <span class="keywordtype">int</span>  <a class="code" href="classRegisteredVertexInfo.html#aa96b6fe7055a789f17506832563b0eeb">i_body</a>;
+<a name="l00887"></a><a class="code" href="classRegisteredVertexInfo.html#a311a23798784da3ac854eb706d119877">00887</a>   <span class="keywordtype">double</span> <a class="code" href="classRegisteredVertexInfo.html#a311a23798784da3ac854eb706d119877">V_time</a>;
+<a name="l00888"></a><a class="code" href="classRegisteredVertexInfo.html#a301a98a41564cee2801faf1bd745da64">00888</a>   <span class="keywordtype">void</span> <a class="code" href="classRegisteredVertexInfo.html#a301a98a41564cee2801faf1bd745da64">setRVI</a>(<a class="code" href="classVertex.html">Vertex</a>* Vx,<span class="keywordtype">int</span> iUI, <span class="keywordtype">int</span> ibody, <span class="keywordtype">double</span> Vtime){
+<a name="l00889"></a>00889     <a class="code" href="classRegisteredVertexInfo.html#a6ab2df44ec357c6b007742ba6829a1ad">V_x</a>    = Vx;
+<a name="l00890"></a>00890     <a class="code" href="classRegisteredVertexInfo.html#ae49f642cea6069e915ffd4e8993bdec9">i_UI</a>   = iUI;
+<a name="l00891"></a>00891     <a class="code" href="classRegisteredVertexInfo.html#aa96b6fe7055a789f17506832563b0eeb">i_body</a> = ibody;
+<a name="l00892"></a>00892     <a class="code" href="classRegisteredVertexInfo.html#a311a23798784da3ac854eb706d119877">V_time</a> = Vtime;
+<a name="l00893"></a>00893   }
+<a name="l00894"></a><a class="code" href="classRegisteredVertexInfo.html#a02fd73d861ef2e4aabb38c0c9ff82947">00894</a>   <span class="keywordtype">void</span> <a class="code" href="classRegisteredVertexInfo.html#a02fd73d861ef2e4aabb38c0c9ff82947">init</a>(){};
+<a name="l00895"></a>00895   
+<a name="l00896"></a>00896 };
+<a name="l00897"></a><a class="code" href="objects_8hpp.html#aff5f5378d2bd22f69f8b864d0869b98b">00897</a> <span class="keyword">inline</span> <span class="keywordtype">bool</span> <a class="code" href="objects_8hpp.html#aff5f5378d2bd22f69f8b864d0869b98b">operator&lt;</a>(<span class="keyword">const</span> <a class="code" href="classRegisteredVertexInfo.html">RegisteredVertexInfo</a>&amp; obj0, <span class="keyword">const</span> <a class="code" href="classRegisteredVertexInfo.html">RegisteredVertexInfo</a>&amp; obj){
+<a name="l00898"></a>00898   <span class="keywordflow">return</span> obj0.<a class="code" href="classRegisteredVertexInfo.html#a311a23798784da3ac854eb706d119877">V_time</a> &lt; obj.<a class="code" href="classRegisteredVertexInfo.html#a311a23798784da3ac854eb706d119877">V_time</a>;
+<a name="l00899"></a>00899 }
+<a name="l00900"></a><a class="code" href="objects_8hpp.html#a4fd942cc9aac07c5936174a83c90a412">00900</a> <span class="keyword">inline</span> <span class="keywordtype">bool</span> <a class="code" href="objects_8hpp.html#a4fd942cc9aac07c5936174a83c90a412">operator&gt;</a>(<span class="keyword">const</span> <a class="code" href="classRegisteredVertexInfo.html">RegisteredVertexInfo</a>&amp; obj0, <span class="keyword">const</span> <a class="code" href="classRegisteredVertexInfo.html">RegisteredVertexInfo</a>&amp; obj){
+<a name="l00901"></a>00901   <span class="keywordflow">return</span> obj0.<a class="code" href="classRegisteredVertexInfo.html#a311a23798784da3ac854eb706d119877">V_time</a> &gt; obj.<a class="code" href="classRegisteredVertexInfo.html#a311a23798784da3ac854eb706d119877">V_time</a>;
+<a name="l00902"></a>00902 }
+<a name="l00903"></a>00903 
+<a name="l00904"></a>00904 <span class="comment">//######################################################################</span>
+<a name="l00905"></a>00905 
+<a name="l00906"></a><a class="code" href="classRegVInfo.html">00906</a> <span class="keyword">class </span><a class="code" href="classRegVInfo.html">RegVInfo</a> : <span class="keyword">public</span> <a class="code" href="classLinked.html">Linked</a>&lt;RegisteredVertexInfo&gt; {
+<a name="l00907"></a>00907 
+<a name="l00908"></a>00908 <span class="keyword">public</span>:
+<a name="l00909"></a>00909 
+<a name="l00910"></a>00910   <span class="keywordtype">void</span> <a class="code" href="classRegVInfo.html#af139f30d28b7dc61f5051c0d595af368">erase</a>();
+<a name="l00911"></a><a class="code" href="classRegVInfo.html#a8a04717e9a15e0a9a8de7c5ef83c668f">00911</a>   <a class="code" href="classRegVInfo.html">RegVInfo</a>&amp; <a class="code" href="classRegVInfo.html#a8a04717e9a15e0a9a8de7c5ef83c668f">prev</a>() { <span class="keywordflow">return</span> (<a class="code" href="classRegVInfo.html">RegVInfo</a>&amp;)<a class="code" href="classRegVInfo.html#a8a04717e9a15e0a9a8de7c5ef83c668f">Linked&lt;RegisteredVertexInfo&gt;::prev</a>(); };
+<a name="l00912"></a><a class="code" href="classRegVInfo.html#a25a928b9f4e8cd6308298628fd6eeb10">00912</a>   <a class="code" href="classRegVInfo.html">RegVInfo</a>&amp; <a class="code" href="classRegVInfo.html#a25a928b9f4e8cd6308298628fd6eeb10">next</a>() { <span class="keywordflow">return</span> (<a class="code" href="classRegVInfo.html">RegVInfo</a>&amp;)<a class="code" href="classRegVInfo.html#a25a928b9f4e8cd6308298628fd6eeb10">Linked&lt;RegisteredVertexInfo&gt;::next</a>(); };
+<a name="l00913"></a><a class="code" href="classRegVInfo.html#a1129a1c9a47fccfc7785a9ffdcf7ab76">00913</a>   <span class="keywordtype">bool</span> <a class="code" href="classRegVInfo.html#a1129a1c9a47fccfc7785a9ffdcf7ab76">operator==</a>(<a class="code" href="classRegVInfo.html">RegVInfo</a>&amp; s) { <span class="keywordflow">return</span> <span class="keyword">this</span> == &amp;s; };
+<a name="l00914"></a>00914 
+<a name="l00915"></a>00915   
+<a name="l00916"></a>00916 };
+<a name="l00917"></a>00917 
+<a name="l00918"></a><a class="code" href="objects_8hpp.html#ae849ff5cc28ba781cc63ca4dac7e18e5">00918</a> <a class="code" href="classPool.html">Pool&lt;RegVInfo&gt;</a> <a class="code" href="objects_8hpp.html#ae849ff5cc28ba781cc63ca4dac7e18e5">TheRVIPool</a>;
+<a name="l00919"></a>00919 
+<a name="l00920"></a><a class="code" href="classRegVInfo.html#af139f30d28b7dc61f5051c0d595af368">00920</a> <span class="keyword">inline</span> <span class="keywordtype">void</span> <a class="code" href="classRegVInfo.html#af139f30d28b7dc61f5051c0d595af368">RegVInfo::erase</a>(){
+<a name="l00921"></a>00921     <a class="code" href="classLinked.html#a1fcb45e5d2428352eb36b487d1d4eea3">Linked&lt;RegisteredVertexInfo&gt;::remove</a>();
+<a name="l00922"></a>00922     TheRVIPool.<a class="code" href="classPool.html#a16266a856a381253acfb30f16d454dc8">push</a>(*<span class="keyword">this</span>);
+<a name="l00923"></a>00923 }
+<a name="l00924"></a>00924 
+<a name="l00925"></a>00925 <span class="comment">//##########################katou#######################################</span>
+<a name="l00926"></a>00926 
+<a name="l00927"></a>00927 <span class="preprocessor">#endif</span>
+</pre></div></div><!-- contents -->
+</div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>全て</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>クラス</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>ネームスペース</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>ファイル</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>関数</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>変数</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(6)"><span class="SelectionMark">&#160;</span>型定義</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(7)"><span class="SelectionMark">&#160;</span>列挙型の値</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(8)"><span class="SelectionMark">&#160;</span>フレンド</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(9)"><span class="SelectionMark">&#160;</span>マクロ定義</a></div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+  <div id="nav-path" class="navpath">
+    <ul>
+      <li class="navelem"><a class="el" href="objects_8hpp.html">objects.hpp</a>      </li>
+
+    <li class="footer">DSQSSに対してThu Jul 12 2012 14:28:53に生成されました。
+    <a href="http://www.doxygen.org/index.html">
+    <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.7.6.1 </li>
+   </ul>
+ </div>
+
+
+</body>
+</html>

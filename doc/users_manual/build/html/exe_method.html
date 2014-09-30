@@ -1,0 +1,461 @@
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>実行方法 &mdash; DSQSS  1.1.16 documentation</title>
+    
+    <link rel="stylesheet" href="_static/sphinxdoc.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '',
+        VERSION:     '1.1.16',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <script type="text/javascript" src="_static/translations.js"></script>
+    <script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <link rel="shortcut icon" href="_static/sam3.ico"/>
+    <link rel="top" title="DSQSS  1.1.16 documentation" href="index.html" />
+    <link rel="next" title="計算例" href="sample.html" />
+    <link rel="prev" title="インストール手順" href="install.html" /> 
+  </head>
+  <body>
+    <div class="related">
+      <h3>ナビゲーション</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="総合索引"
+             accesskey="I">索引</a></li>
+        <li class="right" >
+          <a href="sample.html" title="計算例"
+             accesskey="N">次へ</a> |</li>
+        <li class="right" >
+          <a href="install.html" title="インストール手順"
+             accesskey="P">前へ</a> |</li>
+        <li><a href="index.html">DSQSS  1.1.16 documentation</a> &raquo;</li> 
+      </ul>
+    </div>
+      <div class="sphinxsidebar">
+        <div class="sphinxsidebarwrapper">
+  <h3><a href="index.html">目次</a></h3>
+  <ul>
+<li><a class="reference internal" href="#">実行方法</a><ul>
+<li><a class="reference internal" href="#id2">実行手順</a></li>
+<li><a class="reference internal" href="#id4">入力ファイル</a></li>
+<li><a class="reference internal" href="#id6">出力ファイル</a></li>
+</ul>
+</li>
+</ul>
+
+  <h4>前のトピックへ</h4>
+  <p class="topless"><a href="install.html"
+                        title="前の章へ">インストール手順</a></p>
+  <h4>次のトピックへ</h4>
+  <p class="topless"><a href="sample.html"
+                        title="次の章へ">計算例</a></p>
+  <h3>このページ</h3>
+  <ul class="this-page-menu">
+    <li><a href="_sources/exe_method.txt"
+           rel="nofollow">ソースコードを表示</a></li>
+  </ul>
+<div id="searchbox" style="display: none">
+  <h3>クイック検索</h3>
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" />
+      <input type="submit" value="検索" />
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+    <p class="searchtip" style="font-size: 90%">
+    モジュール、クラス、または関数名を入力してください
+    </p>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body">
+            
+  <div class="section" id="id1">
+<h1>実行方法<a class="headerlink" href="#id1" title="このヘッドラインへのパーマリンク">¶</a></h1>
+<p>DSQSSは、複数のプログラムからなるパッケージです。入力準備プログラム <strong>hamgen_H</strong> , <strong>dla_alg</strong> , <strong>lattgene</strong> と、向き付きループアルゴリズムを採用した量子モンテカルロプログラム <strong>dla</strong> 、結果解析ツール <strong>merge.pl</strong> から構成されています。それぞれの概要、実行方法は以下の通りです。</p>
+<div class="section" id="id2">
+<h2>実行手順<a class="headerlink" href="#id2" title="このヘッドラインへのパーマリンク">¶</a></h2>
+<img alt="_images/dsqss_flow.png" src="_images/dsqss_flow.png" />
+<ul>
+<li><dl class="first docutils">
+<dt><strong>hamgen_H</strong></dt>
+<dd><p class="first">ハミルトニアン定義ファイルを生成するためのプログラムです。
+次の3種類のパラメータを入力値とし、ハミルトニアン定義ファイル <strong>hamiltonian.xml</strong> を生成します。</p>
+<ul>
+<li><p class="first">M [int]</p>
+<p>The number of bosons on each site. ( M=1,2,3 ... for S=1/2,1,3/2 ... )</p>
+</li>
+<li><p class="first">J [double]</p>
+<p>The coupling constant (positive for ferromagnets)</p>
+</li>
+<li><p class="first">F [double]</p>
+<p>The magnetic field in the pair Hamiltonian. ( = H/z if the field H is shared equally by all pairs, where z = 2 for a ring geometry. )</p>
+</li>
+</ul>
+<div class="last highlight-sh"><div class="highlight"><pre><span class="nv">$ $INSTALL_DIR</span>/bin/hamgen_H M J F
+     <span class="c">#hamiltonian.xmlが生成されます。</span>
+</pre></div>
+</div>
+</dd>
+</dl>
+</li>
+<li><dl class="first docutils">
+<dt><strong>dla_alg</strong></dt>
+<dd><p class="first">アルゴリズム定義ファイルを生成するためのプログラムです。</p>
+<p>hamgen_Hで生成されたhamiltonian.xmlを入力とし、アルゴリズム定義ファイル <strong>algorithm.xml</strong> を生成します。</p>
+<div class="last highlight-sh"><div class="highlight"><pre><span class="nv">$ $INSTALL_DIR</span>/bin/dla_alg
+     <span class="c">#algorithm.xmlが生成されます。</span>
+</pre></div>
+</div>
+</dd>
+</dl>
+</li>
+<li><dl class="first docutils">
+<dt><strong>lattgene</strong></dt>
+<dd><p class="first">格子定義ファイルを生成するためのプログラムです。
+次の3種類のパラメータを入力値とし、格子生成ファイル <strong>lattice.xml</strong> を生成します。</p>
+<ul>
+<li><p class="first">D [int]</p>
+<p>The number of dimension</p>
+</li>
+<li><p class="first">L [int]</p>
+<p>The liner size of the lattice  ( L,L0,L1 ..., must be even number.)</p>
+</li>
+<li><p class="first">B [double]</p>
+<p>The inverse tempereture.</p>
+</li>
+</ul>
+<div class="highlight-sh"><div class="highlight"><pre><span class="nv">$ $INSTALL_DIR</span>/bin/lattgene D L B
+     <span class="c">#lattice.xmlが生成されます。</span>
+</pre></div>
+</div>
+<p>多次元の場合は、次のように各方向で異なる格子数を指定することが可能です。</p>
+<div class="last highlight-sh"><div class="highlight"><pre><span class="nv">$ $INSTALL_DIR</span>/bin/lattgene 2 4 6 1.2
+     <span class="c">#4×6の二次元格子、逆温度1.2のlattice.xmlが生成されます。</span>
+     <span class="c"># &quot;lattgene 2 4 1.2&quot;と格子数を省略した場合は、4×4となります。</span>
+</pre></div>
+</div>
+</dd>
+</dl>
+</li>
+<li><p class="first"><strong>dla</strong></p>
+<p>dlaは、向き付きワームアルゴリズムを採用した量子モンテカルロプログラムです。エネルギー、比熱など、様々な物理量を求めることができます。アルゴリズム定義ファイル、格子定義ファイル、計算制御ファイル(書式詳細は後述)を入力とし、計算結果ファイルを生成します。</p>
+<p>また、dlaはMPI並列化されており、異なる初期乱数での並列計算が可能です。計算結果は、 <em>[出力ファイル名.ランク番号]</em> に出力されます。</p>
+<p>dsqss-1.1は磁場、逆温度によるレプリカ交換法を用いた拡張アンサンブル計算にも対応しています。計算方法の詳細は、 <a class="reference external" href="http://kawashima.issp.u-tokyo.ac.jp/dsqss/sample.html#sample-2">計算例</a> を参照してください。</p>
+<blockquote>
+<div><div class="highlight-sh"><div class="highlight"><pre><span class="o">[</span>single<span class="o">]</span>
+<span class="nv">$ $INSTALL_DIR</span>/bin/dla qmc.inp
+     <span class="c">#結果出力ファイルが生成されます。</span>
+
+<span class="o">[</span>parallel<span class="o">]</span>
+<span class="nv">$ </span>mpirun -np n <span class="nv">$INSTALL_DIR</span>/bin/dla qmc.inp
+     <span class="c">#プロセス毎の結果出力ファイルが生成されます。</span>
+     <span class="c">#ex) qmc.log.000, qmc.log.001</span>
+</pre></div>
+</div>
+</div></blockquote>
+</li>
+<li><p class="first"><strong>merge.pl</strong></p>
+<p>merge.plは計算結果を解析するツールです。各物理量の平均値、統計誤差等を求めることができます。
+複数ある <em>[計算結果ファイル名.ランク番号]</em> の <em>[計算結果ファイル名]</em> を引数として与えます。</p>
+<blockquote>
+<div><div class="highlight-sh"><div class="highlight"><pre><span class="nv">$ </span>tool/merge.pl qmc.log
+   <span class="c">#複数のqmc.log.xxxをマージしたqmc.logが生成されます。</span>
+</pre></div>
+</div>
+</div></blockquote>
+</li>
+</ul>
+</div>
+<div class="section" id="id4">
+<h2>入力ファイル<a class="headerlink" href="#id4" title="このヘッドラインへのパーマリンク">¶</a></h2>
+<p>プログラムdlaは、計算を制御する入力ファイルを読み込みます。</p>
+<ul>
+<li><p class="first"><strong>入力データの規則</strong></p>
+<ul class="simple">
+<li>1行の文字数は最大256</li>
+<li>空行,空白は自由に挿入できる</li>
+<li>1行に1データを&#8221;A=B&#8221;形式であらわす</li>
+<li>ファイル名以外の大文字、小文字を区別しない</li>
+<li>&#8220;#&#8221;以降の文字列はコメント行とする</li>
+</ul>
+</li>
+<li><p class="first"><strong>入力パラメータ</strong></p>
+<dl class="docutils">
+<dt><tt class="docutils literal"><span class="pre">runtype</span></tt> <em>[int]</em></dt>
+<dd><p class="first">計算手法の選択。通常計算では&#8221;0&#8221;を与えます。</p>
+<p>0: 通常計算</p>
+<p>1: 磁場によるレプリカ交換計算</p>
+<p>2: 温度によるレプリカ交換計算</p>
+<p>( レプリカ交換による拡張アンサンブル計算の詳細については、 <a class="reference external" href="http://kawashima.issp.u-tokyo.ac.jp/dsqss/sample.html#sample-2">計算例</a> を参照してください。)</p>
+<p class="last"><em>指定必須</em></p>
+</dd>
+<dt><tt class="docutils literal"><span class="pre">nmcse</span></tt> <em>[int]</em></dt>
+<dd><p class="first">ワーム発生数を求めるための試行計算用のモンテカルロ繰り返し回数</p>
+<p class="last"><em>省略可、デフォルト値 nmcse=1000</em></p>
+</dd>
+<dt><tt class="docutils literal"><span class="pre">nmcsd</span></tt> <em>[int]</em></dt>
+<dd><p class="first">物理量計算に関係しないモンテカルロ繰り返し回数</p>
+<p class="last"><em>省略可、デフォルト値 nmcsd=1000</em></p>
+</dd>
+<dt><tt class="docutils literal"><span class="pre">nmcs</span></tt> <em>[int]</em></dt>
+<dd><p class="first">物理量計算をおこなうモンテカルロ繰り返し回数</p>
+<p class="last"><em>省略可、デフォルト値 nmcs=1000</em></p>
+</dd>
+<dt><tt class="docutils literal"><span class="pre">nset</span></tt> <em>[int]</em></dt>
+<dd><p class="first">モンテカルロ繰り返し計算のセット数</p>
+<p>実際の繰り返し回数は、nset* ( nmcsd + nmcs ) となる</p>
+<p>レプリカ交換計算の時は、最大交換試行回数となる。</p>
+<p class="last"><em>省略可、デフォルト値 nset=10</em></p>
+</dd>
+</dl>
+<p>・モンテカルロ繰り返し回数</p>
+<blockquote>
+<div><p>・Runtype=0の場合</p>
+<img alt="_images/MC_cycle.png" src="_images/MC_cycle.png" />
+<p>・Runtype&gt;0の場合(レプリカ交換)</p>
+<img alt="_images/MC_cycle2.png" src="_images/MC_cycle2.png" />
+</div></blockquote>
+<dl class="docutils">
+<dt><tt class="docutils literal"><span class="pre">seed</span></tt> <em>[int]</em></dt>
+<dd><p class="first">乱数種番号</p>
+<p class="last"><em>省略可、デフォルト値 seed=198212240</em></p>
+</dd>
+<dt><tt class="docutils literal"><span class="pre">nvermax</span></tt> <em>[int]</em></dt>
+<dd><p class="first">最大バーテックス数</p>
+<p class="last"><em>省略可、デフォルト値 nvermax=10000</em></p>
+</dd>
+<dt><tt class="docutils literal"><span class="pre">nsegmax</span></tt> <em>[int]</em></dt>
+<dd><p class="first">最大セグメント数</p>
+<p class="last"><em>省略可、デフォルト値 nsegmax=10000</em></p>
+</dd>
+<dt><tt class="docutils literal"><span class="pre">nrep</span></tt> <em>[int]</em></dt>
+<dd><p class="first">レプリカ数</p>
+<p class="last"><em>runtype&gt;0の時、省略不可</em></p>
+</dd>
+<dt><tt class="docutils literal"><span class="pre">vf</span></tt> <em>[double]</em></dt>
+<dd><p class="first">磁場の最小値</p>
+<p class="last"><em>runtype=1の時、省略不可</em></p>
+</dd>
+<dt><tt class="docutils literal"><span class="pre">df</span></tt> <em>[double]</em></dt>
+<dd><p class="first">各レプリカに割り振る磁場の間隔</p>
+<p class="last"><em>runtype=1の時、省略不可</em></p>
+</dd>
+<dt><tt class="docutils literal"><span class="pre">vb</span></tt> <em>[double]</em></dt>
+<dd><p class="first">逆温度(1/T)の最小値</p>
+<p class="last"><em>runtype=2の時、省略不可</em></p>
+</dd>
+<dt><tt class="docutils literal"><span class="pre">db</span></tt> <em>[double]</em></dt>
+<dd><p class="first">各レプリカに割り振る逆温度の間隔</p>
+<p class="last"><em>runtype=2の時、省略不可</em></p>
+</dd>
+<dt><tt class="docutils literal"><span class="pre">algfile</span></tt> <em>[char]</em></dt>
+<dd><p class="first">アルゴリズム定義ファイル名</p>
+<p class="last"><em>省略可、デフォルト値 algfile=&#8221;algorithm.xml&#8221;</em></p>
+</dd>
+<dt><tt class="docutils literal"><span class="pre">latfile</span></tt> <em>[char]</em></dt>
+<dd><p class="first">格子定義ファイル名</p>
+<p class="last"><em>省略可、デフォルト値 latfile=&#8221;lattice.xml&#8221;</em></p>
+</dd>
+<dt><tt class="docutils literal"><span class="pre">outfile</span></tt> <em>[char]</em></dt>
+<dd><p class="first">計算結果ファイル名</p>
+<p class="last"><em>省略可、デフォルト値 outfile=&#8221;qmc.log&#8221;</em></p>
+</dd>
+</dl>
+</li>
+</ul>
+<blockquote>
+<div><dl class="docutils">
+<dt>サンプル 1：</dt>
+<dd><div class="first last highlight-sh"><div class="highlight"><pre><span class="c"># ==== 入力ファイル例  qmc.inp  ====</span>
+<span class="c"># == RUNTYPE ==</span>
+<span class="nv">runtype</span> <span class="o">=</span> 0 <span class="c">#指定必須</span>
+
+<span class="c"># == PARAMETER ==</span>
+<span class="nv">nmcse</span>   <span class="o">=</span> 100
+<span class="nv">nmcsd</span>   <span class="o">=</span> 500
+<span class="nv">nmcs</span>    <span class="o">=</span> 1000
+<span class="nv">nset</span>    <span class="o">=</span> 10
+<span class="nv">seed</span>    <span class="o">=</span> 71443116
+<span class="nv">nvermax</span> <span class="o">=</span> 10000
+<span class="nv">nsegmax</span> <span class="o">=</span> 10000
+
+<span class="c"># == INPUT_FILE ==</span>
+<span class="nv">algfile</span> <span class="o">=</span> algorithm.xml
+<span class="nv">latfile</span> <span class="o">=</span> lattice.xml
+<span class="c">## latfile=/home/hoge/qmc/lattice.xmlのような指定も可</span>
+
+<span class="c"># == OUTPUT_FILE ==</span>
+<span class="nv">outfile</span> <span class="o">=</span> qmc.log
+</pre></div>
+</div>
+</dd>
+<dt>サンプル 2：</dt>
+<dd><div class="first last highlight-sh"><div class="highlight"><pre><span class="c"># ==== 入力ファイル例  qmc.inp  ====</span>
+<span class="c"># == RUNTYPE ==</span>
+<span class="nv">runtype</span> <span class="o">=</span> 2 <span class="c">#逆温度によるレプリカ交換計算</span>
+
+<span class="c"># == PARAMETER ==</span>
+<span class="nv">nmcse</span>   <span class="o">=</span> 100
+<span class="nv">nmcsd</span>   <span class="o">=</span> 500
+<span class="nv">nmcs</span>    <span class="o">=</span> 500
+<span class="nv">nset</span>    <span class="o">=</span> 100
+<span class="nv">seed</span>    <span class="o">=</span> 71443116
+<span class="nv">nrep</span>    <span class="o">=</span>   8    <span class="c">#レプリカ数</span>
+<span class="nv">vb</span>      <span class="o">=</span> 0.1    <span class="c"># 逆温度の最小値</span>
+<span class="nv">db</span>      <span class="o">=</span> 0.03   <span class="c"># 各レプリカの逆温度の間隔</span>
+<span class="nv">nvermax</span> <span class="o">=</span> 10000
+<span class="nv">nsegmax</span> <span class="o">=</span> 10000
+
+<span class="c"># == INPUT_FILE ==</span>
+<span class="nv">algfile</span> <span class="o">=</span> algorithm.xml
+<span class="nv">latfile</span> <span class="o">=</span> lattice.xml
+
+<span class="c"># == OUTPUT_FILE ==</span>
+<span class="nv">outfile</span> <span class="o">=</span> qmc.log
+</pre></div>
+</div>
+</dd>
+</dl>
+</div></blockquote>
+</div>
+<div class="section" id="id6">
+<h2>出力ファイル<a class="headerlink" href="#id6" title="このヘッドラインへのパーマリンク">¶</a></h2>
+<blockquote>
+<div><p>プログラムdlaは、計算結果を次に示すサンプルの書式で出力します。</p>
+<p>各行の先頭文字列は、それぞれ&#8221;C&#8221;はコメント、&#8221;P&#8221;は入力次に設定したパラメータ、&#8221;R&#8221;は計算で求められた物理量、&#8221;I&#8221;はその他計算で得られた情報を表します。</p>
+</div></blockquote>
+<ul>
+<li><p class="first"><strong>出力パラメータ</strong></p>
+<p>物理量値、統計誤差の順で表示されます。</p>
+</li>
+</ul>
+<div class="math">
+\[\begin{split}{\small \begin{array}{l}
+\mbox{anv}\equiv {\left\langle {N_{v} } \right\rangle } /V \\
+\mbox{ene}\equiv {\left( {E_{0} -T\left\langle {N_{v} } \right\rangle } \right)} /V \\
+\mbox{spe}\equiv {\left( {\left\langle {E^{2}} \right\rangle -\left\langle E \right\rangle^{2}} \right)} /V \\
+\mbox{len} \equiv \left\langle {\mbox{``average length of worm paths''}} \right\rangle \\
+\mbox{xmx}\equiv \left\langle \left( \tilde M^{x}({\bf 0}) \right)^2  \right\rangle / (V\beta^2) \\
+\mbox{amzu}\equiv \left\langle M^z({\bf 0}) \right\rangle /V \\
+\mbox{bmzu}\equiv \left\langle \tilde M^z({\bf 0}) \right\rangle /(V\beta) \\
+\mbox{smzu}\equiv \left\langle \left( M^{z}({\bf 0}) \right)^2 \right\rangle /V \\
+\mbox{xmzu}\equiv \left\langle \left( \tilde M^{z}({\bf 0}) \right)^2 \right\rangle /(V\beta^2) \\
+\mbox{amzs}\equiv \left\langle M^z({\bf \pi}) \right\rangle /V \\
+\mbox{bmzs}\equiv \left\langle \tilde M^z({\bf \pi}) \right\rangle /(V\beta) \\
+\mbox{smzs}\equiv \left\langle \left( M^{z}({\bf \pi}) \right)^2 \right\rangle /V \\
+\mbox{xmzs}\equiv \left\langle \left( \tilde M^{z}({\bf \pi}) \right)^2 \right\rangle /(V\beta^2) \\
+\mbox{cov}\equiv \left\langle {\mbox{&quot;coverage of worm paths&quot;}}\right\rangle \equiv N_{CYC} \times \left[ {\mbox{len}} \right]/V/\beta \\
+\ &amp; \ \\
+\langle \cdots \rangle  \equiv \mbox{``the canonical expectation value at temperature $T$''} \\
+\langle \cdots \rangle_{\rm MC}  \equiv \mbox{``Monte Carlo sampling average''} \\
+\epsilon  \equiv \mbox{``energy per volume''} \\
+c  \equiv \mbox{``specific heat per volume''} \\
+m^{\mu}  \equiv \mbox{``uniform magnetization in $\mu$ directionen''} \\
+S_{\mu\mu}  \equiv \mbox{``static structure factor of $\mu$ spin component at wave number ${\bf q}$''} \\
+\chi^{\mu\mu}  \equiv \mbox{``susceptilibity of $\mu$ spin component at wave number ${\bf q}$''} \\
+H  \equiv \mbox{``the Hamiltonian of the system''} = E_0 + \hat H \\
+T  \equiv 1/\beta =\mbox{``temperature''} \\
+V  \equiv \mbox{``total number of lattice points''} \\
+E_0  \equiv \mbox{``sum of base energy of all interactions''} \\
+N_{v}  \equiv \mbox{``total number of vertices''} \\
+M^{\mu }({\bf q})  \equiv \sum_{\bf R} e^{-i{\bf qR}} S^{\mu }\left( {\bf R} \right) \,\,\,\,\left( {\mu =x,y,z} \right) \\
+\mbox{NCYC}  \equiv \mbox{``number of worm cycles in one Monte Carlo step''} \\
+{\bf 0}  \equiv (0,0,\cdots,0) \\
+{\bf \pi}  \equiv (\pi,\pi,\cdots,\pi) \\
+{\cal T}  \equiv \mbox{``time ordered product''} \\
+\tilde Q  \equiv \int_0^{\beta} d\tau\, Q(\tau)
+\,\,\,\left( {Q:\mbox{ any operator}} \right) \\
+%\left\langle {Q;Q} \right\rangle \equiv \frac{1}{\beta }\int_0^\beta {d\tau \left\langle {Q\left( \tau \right)Q\left( 0 \right)} \right\rangle }
+%\,\,\,\left( {Q:\mbox{ any operator}} \right) \\
+\end{array}}\end{split}\]</div>
+<p><strong>サンプル:</strong></p>
+<blockquote>
+<div><div class="highlight-sh"><div class="highlight"><pre>C This is DSQSS ver.1.1
+
+P <span class="nv">D</span>       <span class="o">=</span>            1
+P <span class="nv">L</span>       <span class="o">=</span>            4
+P <span class="nv">BETA</span>    <span class="o">=</span>       0.1000000000000000
+P <span class="nv">NSET</span>    <span class="o">=</span>          100
+P <span class="nv">NMCSE</span>   <span class="o">=</span>           10
+P <span class="nv">NMCSD</span>   <span class="o">=</span>          100
+P <span class="nv">NMCS</span>    <span class="o">=</span>          500
+P <span class="nv">SEED</span>    <span class="o">=</span>    198212240
+P <span class="nv">NSEGMAX</span> <span class="o">=</span>        10000
+P <span class="nv">NVERMAX</span> <span class="o">=</span>        10000
+P <span class="nv">NCYC</span>    <span class="o">=</span>            3
+P <span class="nv">ALGFILE</span> <span class="o">=</span> algorithm.xml
+P <span class="nv">LATFILE</span> <span class="o">=</span> lattice.xml
+P <span class="nv">OUTFILE</span> <span class="o">=</span> qmc.log.000
+R <span class="nv">anv</span>    <span class="o">=</span> 1.2600000000e-03 1.3228374768e-04
+R <span class="nv">ene</span>    <span class="o">=</span> -8.7389634535e-02 2.6235724952e-03
+R <span class="nv">spe</span>    <span class="o">=</span> 9.1045055233e-03 1.3488158010e-04
+R <span class="nv">len</span>    <span class="o">=</span> 1.0483210915e-01 7.7857156133e-05
+R <span class="nv">xmx</span>    <span class="o">=</span> 2.6208027288e-01 1.9464289033e-04
+R <span class="nv">amzu</span>   <span class="o">=</span> 4.1600000000e-02 1.1751638613e-03
+R <span class="nv">bmzu</span>   <span class="o">=</span> 4.1600000000e-02 1.1751638613e-03
+R <span class="nv">smzu</span>   <span class="o">=</span> 2.6832000000e-01 1.4617258376e-03
+R <span class="nv">xmzu</span>   <span class="o">=</span> 2.6832000000e-01 1.4617258376e-03
+R <span class="nv">amzs</span>   <span class="o">=</span> -1.6000000000e-04 1.1371344456e-03
+R <span class="nv">bmzs</span>   <span class="o">=</span> -1.1044073693e-04 1.1322290343e-03
+R <span class="nv">smzs</span>   <span class="o">=</span> 2.3536000000e-01 1.2430834910e-03
+R <span class="nv">xmzs</span>   <span class="o">=</span> 2.3497127399e-01 1.2410218249e-03
+I <span class="o">[</span>the maximum number of segments<span class="o">]</span>          <span class="o">=</span> 13
+I <span class="o">[</span>the maximum number of vertices<span class="o">]</span>          <span class="o">=</span> 9
+I <span class="o">[</span>the maximum number of reg. vertex info.<span class="o">]</span> <span class="o">=</span> 3
+</pre></div>
+</div>
+</div></blockquote>
+</div>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related">
+      <h3>ナビゲーション</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="総合索引"
+             >索引</a></li>
+        <li class="right" >
+          <a href="sample.html" title="計算例"
+             >次へ</a> |</li>
+        <li class="right" >
+          <a href="install.html" title="インストール手順"
+             >前へ</a> |</li>
+        <li><a href="index.html">DSQSS  1.1.16 documentation</a> &raquo;</li> 
+      </ul>
+    </div>
+    <div class="footer">
+        &copy; Copyright 2011, K.Sakakura.
+      最終更新: Mar 24, 2014
+      このドキュメントは <a href="http://sphinx.pocoo.org/">Sphinx</a> 1.1.3 で生成しました。
+    </div>
+  </body>
+</html>

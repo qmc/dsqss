@@ -1,0 +1,789 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<title>DSQSS: クラス Measurement</title>
+
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript">
+  $(document).ready(initResizable);
+</script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="text/javascript">
+  $(document).ready(function() { searchBox.OnSelectItem(0); });
+</script>
+
+</head>
+<body>
+<div id="top"><!-- do not remove this div! -->
+
+
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  
+  
+  <td style="padding-left: 0.5em;">
+   <div id="projectname">DSQSS
+   &#160;<span id="projectnumber">1.1</span>
+   </div>
+   
+  </td>
+  
+  
+  
+ </tr>
+ </tbody>
+</table>
+</div>
+
+<!-- 作成： Doxygen 1.7.6.1 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search",false,'検索');
+</script>
+  <div id="navrow1" class="tabs">
+    <ul class="tablist">
+      <li><a href="index.html"><span>メインページ</span></a></li>
+      <li><a href="namespaces.html"><span>ネームスペース</span></a></li>
+      <li class="current"><a href="annotated.html"><span>クラス</span></a></li>
+      <li><a href="files.html"><span>ファイル</span></a></li>
+      <li>
+        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <img id="MSearchSelect" src="search/mag_sel.png"
+               onmouseover="return searchBox.OnSearchSelectShow()"
+               onmouseout="return searchBox.OnSearchSelectHide()"
+               alt=""/>
+          <input type="text" id="MSearchField" value="検索" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><img id="MSearchCloseImg" border="0" src="search/close.png" alt=""/></a>
+          </span>
+        </div>
+      </li>
+    </ul>
+  </div>
+  <div id="navrow2" class="tabs2">
+    <ul class="tablist">
+      <li><a href="annotated.html"><span>構成</span></a></li>
+      <li><a href="classes.html"><span>構成索引</span></a></li>
+      <li><a href="inherits.html"><span>クラス階層</span></a></li>
+      <li><a href="functions.html"><span>構成メンバ</span></a></li>
+    </ul>
+  </div>
+</div>
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+  initNavTree('classMeasurement.html','');
+</script>
+<div id="doc-content">
+<div class="header">
+  <div class="summary">
+<a href="#pub-methods">Public メソッド</a> &#124;
+<a href="#pub-attribs">Public 変数</a> &#124;
+<a href="#pri-attribs">Private 変数</a>  </div>
+  <div class="headertitle">
+<div class="title">クラス Measurement</div>  </div>
+</div><!--header-->
+<div class="contents">
+<!-- doxytag: class="Measurement" -->
+<p><code>#include &lt;<a class="el" href="measure_8hpp_source.html">measure.hpp</a>&gt;</code></p>
+<div class="dynheader">
+Measurementのコラボレーション図</div>
+<div class="dyncontent">
+<div class="center"><img src="classMeasurement__coll__graph.png" border="0" usemap="#Measurement_coll__map" alt="Collaboration graph"/></div>
+<map name="Measurement_coll__map" id="Measurement_coll__map">
+<area shape="rect" id="node2" href="classAccumulator.html" title="Accumulator" alt="" coords="623,959,721,985"/><area shape="rect" id="node4" href="classEstimate.html" title="Estimate" alt="" coords="596,867,671,893"/><area shape="rect" id="node6" href="classLattice.html" title="Lattice" alt="" coords="879,959,943,985"/><area shape="rect" id="node8" href="classXML_1_1Block.html" title="Block" alt="" coords="1449,197,1505,224"/><area shape="rect" id="node10" href="classArray.html" title="Array\&lt; Block \&gt;" alt="" coords="1372,289,1484,316"/><area shape="rect" id="node85" href="classAlgorithm.html" title="Algorithm" alt="" coords="1196,685,1279,712"/><area shape="rect" id="node12" href="classIndexSystem.html" title="IndexSystem" alt="" coords="961,5,1060,32"/><area shape="rect" id="node15" href="classArray.html" title="Array\&lt; string \&gt;" alt="" coords="1419,96,1531,123"/><area shape="rect" id="node34" href="classArray.html" title="Array\&lt; Segment * \&gt;" alt="" coords="209,411,348,437"/><area shape="rect" id="node45" href="classArray.html" title="Array\&lt; int \&gt;" alt="" coords="925,289,1019,316"/><area shape="rect" id="node48" href="classArray.html" title="Array\&lt; double \&gt;" alt="" coords="1004,147,1124,173"/><area shape="rect" id="node54" href="classArray.html" title="Array\&lt; VertexInitialConfiguration * \&gt;" alt="" coords="656,289,901,316"/><area shape="rect" id="node59" href="classArray.html" title="Array\&lt; ScatteringChannel \&gt;" alt="" coords="168,96,357,123"/><area shape="rect" id="node64" href="classArray.html" title="Array\&lt; VertexInitialConfiguration \&gt;" alt="" coords="397,289,632,316"/><area shape="rect" id="node76" href="classArray.html" title="Array\&lt; SiteInitialConfiguration \&gt;" alt="" coords="152,289,373,316"/><area shape="rect" id="node87" href="classArray.html" title="Array\&lt; VertexProperty \&gt;" alt="" coords="1316,501,1481,528"/><area shape="rect" id="node92" href="classArray.html" title="Array\&lt; InteractionProperty \&gt;" alt="" coords="981,593,1179,620"/><area shape="rect" id="node96" href="classArray.html" title="Array\&lt; SiteProperty \&gt;" alt="" coords="1203,593,1355,620"/><area shape="rect" id="node18" href="classSite.html" title="Site" alt="" coords="604,776,649,803"/><area shape="rect" id="node26" href="classBareSegment.html" title="BareSegment" alt="" coords="357,867,459,893"/><area shape="rect" id="node38" href="classInteraction.html" title="Interaction" alt="" coords="772,867,863,893"/><area shape="rect" id="node20" href="classRing.html" title="Ring\&lt; Segment \&gt;" alt="" coords="441,1171,567,1197"/><area shape="rect" id="node22" href="classSegment.html" title="Segment" alt="" coords="363,1080,437,1107"/><area shape="rect" id="node24" href="classLinked.html" title="Linked\&lt; BareSegment \&gt;" alt="" coords="316,959,484,985"/><area shape="rect" id="node28" href="classVertex.html" title="Vertex" alt="" coords="528,685,587,712"/><area shape="rect" id="node40" href="classRing.html" title="Ring\&lt; Vertex \&gt;" alt="" coords="471,776,580,803"/><area shape="rect" id="node30" href="classLinked.html" title="Linked\&lt; BareVertex \&gt;" alt="" coords="500,593,652,620"/><area shape="rect" id="node32" href="classBareVertex.html" title="BareVertex" alt="" coords="681,501,769,528"/><area shape="rect" id="node43" href="classInteractionProperty.html" title="InteractionProperty" alt="" coords="923,501,1064,528"/><area shape="rect" id="node51" href="classVertexProperty.html" title="VertexProperty" alt="" coords="793,411,905,437"/><area shape="rect" id="node74" href="classSiteProperty.html" title="SiteProperty" alt="" coords="800,501,899,528"/><area shape="rect" id="node57" href="classVertexInitialConfiguration.html" title="VertexInitialConfiguration" alt="" coords="432,197,613,224"/><area shape="rect" id="node79" href="classSiteInitialConfiguration.html" title="SiteInitialConfiguration" alt="" coords="180,197,345,224"/><area shape="rect" id="node62" href="classScatteringChannel.html" title="ScatteringChannel" alt="" coords="5,5,141,32"/><area shape="rect" id="node100" href="classParameter.html" title="Parameter" alt="" coords="759,959,841,985"/><area shape="rect" id="node102" href="classInput.html" title="Input" alt="" coords="695,867,748,893"/></map>
+<center><span class="legend">[<a target="top" href="graph_legend.html">凡例</a>]</span></center></div>
+
+<p><a href="classMeasurement-members.html">すべてのメンバ一覧</a></p>
+<table class="memberdecls">
+<tr><td colspan="2"><h2><a name="pub-methods"></a>
+Public メソッド</h2></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMeasurement.html#adecafd8776c7ec293f2b5af7779a4324">Measurement</a> (<a class="el" href="classParameter.html">Parameter</a> &amp;P0, <a class="el" href="classLattice.html">Lattice</a> &amp;L, <a class="el" href="classAlgorithm.html">Algorithm</a> &amp;A)</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMeasurement.html#a2ed11b7dabd4e2c204b8645dace27f7c">~Measurement</a> ()</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMeasurement.html#a9819f5969402ace9a8362a92e666a859">measure</a> ()</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMeasurement.html#a7c19fac4a67cc204a905275d96743072">summary</a> ()</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMeasurement.html#a4635337a40920f42d61240644ffa2084">setinit</a> ()</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMeasurement.html#a6f03238146cbc62891cc93c06deed64a">summary_REP</a> (int index)</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMeasurement.html#a8076546222e9ce013bb0b1092ec2f38a">setsummary</a> (int index)</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMeasurement.html#a47af540fc1336f6f103f61be02542ff3">get_data</a> ()</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMeasurement.html#adc58d895fa971c7e2bfbdd9fc621694b">get_ediag</a> ()</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMeasurement.html#ae735740ea528dfa415a5cb057263f7e3">get_nkink</a> ()</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMeasurement.html#a9415666a62a496619988fdafed5ecb0a">accumulate_length</a> (double len)</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMeasurement.html#accd2600060dbaee3a3b41aed4034c63c">dump</a> ()</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMeasurement.html#a2a5b27828219816d2da67fbc18ed7367">show</a> (FILE *)</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMeasurement.html#a3f96d187d3e4bfe7664e35f27766c9ca">imin</a> (int n, double *<a class="el" href="matrix_8h.html#a0f57174a41569bfcf47a55eb2e60e35c">t</a>)</td></tr>
+<tr><td colspan="2"><h2><a name="pub-attribs"></a>
+Public 変数</h2></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="el" href="classAccumulator.html">Accumulator</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMeasurement.html#a7caa1610e29aecbfa79ce60d4c6a6852">ACC</a></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="el" href="classAccumulator.html">Accumulator</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMeasurement.html#af3ee667cdadc365314cceba1c5b0a3ad">PHY</a></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="el" href="classAccumulator.html">Accumulator</a> **&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMeasurement.html#a5b242fea0e5a2fca8d9c0a2f75cbf56f">PHYX</a></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMeasurement.html#acdefd20277f6863e1b1461aba302d30c">ediag</a></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMeasurement.html#ac25609f8419a839313382df8304e671a">nkink</a></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMeasurement.html#ad5f4f052b92013a850af5f9ea527d8b5">EBASE</a></td></tr>
+<tr><td colspan="2"><h2><a name="pri-attribs"></a>
+Private 変数</h2></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMeasurement.html#a16df4eac782f8831ebfcef7b38d4d9a5">NACC</a></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMeasurement.html#a07a92068d2acb63a1e802a1aa0835e51">NPHY</a></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="el" href="classParameter.html">Parameter</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMeasurement.html#ad2ee3579867faad60b53b3ee69deb4f8">P</a></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="el" href="classLattice.html">Lattice</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMeasurement.html#af7beaa60e1fbf7094c41ffc94a05342c">LAT</a></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="el" href="classAlgorithm.html">Algorithm</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMeasurement.html#ad094a7c3b90de630ae5b402d4af603d4">ALG</a></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">double *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMeasurement.html#a15734b088280482d64321de94c6431bd">Q</a></td></tr>
+</table>
+<hr/><a name="details" id="details"></a><h2>説明</h2>
+<div class="textblock">
+<p> <a class="el" href="measure_8hpp_source.html">measure.hpp</a> の <a class="el" href="measure_8hpp_source.html#l00123">123</a> 行で定義されています。</p>
+</div><hr/><h2>コンストラクタとデストラクタ</h2>
+<a class="anchor" id="adecafd8776c7ec293f2b5af7779a4324"></a><!-- doxytag: member="Measurement::Measurement" ref="adecafd8776c7ec293f2b5af7779a4324" args="(Parameter &amp;P0, Lattice &amp;L, Algorithm &amp;A)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classMeasurement.html">Measurement</a> </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classParameter.html">Parameter</a> &amp;&#160;</td>
+          <td class="paramname"><em>P0</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="classLattice.html">Lattice</a> &amp;&#160;</td>
+          <td class="paramname"><em>L</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="classAlgorithm.html">Algorithm</a> &amp;&#160;</td>
+          <td class="paramname"><em>A</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td><code> [inline]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p> <a class="el" href="measure_8hpp_source.html">measure.hpp</a> の <a class="el" href="measure_8hpp_source.html#l00188">188</a> 行で定義されています。</p>
+
+<p><div class="dynheader">
+関数の呼び出しグラフ:</div>
+<div class="dyncontent">
+<div class="center"><img src="classMeasurement_adecafd8776c7ec293f2b5af7779a4324_cgraph.png" border="0" usemap="#classMeasurement_adecafd8776c7ec293f2b5af7779a4324_cgraph" alt=""/></div>
+<map name="classMeasurement_adecafd8776c7ec293f2b5af7779a4324_cgraph" id="classMeasurement_adecafd8776c7ec293f2b5af7779a4324_cgraph">
+<area shape="rect" id="node3" href="classAccumulator.html#ad20897c5c8bd47f5d4005989bead0e55" title="Accumulator::reset" alt="" coords="167,5,305,32"/><area shape="rect" id="node5" href="classEstimate.html#a008cb52188d81d9bafe43227b5b02032" title="Estimate::set_key" alt="" coords="172,56,300,83"/><area shape="rect" id="node7" href="classLattice.html#a7fc0278ace84ded48e0f4c8189db1c02" title="Lattice::I" alt="" coords="199,107,273,133"/><area shape="rect" id="node9" href="classInteraction.html#ac929f04449d488399477c6bd97043a3f" title="Interaction::property" alt="" coords="161,157,311,184"/></map>
+</div>
+</p>
+
+</div>
+</div>
+<a class="anchor" id="a2ed11b7dabd4e2c204b8645dace27f7c"></a><!-- doxytag: member="Measurement::~Measurement" ref="a2ed11b7dabd4e2c204b8645dace27f7c" args="()" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">~<a class="el" href="classMeasurement.html">Measurement</a> </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td><code> [inline]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p> <a class="el" href="measure_8hpp_source.html">measure.hpp</a> の <a class="el" href="measure_8hpp_source.html#l00238">238</a> 行で定義されています。</p>
+
+</div>
+</div>
+<hr/><h2>関数</h2>
+<a class="anchor" id="a9415666a62a496619988fdafed5ecb0a"></a><!-- doxytag: member="Measurement::accumulate_length" ref="a9415666a62a496619988fdafed5ecb0a" args="(double len)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void <a class="el" href="classMeasurement.html#a9415666a62a496619988fdafed5ecb0a">accumulate_length</a> </td>
+          <td>(</td>
+          <td class="paramtype">double&#160;</td>
+          <td class="paramname"><em>len</em></td><td>)</td>
+          <td><code> [inline]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p> <a class="el" href="measure_8hpp_source.html">measure.hpp</a> の <a class="el" href="measure_8hpp_source.html#l00294">294</a> 行で定義されています。</p>
+
+<p><div class="dynheader">
+関数の呼び出しグラフ:</div>
+<div class="dyncontent">
+<div class="center"><img src="classMeasurement_a9415666a62a496619988fdafed5ecb0a_cgraph.png" border="0" usemap="#classMeasurement_a9415666a62a496619988fdafed5ecb0a_cgraph" alt=""/></div>
+<map name="classMeasurement_a9415666a62a496619988fdafed5ecb0a_cgraph" id="classMeasurement_a9415666a62a496619988fdafed5ecb0a_cgraph">
+<area shape="rect" id="node3" href="classAccumulator.html#a84e557a586fe5cfa639bf39181106eba" title="Accumulator::accumulate" alt="" coords="192,5,371,32"/></map>
+</div>
+</p>
+
+<p><div class="dynheader">
+呼出しグラフ:</div>
+<div class="dyncontent">
+<div class="center"><img src="classMeasurement_a9415666a62a496619988fdafed5ecb0a_icgraph.png" border="0" usemap="#classMeasurement_a9415666a62a496619988fdafed5ecb0a_icgraph" alt=""/></div>
+<map name="classMeasurement_a9415666a62a496619988fdafed5ecb0a_icgraph" id="classMeasurement_a9415666a62a496619988fdafed5ecb0a_icgraph">
+<area shape="rect" id="node3" href="classSimulation.html#a498dbdb73c8f6d58c9147cd07dce3362" title="Simulation::Set" alt="" coords="192,5,309,32"/></map>
+</div>
+</p>
+
+</div>
+</div>
+<a class="anchor" id="accd2600060dbaee3a3b41aed4034c63c"></a><!-- doxytag: member="Measurement::dump" ref="accd2600060dbaee3a3b41aed4034c63c" args="()" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void <a class="el" href="classMeasurement.html#accd2600060dbaee3a3b41aed4034c63c">dump</a> </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td><code> [inline]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p> <a class="el" href="measure_8hpp_source.html">measure.hpp</a> の <a class="el" href="measure_8hpp_source.html#l00280">280</a> 行で定義されています。</p>
+
+</div>
+</div>
+<a class="anchor" id="a47af540fc1336f6f103f61be02542ff3"></a><!-- doxytag: member="Measurement::get_data" ref="a47af540fc1336f6f103f61be02542ff3" args="()" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">double <a class="el" href="classMeasurement.html#a47af540fc1336f6f103f61be02542ff3">get_data</a> </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td><code> [inline]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p> <a class="el" href="measure_8hpp_source.html">measure.hpp</a> の <a class="el" href="measure_8hpp_source.html#l00316">316</a> 行で定義されています。</p>
+
+</div>
+</div>
+<a class="anchor" id="adc58d895fa971c7e2bfbdd9fc621694b"></a><!-- doxytag: member="Measurement::get_ediag" ref="adc58d895fa971c7e2bfbdd9fc621694b" args="()" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">double <a class="el" href="classMeasurement.html#adc58d895fa971c7e2bfbdd9fc621694b">get_ediag</a> </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td><code> [inline]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p> <a class="el" href="measure_8hpp_source.html">measure.hpp</a> の <a class="el" href="measure_8hpp_source.html#l00320">320</a> 行で定義されています。</p>
+
+<p><div class="dynheader">
+呼出しグラフ:</div>
+<div class="dyncontent">
+<div class="center"><img src="classMeasurement_adc58d895fa971c7e2bfbdd9fc621694b_icgraph.png" border="0" usemap="#classMeasurement_adc58d895fa971c7e2bfbdd9fc621694b_icgraph" alt=""/></div>
+<map name="classMeasurement_adc58d895fa971c7e2bfbdd9fc621694b_icgraph" id="classMeasurement_adc58d895fa971c7e2bfbdd9fc621694b_icgraph">
+<area shape="rect" id="node3" href="classSimulation.html#a934fee6f68aa93d5eb03fe0a778bdc07" title="Simulation::Simulation" alt="" coords="137,5,300,32"/></map>
+</div>
+</p>
+
+</div>
+</div>
+<a class="anchor" id="ae735740ea528dfa415a5cb057263f7e3"></a><!-- doxytag: member="Measurement::get_nkink" ref="ae735740ea528dfa415a5cb057263f7e3" args="()" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int <a class="el" href="classMeasurement.html#ae735740ea528dfa415a5cb057263f7e3">get_nkink</a> </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td><code> [inline]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p> <a class="el" href="measure_8hpp_source.html">measure.hpp</a> の <a class="el" href="measure_8hpp_source.html#l00324">324</a> 行で定義されています。</p>
+
+<p><div class="dynheader">
+呼出しグラフ:</div>
+<div class="dyncontent">
+<div class="center"><img src="classMeasurement_ae735740ea528dfa415a5cb057263f7e3_icgraph.png" border="0" usemap="#classMeasurement_ae735740ea528dfa415a5cb057263f7e3_icgraph" alt=""/></div>
+<map name="classMeasurement_ae735740ea528dfa415a5cb057263f7e3_icgraph" id="classMeasurement_ae735740ea528dfa415a5cb057263f7e3_icgraph">
+<area shape="rect" id="node3" href="classSimulation.html#a934fee6f68aa93d5eb03fe0a778bdc07" title="Simulation::Simulation" alt="" coords="137,5,300,32"/></map>
+</div>
+</p>
+
+</div>
+</div>
+<a class="anchor" id="a3f96d187d3e4bfe7664e35f27766c9ca"></a><!-- doxytag: member="Measurement::imin" ref="a3f96d187d3e4bfe7664e35f27766c9ca" args="(int n, double *t)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int <a class="el" href="classMeasurement.html#a3f96d187d3e4bfe7664e35f27766c9ca">imin</a> </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>n</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double *&#160;</td>
+          <td class="paramname"><em>t</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td><code> [inline]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p> <a class="el" href="measure_8hpp_source.html">measure.hpp</a> の <a class="el" href="measure_8hpp_source.html#l00175">175</a> 行で定義されています。</p>
+
+<p><div class="dynheader">
+呼出しグラフ:</div>
+<div class="dyncontent">
+<div class="center"><img src="classMeasurement_a3f96d187d3e4bfe7664e35f27766c9ca_icgraph.png" border="0" usemap="#classMeasurement_a3f96d187d3e4bfe7664e35f27766c9ca_icgraph" alt=""/></div>
+<map name="classMeasurement_a3f96d187d3e4bfe7664e35f27766c9ca_icgraph" id="classMeasurement_a3f96d187d3e4bfe7664e35f27766c9ca_icgraph">
+<area shape="rect" id="node3" href="classMeasurement.html#a9819f5969402ace9a8362a92e666a859" title="measure" alt="" coords="105,5,177,32"/><area shape="rect" id="node5" href="classSimulation.html#a498dbdb73c8f6d58c9147cd07dce3362" title="Simulation::Set" alt="" coords="227,5,344,32"/></map>
+</div>
+</p>
+
+</div>
+</div>
+<a class="anchor" id="a9819f5969402ace9a8362a92e666a859"></a><!-- doxytag: member="Measurement::measure" ref="a9819f5969402ace9a8362a92e666a859" args="()" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void <a class="el" href="classMeasurement.html#a9819f5969402ace9a8362a92e666a859">measure</a> </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p> <a class="el" href="measure__specific_8cc_source.html">measure_specific.cc</a> の <a class="el" href="measure__specific_8cc_source.html#l00003">3</a> 行で定義されています。</p>
+
+<p><div class="dynheader">
+関数の呼び出しグラフ:</div>
+<div class="dyncontent">
+<div class="center"><img src="classMeasurement_a9819f5969402ace9a8362a92e666a859_cgraph.png" border="0" usemap="#classMeasurement_a9819f5969402ace9a8362a92e666a859_cgraph" alt=""/></div>
+<map name="classMeasurement_a9819f5969402ace9a8362a92e666a859_cgraph" id="classMeasurement_a9819f5969402ace9a8362a92e666a859_cgraph">
+<area shape="rect" id="node3" href="classLattice.html#a33cccf4c18f886a969ad2a901494f7dc" title="Lattice::countVertices" alt="" coords="139,66,296,92"/><area shape="rect" id="node5" href="classLattice.html#a7fc0278ace84ded48e0f4c8189db1c02" title="Lattice::I" alt="" coords="411,15,485,42"/><area shape="rect" id="node9" href="classAccumulator.html#a84e557a586fe5cfa639bf39181106eba" title="Accumulator::accumulate" alt="" coords="128,116,307,143"/><area shape="rect" id="node11" href="classLattice.html#a869eaa58537df3af3d0f65af9c59e81c" title="Lattice::S" alt="" coords="177,167,257,194"/><area shape="rect" id="node13" href="classSite.html#ab10f24379cda198299beb5ccfa230161" title="Site::getMTYPE" alt="" coords="159,218,276,244"/><area shape="rect" id="node15" href="classRing.html#ae25b42aa10f9f14b23bb58506b6da94d" title="Ring::first" alt="" coords="177,268,257,295"/><area shape="rect" id="node17" href="classBareSegment.html#aafabadb78034330e508ebff9c58e0839" title="BareSegment::X" alt="" coords="157,319,277,346"/><area shape="rect" id="node19" href="classBareSegment.html#a35b40d9678428ee6772554f8a60bd55d" title="BareSegment::length" alt="" coords="143,370,292,396"/><area shape="rect" id="node29" href="matrix_8h.html#a0f57174a41569bfcf47a55eb2e60e35c" title="t" alt="" coords="649,420,687,447"/><area shape="rect" id="node35" href="classInteraction.html#ac929f04449d488399477c6bd97043a3f" title="Interaction::property" alt="" coords="143,471,292,498"/><area shape="rect" id="node37" href="classInteraction.html#a42a6e3212d8b6431c4c5dbf21504af63" title="Interaction::site" alt="" coords="157,522,277,548"/><area shape="rect" id="node39" href="classRingIterator.html#aa53012ae43dfbe95f25d414aee5ed9fe" title="RingIterator::init" alt="" coords="156,572,279,599"/><area shape="rect" id="node42" href="classMeasurement.html#a3f96d187d3e4bfe7664e35f27766c9ca" title="imin" alt="" coords="193,623,241,650"/><area shape="rect" id="node7" href="classRing.html#a9ba94da7db769b98d02381d872dd9bbb" title="Ring::count" alt="" coords="401,66,495,92"/><area shape="rect" id="node21" href="classBareSegment.html#acdc37b746192b6817020c82895ddc16e" title="BareSegment::topTime" alt="" coords="367,319,529,346"/><area shape="rect" id="node27" href="classBareSegment.html#a70f36a1813076bcf547563bfee659ef7" title="BareSegment::bottomTime" alt="" coords="355,370,541,396"/><area shape="rect" id="node23" href="classBareSegment.html#ab5ed5bec1cfe54a48a31900c0abb7565" title="BareSegment::top" alt="" coords="603,268,733,295"/><area shape="rect" id="node25" href="classBareVertex.html#a4b87946890b3b3476f46a9208e52ff01" title="BareVertex::time" alt="" coords="607,319,729,346"/><area shape="rect" id="node31" href="classBareSegment.html#a4586cfd4b76d82fa2504823166e6ca27" title="BareSegment::bottom" alt="" coords="591,370,745,396"/></map>
+</div>
+</p>
+
+<p><div class="dynheader">
+呼出しグラフ:</div>
+<div class="dyncontent">
+<div class="center"><img src="classMeasurement_a9819f5969402ace9a8362a92e666a859_icgraph.png" border="0" usemap="#classMeasurement_a9819f5969402ace9a8362a92e666a859_icgraph" alt=""/></div>
+<map name="classMeasurement_a9819f5969402ace9a8362a92e666a859_icgraph" id="classMeasurement_a9819f5969402ace9a8362a92e666a859_icgraph">
+<area shape="rect" id="node3" href="classSimulation.html#a498dbdb73c8f6d58c9147cd07dce3362" title="Simulation::Set" alt="" coords="128,5,245,32"/></map>
+</div>
+</p>
+
+</div>
+</div>
+<a class="anchor" id="a4635337a40920f42d61240644ffa2084"></a><!-- doxytag: member="Measurement::setinit" ref="a4635337a40920f42d61240644ffa2084" args="()" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void <a class="el" href="classMeasurement.html#a4635337a40920f42d61240644ffa2084">setinit</a> </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td><code> [inline]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p> <a class="el" href="measure_8hpp_source.html">measure.hpp</a> の <a class="el" href="measure_8hpp_source.html#l00254">254</a> 行で定義されています。</p>
+
+<p><div class="dynheader">
+呼出しグラフ:</div>
+<div class="dyncontent">
+<div class="center"><img src="classMeasurement_a4635337a40920f42d61240644ffa2084_icgraph.png" border="0" usemap="#classMeasurement_a4635337a40920f42d61240644ffa2084_icgraph" alt=""/></div>
+<map name="classMeasurement_a4635337a40920f42d61240644ffa2084_icgraph" id="classMeasurement_a4635337a40920f42d61240644ffa2084_icgraph">
+<area shape="rect" id="node3" href="classSimulation.html#a498dbdb73c8f6d58c9147cd07dce3362" title="Simulation::Set" alt="" coords="115,5,232,32"/></map>
+</div>
+</p>
+
+</div>
+</div>
+<a class="anchor" id="a8076546222e9ce013bb0b1092ec2f38a"></a><!-- doxytag: member="Measurement::setsummary" ref="a8076546222e9ce013bb0b1092ec2f38a" args="(int index)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void <a class="el" href="classMeasurement.html#a8076546222e9ce013bb0b1092ec2f38a">setsummary</a> </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>index</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p> <a class="el" href="measure__specific_8cc_source.html">measure_specific.cc</a> の <a class="el" href="measure__specific_8cc_source.html#l00126">126</a> 行で定義されています。</p>
+
+<p><div class="dynheader">
+呼出しグラフ:</div>
+<div class="dyncontent">
+<div class="center"><img src="classMeasurement_a8076546222e9ce013bb0b1092ec2f38a_icgraph.png" border="0" usemap="#classMeasurement_a8076546222e9ce013bb0b1092ec2f38a_icgraph" alt=""/></div>
+<map name="classMeasurement_a8076546222e9ce013bb0b1092ec2f38a_icgraph" id="classMeasurement_a8076546222e9ce013bb0b1092ec2f38a_icgraph">
+<area shape="rect" id="node3" href="classSimulation.html#a498dbdb73c8f6d58c9147cd07dce3362" title="Simulation::Set" alt="" coords="149,5,267,32"/></map>
+</div>
+</p>
+
+</div>
+</div>
+<a class="anchor" id="a2a5b27828219816d2da67fbc18ed7367"></a><!-- doxytag: member="Measurement::show" ref="a2a5b27828219816d2da67fbc18ed7367" args="(FILE *)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void <a class="el" href="classMeasurement.html#a2a5b27828219816d2da67fbc18ed7367">show</a> </td>
+          <td>(</td>
+          <td class="paramtype">FILE *&#160;</td>
+          <td class="paramname"><em>F</em></td><td>)</td>
+          <td><code> [inline]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p> <a class="el" href="measure_8hpp_source.html">measure.hpp</a> の <a class="el" href="measure_8hpp_source.html#l00271">271</a> 行で定義されています。</p>
+
+<p><div class="dynheader">
+呼出しグラフ:</div>
+<div class="dyncontent">
+<div class="center"><img src="classMeasurement_a2a5b27828219816d2da67fbc18ed7367_icgraph.png" border="0" usemap="#classMeasurement_a2a5b27828219816d2da67fbc18ed7367_icgraph" alt=""/></div>
+<map name="classMeasurement_a2a5b27828219816d2da67fbc18ed7367_icgraph" id="classMeasurement_a2a5b27828219816d2da67fbc18ed7367_icgraph">
+<area shape="rect" id="node3" href="classSimulation.html#a934fee6f68aa93d5eb03fe0a778bdc07" title="Simulation::Simulation" alt="" coords="111,5,273,32"/></map>
+</div>
+</p>
+
+</div>
+</div>
+<a class="anchor" id="a7c19fac4a67cc204a905275d96743072"></a><!-- doxytag: member="Measurement::summary" ref="a7c19fac4a67cc204a905275d96743072" args="()" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void <a class="el" href="classMeasurement.html#a7c19fac4a67cc204a905275d96743072">summary</a> </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td><code> [inline]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p> <a class="el" href="measure_8hpp_source.html">measure.hpp</a> の <a class="el" href="measure_8hpp_source.html#l00261">261</a> 行で定義されています。</p>
+
+<p><div class="dynheader">
+関数の呼び出しグラフ:</div>
+<div class="dyncontent">
+<div class="center"><img src="classMeasurement_a7c19fac4a67cc204a905275d96743072_cgraph.png" border="0" usemap="#classMeasurement_a7c19fac4a67cc204a905275d96743072_cgraph" alt=""/></div>
+<map name="classMeasurement_a7c19fac4a67cc204a905275d96743072_cgraph" id="classMeasurement_a7c19fac4a67cc204a905275d96743072_cgraph">
+<area shape="rect" id="node3" href="classAccumulator.html#adcc1a888cd92655a25f4d7838e3a3ec1" title="Accumulator::average" alt="" coords="131,5,285,32"/></map>
+</div>
+</p>
+
+<p><div class="dynheader">
+呼出しグラフ:</div>
+<div class="dyncontent">
+<div class="center"><img src="classMeasurement_a7c19fac4a67cc204a905275d96743072_icgraph.png" border="0" usemap="#classMeasurement_a7c19fac4a67cc204a905275d96743072_icgraph" alt=""/></div>
+<map name="classMeasurement_a7c19fac4a67cc204a905275d96743072_icgraph" id="classMeasurement_a7c19fac4a67cc204a905275d96743072_icgraph">
+<area shape="rect" id="node3" href="classSimulation.html#a934fee6f68aa93d5eb03fe0a778bdc07" title="Simulation::Simulation" alt="" coords="132,5,295,32"/></map>
+</div>
+</p>
+
+</div>
+</div>
+<a class="anchor" id="a6f03238146cbc62891cc93c06deed64a"></a><!-- doxytag: member="Measurement::summary_REP" ref="a6f03238146cbc62891cc93c06deed64a" args="(int index)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void <a class="el" href="classMeasurement.html#a6f03238146cbc62891cc93c06deed64a">summary_REP</a> </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>index</em></td><td>)</td>
+          <td><code> [inline]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p> <a class="el" href="measure_8hpp_source.html">measure.hpp</a> の <a class="el" href="measure_8hpp_source.html#l00328">328</a> 行で定義されています。</p>
+
+<p><div class="dynheader">
+関数の呼び出しグラフ:</div>
+<div class="dyncontent">
+<div class="center"><img src="classMeasurement_a6f03238146cbc62891cc93c06deed64a_cgraph.png" border="0" usemap="#classMeasurement_a6f03238146cbc62891cc93c06deed64a_cgraph" alt=""/></div>
+<map name="classMeasurement_a6f03238146cbc62891cc93c06deed64a_cgraph" id="classMeasurement_a6f03238146cbc62891cc93c06deed64a_cgraph">
+<area shape="rect" id="node3" href="classAccumulator.html#ae61a6809c42dbd6bda26b5af6a5962c1" title="Accumulator::acc_get_value" alt="" coords="161,5,356,32"/><area shape="rect" id="node5" href="classAccumulator.html#a67465f7cc23572e0f2511ae44c4dab44" title="Accumulator::acc_put_value" alt="" coords="161,56,356,83"/><area shape="rect" id="node7" href="classAccumulator.html#a5c8cd506f864868b13ce88b8b9bca4c0" title="Accumulator::acc_get_error" alt="" coords="163,107,355,133"/><area shape="rect" id="node9" href="classAccumulator.html#a050ef6d0c1d3e81226e03d59773d90ab" title="Accumulator::acc_put_error" alt="" coords="161,157,356,184"/></map>
+</div>
+</p>
+
+<p><div class="dynheader">
+呼出しグラフ:</div>
+<div class="dyncontent">
+<div class="center"><img src="classMeasurement_a6f03238146cbc62891cc93c06deed64a_icgraph.png" border="0" usemap="#classMeasurement_a6f03238146cbc62891cc93c06deed64a_icgraph" alt=""/></div>
+<map name="classMeasurement_a6f03238146cbc62891cc93c06deed64a_icgraph" id="classMeasurement_a6f03238146cbc62891cc93c06deed64a_icgraph">
+<area shape="rect" id="node3" href="classSimulation.html#a934fee6f68aa93d5eb03fe0a778bdc07" title="Simulation::Simulation" alt="" coords="161,5,324,32"/></map>
+</div>
+</p>
+
+</div>
+</div>
+<hr/><h2>変数</h2>
+<a class="anchor" id="a7caa1610e29aecbfa79ce60d4c6a6852"></a><!-- doxytag: member="Measurement::ACC" ref="a7caa1610e29aecbfa79ce60d4c6a6852" args="" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classAccumulator.html">Accumulator</a>* <a class="el" href="classMeasurement.html#a7caa1610e29aecbfa79ce60d4c6a6852">ACC</a></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p> <a class="el" href="measure_8hpp_source.html">measure.hpp</a> の <a class="el" href="measure_8hpp_source.html#l00136">136</a> 行で定義されています。</p>
+
+</div>
+</div>
+<a class="anchor" id="ad094a7c3b90de630ae5b402d4af603d4"></a><!-- doxytag: member="Measurement::ALG" ref="ad094a7c3b90de630ae5b402d4af603d4" args="" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classAlgorithm.html">Algorithm</a>&amp; <a class="el" href="classMeasurement.html#ad094a7c3b90de630ae5b402d4af603d4">ALG</a><code> [private]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p> <a class="el" href="measure_8hpp_source.html">measure.hpp</a> の <a class="el" href="measure_8hpp_source.html#l00131">131</a> 行で定義されています。</p>
+
+</div>
+</div>
+<a class="anchor" id="ad5f4f052b92013a850af5f9ea527d8b5"></a><!-- doxytag: member="Measurement::EBASE" ref="ad5f4f052b92013a850af5f9ea527d8b5" args="" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">double <a class="el" href="classMeasurement.html#ad5f4f052b92013a850af5f9ea527d8b5">EBASE</a></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p> <a class="el" href="measure_8hpp_source.html">measure.hpp</a> の <a class="el" href="measure_8hpp_source.html#l00147">147</a> 行で定義されています。</p>
+
+</div>
+</div>
+<a class="anchor" id="acdefd20277f6863e1b1461aba302d30c"></a><!-- doxytag: member="Measurement::ediag" ref="acdefd20277f6863e1b1461aba302d30c" args="" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">double <a class="el" href="classMeasurement.html#acdefd20277f6863e1b1461aba302d30c">ediag</a></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p> <a class="el" href="measure_8hpp_source.html">measure.hpp</a> の <a class="el" href="measure_8hpp_source.html#l00143">143</a> 行で定義されています。</p>
+
+</div>
+</div>
+<a class="anchor" id="af7beaa60e1fbf7094c41ffc94a05342c"></a><!-- doxytag: member="Measurement::LAT" ref="af7beaa60e1fbf7094c41ffc94a05342c" args="" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classLattice.html">Lattice</a>&amp; <a class="el" href="classMeasurement.html#af7beaa60e1fbf7094c41ffc94a05342c">LAT</a><code> [private]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p> <a class="el" href="measure_8hpp_source.html">measure.hpp</a> の <a class="el" href="measure_8hpp_source.html#l00130">130</a> 行で定義されています。</p>
+
+</div>
+</div>
+<a class="anchor" id="a16df4eac782f8831ebfcef7b38d4d9a5"></a><!-- doxytag: member="Measurement::NACC" ref="a16df4eac782f8831ebfcef7b38d4d9a5" args="" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int <a class="el" href="classMeasurement.html#a16df4eac782f8831ebfcef7b38d4d9a5">NACC</a><code> [private]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p> <a class="el" href="measure_8hpp_source.html">measure.hpp</a> の <a class="el" href="measure_8hpp_source.html#l00127">127</a> 行で定義されています。</p>
+
+</div>
+</div>
+<a class="anchor" id="ac25609f8419a839313382df8304e671a"></a><!-- doxytag: member="Measurement::nkink" ref="ac25609f8419a839313382df8304e671a" args="" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int <a class="el" href="classMeasurement.html#ac25609f8419a839313382df8304e671a">nkink</a></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p> <a class="el" href="measure_8hpp_source.html">measure.hpp</a> の <a class="el" href="measure_8hpp_source.html#l00144">144</a> 行で定義されています。</p>
+
+</div>
+</div>
+<a class="anchor" id="a07a92068d2acb63a1e802a1aa0835e51"></a><!-- doxytag: member="Measurement::NPHY" ref="a07a92068d2acb63a1e802a1aa0835e51" args="" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int <a class="el" href="classMeasurement.html#a07a92068d2acb63a1e802a1aa0835e51">NPHY</a><code> [private]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p> <a class="el" href="measure_8hpp_source.html">measure.hpp</a> の <a class="el" href="measure_8hpp_source.html#l00128">128</a> 行で定義されています。</p>
+
+</div>
+</div>
+<a class="anchor" id="ad2ee3579867faad60b53b3ee69deb4f8"></a><!-- doxytag: member="Measurement::P" ref="ad2ee3579867faad60b53b3ee69deb4f8" args="" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classParameter.html">Parameter</a>&amp; <a class="el" href="classMeasurement.html#ad2ee3579867faad60b53b3ee69deb4f8">P</a><code> [private]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p> <a class="el" href="measure_8hpp_source.html">measure.hpp</a> の <a class="el" href="measure_8hpp_source.html#l00129">129</a> 行で定義されています。</p>
+
+</div>
+</div>
+<a class="anchor" id="af3ee667cdadc365314cceba1c5b0a3ad"></a><!-- doxytag: member="Measurement::PHY" ref="af3ee667cdadc365314cceba1c5b0a3ad" args="" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classAccumulator.html">Accumulator</a>* <a class="el" href="classMeasurement.html#af3ee667cdadc365314cceba1c5b0a3ad">PHY</a></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p> <a class="el" href="measure_8hpp_source.html">measure.hpp</a> の <a class="el" href="measure_8hpp_source.html#l00137">137</a> 行で定義されています。</p>
+
+</div>
+</div>
+<a class="anchor" id="a5b242fea0e5a2fca8d9c0a2f75cbf56f"></a><!-- doxytag: member="Measurement::PHYX" ref="a5b242fea0e5a2fca8d9c0a2f75cbf56f" args="" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classAccumulator.html">Accumulator</a>** <a class="el" href="classMeasurement.html#a5b242fea0e5a2fca8d9c0a2f75cbf56f">PHYX</a></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p> <a class="el" href="measure_8hpp_source.html">measure.hpp</a> の <a class="el" href="measure_8hpp_source.html#l00139">139</a> 行で定義されています。</p>
+
+</div>
+</div>
+<a class="anchor" id="a15734b088280482d64321de94c6431bd"></a><!-- doxytag: member="Measurement::Q" ref="a15734b088280482d64321de94c6431bd" args="" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">double* <a class="el" href="classMeasurement.html#a15734b088280482d64321de94c6431bd">Q</a><code> [private]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p> <a class="el" href="measure_8hpp_source.html">measure.hpp</a> の <a class="el" href="measure_8hpp_source.html#l00132">132</a> 行で定義されています。</p>
+
+</div>
+</div>
+<hr/>このクラスの説明は次のファイルから生成されました:<ul>
+<li><a class="el" href="measure_8hpp_source.html">measure.hpp</a></li>
+<li><a class="el" href="measure__specific_8cc_source.html">measure_specific.cc</a></li>
+</ul>
+</div><!-- contents -->
+</div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>全て</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>クラス</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>ネームスペース</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>ファイル</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>関数</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>変数</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(6)"><span class="SelectionMark">&#160;</span>型定義</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(7)"><span class="SelectionMark">&#160;</span>列挙型の値</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(8)"><span class="SelectionMark">&#160;</span>フレンド</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(9)"><span class="SelectionMark">&#160;</span>マクロ定義</a></div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+  <div id="nav-path" class="navpath">
+    <ul>
+      <li class="navelem"><a class="el" href="classMeasurement.html">Measurement</a>      </li>
+
+    <li class="footer">DSQSSに対してThu Jul 12 2012 14:28:53に生成されました。
+    <a href="http://www.doxygen.org/index.html">
+    <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.7.6.1 </li>
+   </ul>
+ </div>
+
+
+</body>
+</html>

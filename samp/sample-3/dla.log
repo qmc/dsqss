@@ -1,0 +1,152 @@
+>>> The program is being run with MPI mode.( IP=   0 / NP=   8 ) 
+
+>>> The program is being run with MPI mode.( IP=   1 / NP=   8 ) 
+
+INPUT:INIT
+>>> The program is being run with MPI mode.( IP=   2 / NP=   8 ) 
+
+INPUT:INIT
+>>> The program is being run with MPI mode.( IP=   5 / NP=   8 ) 
+
+INPUT:INIT
+INPUT:INIT
+
++++++++++ input data +++++++++
+RUNTYPE = 2
+
+NREP    = 8
+NSET    = 100
+NMCSD   = 100
+NMCS    = 500
+SEED    = 71314416
+NVERMAX = 10000
+NSEGMAX = 10000
+
+ALGFILE = algorithm.xml
+LATFILE = lattice.xml
+OUTFILE = qmc.log
++++++++++ input data +++++++++
+
++++++++++ input data +++++++++
+>>> The program is being run with MPI mode.( IP=   4 / NP=   8 ) 
+
+RUNTYPE = 2
+>>> The program is being run with MPI mode.( IP=   3 / NP=   8 ) 
+
+
++++++++++ input data +++++++++
+RUNTYPE = 2
+
+NREP    = 8
+
+NREP    = 8
+NSET    = 100
+NMCSD   = 100
+NMCS    = 500
+SEED    = 71314416
+NVERMAX = 10000
+
++++++++++ input data +++++++++
+RUNTYPE = 2
+
+NREP    = 8
+NSET    = 100
+NMCSD   = 100
+NMCS    = 500
+SEED    = 71314416
+NSEGMAX = 10000
+
+ALGFILE = algorithm.xml
+LATFILE = lattice.xml
+OUTFILE = qmc.log
++++++++++ input data +++++++++
+NVERMAX = 10000
+NSEGMAX = 10000
+
+ALGFILE = algorithm.xml
+LATFILE = lattice.xml
+OUTFILE = qmc.log
++++++++++ input data +++++++++
+NSET    = 100
+NMCSD   = 100
+NMCS    = 500
+SEED    = 71314416
+NVERMAX = 10000
+NSEGMAX = 10000
+
+ALGFILE = algorithm.xml
+LATFILE = lattice.xml
+OUTFILE = qmc.log
++++++++++ input data +++++++++
+INPUT:INIT
+
++++++++++ input data +++++++++
+RUNTYPE = 2
+
+NREP    = 8
+NSET    = 100
+NMCSD   = 100
+NMCS    = 500
+SEED    = 71314416
+NVERMAX = 10000
+NSEGMAX = 10000
+
+ALGFILE = algorithm.xml
+LATFILE = lattice.xml
+OUTFILE = qmc.log
++++++++++ input data +++++++++
+INPUT:INIT
+
++++++++++ input data +++++++++
+RUNTYPE = 2
+
+NREP    = 8
+NSET    = 100
+NMCSD   = 100
+NMCS    = 500
+SEED    = 71314416
+NVERMAX = 10000
+NSEGMAX = 10000
+
+ALGFILE = algorithm.xml
+LATFILE = lattice.xml
+OUTFILE = qmc.log
++++++++++ input data +++++++++
+>>> The program is being run with MPI mode.( IP=   7 / NP=   8 ) 
+
+INPUT:INIT
+
++++++++++ input data +++++++++
+RUNTYPE = 2
+
+NREP    = 8
+NSET    = 100
+NMCSD   = 100
+NMCS    = 500
+SEED    = 71314416
+NVERMAX = 10000
+NSEGMAX = 10000
+
+ALGFILE = algorithm.xml
+LATFILE = lattice.xml
+OUTFILE = qmc.log
++++++++++ input data +++++++++
+>>> The program is being run with MPI mode.( IP=   6 / NP=   8 ) 
+
+INPUT:INIT
+
++++++++++ input data +++++++++
+RUNTYPE = 2
+
+NREP    = 8
+NSET    = 100
+NMCSD   = 100
+NMCS    = 500
+SEED    = 71314416
+NVERMAX = 10000
+NSEGMAX = 10000
+
+ALGFILE = algorithm.xml
+LATFILE = lattice.xml
+OUTFILE = qmc.log
++++++++++ input data +++++++++

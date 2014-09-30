@@ -1,0 +1,490 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<title>DSQSS: dla_alg.h ソースファイル</title>
+
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript">
+  $(document).ready(initResizable);
+</script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="text/javascript">
+  $(document).ready(function() { searchBox.OnSelectItem(0); });
+</script>
+
+</head>
+<body>
+<div id="top"><!-- do not remove this div! -->
+
+
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  
+  
+  <td style="padding-left: 0.5em;">
+   <div id="projectname">DSQSS
+   &#160;<span id="projectnumber">1.1</span>
+   </div>
+   
+  </td>
+  
+  
+  
+ </tr>
+ </tbody>
+</table>
+</div>
+
+<!-- 作成： Doxygen 1.7.6.1 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search",false,'検索');
+</script>
+  <div id="navrow1" class="tabs">
+    <ul class="tablist">
+      <li><a href="index.html"><span>メインページ</span></a></li>
+      <li><a href="namespaces.html"><span>ネームスペース</span></a></li>
+      <li><a href="annotated.html"><span>クラス</span></a></li>
+      <li class="current"><a href="files.html"><span>ファイル</span></a></li>
+      <li>
+        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <img id="MSearchSelect" src="search/mag_sel.png"
+               onmouseover="return searchBox.OnSearchSelectShow()"
+               onmouseout="return searchBox.OnSearchSelectHide()"
+               alt=""/>
+          <input type="text" id="MSearchField" value="検索" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><img id="MSearchCloseImg" border="0" src="search/close.png" alt=""/></a>
+          </span>
+        </div>
+      </li>
+    </ul>
+  </div>
+  <div id="navrow2" class="tabs2">
+    <ul class="tablist">
+      <li><a href="files.html"><span>ファイル一覧</span></a></li>
+      <li><a href="globals.html"><span>ファイルメンバ</span></a></li>
+    </ul>
+  </div>
+</div>
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+  initNavTree('dla__alg_8h.html','');
+</script>
+<div id="doc-content">
+<div class="header">
+  <div class="headertitle">
+<div class="title">dla_alg.h</div>  </div>
+</div><!--header-->
+<div class="contents">
+<a href="dla__alg_8h.html">説明を見る。</a><div class="fragment"><pre class="fragment"><a name="l00001"></a>00001 <span class="comment">//</span>
+<a name="l00002"></a>00002 <span class="comment">//     Algorithm File Generator for dla.cc</span>
+<a name="l00003"></a>00003 <span class="comment">//</span>
+<a name="l00004"></a>00004 <span class="comment">//                   Copy Right 2005, Naoki Kawashima </span>
+<a name="l00005"></a>00005 <span class="comment">//</span>
+<a name="l00006"></a>00006 
+<a name="l00007"></a>00007 <span class="preprocessor">#include &lt;math.h&gt;</span>
+<a name="l00008"></a>00008 <span class="preprocessor">#include &lt;vector&gt;</span>
+<a name="l00009"></a>00009 <span class="preprocessor">#include &quot;<a class="code" href="array_8h.html">array.h</a>&quot;</span>
+<a name="l00010"></a>00010 <span class="preprocessor">#include &quot;<a class="code" href="io_8h.html">io.h</a>&quot;</span>
+<a name="l00011"></a>00011 <span class="preprocessor">#include &quot;<a class="code" href="name_8h.html">name.h</a>&quot;</span>
+<a name="l00012"></a>00012 <span class="preprocessor">#include &quot;<a class="code" href="xml_8h.html">xml.h</a>&quot;</span>
+<a name="l00013"></a>00013 
+<a name="l00014"></a>00014 <span class="keyword">class </span><a class="code" href="classInitialConfiguration.html">InitialConfiguration</a>;
+<a name="l00015"></a>00015 <span class="keyword">class </span><a class="code" href="classInitialConfigurationGroup.html">InitialConfigurationGroup</a>;
+<a name="l00016"></a>00016 <span class="keyword">class </span><a class="code" href="classGENERAL.html">GENERAL</a>;
+<a name="l00017"></a>00017 <span class="keyword">class </span><a class="code" href="classSITE.html">SITE</a>;
+<a name="l00018"></a>00018 <span class="keyword">class </span><a class="code" href="classSOURCE.html">SOURCE</a>;
+<a name="l00019"></a>00019 <span class="keyword">class </span><a class="code" href="classINTERACTION.html">INTERACTION</a>;
+<a name="l00020"></a>00020 <span class="keyword">class </span><a class="code" href="classVERTEX.html">VERTEX</a>;
+<a name="l00021"></a>00021 <span class="keyword">class </span><a class="code" href="classQUANTITY.html">QUANTITY</a>;
+<a name="l00022"></a>00022 
+<a name="l00023"></a>00023 <span class="keyword">using namespace </span>std;
+<a name="l00024"></a>00024 
+<a name="l00025"></a>00025 <span class="comment">//######################################################################</span>
+<a name="l00026"></a>00026 
+<a name="l00027"></a>00027 <span class="keywordtype">void</span> <a class="code" href="dla__alg_8cc.html#aeab06fd759525e7c94929ec5ed89a974">SolveWeightEquation</a>(<span class="keywordtype">int</span> N, <a class="code" href="classArray.html">Array&lt;double&gt;</a>&amp; V, <a class="code" href="classArray.html">Array&lt;double&gt;</a>&amp; W);
+<a name="l00028"></a>00028 <span class="keywordtype">bool</span> <a class="code" href="dla__alg_8h.html#a4d2943bb66a9923a6da9b065ca64984a">testKink</a>(<span class="keywordtype">int</span> ist);
+<a name="l00029"></a>00029 <span class="keywordtype">bool</span> <a class="code" href="dla__alg_8h.html#aa6f285b73f7bfee462f5227d73db8ddb">testForbidden</a>(<span class="keywordtype">int</span> ist);
+<a name="l00030"></a>00030 <span class="keywordtype">void</span> <a class="code" href="dla__alg_8cc.html#ac16b7b50b923317227f20002e977d596">bubble_sort</a>(<span class="keywordtype">int</span> N, <a class="code" href="classArray.html">Array&lt;double&gt;</a>&amp; V, <a class="code" href="classArray.html">Array&lt;int&gt;</a>&amp; I);
+<a name="l00031"></a>00031 
+<a name="l00032"></a>00032 <span class="comment">//######################################################################</span>
+<a name="l00033"></a>00033 
+<a name="l00034"></a><a class="code" href="classGENERAL.html">00034</a> <span class="keyword">class </span><a class="code" href="classGENERAL.html">GENERAL</a> {
+<a name="l00035"></a>00035 <span class="keyword">public</span>:
+<a name="l00036"></a><a class="code" href="classGENERAL.html#ab41a179bb7208ea52fd49e567b24ba29">00036</a>   <span class="keywordtype">string</span> <a class="code" href="classGENERAL.html#ab41a179bb7208ea52fd49e567b24ba29">comment</a>;
+<a name="l00037"></a>00037   <span class="comment">// &quot;WeightDiagonal&quot;</span>
+<a name="l00038"></a>00038   <span class="comment">// the artificial weight attached to the diagonal state</span>
+<a name="l00039"></a>00039   <span class="comment">// in solving the weight equation for the worm creation/annihilation</span>
+<a name="l00040"></a>00040   <span class="comment">// ( the same as 1/(N_{box} \eta^2) )</span>
+<a name="l00041"></a><a class="code" href="classGENERAL.html#a7c8080b243082b92783a87fc337edbda">00041</a>   <span class="keywordtype">double</span> <a class="code" href="classGENERAL.html#a7c8080b243082b92783a87fc337edbda">WeightDiagonal</a>; 
+<a name="l00042"></a>00042   <a class="code" href="classGENERAL.html">GENERAL</a>(<a class="code" href="classXML_1_1Block.html">XML::Block</a>&amp; X);
+<a name="l00043"></a>00043   <span class="keywordtype">void</span> write();
+<a name="l00044"></a>00044 };
+<a name="l00045"></a>00045 
+<a name="l00046"></a>00046 <span class="comment">//######################################################################</span>
+<a name="l00047"></a>00047 
+<a name="l00048"></a><a class="code" href="classSITE.html">00048</a> <span class="keyword">class </span><a class="code" href="classSITE.html">SITE</a> {
+<a name="l00049"></a>00049 <span class="keyword">public</span>:
+<a name="l00050"></a><a class="code" href="classSITE.html#af180e926633cde08a05ccbc3af397ee4">00050</a>   <span class="keywordtype">int</span> <a class="code" href="classSITE.html#af180e926633cde08a05ccbc3af397ee4">ID</a>;
+<a name="l00051"></a><a class="code" href="classSITE.html#a5e8d338d9f4e30c0b0a52ee8b76982ec">00051</a>   <span class="keywordtype">int</span> <a class="code" href="classSITE.html#a5e8d338d9f4e30c0b0a52ee8b76982ec">TTYPE</a>; <span class="comment">// the SOURCE type of the worm tail</span>
+<a name="l00052"></a><a class="code" href="classSITE.html#adb97fc436189a73c3fde020301a62af2">00052</a>   <span class="keywordtype">int</span> <a class="code" href="classSITE.html#adb97fc436189a73c3fde020301a62af2">VTYPE</a>; <span class="comment">// the VERTEX type of the worm tail</span>
+<a name="l00053"></a><a class="code" href="classSITE.html#ab304b26016ce886af898dfdaed93a120">00053</a>   <span class="keywordtype">int</span> <a class="code" href="classSITE.html#ab304b26016ce886af898dfdaed93a120">NX</a>;
+<a name="l00054"></a><a class="code" href="classSITE.html#a1bd21fb7a8f293844612156e0b9a0c9e">00054</a>   <span class="keywordtype">int</span>* <a class="code" href="classSITE.html#a1bd21fb7a8f293844612156e0b9a0c9e">NumberOfChannels</a>;
+<a name="l00055"></a><a class="code" href="classSITE.html#af745eddec2b559b752f0c911f7d4a257">00055</a>   <a class="code" href="classSOURCE.html">SOURCE</a>* <a class="code" href="classSITE.html#af745eddec2b559b752f0c911f7d4a257">_T</a>;
+<a name="l00056"></a><a class="code" href="classSITE.html#a92a832e3538c26569bbdc1c9c2a47d29">00056</a>   <a class="code" href="classSOURCE.html">SOURCE</a>&amp; <a class="code" href="classSITE.html#a92a832e3538c26569bbdc1c9c2a47d29">T</a>() { <span class="keywordflow">return</span> *_T; };
+<a name="l00057"></a>00057   <a class="code" href="classVERTEX.html">VERTEX</a>&amp; V();
+<a name="l00058"></a><a class="code" href="classSITE.html#a818a8ecf8164e6c66a32e67a0443b473">00058</a>   <a class="code" href="classArray.html">Array&lt;int&gt;</a> <a class="code" href="classSITE.html#a818a8ecf8164e6c66a32e67a0443b473">WormCreationNewState</a>;
+<a name="l00059"></a><a class="code" href="classSITE.html#a1a09d02b02dc5735d5afd6d9dd909b4f">00059</a>   <a class="code" href="classArray.html">Array&lt;int&gt;</a> <a class="code" href="classSITE.html#a1a09d02b02dc5735d5afd6d9dd909b4f">WormCreationDirection</a>;
+<a name="l00060"></a><a class="code" href="classSITE.html#a05e2e55547b3c3aec0362999dd18f4f3">00060</a>   <a class="code" href="classArray.html">Array&lt;double&gt;</a> <a class="code" href="classSITE.html#a05e2e55547b3c3aec0362999dd18f4f3">WormCreationProbability</a>;
+<a name="l00061"></a>00061 
+<a name="l00062"></a><a class="code" href="classSITE.html#a04d6ea4ed0c4fae02537ca28c21c31f7">00062</a>   <a class="code" href="classSITE.html#a04d6ea4ed0c4fae02537ca28c21c31f7">SITE</a>() {
+<a name="l00063"></a>00063     _T = 0;
+<a name="l00064"></a>00064     ID = <a class="code" href="namespaceSTYPE.html#a6af3477d2e74163c155b0d0a2e4265ae">STYPE::UNDEF</a>;
+<a name="l00065"></a>00065     TTYPE = <a class="code" href="namespaceSTYPE.html#a6af3477d2e74163c155b0d0a2e4265ae">TTYPE::UNDEF</a>;
+<a name="l00066"></a>00066     VTYPE = <a class="code" href="namespaceSTYPE.html#a6af3477d2e74163c155b0d0a2e4265ae">VTYPE::UNDEF</a>;
+<a name="l00067"></a>00067     NX = 0;
+<a name="l00068"></a>00068     NumberOfChannels = 0;
+<a name="l00069"></a>00069   };
+<a name="l00070"></a>00070 
+<a name="l00071"></a><a class="code" href="classSITE.html#aa3731a765abe1343614be9bfdc40ac03">00071</a>   <a class="code" href="classSITE.html#aa3731a765abe1343614be9bfdc40ac03">~SITE</a>() {
+<a name="l00072"></a>00072     <span class="keywordflow">if</span> ( NumberOfChannels != 0 ) <span class="keyword">delete</span> [] NumberOfChannels;
+<a name="l00073"></a>00073     WormCreationNewState.reset();
+<a name="l00074"></a>00074     WormCreationDirection.reset();
+<a name="l00075"></a>00075     WormCreationProbability.reset();
+<a name="l00076"></a>00076   };
+<a name="l00077"></a>00077 
+<a name="l00078"></a>00078   <span class="keywordtype">void</span> load(<a class="code" href="classXML_1_1Block.html">XML::Block</a>&amp; X);
+<a name="l00079"></a>00079   <span class="keywordtype">void</span> SetInitialHeadTypeProbability();
+<a name="l00080"></a>00080   <span class="keywordtype">void</span> write();
+<a name="l00081"></a>00081   <span class="keywordtype">void</span> <a class="code" href="matrix_8h.html#a7a9ca5f0e5c67fe68272326edd13cd7e">dump</a>();
+<a name="l00082"></a>00082 
+<a name="l00083"></a>00083 };
+<a name="l00084"></a>00084 
+<a name="l00085"></a>00085 <span class="comment">//######################################################################</span>
+<a name="l00086"></a>00086 
+<a name="l00087"></a><a class="code" href="classVERTEX.html">00087</a> <span class="keyword">class </span><a class="code" href="classVERTEX.html">VERTEX</a> {
+<a name="l00088"></a>00088 <span class="keyword">private</span>:
+<a name="l00089"></a><a class="code" href="classVERTEX.html#aca575dbce38ab0776cd3611e21845f4d">00089</a>   <a class="code" href="classIndexSystem.html">IndexSystem</a>* <a class="code" href="classVERTEX.html#aca575dbce38ab0776cd3611e21845f4d">_INDX</a>;
+<a name="l00090"></a>00090 
+<a name="l00091"></a>00091 <span class="keyword">public</span>:
+<a name="l00092"></a>00092 
+<a name="l00093"></a><a class="code" href="classVERTEX.html#af180e926633cde08a05ccbc3af397ee4">00093</a>   <span class="keywordtype">int</span> <a class="code" href="classVERTEX.html#af180e926633cde08a05ccbc3af397ee4">ID</a>;
+<a name="l00094"></a><a class="code" href="classVERTEX.html#ad3d4699a589cebfac09661cb5f211a73">00094</a>   vector&lt;InitialConfigurationGroup*&gt; <a class="code" href="classVERTEX.html#ad3d4699a589cebfac09661cb5f211a73">icg</a>;
+<a name="l00095"></a><a class="code" href="classVERTEX.html#a5bf3f6148e8638d310911312eedb314a">00095</a>   <a class="code" href="classInitialConfigurationGroup.html">InitialConfigurationGroup</a>&amp; <a class="code" href="classVERTEX.html#a5bf3f6148e8638d310911312eedb314a">ICG</a>(<span class="keywordtype">int</span> i) { <span class="keywordflow">return</span> *(icg[i]); };
+<a name="l00096"></a><a class="code" href="classVERTEX.html#a40b6cb423d67e694bd442231902c4b06">00096</a>   <span class="keywordtype">void</span> add_ICG( <a class="code" href="classInitialConfigurationGroup.html">InitialConfigurationGroup</a>&amp; x ) { icg.push_back( &amp;x ); };
+<a name="l00097"></a>00097 
+<a name="l00098"></a>00098   <span class="keywordtype">int</span> NBODY;     <span class="comment">// the number of sites interacting</span>
+<a name="l00099"></a><a class="code" href="classVERTEX.html#ad2e978411f291e4018c6291e9d4a6deb">00099</a>   <span class="keywordtype">int</span> <a class="code" href="classVERTEX.html#ad2e978411f291e4018c6291e9d4a6deb">NLEG</a>;
+<a name="l00100"></a><a class="code" href="classVERTEX.html#a1f75a9744b8c73b83a83c3e3924f3811">00100</a>   <span class="keywordtype">int</span> <a class="code" href="classVERTEX.html#a1f75a9744b8c73b83a83c3e3924f3811">NICG</a>;      <span class="comment">// number of initial configuration group</span>
+<a name="l00101"></a><a class="code" href="classVERTEX.html#a3f028327ee96edfd6f3bf4bcfd3f9546">00101</a>   <span class="keywordtype">int</span> <a class="code" href="classVERTEX.html#a3f028327ee96edfd6f3bf4bcfd3f9546">NICV</a>;      <span class="comment">// total number of initial configurations</span>
+<a name="l00102"></a><a class="code" href="classVERTEX.html#adfc7b44a2818d3c7bad6890ae07e4b18">00102</a>   <span class="keywordtype">int</span> <a class="code" href="classVERTEX.html#adfc7b44a2818d3c7bad6890ae07e4b18">NST</a>;       <span class="comment">// the number of initial states (not including worm type or direction)</span>
+<a name="l00103"></a><a class="code" href="classVERTEX.html#a643f76773b1f3f1446cc4b24aa3e0ad3">00103</a>   <span class="keywordtype">int</span> <a class="code" href="classVERTEX.html#a643f76773b1f3f1446cc4b24aa3e0ad3">CATEGORY</a>;  <span class="comment">// =0 (TERM), =1 (WORM), =2 (INTERACTION)</span>
+<a name="l00104"></a><a class="code" href="classVERTEX.html#ad5f4f052b92013a850af5f9ea527d8b5">00104</a>   <span class="keywordtype">double</span> <a class="code" href="classVERTEX.html#ad5f4f052b92013a850af5f9ea527d8b5">EBASE</a>;
+<a name="l00105"></a><a class="code" href="classVERTEX.html#af56e280b2c94cebef5c80e6707062b18">00105</a>   <a class="code" href="classArray.html">Array&lt;double&gt;</a> <a class="code" href="classVERTEX.html#af56e280b2c94cebef5c80e6707062b18">Weight</a>;
+<a name="l00106"></a><a class="code" href="classVERTEX.html#ab880edb46dac897b907057c56e65dfc7">00106</a>   <a class="code" href="classArray.html">Array&lt;int&gt;</a> <a class="code" href="classVERTEX.html#ab880edb46dac897b907057c56e65dfc7">SiteTypeOfLeg</a>;
+<a name="l00107"></a><a class="code" href="classVERTEX.html#a722d16497db8771d93b3dc55c9729fef">00107</a>   <a class="code" href="classArray.html">Array&lt;int&gt;</a> <a class="code" href="classVERTEX.html#a722d16497db8771d93b3dc55c9729fef">checked</a>;
+<a name="l00108"></a>00108 
+<a name="l00109"></a><a class="code" href="classVERTEX.html#ad737e867fc59a19cb4ec5fe1f5cc92ae">00109</a>   <span class="keywordtype">void</span> <a class="code" href="classVERTEX.html#ad737e867fc59a19cb4ec5fe1f5cc92ae">setINDX</a>( <a class="code" href="classIndexSystem.html">IndexSystem</a>&amp; I ) { _INDX = &amp;I; };
+<a name="l00110"></a><a class="code" href="classVERTEX.html#af0261ee9ed4d08c911429c30fba45bae">00110</a>   <a class="code" href="classIndexSystem.html">IndexSystem</a>&amp; <a class="code" href="classVERTEX.html#af0261ee9ed4d08c911429c30fba45bae">INDX</a>() { <span class="keywordflow">return</span> *_INDX; };
+<a name="l00111"></a>00111 
+<a name="l00112"></a><a class="code" href="classVERTEX.html#a89134e5301aeb5280787e9e636b66e9d">00112</a>   <a class="code" href="classVERTEX.html#a89134e5301aeb5280787e9e636b66e9d">VERTEX</a>() { 
+<a name="l00113"></a>00113     ID = <a class="code" href="namespaceSTYPE.html#a6af3477d2e74163c155b0d0a2e4265ae">VTYPE::UNDEF</a>; 
+<a name="l00114"></a>00114     NBODY = 0;
+<a name="l00115"></a>00115     NLEG = 0;
+<a name="l00116"></a>00116     NICG = 0;
+<a name="l00117"></a>00117     NICV = 0;
+<a name="l00118"></a>00118     NST = 0;
+<a name="l00119"></a>00119     CATEGORY = <a class="code" href="namespaceSTYPE.html#a6af3477d2e74163c155b0d0a2e4265ae">VCAT::UNDEF</a>;
+<a name="l00120"></a>00120     EBASE = 0.0;
+<a name="l00121"></a>00121   };
+<a name="l00122"></a>00122 
+<a name="l00123"></a><a class="code" href="classVERTEX.html#a2a2d3782d5191ffc9f7da4c9377ea55b">00123</a>   <a class="code" href="classVERTEX.html#a2a2d3782d5191ffc9f7da4c9377ea55b">~VERTEX</a>() {
+<a name="l00124"></a>00124   };
+<a name="l00125"></a>00125 
+<a name="l00126"></a><a class="code" href="classVERTEX.html#afdc77d25074c3fcc1571b62e8559b9f7">00126</a>   <span class="keywordtype">bool</span> <a class="code" href="classVERTEX.html#afdc77d25074c3fcc1571b62e8559b9f7">isTerm</a>() { <span class="keywordflow">return</span> CATEGORY == <a class="code" href="namespaceVCAT.html#a0a5dba6a1474034dbc50e8de3560f059">VCAT::TERM</a>; };
+<a name="l00127"></a><a class="code" href="classVERTEX.html#abc6a960d3033961b012d05681773110c">00127</a>   <span class="keywordtype">bool</span> <a class="code" href="classVERTEX.html#abc6a960d3033961b012d05681773110c">isWorm</a>() { <span class="keywordflow">return</span> CATEGORY == <a class="code" href="namespaceVCAT.html#a61263646e7c804385f85f85cfe19a16d">VCAT::WORM</a>; };
+<a name="l00128"></a><a class="code" href="classVERTEX.html#a9ad4eb00a35c9256bd2b2dc18b9df895">00128</a>   <span class="keywordtype">bool</span> <a class="code" href="classVERTEX.html#a9ad4eb00a35c9256bd2b2dc18b9df895">isInteraction</a>() { <span class="keywordflow">return</span> CATEGORY == <a class="code" href="namespaceVCAT.html#aad63d4da4983eace804e391db3539c73">VCAT::INT</a>; };
+<a name="l00129"></a>00129   <span class="keywordtype">void</span> Grouping();
+<a name="l00130"></a>00130   <span class="keywordtype">double</span> ComputeEBASE();
+<a name="l00131"></a>00131   <span class="keywordtype">void</span> ComputeScatteringProbability();
+<a name="l00132"></a>00132   <span class="keywordtype">void</span> <a class="code" href="matrix_8h.html#a7a9ca5f0e5c67fe68272326edd13cd7e">dump</a>();
+<a name="l00133"></a>00133   <span class="keywordtype">void</span> load(<a class="code" href="classXML_1_1Block.html">XML::Block</a>&amp; X);
+<a name="l00134"></a>00134   <span class="keywordtype">void</span> write();
+<a name="l00135"></a>00135   <span class="keywordtype">int</span> NumberOfValidInitialConfigurations();
+<a name="l00136"></a>00136   <span class="keywordtype">bool</span> <a class="code" href="dla__alg_8h.html#a4d2943bb66a9923a6da9b065ca64984a">testKink</a>(<span class="keywordtype">int</span> ist);
+<a name="l00137"></a>00137   <span class="keywordtype">bool</span> <a class="code" href="dla__alg_8h.html#aa6f285b73f7bfee462f5227d73db8ddb">testForbidden</a>(<span class="keywordtype">int</span> ist);
+<a name="l00138"></a>00138 
+<a name="l00139"></a>00139 };
+<a name="l00140"></a>00140 
+<a name="l00141"></a>00141 <span class="comment">//######################################################################</span>
+<a name="l00142"></a>00142 
+<a name="l00143"></a><a class="code" href="classSOURCE.html">00143</a> <span class="keyword">class </span><a class="code" href="classSOURCE.html">SOURCE</a> {
+<a name="l00144"></a>00144 <span class="keyword">public</span>:
+<a name="l00145"></a><a class="code" href="classSOURCE.html#af180e926633cde08a05ccbc3af397ee4">00145</a>   <span class="keywordtype">int</span> <a class="code" href="classSOURCE.html#af180e926633cde08a05ccbc3af397ee4">ID</a>;
+<a name="l00146"></a><a class="code" href="classSOURCE.html#a83c39e1a5481e471f830b38d64ba7ce7">00146</a>   <span class="keywordtype">int</span> <a class="code" href="classSOURCE.html#a83c39e1a5481e471f830b38d64ba7ce7">STYPE</a>;
+<a name="l00147"></a><a class="code" href="classSOURCE.html#adb97fc436189a73c3fde020301a62af2">00147</a>   <span class="keywordtype">int</span> <a class="code" href="classSOURCE.html#adb97fc436189a73c3fde020301a62af2">VTYPE</a>;
+<a name="l00148"></a><a class="code" href="classSOURCE.html#a0a50d02fe67a9a6dead68e688c51942c">00148</a>   <a class="code" href="classVERTEX.html">VERTEX</a> *<a class="code" href="classSOURCE.html#a0a50d02fe67a9a6dead68e688c51942c">_V</a>;
+<a name="l00149"></a><a class="code" href="classSOURCE.html#a03747257de5b3b722ea1697892274786">00149</a>   <a class="code" href="classSOURCE.html#a03747257de5b3b722ea1697892274786">SOURCE</a>() { 
+<a name="l00150"></a>00150     ID = <a class="code" href="namespaceSTYPE.html#a6af3477d2e74163c155b0d0a2e4265ae">TTYPE::UNDEF</a>; STYPE = <a class="code" href="namespaceSTYPE.html#a6af3477d2e74163c155b0d0a2e4265ae">STYPE::UNDEF</a>; VTYPE = <a class="code" href="namespaceSTYPE.html#a6af3477d2e74163c155b0d0a2e4265ae">VTYPE::UNDEF</a>; _V = 0; 
+<a name="l00151"></a>00151   };
+<a name="l00152"></a><a class="code" href="classSOURCE.html#a075af34a843191d8a1dc1cb9db262c8b">00152</a>   <a class="code" href="classVERTEX.html">VERTEX</a>&amp; <a class="code" href="classSOURCE.html#a075af34a843191d8a1dc1cb9db262c8b">V</a>() { 
+<a name="l00153"></a>00153     <span class="keywordflow">if</span> ( _V == 0 ) {
+<a name="l00154"></a>00154       printf(<span class="stringliteral">&quot;SOURCE::V&gt; Error. _V is not defined.\n&quot;</span>); 
+<a name="l00155"></a>00155       exit(0);
+<a name="l00156"></a>00156     }
+<a name="l00157"></a>00157     <span class="keywordflow">return</span> *_V; 
+<a name="l00158"></a>00158   };
+<a name="l00159"></a><a class="code" href="classSOURCE.html#a9ba355badb4b5f534c7c29bd049d4358">00159</a>   <span class="keywordtype">double</span> <a class="code" href="classSOURCE.html#a9ba355badb4b5f534c7c29bd049d4358">Weight</a>(<span class="keywordtype">int</span> x0, <span class="keywordtype">int</span> x1) { 
+<a name="l00160"></a>00160     <span class="keywordflow">return</span> V().Weight( x0 , x1 ); 
+<a name="l00161"></a>00161   };
+<a name="l00162"></a>00162   <span class="keywordtype">void</span> load(<a class="code" href="classXML_1_1Block.html">XML::Block</a>&amp; X);
+<a name="l00163"></a>00163   <span class="keywordtype">void</span> <a class="code" href="matrix_8h.html#a7a9ca5f0e5c67fe68272326edd13cd7e">dump</a>();
+<a name="l00164"></a>00164 };
+<a name="l00165"></a>00165 
+<a name="l00166"></a>00166 <span class="comment">//######################################################################</span>
+<a name="l00167"></a>00167 
+<a name="l00168"></a><a class="code" href="classINTERACTION.html">00168</a> <span class="keyword">class </span><a class="code" href="classINTERACTION.html">INTERACTION</a> {
+<a name="l00169"></a>00169 <span class="keyword">public</span>:
+<a name="l00170"></a><a class="code" href="classINTERACTION.html#af180e926633cde08a05ccbc3af397ee4">00170</a>   <span class="keywordtype">int</span> <a class="code" href="classINTERACTION.html#af180e926633cde08a05ccbc3af397ee4">ID</a>;
+<a name="l00171"></a><a class="code" href="classINTERACTION.html#adb97fc436189a73c3fde020301a62af2">00171</a>   <span class="keywordtype">int</span> <a class="code" href="classINTERACTION.html#adb97fc436189a73c3fde020301a62af2">VTYPE</a>;
+<a name="l00172"></a><a class="code" href="classINTERACTION.html#a40b6cb423d67e694bd442231902c4b06">00172</a>   <span class="keywordtype">int</span> <a class="code" href="classINTERACTION.html#a40b6cb423d67e694bd442231902c4b06">NBODY</a>;
+<a name="l00173"></a><a class="code" href="classINTERACTION.html#a0a50d02fe67a9a6dead68e688c51942c">00173</a>   <a class="code" href="classVERTEX.html">VERTEX</a>* <a class="code" href="classINTERACTION.html#a0a50d02fe67a9a6dead68e688c51942c">_V</a>;
+<a name="l00174"></a><a class="code" href="classINTERACTION.html#a02f62c9684ac7a21d53a738c6dfea2d6">00174</a>   <a class="code" href="classVERTEX.html">VERTEX</a>&amp; V() { <span class="keywordflow">return</span> *_V; };
+<a name="l00175"></a>00175   <a class="code" href="classArray.html">Array&lt;double&gt;</a> VertexDensity;
+<a name="l00176"></a><a class="code" href="classINTERACTION.html#a6d330abd7a12b81411b818d745fdf5c3">00176</a>   <a class="code" href="classINTERACTION.html#a6d330abd7a12b81411b818d745fdf5c3">INTERACTION</a>() { ID = <a class="code" href="namespaceSTYPE.html#a6af3477d2e74163c155b0d0a2e4265ae">ITYPE::UNDEF</a>; VTYPE = <a class="code" href="namespaceSTYPE.html#a6af3477d2e74163c155b0d0a2e4265ae">VTYPE::UNDEF</a>; NBODY = 0; };
+<a name="l00177"></a><a class="code" href="classINTERACTION.html#aa53e997fcb6dd110e8dd39fc7e310747">00177</a>   <a class="code" href="classINTERACTION.html#aa53e997fcb6dd110e8dd39fc7e310747">~INTERACTION</a>() { VertexDensity.reset(); };
+<a name="l00178"></a>00178   <span class="keywordtype">int</span> STYPE(<span class="keywordtype">int</span> i);
+<a name="l00179"></a>00179   <span class="keywordtype">void</span> SetVertexDensity();
+<a name="l00180"></a>00180   <span class="keywordtype">void</span> load(<a class="code" href="classXML_1_1Block.html">XML::Block</a>&amp; X);
+<a name="l00181"></a>00181   <span class="keywordtype">void</span> write();
+<a name="l00182"></a>00182   <span class="keywordtype">void</span> <a class="code" href="matrix_8h.html#a7a9ca5f0e5c67fe68272326edd13cd7e">dump</a>();
+<a name="l00183"></a>00183 };
+<a name="l00184"></a>00184 
+<a name="l00185"></a>00185 <span class="comment">//######################################################################</span>
+<a name="l00186"></a>00186 
+<a name="l00187"></a><a class="code" href="classInitialConfiguration.html">00187</a> <span class="keyword">class </span><a class="code" href="classInitialConfiguration.html">InitialConfiguration</a> {
+<a name="l00188"></a>00188 
+<a name="l00189"></a>00189 <span class="keyword">private</span>:
+<a name="l00190"></a>00190 
+<a name="l00191"></a><a class="code" href="classInitialConfiguration.html#adf95e48510142f4efe6b7fbe7ad9ec2e">00191</a>   <span class="keyword">static</span> <span class="keywordtype">int</span> <a class="code" href="classInitialConfiguration.html#adf95e48510142f4efe6b7fbe7ad9ec2e">LastID</a>;
+<a name="l00192"></a><a class="code" href="classInitialConfiguration.html#af180e926633cde08a05ccbc3af397ee4">00192</a>   <span class="keywordtype">int</span> <a class="code" href="classInitialConfiguration.html#af180e926633cde08a05ccbc3af397ee4">ID</a>;
+<a name="l00193"></a>00193 
+<a name="l00194"></a>00194 <span class="keyword">public</span>:
+<a name="l00195"></a>00195 
+<a name="l00196"></a><a class="code" href="classInitialConfiguration.html#a216b9d114392aa51b748e9973b9f0651">00196</a>   <span class="keyword">friend</span> <span class="keyword">class </span><a class="code" href="classInitialConfigurationGroup.html">InitialConfigurationGroup</a>;
+<a name="l00197"></a>00197 
+<a name="l00198"></a><a class="code" href="classInitialConfiguration.html#a40b6cb423d67e694bd442231902c4b06">00198</a>   <span class="keywordtype">int</span> <a class="code" href="classInitialConfiguration.html#a40b6cb423d67e694bd442231902c4b06">NBODY</a>;
+<a name="l00199"></a><a class="code" href="classInitialConfiguration.html#ad2e978411f291e4018c6291e9d4a6deb">00199</a>   <span class="keywordtype">int</span> <a class="code" href="classInitialConfiguration.html#ad2e978411f291e4018c6291e9d4a6deb">NLEG</a>;
+<a name="l00200"></a><a class="code" href="classInitialConfiguration.html#abec7c8ef75bc4b811f2eb3d4e8db6d2b">00200</a>   <span class="keywordtype">int</span> <a class="code" href="classInitialConfiguration.html#abec7c8ef75bc4b811f2eb3d4e8db6d2b">NCH</a>;
+<a name="l00201"></a><a class="code" href="classInitialConfiguration.html#a92297bc6de760f10ff2e8f4e25ecac0b">00201</a>   <span class="keywordtype">int</span> <a class="code" href="classInitialConfiguration.html#a92297bc6de760f10ff2e8f4e25ecac0b">STI</a>;
+<a name="l00202"></a><a class="code" href="classInitialConfiguration.html#a8f747dc37066722ae97fb0edbb79ee71">00202</a>   <span class="keywordtype">int</span> <a class="code" href="classInitialConfiguration.html#a8f747dc37066722ae97fb0edbb79ee71">XINC</a>;
+<a name="l00203"></a><a class="code" href="classInitialConfiguration.html#a66e9afc35cfde27c7f2c650df188c0c8">00203</a>   <span class="keywordtype">int</span> <a class="code" href="classInitialConfiguration.html#a66e9afc35cfde27c7f2c650df188c0c8">INC</a>;
+<a name="l00204"></a>00204 
+<a name="l00205"></a><a class="code" href="classInitialConfiguration.html#a1b922b6523bd302b3a36812b23c4eebb">00205</a>   <span class="keywordtype">int</span>* <a class="code" href="classInitialConfiguration.html#a1b922b6523bd302b3a36812b23c4eebb">State</a>;
+<a name="l00206"></a><a class="code" href="classInitialConfiguration.html#a228ef943ea00843456f11a742a1426aa">00206</a>   <span class="keywordtype">int</span>* <a class="code" href="classInitialConfiguration.html#a228ef943ea00843456f11a742a1426aa">FinalState</a>;
+<a name="l00207"></a><a class="code" href="classInitialConfiguration.html#af60991908d4085d9b1282624853d053e">00207</a>   <span class="keywordtype">int</span>* <a class="code" href="classInitialConfiguration.html#af60991908d4085d9b1282624853d053e">FinalDirection</a>;
+<a name="l00208"></a><a class="code" href="classInitialConfiguration.html#ab861732a67ffb9d9c9cc061b0d77faae">00208</a>   <span class="keywordtype">double</span>* <a class="code" href="classInitialConfiguration.html#ab861732a67ffb9d9c9cc061b0d77faae">ScatteringProbability</a>;
+<a name="l00209"></a><a class="code" href="classInitialConfiguration.html#a0a50d02fe67a9a6dead68e688c51942c">00209</a>   <a class="code" href="classVERTEX.html">VERTEX</a>* <a class="code" href="classInitialConfiguration.html#a0a50d02fe67a9a6dead68e688c51942c">_V</a>;
+<a name="l00210"></a>00210 
+<a name="l00211"></a><a class="code" href="classInitialConfiguration.html#a714c701ce54e9aae5e223329b3c8c9de">00211</a>   <a class="code" href="classInitialConfiguration.html#a714c701ce54e9aae5e223329b3c8c9de">InitialConfiguration</a>() { 
+<a name="l00212"></a>00212     <a class="code" href="classInitialConfigurationGroup.html#af180e926633cde08a05ccbc3af397ee4">ID</a> = <a class="code" href="classInitialConfigurationGroup.html#adf95e48510142f4efe6b7fbe7ad9ec2e">LastID</a>; 
+<a name="l00213"></a>00213     <a class="code" href="classInitialConfigurationGroup.html#adf95e48510142f4efe6b7fbe7ad9ec2e">LastID</a>++; 
+<a name="l00214"></a>00214     State = 0;
+<a name="l00215"></a>00215     FinalState = 0;
+<a name="l00216"></a>00216     FinalDirection = 0;
+<a name="l00217"></a>00217     <a class="code" href="classInitialConfigurationGroup.html#a21991132691d4646e8ab528a6354612f">ScatteringProbability</a> = 0;
+<a name="l00218"></a>00218   };
+<a name="l00219"></a>00219 
+<a name="l00220"></a><a class="code" href="classInitialConfiguration.html#a6e49a810dac0c0cca7b7ffd35cde9224">00220</a>   <a class="code" href="classInitialConfiguration.html#a6e49a810dac0c0cca7b7ffd35cde9224">~InitialConfiguration</a>() {
+<a name="l00221"></a>00221     <span class="keywordflow">if</span> ( State != 0 ) <span class="keyword">delete</span> [] State;
+<a name="l00222"></a>00222     <span class="keywordflow">if</span> ( <a class="code" href="classInitialConfigurationGroup.html#a21991132691d4646e8ab528a6354612f">ScatteringProbability</a> != 0 ) <span class="keyword">delete</span> [] <a class="code" href="classInitialConfigurationGroup.html#a21991132691d4646e8ab528a6354612f">ScatteringProbability</a>;
+<a name="l00223"></a>00223     <span class="keywordflow">if</span> ( FinalState != 0 ) <span class="keyword">delete</span> [] FinalState;
+<a name="l00224"></a>00224     <span class="keywordflow">if</span> ( FinalDirection != 0 ) <span class="keyword">delete</span> [] FinalDirection;
+<a name="l00225"></a>00225   };
+<a name="l00226"></a>00226 
+<a name="l00227"></a>00227   <span class="keywordtype">bool</span> isValid();
+<a name="l00228"></a><a class="code" href="classInitialConfiguration.html#a1164e5678e2ef427620d7fcd96365739">00228</a>   <span class="keywordtype">void</span> <a class="code" href="classInitialConfiguration.html#a1164e5678e2ef427620d7fcd96365739">setV</a>(<a class="code" href="classVERTEX.html">VERTEX</a>&amp; V0) { <a class="code" href="classInitialConfigurationGroup.html#a0a50d02fe67a9a6dead68e688c51942c">_V</a> = &amp;V0; };
+<a name="l00229"></a><a class="code" href="classInitialConfiguration.html#a075af34a843191d8a1dc1cb9db262c8b">00229</a>   <a class="code" href="classVERTEX.html">VERTEX</a>&amp; <a class="code" href="classInitialConfiguration.html#a075af34a843191d8a1dc1cb9db262c8b">V</a>() { <span class="keywordflow">return</span> *<a class="code" href="classInitialConfigurationGroup.html#a0a50d02fe67a9a6dead68e688c51942c">_V</a>; };
+<a name="l00230"></a>00230   <span class="keywordtype">void</span> <a class="code" href="classInitialConfigurationGroup.html#ad2792a3d2bcb1db2d0aaffff1234715e">init</a>( <a class="code" href="classVERTEX.html">VERTEX</a>&amp; <a class="code" href="classInitialConfigurationGroup.html#a075af34a843191d8a1dc1cb9db262c8b">V</a>, <span class="keywordtype">int</span> sti , <span class="keywordtype">int</span> inc, <span class="keywordtype">int</span> xinc, <span class="keywordtype">int</span> NICmax );
+<a name="l00231"></a>00231   <span class="keywordtype">bool</span> <a class="code" href="dla__alg_8h.html#ae7e84b92e5385c13642109f861c4386a">isKink</a>();
+<a name="l00232"></a><a class="code" href="classInitialConfiguration.html#a4d612bd576d9ffee2de00f1937d3de69">00232</a>   <span class="keywordtype">int</span>&amp; <a class="code" href="classInitialConfiguration.html#a4d612bd576d9ffee2de00f1937d3de69">id</a>() { <span class="keywordflow">return</span> <a class="code" href="classInitialConfigurationGroup.html#af180e926633cde08a05ccbc3af397ee4">ID</a>; }
+<a name="l00233"></a>00233   <span class="keywordtype">double</span> weight();
+<a name="l00234"></a>00234   <span class="keywordtype">double</span> vertex_weight();
+<a name="l00235"></a>00235   <span class="keywordtype">double</span> worm_weight();
+<a name="l00236"></a>00236   <span class="keywordtype">void</span> <a class="code" href="matrix_8h.html#a7a9ca5f0e5c67fe68272326edd13cd7e">dump</a>();
+<a name="l00237"></a>00237   <span class="keywordtype">void</span> <a class="code" href="classInitialConfigurationGroup.html#aac759501cf6c7895a70eecbef0226ae1">write</a>();
+<a name="l00238"></a>00238 
+<a name="l00239"></a>00239 };
+<a name="l00240"></a>00240 
+<a name="l00241"></a>00241 <span class="keywordtype">int</span> <a class="code" href="classInitialConfiguration.html#adf95e48510142f4efe6b7fbe7ad9ec2e">InitialConfiguration::LastID</a> = 0;
+<a name="l00242"></a>00242 
+<a name="l00243"></a>00243 <span class="comment">//######################################################################</span>
+<a name="l00244"></a>00244 
+<a name="l00245"></a><a class="code" href="classInitialConfigurationGroup.html">00245</a> <span class="keyword">class </span><a class="code" href="classInitialConfigurationGroup.html">InitialConfigurationGroup</a> {
+<a name="l00246"></a>00246 
+<a name="l00247"></a>00247 <span class="keyword">private</span>:
+<a name="l00248"></a><a class="code" href="classInitialConfigurationGroup.html#adf95e48510142f4efe6b7fbe7ad9ec2e">00248</a>   <span class="keyword">static</span> <span class="keywordtype">int</span> <a class="code" href="classInitialConfigurationGroup.html#adf95e48510142f4efe6b7fbe7ad9ec2e">LastID</a>;
+<a name="l00249"></a><a class="code" href="classInitialConfigurationGroup.html#af180e926633cde08a05ccbc3af397ee4">00249</a>   <span class="keywordtype">int</span> <a class="code" href="classInitialConfigurationGroup.html#af180e926633cde08a05ccbc3af397ee4">ID</a>;
+<a name="l00250"></a>00250   
+<a name="l00251"></a>00251 <span class="keyword">public</span>:
+<a name="l00252"></a><a class="code" href="classInitialConfigurationGroup.html#ac2ef20a53da6bbd710051417ccf102a6">00252</a>   <span class="keywordtype">int</span> <a class="code" href="classInitialConfigurationGroup.html#ac2ef20a53da6bbd710051417ccf102a6">NIC</a>;
+<a name="l00253"></a><a class="code" href="classInitialConfigurationGroup.html#a4e10227c873697de048c48d925a08a1f">00253</a>   <span class="keywordtype">int</span> <a class="code" href="classInitialConfigurationGroup.html#a4e10227c873697de048c48d925a08a1f">NDIAG</a>;
+<a name="l00254"></a><a class="code" href="classInitialConfigurationGroup.html#a0101243218ad5586b290bc1fbd8051a3">00254</a>   <a class="code" href="classArray.html">Array&lt;double&gt;</a> <a class="code" href="classInitialConfigurationGroup.html#a0101243218ad5586b290bc1fbd8051a3">U</a>;
+<a name="l00255"></a>00255   <span class="comment">//  Array&lt;double&gt; W;</span>
+<a name="l00256"></a>00256   <span class="comment">//  Array&lt;double&gt; P;</span>
+<a name="l00257"></a><a class="code" href="classInitialConfigurationGroup.html#a0a50d02fe67a9a6dead68e688c51942c">00257</a>   <a class="code" href="classVERTEX.html">VERTEX</a>* <a class="code" href="classInitialConfigurationGroup.html#a0a50d02fe67a9a6dead68e688c51942c">_V</a>;
+<a name="l00258"></a><a class="code" href="classInitialConfigurationGroup.html#a3fab21a5c15ed8b5668a2cc3bf6c575d">00258</a>   <a class="code" href="classArray.html">Array&lt;InitialConfiguration&gt;</a> <a class="code" href="classInitialConfigurationGroup.html#a3fab21a5c15ed8b5668a2cc3bf6c575d">IC</a>;
+<a name="l00259"></a><a class="code" href="classInitialConfigurationGroup.html#a40b6cb423d67e694bd442231902c4b06">00259</a>   <span class="keywordtype">int</span> <a class="code" href="classInitialConfigurationGroup.html#a40b6cb423d67e694bd442231902c4b06">NBODY</a>;
+<a name="l00260"></a><a class="code" href="classInitialConfigurationGroup.html#ad2e978411f291e4018c6291e9d4a6deb">00260</a>   <span class="keywordtype">int</span> <a class="code" href="classInitialConfigurationGroup.html#ad2e978411f291e4018c6291e9d4a6deb">NLEG</a>;
+<a name="l00261"></a>00261 
+<a name="l00262"></a><a class="code" href="classInitialConfigurationGroup.html#a67bf0c1bb616eb7fd8922963e5adbe89">00262</a>   <a class="code" href="classInitialConfigurationGroup.html#a67bf0c1bb616eb7fd8922963e5adbe89">InitialConfigurationGroup</a>() { 
+<a name="l00263"></a>00263     ID = LastID;
+<a name="l00264"></a>00264     LastID++;
+<a name="l00265"></a>00265     _V = 0;
+<a name="l00266"></a>00266   };
+<a name="l00267"></a>00267 
+<a name="l00268"></a><a class="code" href="classInitialConfigurationGroup.html#a81dbdf7ca4a93898d7b54b23e0159ac5">00268</a>   <a class="code" href="classInitialConfigurationGroup.html#a81dbdf7ca4a93898d7b54b23e0159ac5">~InitialConfigurationGroup</a>() {
+<a name="l00269"></a>00269     IC.reset();
+<a name="l00270"></a>00270   };
+<a name="l00271"></a>00271 
+<a name="l00272"></a><a class="code" href="classInitialConfigurationGroup.html#a1164e5678e2ef427620d7fcd96365739">00272</a>   <span class="keywordtype">void</span> <a class="code" href="classInitialConfigurationGroup.html#a1164e5678e2ef427620d7fcd96365739">setV</a>(<a class="code" href="classVERTEX.html">VERTEX</a>&amp; V0) { _V = &amp;V0; };
+<a name="l00273"></a>00273 
+<a name="l00274"></a><a class="code" href="classInitialConfigurationGroup.html#a075af34a843191d8a1dc1cb9db262c8b">00274</a>   <a class="code" href="classVERTEX.html">VERTEX</a>&amp; <a class="code" href="classInitialConfigurationGroup.html#a075af34a843191d8a1dc1cb9db262c8b">V</a>() { 
+<a name="l00275"></a>00275     <span class="keywordflow">if</span> ( _V == 0 ) {
+<a name="l00276"></a>00276       printf(<span class="stringliteral">&quot;VERTEX::V&gt; Error. _V has not been defined.\n&quot;</span>);
+<a name="l00277"></a>00277       exit(0);
+<a name="l00278"></a>00278     }
+<a name="l00279"></a>00279     <span class="keywordflow">return</span> *_V; 
+<a name="l00280"></a>00280   };
+<a name="l00281"></a>00281 
+<a name="l00282"></a>00282   <span class="keywordtype">int</span> NumberOfValidInitialConfigurations();
+<a name="l00283"></a>00283 
+<a name="l00284"></a>00284   <span class="comment">//  void init_w( int nbody , int sti );</span>
+<a name="l00285"></a>00285   <span class="keywordtype">void</span> init( <a class="code" href="classVERTEX.html">VERTEX</a>&amp; v, <span class="keywordtype">int</span> nbody , <span class="keywordtype">int</span> sti, <span class="keywordtype">int</span> inc , <span class="keywordtype">int</span> xinc );
+<a name="l00286"></a>00286   <span class="keywordtype">int</span> number_of_diagonal_states();
+<a name="l00287"></a>00287   <span class="keywordtype">int</span> number_of_offdiagonal_states();
+<a name="l00288"></a>00288   <span class="keywordtype">double</span> minimum_diagonal_weight();
+<a name="l00289"></a>00289   <span class="keywordtype">double</span> maximum_diagonal_weight();
+<a name="l00290"></a>00290   <span class="keywordtype">double</span> maximum_offdiagonal_weight();
+<a name="l00291"></a>00291   <span class="keywordtype">double</span> sum_of_all_weights();
+<a name="l00292"></a>00292   <span class="keywordtype">double</span> ebase(); <span class="comment">// the maximum base energy to make</span>
+<a name="l00293"></a>00293                   <span class="comment">// all diagonal weights positive</span>
+<a name="l00294"></a>00294   <span class="keywordtype">void</span> add_to_diagonal_element(<span class="keywordtype">double</span> E);
+<a name="l00295"></a>00295   <span class="keywordtype">void</span> numbering(<span class="keywordtype">int</span>&amp; ICNF);
+<a name="l00296"></a>00296   <span class="keywordtype">void</span> ScatteringProbability();
+<a name="l00297"></a>00297   <span class="keywordtype">void</span> ResetWeight();
+<a name="l00298"></a>00298 
+<a name="l00299"></a>00299   <span class="keywordtype">void</span> <a class="code" href="matrix_8h.html#a7a9ca5f0e5c67fe68272326edd13cd7e">dump</a>();
+<a name="l00300"></a>00300   <span class="keywordtype">void</span> write();
+<a name="l00301"></a>00301   
+<a name="l00302"></a>00302 };
+<a name="l00303"></a>00303 
+<a name="l00304"></a>00304 <span class="keywordtype">int</span> <a class="code" href="classInitialConfigurationGroup.html#adf95e48510142f4efe6b7fbe7ad9ec2e">InitialConfigurationGroup::LastID</a> = 0;
+<a name="l00305"></a>00305 
+<a name="l00306"></a>00306 <span class="comment">//######################################################################</span>
+<a name="l00307"></a>00307 
+<a name="l00308"></a><a class="code" href="classQUANTITY.html">00308</a> <span class="keyword">class </span><a class="code" href="classQUANTITY.html">QUANTITY</a> {
+<a name="l00309"></a>00309 <span class="keyword">private</span>:
+<a name="l00310"></a><a class="code" href="classQUANTITY.html#af180e926633cde08a05ccbc3af397ee4">00310</a>   <span class="keywordtype">int</span> <a class="code" href="classQUANTITY.html#af180e926633cde08a05ccbc3af397ee4">ID</a>;
+<a name="l00311"></a><a class="code" href="classQUANTITY.html#acabb6ad9b502cdea108fc7d574ec62c4">00311</a>   <span class="keywordtype">string</span> <a class="code" href="classQUANTITY.html#acabb6ad9b502cdea108fc7d574ec62c4">NAME</a>;
+<a name="l00312"></a>00312 <span class="keyword">public</span>:
+<a name="l00313"></a><a class="code" href="classQUANTITY.html#ad2dda4b775e3c53250d884ce4ff85a06">00313</a>   <a class="code" href="classArray.html">Array&lt;double&gt;</a> <a class="code" href="classQUANTITY.html#ad2dda4b775e3c53250d884ce4ff85a06">Value</a>;
+<a name="l00314"></a><a class="code" href="classQUANTITY.html#ae42ce2c0562e399cba070105e28fe3d1">00314</a>   <a class="code" href="classArray.html">Array&lt;bool&gt;</a> <a class="code" href="classQUANTITY.html#ae42ce2c0562e399cba070105e28fe3d1">isDefined</a>;
+<a name="l00315"></a><a class="code" href="classQUANTITY.html#aea93026f92028ac88f6b60cd2f3e438b">00315</a>   <span class="keywordtype">int</span> <a class="code" href="classQUANTITY.html#aea93026f92028ac88f6b60cd2f3e438b">getID</a>() { <span class="keywordflow">return</span> ID; };
+<a name="l00316"></a><a class="code" href="classQUANTITY.html#aaba7e9756a1134bf88a746225e38ead8">00316</a>   <span class="keywordtype">void</span> <a class="code" href="classQUANTITY.html#aaba7e9756a1134bf88a746225e38ead8">setID</a>(<span class="keywordtype">int</span> i) { ID = i; };
+<a name="l00317"></a><a class="code" href="classQUANTITY.html#aa1e3f15b37a840cae70bbdd7e10fb40f">00317</a>   <span class="keyword">const</span> <span class="keywordtype">string</span>&amp; <a class="code" href="classQUANTITY.html#aa1e3f15b37a840cae70bbdd7e10fb40f">getName</a>() { <span class="keywordflow">return</span> NAME; };
+<a name="l00318"></a><a class="code" href="classQUANTITY.html#a876026db0d0df2ec30f5833dc3b32b66">00318</a>   <span class="keywordtype">void</span> <a class="code" href="classQUANTITY.html#a876026db0d0df2ec30f5833dc3b32b66">setName</a>(<span class="keyword">const</span> <span class="keywordtype">string</span>&amp; s) { NAME = s; };
+<a name="l00319"></a>00319   <span class="keywordtype">void</span> load(<a class="code" href="classXML_1_1Block.html">XML::Block</a>&amp; X);
+<a name="l00320"></a>00320   <span class="comment">//  void dump();</span>
+<a name="l00321"></a>00321   <span class="keywordtype">void</span> write();
+<a name="l00322"></a>00322 };
+<a name="l00323"></a>00323 
+<a name="l00324"></a>00324 <span class="comment">//######################################################################</span>
+<a name="l00325"></a>00325 
+<a name="l00326"></a><a class="code" href="classINTERACTION.html#a4e1847f75d28cacef1789aefa5aecf42">00326</a> <span class="keywordtype">int</span> <a class="code" href="classINTERACTION.html#a4e1847f75d28cacef1789aefa5aecf42">INTERACTION::STYPE</a>(<span class="keywordtype">int</span> i) { <span class="keywordflow">return</span> _V-&gt;SiteTypeOfLeg(2*i); }
+<a name="l00327"></a>00327 
+<a name="l00328"></a>00328 <span class="comment">//######################################################################</span>
+<a name="l00329"></a>00329 
+<a name="l00330"></a><a class="code" href="classSITE.html#acf0575128e042bee98addaa5135a21ab">00330</a> <a class="code" href="classVERTEX.html">VERTEX</a>&amp; <a class="code" href="classSITE.html#acf0575128e042bee98addaa5135a21ab">SITE::V</a>() { 
+<a name="l00331"></a>00331   <span class="keywordflow">if</span> ( _T == 0 ) {
+<a name="l00332"></a>00332     printf(<span class="stringliteral">&quot;SITE::V&gt; Error. _T is not defined.\n&quot;</span>); 
+<a name="l00333"></a>00333     exit(0);
+<a name="l00334"></a>00334   }
+<a name="l00335"></a>00335   <span class="keywordflow">return</span> T().V(); 
+<a name="l00336"></a>00336 }
+<a name="l00337"></a>00337 
+<a name="l00338"></a>00338 <span class="comment">//######################################################################</span>
+<a name="l00339"></a>00339 
+<a name="l00340"></a><a class="code" href="dla__alg_8h.html#a0cf1e245578b90cf6a25562a673fb667">00340</a> <span class="keywordtype">char</span>* <a class="code" href="dla__alg_8h.html#a0cf1e245578b90cf6a25562a673fb667">HFILE</a>; <span class="comment">// file name of the hamiltonian and the worm</span>
+<a name="l00341"></a><a class="code" href="dla__alg_8h.html#aac2cb90ac28c35a4c4c2d1df5f4a4dbf">00341</a> <span class="keywordtype">char</span>* <a class="code" href="dla__alg_8h.html#aac2cb90ac28c35a4c4c2d1df5f4a4dbf">AFILE</a>; <span class="comment">// file name of algorithm data file</span>
+<a name="l00342"></a><a class="code" href="dla__alg_8h.html#a62b9b6143b2d88464c7bcb34d3fc9f40">00342</a> <a class="code" href="classFileReader.html">FileReader</a> <a class="code" href="dla__alg_8h.html#a62b9b6143b2d88464c7bcb34d3fc9f40">H</a>;
+<a name="l00343"></a><a class="code" href="dla__alg_8h.html#a58060d07f59ce3eff252924cf18e5d39">00343</a> FILE* <a class="code" href="dla__alg_8h.html#a58060d07f59ce3eff252924cf18e5d39">FALG</a>;
+<a name="l00344"></a>00344 
+<a name="l00345"></a><a class="code" href="dla__alg_8h.html#af3e32ba4d1b055ad90d8eea747a9930a">00345</a> <a class="code" href="classSITE.html">SITE</a>* <a class="code" href="dla__alg_8h.html#af3e32ba4d1b055ad90d8eea747a9930a">Site</a>;
+<a name="l00346"></a><a class="code" href="dla__alg_8h.html#a35f116b5f6905f314bc3858998e27dd2">00346</a> <a class="code" href="classSOURCE.html">SOURCE</a>* <a class="code" href="dla__alg_8h.html#a35f116b5f6905f314bc3858998e27dd2">Source</a>;
+<a name="l00347"></a><a class="code" href="dla__alg_8h.html#a9a71a3dd3f6578bf2688d995db18b8b5">00347</a> <a class="code" href="classINTERACTION.html">INTERACTION</a>* <a class="code" href="dla__alg_8h.html#a9a71a3dd3f6578bf2688d995db18b8b5">Interaction</a>;
+<a name="l00348"></a><a class="code" href="dla__alg_8h.html#a58373c1e7631a87ad7e2c548d568d03c">00348</a> <a class="code" href="classVERTEX.html">VERTEX</a>* <a class="code" href="dla__alg_8h.html#a58373c1e7631a87ad7e2c548d568d03c">Vertex</a>;
+<a name="l00349"></a><a class="code" href="dla__alg_8h.html#a70062763cb827e5199f2f7d4b9b26d47">00349</a> <a class="code" href="classQUANTITY.html">QUANTITY</a>* <a class="code" href="dla__alg_8h.html#a70062763cb827e5199f2f7d4b9b26d47">Quantity</a>;
+<a name="l00350"></a>00350 
+<a name="l00351"></a>00351 <span class="keywordtype">bool</span> <a class="code" href="dla__alg_8h.html#ae7e84b92e5385c13642109f861c4386a">isKink</a>(<span class="keywordtype">int</span> st);
+<a name="l00352"></a>00352 
+<a name="l00353"></a><a class="code" href="dla__alg_8h.html#ab6af66382562de2aa8b45b81e256d909">00353</a> <span class="keywordtype">int</span> <a class="code" href="dla__alg_8h.html#ab6af66382562de2aa8b45b81e256d909">NVTYPE</a>;
+<a name="l00354"></a><a class="code" href="dla__alg_8h.html#a2dad84a8985d20913d523848ae5e40ea">00354</a> <span class="keywordtype">int</span> <a class="code" href="dla__alg_8h.html#a2dad84a8985d20913d523848ae5e40ea">NSTYPE</a>; <span class="comment">// the number of site types</span>
+<a name="l00355"></a><a class="code" href="dla__alg_8h.html#a28e1a55e45e45a80a49a8ae1f0e50bcb">00355</a> <span class="keywordtype">int</span> <a class="code" href="dla__alg_8h.html#a28e1a55e45e45a80a49a8ae1f0e50bcb">NITYPE</a>; <span class="comment">// the number of interaction types</span>
+<a name="l00356"></a><a class="code" href="dla__alg_8h.html#a54194e8aa7ff1f8bb7079bcbf617d359">00356</a> <span class="keywordtype">int</span> <a class="code" href="dla__alg_8h.html#a54194e8aa7ff1f8bb7079bcbf617d359">NHTYPE</a>; <span class="comment">// the number of worm head types</span>
+<a name="l00357"></a><a class="code" href="dla__alg_8h.html#af809726197326fd5d7f57175df17fc23">00357</a> <span class="keywordtype">int</span> <a class="code" href="dla__alg_8h.html#af809726197326fd5d7f57175df17fc23">NQTYPE</a>; <span class="comment">// the number of observable types</span>
+<a name="l00358"></a><a class="code" href="dla__alg_8h.html#a52b41a08e36114fbb78f5d900f0371b9">00358</a> <span class="keywordtype">int</span> <a class="code" href="dla__alg_8h.html#a52b41a08e36114fbb78f5d900f0371b9">NXMAX</a>;
+<a name="l00359"></a>00359 
+<a name="l00360"></a><a class="code" href="dla__alg_8h.html#a31b0ef5fed2b0d0eefd2058be2c91818">00360</a> <span class="keywordtype">bool</span> <a class="code" href="dla__alg_8h.html#a31b0ef5fed2b0d0eefd2058be2c91818">MON</a> = <span class="keyword">false</span>; <span class="comment">// true for monitoring</span>
+<a name="l00361"></a>00361 
+</pre></div></div><!-- contents -->
+</div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>全て</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>クラス</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>ネームスペース</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>ファイル</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>関数</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>変数</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(6)"><span class="SelectionMark">&#160;</span>型定義</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(7)"><span class="SelectionMark">&#160;</span>列挙型の値</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(8)"><span class="SelectionMark">&#160;</span>フレンド</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(9)"><span class="SelectionMark">&#160;</span>マクロ定義</a></div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+  <div id="nav-path" class="navpath">
+    <ul>
+      <li class="navelem"><a class="el" href="dla__alg_8h.html">dla_alg.h</a>      </li>
+
+    <li class="footer">DSQSSに対してThu Jul 12 2012 14:28:53に生成されました。
+    <a href="http://www.doxygen.org/index.html">
+    <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.7.6.1 </li>
+   </ul>
+ </div>
+
+
+</body>
+</html>

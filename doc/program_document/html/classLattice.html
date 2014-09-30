@@ -1,0 +1,648 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<title>DSQSS: クラス Lattice</title>
+
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript">
+  $(document).ready(initResizable);
+</script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="text/javascript">
+  $(document).ready(function() { searchBox.OnSelectItem(0); });
+</script>
+
+</head>
+<body>
+<div id="top"><!-- do not remove this div! -->
+
+
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  
+  
+  <td style="padding-left: 0.5em;">
+   <div id="projectname">DSQSS
+   &#160;<span id="projectnumber">1.1</span>
+   </div>
+   
+  </td>
+  
+  
+  
+ </tr>
+ </tbody>
+</table>
+</div>
+
+<!-- 作成： Doxygen 1.7.6.1 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search",false,'検索');
+</script>
+  <div id="navrow1" class="tabs">
+    <ul class="tablist">
+      <li><a href="index.html"><span>メインページ</span></a></li>
+      <li><a href="namespaces.html"><span>ネームスペース</span></a></li>
+      <li class="current"><a href="annotated.html"><span>クラス</span></a></li>
+      <li><a href="files.html"><span>ファイル</span></a></li>
+      <li>
+        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <img id="MSearchSelect" src="search/mag_sel.png"
+               onmouseover="return searchBox.OnSearchSelectShow()"
+               onmouseout="return searchBox.OnSearchSelectHide()"
+               alt=""/>
+          <input type="text" id="MSearchField" value="検索" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><img id="MSearchCloseImg" border="0" src="search/close.png" alt=""/></a>
+          </span>
+        </div>
+      </li>
+    </ul>
+  </div>
+  <div id="navrow2" class="tabs2">
+    <ul class="tablist">
+      <li><a href="annotated.html"><span>構成</span></a></li>
+      <li><a href="classes.html"><span>構成索引</span></a></li>
+      <li><a href="inherits.html"><span>クラス階層</span></a></li>
+      <li><a href="functions.html"><span>構成メンバ</span></a></li>
+    </ul>
+  </div>
+</div>
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+  initNavTree('classLattice.html','');
+</script>
+<div id="doc-content">
+<div class="header">
+  <div class="summary">
+<a href="#pub-methods">Public メソッド</a> &#124;
+<a href="#pub-attribs">Public 変数</a> &#124;
+<a href="#pri-attribs">Private 変数</a>  </div>
+  <div class="headertitle">
+<div class="title">クラス Lattice</div>  </div>
+</div><!--header-->
+<div class="contents">
+<!-- doxytag: class="Lattice" -->
+<p><code>#include &lt;<a class="el" href="lattice_8hpp_source.html">lattice.hpp</a>&gt;</code></p>
+<div class="dynheader">
+Latticeのコラボレーション図</div>
+<div class="dyncontent">
+<div class="center"><img src="classLattice__coll__graph.png" border="0" usemap="#Lattice_coll__map" alt="Collaboration graph"/></div>
+<map name="Lattice_coll__map" id="Lattice_coll__map">
+<area shape="rect" id="node2" href="classXML_1_1Block.html" title="Block" alt="" coords="1429,197,1485,224"/><area shape="rect" id="node4" href="classArray.html" title="Array\&lt; Block \&gt;" alt="" coords="1432,289,1544,316"/><area shape="rect" id="node79" href="classAlgorithm.html" title="Algorithm" alt="" coords="1041,685,1124,712"/><area shape="rect" id="node6" href="classIndexSystem.html" title="IndexSystem" alt="" coords="939,5,1037,32"/><area shape="rect" id="node9" href="classArray.html" title="Array\&lt; string \&gt;" alt="" coords="1401,96,1513,123"/><area shape="rect" id="node28" href="classArray.html" title="Array\&lt; Segment * \&gt;" alt="" coords="52,411,191,437"/><area shape="rect" id="node39" href="classArray.html" title="Array\&lt; int \&gt;" alt="" coords="152,289,245,316"/><area shape="rect" id="node42" href="classArray.html" title="Array\&lt; double \&gt;" alt="" coords="1003,147,1123,173"/><area shape="rect" id="node48" href="classArray.html" title="Array\&lt; VertexInitialConfiguration * \&gt;" alt="" coords="515,289,760,316"/><area shape="rect" id="node53" href="classArray.html" title="Array\&lt; ScatteringChannel \&gt;" alt="" coords="495,96,684,123"/><area shape="rect" id="node58" href="classArray.html" title="Array\&lt; VertexInitialConfiguration \&gt;" alt="" coords="784,289,1019,316"/><area shape="rect" id="node70" href="classArray.html" title="Array\&lt; SiteInitialConfiguration \&gt;" alt="" coords="269,289,491,316"/><area shape="rect" id="node81" href="classArray.html" title="Array\&lt; VertexProperty \&gt;" alt="" coords="1060,501,1225,528"/><area shape="rect" id="node86" href="classArray.html" title="Array\&lt; InteractionProperty \&gt;" alt="" coords="984,593,1181,620"/><area shape="rect" id="node90" href="classArray.html" title="Array\&lt; SiteProperty \&gt;" alt="" coords="808,593,960,620"/><area shape="rect" id="node12" href="classSite.html" title="Site" alt="" coords="607,776,652,803"/><area shape="rect" id="node20" href="classBareSegment.html" title="BareSegment" alt="" coords="311,867,412,893"/><area shape="rect" id="node32" href="classInteraction.html" title="Interaction" alt="" coords="501,867,592,893"/><area shape="rect" id="node14" href="classRing.html" title="Ring\&lt; Segment \&gt;" alt="" coords="573,1128,699,1155"/><area shape="rect" id="node16" href="classSegment.html" title="Segment" alt="" coords="324,1037,399,1064"/><area shape="rect" id="node18" href="classLinked.html" title="Linked\&lt; BareSegment \&gt;" alt="" coords="277,959,445,985"/><area shape="rect" id="node22" href="classVertex.html" title="Vertex" alt="" coords="265,685,324,712"/><area shape="rect" id="node34" href="classRing.html" title="Ring\&lt; Vertex \&gt;" alt="" coords="159,776,268,803"/><area shape="rect" id="node24" href="classLinked.html" title="Linked\&lt; BareVertex \&gt;" alt="" coords="188,593,340,620"/><area shape="rect" id="node26" href="classBareVertex.html" title="BareVertex" alt="" coords="332,501,420,528"/><area shape="rect" id="node37" href="classInteractionProperty.html" title="InteractionProperty" alt="" coords="703,501,844,528"/><area shape="rect" id="node45" href="classVertexProperty.html" title="VertexProperty" alt="" coords="581,411,693,437"/><area shape="rect" id="node68" href="classSiteProperty.html" title="SiteProperty" alt="" coords="580,501,679,528"/><area shape="rect" id="node51" href="classVertexInitialConfiguration.html" title="VertexInitialConfiguration" alt="" coords="547,197,728,224"/><area shape="rect" id="node73" href="classSiteInitialConfiguration.html" title="SiteInitialConfiguration" alt="" coords="343,197,508,224"/><area shape="rect" id="node56" href="classScatteringChannel.html" title="ScatteringChannel" alt="" coords="5,5,141,32"/></map>
+<center><span class="legend">[<a target="top" href="graph_legend.html">凡例</a>]</span></center></div>
+
+<p><a href="classLattice-members.html">すべてのメンバ一覧</a></p>
+<table class="memberdecls">
+<tr><td colspan="2"><h2><a name="pub-methods"></a>
+Public メソッド</h2></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classLattice.html#af90c7efc05e296555a50fdbacd4a1c62">Lattice</a> (const char *FNAME, <a class="el" href="classAlgorithm.html">Algorithm</a> &amp;A)</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classLattice.html#ad7eb7d66b366a90fd949015f59cdc98d">~Lattice</a> ()</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classLattice.html#aaa936da334e29618ece019bd8a9aa06f">read</a> ()</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classLattice.html#a25a40b6614565f755233080a384c35f1">initialize</a> ()</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="el" href="classSite.html">Site</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classLattice.html#a869eaa58537df3af3d0f65af9c59e81c">S</a> (int i)</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="el" href="classInteraction.html">Interaction</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classLattice.html#a7fc0278ace84ded48e0f4c8189db1c02">I</a> (int i)</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classLattice.html#a33cccf4c18f886a969ad2a901494f7dc">countVertices</a> ()</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classLattice.html#a7859dcb25805ee420807d2c2904e95f2">show_param</a> (FILE *F)</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classLattice.html#accd2600060dbaee3a3b41aed4034c63c">dump</a> ()</td></tr>
+<tr><td colspan="2"><h2><a name="pub-attribs"></a>
+Public 変数</h2></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classLattice.html#abf6d0ccec2f5157184071729f129de19">D</a></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">int *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classLattice.html#a032faf6d339bcf3caaaf4d0f8bc3551f">L</a></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classLattice.html#afc84277b28fe008096c4d3dae3c63c21">BETA</a></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classLattice.html#a27490d82ca0625a1c7c12a8e0c420400">NCELL</a></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classLattice.html#a424e1d5d24bd237ddc8bfaa7c7172a4d">NSITE</a></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classLattice.html#ac68b4f192d1bfefa2132ccb07807e2a4">NINT</a></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classLattice.html#a2dad84a8985d20913d523848ae5e40ea">NSTYPE</a></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classLattice.html#a28e1a55e45e45a80a49a8ae1f0e50bcb">NITYPE</a></td></tr>
+<tr><td colspan="2"><h2><a name="pri-attribs"></a>
+Private 変数</h2></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="el" href="classSite.html">Site</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classLattice.html#a2facb9ff3a28e7535703fa8e0a4f25da">site</a></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="el" href="classInteraction.html">Interaction</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classLattice.html#a604353fb438ce408b88c6431f2f54e97">interaction</a></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="el" href="classXML_1_1Block.html">XML::Block</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classLattice.html#ade0b597d45ab0fc6e9f8c68cf635773c">X</a></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="el" href="classAlgorithm.html">Algorithm</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classLattice.html#ad094a7c3b90de630ae5b402d4af603d4">ALG</a></td></tr>
+</table>
+<hr/><a name="details" id="details"></a><h2>説明</h2>
+<div class="textblock">
+<p> <a class="el" href="lattice_8hpp_source.html">lattice.hpp</a> の <a class="el" href="lattice_8hpp_source.html#l00013">13</a> 行で定義されています。</p>
+</div><hr/><h2>コンストラクタとデストラクタ</h2>
+<a class="anchor" id="af90c7efc05e296555a50fdbacd4a1c62"></a><!-- doxytag: member="Lattice::Lattice" ref="af90c7efc05e296555a50fdbacd4a1c62" args="(const char *FNAME, Algorithm &amp;A)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classLattice.html">Lattice</a> </td>
+          <td>(</td>
+          <td class="paramtype">const char *&#160;</td>
+          <td class="paramname"><em>FNAME</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="classAlgorithm.html">Algorithm</a> &amp;&#160;</td>
+          <td class="paramname"><em>A</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td><code> [inline]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p> <a class="el" href="lattice_8hpp_source.html">lattice.hpp</a> の <a class="el" href="lattice_8hpp_source.html#l00063">63</a> 行で定義されています。</p>
+
+<p><div class="dynheader">
+関数の呼び出しグラフ:</div>
+<div class="dyncontent">
+<div class="center"><img src="classLattice_af90c7efc05e296555a50fdbacd4a1c62_cgraph.png" border="0" usemap="#classLattice_af90c7efc05e296555a50fdbacd4a1c62_cgraph" alt=""/></div>
+<map name="classLattice_af90c7efc05e296555a50fdbacd4a1c62_cgraph" id="classLattice_af90c7efc05e296555a50fdbacd4a1c62_cgraph">
+<area shape="rect" id="node3" href="classXML_1_1Block.html#ac15d5d5c09d2d256f6c5b1be6ed2f168" title="XML::Block::initialize" alt="" coords="117,188,272,214"/><area shape="rect" id="node25" href="classLattice.html#aaa936da334e29618ece019bd8a9aa06f" title="read" alt="" coords="171,390,219,417"/><area shape="rect" id="node59" href="classLattice.html#a25a40b6614565f755233080a384c35f1" title="initialize" alt="" coords="157,770,232,797"/><area shape="rect" id="node5" href="classXML_1_1Block.html#aaa936da334e29618ece019bd8a9aa06f" title="XML::Block::read" alt="" coords="371,61,499,88"/><area shape="rect" id="node7" href="classXML_1_1Block.html#a0dd8335ab7f24fff9700ff9ff6ce187c" title="XML::Block::syntax_error" alt="" coords="597,137,773,164"/><area shape="rect" id="node9" href="namespaceXML.html#aca68844ce580db07934916b326ce8c72" title="XML::isOpening" alt="" coords="1048,36,1168,62"/><area shape="rect" id="node11" href="namespaceXML.html#a08bd6fcf584394a94bf4d1192c0c0679" title="XML::getOpeningName" alt="" coords="829,36,992,62"/><area shape="rect" id="node14" href="namespaceXML.html#a47c66d0e0cab28af3ee7cddbedf658b7" title="XML::isCommentOpening" alt="" coords="821,188,1000,214"/><area shape="rect" id="node20" href="classArray.html#a5fd83b4910658540977272a168cfbdae" title="Array::init" alt="" coords="644,36,727,62"/><area shape="rect" id="node16" href="namespaceXML.html#a75143a39b026f67d2cafc5b1fce0ee6a" title="XML::isClosing" alt="" coords="853,86,968,113"/><area shape="rect" id="node18" href="classXML_1_1Block.html#a8cf4db36c9f3123506d73e98c4a93464" title="XML::Block::getName" alt="" coords="833,353,988,380"/><area shape="rect" id="node27" href="classXML_1_1Block.html#afcd6370972fce7a0d9378c778f5f09c7" title="XML::Block::getInteger" alt="" coords="353,314,516,341"/><area shape="rect" id="node31" href="classXML_1_1Block.html#a0bf14d82466b0e2b1ebff36333d0ad25" title="XML::Block::getDouble" alt="" coords="352,162,517,189"/><area shape="rect" id="node34" href="classXML_1_1Block.html#a88796becd473f212deb450ad1a31a893" title="XML::Block::NumberOfBlocks" alt="" coords="332,112,537,138"/><area shape="rect" id="node37" href="classLattice.html#a869eaa58537df3af3d0f65af9c59e81c" title="S" alt="" coords="416,618,453,645"/><area shape="rect" id="node39" href="classSite.html#a0aba4689ff61873ed996b3604f6bfb04" title="Site::init" alt="" coords="397,213,472,240"/><area shape="rect" id="node41" href="classAlgorithm.html#a77e852eb06c91d69d8890f8b54e54c81" title="Algorithm::getSiteProperty" alt="" coords="343,264,527,290"/><area shape="rect" id="node43" href="classSite.html#a33b3c88e4f553812e75c92d63c4f2557" title="Site::setBeta" alt="" coords="385,517,484,544"/><area shape="rect" id="node49" href="classLattice.html#a7fc0278ace84ded48e0f4c8189db1c02" title="I" alt="" coords="416,669,453,696"/><area shape="rect" id="node51" href="classInteraction.html#a02fd73d861ef2e4aabb38c0c9ff82947" title="Interaction::init" alt="" coords="376,365,493,392"/><area shape="rect" id="node53" href="classAlgorithm.html#af6931f368ca485f4d9e925a09ca9d3d3" title="Algorithm::getInteractionProperty" alt="" coords="320,416,549,442"/><area shape="rect" id="node55" href="classInteraction.html#a55f43bdab4c644bdb484c6322b6c9870" title="Interaction::setSite" alt="" coords="365,568,504,594"/><area shape="rect" id="node29" href="classXML_1_1Block.html#a753440fc57aae094f400478d07277a73" title="XML::Block::getString" alt="" coords="607,277,764,304"/><area shape="rect" id="node45" href="classBareVertex.html#acd2ceab987abdc16c17101e97db10ada" title="BareVertex::setTime" alt="" coords="613,517,757,544"/><area shape="rect" id="node47" href="matrix_8h.html#a0f57174a41569bfcf47a55eb2e60e35c" title="t" alt="" coords="892,517,929,544"/><area shape="rect" id="node57" href="classInteraction.html#a368c7483982558680af147ac398bfcca" title="Interaction::NBODY" alt="" coords="613,644,757,670"/><area shape="rect" id="node63" href="classInteraction.html#a42a6e3212d8b6431c4c5dbf21504af63" title="Interaction::site" alt="" coords="375,973,495,1000"/><area shape="rect" id="node65" href="classSite.html#a4a716406d3d9d4fdbbe46f100e648f3b" title="Site::id" alt="" coords="401,770,468,797"/><area shape="rect" id="node68" href="classSite.html#ab98cf909381f98656bd338c42ef945b3" title="Site::setNCI" alt="" coords="388,821,481,848"/><area shape="rect" id="node70" href="classSite.html#a00cc87139c22444a7ca9df822b4a8f9b" title="Site::setCI" alt="" coords="392,872,477,898"/><area shape="rect" id="node72" href="classSite.html#ab7d53116d3612709142776a7d446e494" title="Site::getNCI" alt="" coords="387,922,483,949"/></map>
+</div>
+</p>
+
+</div>
+</div>
+<a class="anchor" id="ad7eb7d66b366a90fd949015f59cdc98d"></a><!-- doxytag: member="Lattice::~Lattice" ref="ad7eb7d66b366a90fd949015f59cdc98d" args="()" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">~<a class="el" href="classLattice.html">Lattice</a> </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td><code> [inline]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p> <a class="el" href="lattice_8hpp_source.html">lattice.hpp</a> の <a class="el" href="lattice_8hpp_source.html#l00166">166</a> 行で定義されています。</p>
+
+</div>
+</div>
+<hr/><h2>関数</h2>
+<a class="anchor" id="a33cccf4c18f886a969ad2a901494f7dc"></a><!-- doxytag: member="Lattice::countVertices" ref="a33cccf4c18f886a969ad2a901494f7dc" args="()" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int <a class="el" href="classLattice.html#a33cccf4c18f886a969ad2a901494f7dc">countVertices</a> </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td><code> [inline]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p> <a class="el" href="lattice_8hpp_source.html">lattice.hpp</a> の <a class="el" href="lattice_8hpp_source.html#l00175">175</a> 行で定義されています。</p>
+
+<p><div class="dynheader">
+関数の呼び出しグラフ:</div>
+<div class="dyncontent">
+<div class="center"><img src="classLattice_a33cccf4c18f886a969ad2a901494f7dc_cgraph.png" border="0" usemap="#classLattice_a33cccf4c18f886a969ad2a901494f7dc_cgraph" alt=""/></div>
+<map name="classLattice_a33cccf4c18f886a969ad2a901494f7dc_cgraph" id="classLattice_a33cccf4c18f886a969ad2a901494f7dc_cgraph">
+<area shape="rect" id="node3" href="classLattice.html#a7fc0278ace84ded48e0f4c8189db1c02" title="I" alt="" coords="188,5,225,32"/><area shape="rect" id="node5" href="classRing.html#a9ba94da7db769b98d02381d872dd9bbb" title="Ring::count" alt="" coords="160,56,253,83"/></map>
+</div>
+</p>
+
+<p><div class="dynheader">
+呼出しグラフ:</div>
+<div class="dyncontent">
+<div class="center"><img src="classLattice_a33cccf4c18f886a969ad2a901494f7dc_icgraph.png" border="0" usemap="#classLattice_a33cccf4c18f886a969ad2a901494f7dc_icgraph" alt=""/></div>
+<map name="classLattice_a33cccf4c18f886a969ad2a901494f7dc_icgraph" id="classLattice_a33cccf4c18f886a969ad2a901494f7dc_icgraph">
+<area shape="rect" id="node3" href="classMeasurement.html#a9819f5969402ace9a8362a92e666a859" title="Measurement::measure" alt="" coords="161,5,324,32"/><area shape="rect" id="node5" href="classSimulation.html#a498dbdb73c8f6d58c9147cd07dce3362" title="Simulation::Set" alt="" coords="373,5,491,32"/></map>
+</div>
+</p>
+
+</div>
+</div>
+<a class="anchor" id="accd2600060dbaee3a3b41aed4034c63c"></a><!-- doxytag: member="Lattice::dump" ref="accd2600060dbaee3a3b41aed4034c63c" args="()" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void <a class="el" href="classLattice.html#accd2600060dbaee3a3b41aed4034c63c">dump</a> </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td><code> [inline]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p> <a class="el" href="lattice_8hpp_source.html">lattice.hpp</a> の <a class="el" href="lattice_8hpp_source.html#l00185">185</a> 行で定義されています。</p>
+
+<p><div class="dynheader">
+関数の呼び出しグラフ:</div>
+<div class="dyncontent">
+<div class="center"><img src="classLattice_accd2600060dbaee3a3b41aed4034c63c_cgraph.png" border="0" usemap="#classLattice_accd2600060dbaee3a3b41aed4034c63c_cgraph" alt=""/></div>
+<map name="classLattice_accd2600060dbaee3a3b41aed4034c63c_cgraph" id="classLattice_accd2600060dbaee3a3b41aed4034c63c_cgraph">
+<area shape="rect" id="node3" href="classLattice.html#a869eaa58537df3af3d0f65af9c59e81c" title="S" alt="" coords="160,5,197,32"/><area shape="rect" id="node5" href="classSite.html#accd2600060dbaee3a3b41aed4034c63c" title="Site::dump" alt="" coords="135,56,223,83"/><area shape="rect" id="node9" href="classLattice.html#a7fc0278ace84ded48e0f4c8189db1c02" title="I" alt="" coords="160,107,197,133"/><area shape="rect" id="node11" href="classInteraction.html#accd2600060dbaee3a3b41aed4034c63c" title="Interaction::dump" alt="" coords="112,157,245,184"/><area shape="rect" id="node7" href="classSite.html#ae3775081dae5d62a47eee5c62fa49995" title="Site::type" alt="" coords="327,56,407,83"/><area shape="rect" id="node13" href="classInteraction.html#a368c7483982558680af147ac398bfcca" title="Interaction::NBODY" alt="" coords="295,107,439,133"/><area shape="rect" id="node15" href="classInteraction.html#a42a6e3212d8b6431c4c5dbf21504af63" title="Interaction::site" alt="" coords="307,157,427,184"/><area shape="rect" id="node17" href="classSite.html#a4a716406d3d9d4fdbbe46f100e648f3b" title="Site::id" alt="" coords="333,208,400,235"/><area shape="rect" id="node19" href="classInteraction.html#ae3775081dae5d62a47eee5c62fa49995" title="Interaction::type" alt="" coords="305,259,428,285"/></map>
+</div>
+</p>
+
+<p><div class="dynheader">
+呼出しグラフ:</div>
+<div class="dyncontent">
+<div class="center"><img src="classLattice_accd2600060dbaee3a3b41aed4034c63c_icgraph.png" border="0" usemap="#classLattice_accd2600060dbaee3a3b41aed4034c63c_icgraph" alt=""/></div>
+<map name="classLattice_accd2600060dbaee3a3b41aed4034c63c_icgraph" id="classLattice_accd2600060dbaee3a3b41aed4034c63c_icgraph">
+<area shape="rect" id="node3" href="classSimulation.html#a9eaa33a0fc1eacd0d8279cb8138f09dc" title="Simulation::dump" alt="" coords="113,5,244,32"/></map>
+</div>
+</p>
+
+</div>
+</div>
+<a class="anchor" id="a7fc0278ace84ded48e0f4c8189db1c02"></a><!-- doxytag: member="Lattice::I" ref="a7fc0278ace84ded48e0f4c8189db1c02" args="(int i)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classInteraction.html">Interaction</a>&amp; <a class="el" href="classLattice.html#a7fc0278ace84ded48e0f4c8189db1c02">I</a> </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>i</em></td><td>)</td>
+          <td><code> [inline]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p> <a class="el" href="lattice_8hpp_source.html">lattice.hpp</a> の <a class="el" href="lattice_8hpp_source.html#l00043">43</a> 行で定義されています。</p>
+
+<p><div class="dynheader">
+呼出しグラフ:</div>
+<div class="dyncontent">
+<div class="center"><img src="classLattice_a7fc0278ace84ded48e0f4c8189db1c02_icgraph.png" border="0" usemap="#classLattice_a7fc0278ace84ded48e0f4c8189db1c02_icgraph" alt=""/></div>
+<map name="classLattice_a7fc0278ace84ded48e0f4c8189db1c02_icgraph" id="classLattice_a7fc0278ace84ded48e0f4c8189db1c02_icgraph">
+<area shape="rect" id="node3" href="classSimulation.html#a434b035308434bbeb9b857f22b9f0db1" title="Simulation::Check" alt="" coords="125,5,259,32"/><area shape="rect" id="node5" href="classLattice.html#aaa936da334e29618ece019bd8a9aa06f" title="read" alt="" coords="168,56,216,83"/><area shape="rect" id="node9" href="classLattice.html#a25a40b6614565f755233080a384c35f1" title="initialize" alt="" coords="155,107,229,133"/><area shape="rect" id="node12" href="classLattice.html#a33cccf4c18f886a969ad2a901494f7dc" title="countVertices" alt="" coords="139,157,245,184"/><area shape="rect" id="node14" href="classMeasurement.html#a9819f5969402ace9a8362a92e666a859" title="Measurement::measure" alt="" coords="340,183,503,209"/><area shape="rect" id="node18" href="classLattice.html#accd2600060dbaee3a3b41aed4034c63c" title="dump" alt="" coords="164,259,220,285"/><area shape="rect" id="node22" href="classMeasurement.html#adecafd8776c7ec293f2b5af7779a4324" title="Measurement::Measurement" alt="" coords="95,309,289,336"/><area shape="rect" id="node7" href="classLattice.html#af90c7efc05e296555a50fdbacd4a1c62" title="Lattice" alt="" coords="389,81,453,108"/><area shape="rect" id="node16" href="classSimulation.html#a498dbdb73c8f6d58c9147cd07dce3362" title="Simulation::Set" alt="" coords="552,183,669,209"/><area shape="rect" id="node20" href="classSimulation.html#a9eaa33a0fc1eacd0d8279cb8138f09dc" title="Simulation::dump" alt="" coords="356,259,487,285"/></map>
+</div>
+</p>
+
+</div>
+</div>
+<a class="anchor" id="a25a40b6614565f755233080a384c35f1"></a><!-- doxytag: member="Lattice::initialize" ref="a25a40b6614565f755233080a384c35f1" args="()" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void <a class="el" href="classLattice.html#a25a40b6614565f755233080a384c35f1">initialize</a> </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p> <a class="el" href="lattice_8hpp_source.html">lattice.hpp</a> の <a class="el" href="lattice_8hpp_source.html#l00125">125</a> 行で定義されています。</p>
+
+<p><div class="dynheader">
+関数の呼び出しグラフ:</div>
+<div class="dyncontent">
+<div class="center"><img src="classLattice_a25a40b6614565f755233080a384c35f1_cgraph.png" border="0" usemap="#classLattice_a25a40b6614565f755233080a384c35f1_cgraph" alt=""/></div>
+<map name="classLattice_a25a40b6614565f755233080a384c35f1_cgraph" id="classLattice_a25a40b6614565f755233080a384c35f1_cgraph">
+<area shape="rect" id="node3" href="classLattice.html#a7fc0278ace84ded48e0f4c8189db1c02" title="I" alt="" coords="183,5,220,32"/><area shape="rect" id="node5" href="classInteraction.html#a368c7483982558680af147ac398bfcca" title="Interaction::NBODY" alt="" coords="129,56,273,83"/><area shape="rect" id="node7" href="classInteraction.html#a42a6e3212d8b6431c4c5dbf21504af63" title="Interaction::site" alt="" coords="141,107,261,133"/><area shape="rect" id="node9" href="classSite.html#a4a716406d3d9d4fdbbe46f100e648f3b" title="Site::id" alt="" coords="168,157,235,184"/><area shape="rect" id="node11" href="classLattice.html#a869eaa58537df3af3d0f65af9c59e81c" title="S" alt="" coords="183,208,220,235"/><area shape="rect" id="node13" href="classSite.html#ab98cf909381f98656bd338c42ef945b3" title="Site::setNCI" alt="" coords="155,259,248,285"/><area shape="rect" id="node15" href="classSite.html#a00cc87139c22444a7ca9df822b4a8f9b" title="Site::setCI" alt="" coords="159,309,244,336"/><area shape="rect" id="node17" href="classSite.html#ab7d53116d3612709142776a7d446e494" title="Site::getNCI" alt="" coords="153,360,249,387"/></map>
+</div>
+</p>
+
+<p><div class="dynheader">
+呼出しグラフ:</div>
+<div class="dyncontent">
+<div class="center"><img src="classLattice_a25a40b6614565f755233080a384c35f1_icgraph.png" border="0" usemap="#classLattice_a25a40b6614565f755233080a384c35f1_icgraph" alt=""/></div>
+<map name="classLattice_a25a40b6614565f755233080a384c35f1_icgraph" id="classLattice_a25a40b6614565f755233080a384c35f1_icgraph">
+<area shape="rect" id="node3" href="classLattice.html#af90c7efc05e296555a50fdbacd4a1c62" title="Lattice" alt="" coords="128,5,192,32"/></map>
+</div>
+</p>
+
+</div>
+</div>
+<a class="anchor" id="aaa936da334e29618ece019bd8a9aa06f"></a><!-- doxytag: member="Lattice::read" ref="aaa936da334e29618ece019bd8a9aa06f" args="()" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void <a class="el" href="classLattice.html#aaa936da334e29618ece019bd8a9aa06f">read</a> </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p> <a class="el" href="lattice_8hpp_source.html">lattice.hpp</a> の <a class="el" href="lattice_8hpp_source.html#l00077">77</a> 行で定義されています。</p>
+
+<p><div class="dynheader">
+関数の呼び出しグラフ:</div>
+<div class="dyncontent">
+<div class="center"><img src="classLattice_aaa936da334e29618ece019bd8a9aa06f_cgraph.png" border="0" usemap="#classLattice_aaa936da334e29618ece019bd8a9aa06f_cgraph" alt=""/></div>
+<map name="classLattice_aaa936da334e29618ece019bd8a9aa06f_cgraph" id="classLattice_aaa936da334e29618ece019bd8a9aa06f_cgraph">
+<area shape="rect" id="node3" href="classXML_1_1Block.html#afcd6370972fce7a0d9378c778f5f09c7" title="XML::Block::getInteger" alt="" coords="137,5,300,32"/><area shape="rect" id="node7" href="classXML_1_1Block.html#a0bf14d82466b0e2b1ebff36333d0ad25" title="XML::Block::getDouble" alt="" coords="136,56,301,83"/><area shape="rect" id="node10" href="classXML_1_1Block.html#a88796becd473f212deb450ad1a31a893" title="XML::Block::NumberOfBlocks" alt="" coords="116,107,321,133"/><area shape="rect" id="node12" href="classXML_1_1Block.html#a8cf4db36c9f3123506d73e98c4a93464" title="XML::Block::getName" alt="" coords="141,157,296,184"/><area shape="rect" id="node14" href="classLattice.html#a869eaa58537df3af3d0f65af9c59e81c" title="S" alt="" coords="200,208,237,235"/><area shape="rect" id="node16" href="classSite.html#a0aba4689ff61873ed996b3604f6bfb04" title="Site::init" alt="" coords="181,259,256,285"/><area shape="rect" id="node18" href="classAlgorithm.html#a77e852eb06c91d69d8890f8b54e54c81" title="Algorithm::getSiteProperty" alt="" coords="127,309,311,336"/><area shape="rect" id="node20" href="classSite.html#a33b3c88e4f553812e75c92d63c4f2557" title="Site::setBeta" alt="" coords="169,360,268,387"/><area shape="rect" id="node26" href="classLattice.html#a7fc0278ace84ded48e0f4c8189db1c02" title="I" alt="" coords="200,411,237,437"/><area shape="rect" id="node28" href="classInteraction.html#a02fd73d861ef2e4aabb38c0c9ff82947" title="Interaction::init" alt="" coords="160,461,277,488"/><area shape="rect" id="node30" href="classAlgorithm.html#af6931f368ca485f4d9e925a09ca9d3d3" title="Algorithm::getInteractionProperty" alt="" coords="104,512,333,539"/><area shape="rect" id="node32" href="classInteraction.html#a55f43bdab4c644bdb484c6322b6c9870" title="Interaction::setSite" alt="" coords="149,563,288,589"/><area shape="rect" id="node5" href="classXML_1_1Block.html#a753440fc57aae094f400478d07277a73" title="XML::Block::getString" alt="" coords="381,31,539,57"/><area shape="rect" id="node22" href="classBareVertex.html#acd2ceab987abdc16c17101e97db10ada" title="BareVertex::setTime" alt="" coords="388,360,532,387"/><area shape="rect" id="node24" href="matrix_8h.html#a0f57174a41569bfcf47a55eb2e60e35c" title="t" alt="" coords="588,360,625,387"/><area shape="rect" id="node34" href="classInteraction.html#a368c7483982558680af147ac398bfcca" title="Interaction::NBODY" alt="" coords="388,563,532,589"/></map>
+</div>
+</p>
+
+<p><div class="dynheader">
+呼出しグラフ:</div>
+<div class="dyncontent">
+<div class="center"><img src="classLattice_aaa936da334e29618ece019bd8a9aa06f_icgraph.png" border="0" usemap="#classLattice_aaa936da334e29618ece019bd8a9aa06f_icgraph" alt=""/></div>
+<map name="classLattice_aaa936da334e29618ece019bd8a9aa06f_icgraph" id="classLattice_aaa936da334e29618ece019bd8a9aa06f_icgraph">
+<area shape="rect" id="node3" href="classLattice.html#af90c7efc05e296555a50fdbacd4a1c62" title="Lattice" alt="" coords="104,5,168,32"/></map>
+</div>
+</p>
+
+</div>
+</div>
+<a class="anchor" id="a869eaa58537df3af3d0f65af9c59e81c"></a><!-- doxytag: member="Lattice::S" ref="a869eaa58537df3af3d0f65af9c59e81c" args="(int i)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classSite.html">Site</a>&amp; <a class="el" href="classLattice.html#a869eaa58537df3af3d0f65af9c59e81c">S</a> </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>i</em></td><td>)</td>
+          <td><code> [inline]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p> <a class="el" href="lattice_8hpp_source.html">lattice.hpp</a> の <a class="el" href="lattice_8hpp_source.html#l00041">41</a> 行で定義されています。</p>
+
+<p><div class="dynheader">
+呼出しグラフ:</div>
+<div class="dyncontent">
+<div class="center"><img src="classLattice_a869eaa58537df3af3d0f65af9c59e81c_icgraph.png" border="0" usemap="#classLattice_a869eaa58537df3af3d0f65af9c59e81c_icgraph" alt=""/></div>
+<map name="classLattice_a869eaa58537df3af3d0f65af9c59e81c_icgraph" id="classLattice_a869eaa58537df3af3d0f65af9c59e81c_icgraph">
+<area shape="rect" id="node3" href="classSimulation.html#aecd8949a46b7afbc028fa1ef3bada17c" title="Simulation::PlaceWorm" alt="" coords="95,125,260,152"/><area shape="rect" id="node15" href="classSimulation.html#a434b035308434bbeb9b857f22b9f0db1" title="Simulation::Check" alt="" coords="111,74,244,101"/><area shape="rect" id="node17" href="classSimulation.html#a3dea8b90b84f7608ca8130b79e5f536b" title="Simulation::RepChangeB" alt="" coords="524,37,697,64"/><area shape="rect" id="node20" href="classLattice.html#aaa936da334e29618ece019bd8a9aa06f" title="read" alt="" coords="153,226,201,253"/><area shape="rect" id="node24" href="classLattice.html#a25a40b6614565f755233080a384c35f1" title="initialize" alt="" coords="140,176,215,202"/><area shape="rect" id="node27" href="classLattice.html#accd2600060dbaee3a3b41aed4034c63c" title="dump" alt="" coords="149,277,205,304"/><area shape="rect" id="node31" href="classMeasurement.html#a9819f5969402ace9a8362a92e666a859" title="Measurement::measure" alt="" coords="311,328,473,354"/><area shape="rect" id="node5" href="classSimulation.html#a646ba83afbaf2013960493daa6268ff5" title="Simulation::Cycle" alt="" coords="327,125,457,152"/><area shape="rect" id="node7" href="classSimulation.html#ae5cc367fde8543dc44b660055f7694bf" title="Simulation::set_NCYC" alt="" coords="532,113,689,140"/><area shape="rect" id="node11" href="classSimulation.html#a948f644fec100a1ad661e30ff9f4a314" title="Simulation::Sweep" alt="" coords="543,164,679,190"/><area shape="rect" id="node9" href="classSimulation.html#a934fee6f68aa93d5eb03fe0a778bdc07" title="Simulation::Simulation" alt="" coords="748,88,911,114"/><area shape="rect" id="node13" href="classSimulation.html#a498dbdb73c8f6d58c9147cd07dce3362" title="Simulation::Set" alt="" coords="771,189,888,216"/><area shape="rect" id="node22" href="classLattice.html#af90c7efc05e296555a50fdbacd4a1c62" title="Lattice" alt="" coords="360,201,424,228"/><area shape="rect" id="node29" href="classSimulation.html#a9eaa33a0fc1eacd0d8279cb8138f09dc" title="Simulation::dump" alt="" coords="327,277,457,304"/></map>
+</div>
+</p>
+
+</div>
+</div>
+<a class="anchor" id="a7859dcb25805ee420807d2c2904e95f2"></a><!-- doxytag: member="Lattice::show_param" ref="a7859dcb25805ee420807d2c2904e95f2" args="(FILE *F)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void <a class="el" href="classLattice.html#a7859dcb25805ee420807d2c2904e95f2">show_param</a> </td>
+          <td>(</td>
+          <td class="paramtype">FILE *&#160;</td>
+          <td class="paramname"><em>F</em></td><td>)</td>
+          <td><code> [inline]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p> <a class="el" href="lattice_8hpp_source.html">lattice.hpp</a> の <a class="el" href="lattice_8hpp_source.html#l00047">47</a> 行で定義されています。</p>
+
+<p><div class="dynheader">
+呼出しグラフ:</div>
+<div class="dyncontent">
+<div class="center"><img src="classLattice_a7859dcb25805ee420807d2c2904e95f2_icgraph.png" border="0" usemap="#classLattice_a7859dcb25805ee420807d2c2904e95f2_icgraph" alt=""/></div>
+<map name="classLattice_a7859dcb25805ee420807d2c2904e95f2_icgraph" id="classLattice_a7859dcb25805ee420807d2c2904e95f2_icgraph">
+<area shape="rect" id="node3" href="classSimulation.html#a934fee6f68aa93d5eb03fe0a778bdc07" title="Simulation::Simulation" alt="" coords="153,5,316,32"/></map>
+</div>
+</p>
+
+</div>
+</div>
+<hr/><h2>変数</h2>
+<a class="anchor" id="ad094a7c3b90de630ae5b402d4af603d4"></a><!-- doxytag: member="Lattice::ALG" ref="ad094a7c3b90de630ae5b402d4af603d4" args="" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classAlgorithm.html">Algorithm</a>&amp; <a class="el" href="classLattice.html#ad094a7c3b90de630ae5b402d4af603d4">ALG</a><code> [private]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p> <a class="el" href="lattice_8hpp_source.html">lattice.hpp</a> の <a class="el" href="lattice_8hpp_source.html#l00020">20</a> 行で定義されています。</p>
+
+</div>
+</div>
+<a class="anchor" id="afc84277b28fe008096c4d3dae3c63c21"></a><!-- doxytag: member="Lattice::BETA" ref="afc84277b28fe008096c4d3dae3c63c21" args="" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">double <a class="el" href="classLattice.html#afc84277b28fe008096c4d3dae3c63c21">BETA</a></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p> <a class="el" href="lattice_8hpp_source.html">lattice.hpp</a> の <a class="el" href="lattice_8hpp_source.html#l00026">26</a> 行で定義されています。</p>
+
+</div>
+</div>
+<a class="anchor" id="abf6d0ccec2f5157184071729f129de19"></a><!-- doxytag: member="Lattice::D" ref="abf6d0ccec2f5157184071729f129de19" args="" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int <a class="el" href="classLattice.html#abf6d0ccec2f5157184071729f129de19">D</a></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p> <a class="el" href="lattice_8hpp_source.html">lattice.hpp</a> の <a class="el" href="lattice_8hpp_source.html#l00024">24</a> 行で定義されています。</p>
+
+</div>
+</div>
+<a class="anchor" id="a604353fb438ce408b88c6431f2f54e97"></a><!-- doxytag: member="Lattice::interaction" ref="a604353fb438ce408b88c6431f2f54e97" args="" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classInteraction.html">Interaction</a>* <a class="el" href="classLattice.html#a604353fb438ce408b88c6431f2f54e97">interaction</a><code> [private]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p> <a class="el" href="lattice_8hpp_source.html">lattice.hpp</a> の <a class="el" href="lattice_8hpp_source.html#l00018">18</a> 行で定義されています。</p>
+
+</div>
+</div>
+<a class="anchor" id="a032faf6d339bcf3caaaf4d0f8bc3551f"></a><!-- doxytag: member="Lattice::L" ref="a032faf6d339bcf3caaaf4d0f8bc3551f" args="" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int* <a class="el" href="classLattice.html#a032faf6d339bcf3caaaf4d0f8bc3551f">L</a></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p> <a class="el" href="lattice_8hpp_source.html">lattice.hpp</a> の <a class="el" href="lattice_8hpp_source.html#l00025">25</a> 行で定義されています。</p>
+
+</div>
+</div>
+<a class="anchor" id="a27490d82ca0625a1c7c12a8e0c420400"></a><!-- doxytag: member="Lattice::NCELL" ref="a27490d82ca0625a1c7c12a8e0c420400" args="" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int <a class="el" href="classLattice.html#a27490d82ca0625a1c7c12a8e0c420400">NCELL</a></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p> <a class="el" href="lattice_8hpp_source.html">lattice.hpp</a> の <a class="el" href="lattice_8hpp_source.html#l00027">27</a> 行で定義されています。</p>
+
+</div>
+</div>
+<a class="anchor" id="ac68b4f192d1bfefa2132ccb07807e2a4"></a><!-- doxytag: member="Lattice::NINT" ref="ac68b4f192d1bfefa2132ccb07807e2a4" args="" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int <a class="el" href="classLattice.html#ac68b4f192d1bfefa2132ccb07807e2a4">NINT</a></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p> <a class="el" href="lattice_8hpp_source.html">lattice.hpp</a> の <a class="el" href="lattice_8hpp_source.html#l00029">29</a> 行で定義されています。</p>
+
+</div>
+</div>
+<a class="anchor" id="a28e1a55e45e45a80a49a8ae1f0e50bcb"></a><!-- doxytag: member="Lattice::NITYPE" ref="a28e1a55e45e45a80a49a8ae1f0e50bcb" args="" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int <a class="el" href="classLattice.html#a28e1a55e45e45a80a49a8ae1f0e50bcb">NITYPE</a></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p> <a class="el" href="lattice_8hpp_source.html">lattice.hpp</a> の <a class="el" href="lattice_8hpp_source.html#l00031">31</a> 行で定義されています。</p>
+
+</div>
+</div>
+<a class="anchor" id="a424e1d5d24bd237ddc8bfaa7c7172a4d"></a><!-- doxytag: member="Lattice::NSITE" ref="a424e1d5d24bd237ddc8bfaa7c7172a4d" args="" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int <a class="el" href="classLattice.html#a424e1d5d24bd237ddc8bfaa7c7172a4d">NSITE</a></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p> <a class="el" href="lattice_8hpp_source.html">lattice.hpp</a> の <a class="el" href="lattice_8hpp_source.html#l00028">28</a> 行で定義されています。</p>
+
+</div>
+</div>
+<a class="anchor" id="a2dad84a8985d20913d523848ae5e40ea"></a><!-- doxytag: member="Lattice::NSTYPE" ref="a2dad84a8985d20913d523848ae5e40ea" args="" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int <a class="el" href="classLattice.html#a2dad84a8985d20913d523848ae5e40ea">NSTYPE</a></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p> <a class="el" href="lattice_8hpp_source.html">lattice.hpp</a> の <a class="el" href="lattice_8hpp_source.html#l00030">30</a> 行で定義されています。</p>
+
+</div>
+</div>
+<a class="anchor" id="a2facb9ff3a28e7535703fa8e0a4f25da"></a><!-- doxytag: member="Lattice::site" ref="a2facb9ff3a28e7535703fa8e0a4f25da" args="" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classSite.html">Site</a>* <a class="el" href="classLattice.html#a2facb9ff3a28e7535703fa8e0a4f25da">site</a><code> [private]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p> <a class="el" href="lattice_8hpp_source.html">lattice.hpp</a> の <a class="el" href="lattice_8hpp_source.html#l00017">17</a> 行で定義されています。</p>
+
+</div>
+</div>
+<a class="anchor" id="ade0b597d45ab0fc6e9f8c68cf635773c"></a><!-- doxytag: member="Lattice::X" ref="ade0b597d45ab0fc6e9f8c68cf635773c" args="" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classXML_1_1Block.html">XML::Block</a> <a class="el" href="classLattice.html#ade0b597d45ab0fc6e9f8c68cf635773c">X</a><code> [private]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p> <a class="el" href="lattice_8hpp_source.html">lattice.hpp</a> の <a class="el" href="lattice_8hpp_source.html#l00019">19</a> 行で定義されています。</p>
+
+</div>
+</div>
+<hr/>このクラスの説明は次のファイルから生成されました:<ul>
+<li><a class="el" href="lattice_8hpp_source.html">lattice.hpp</a></li>
+</ul>
+</div><!-- contents -->
+</div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>全て</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>クラス</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>ネームスペース</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>ファイル</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>関数</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>変数</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(6)"><span class="SelectionMark">&#160;</span>型定義</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(7)"><span class="SelectionMark">&#160;</span>列挙型の値</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(8)"><span class="SelectionMark">&#160;</span>フレンド</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(9)"><span class="SelectionMark">&#160;</span>マクロ定義</a></div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+  <div id="nav-path" class="navpath">
+    <ul>
+      <li class="navelem"><a class="el" href="classLattice.html">Lattice</a>      </li>
+
+    <li class="footer">DSQSSに対してThu Jul 12 2012 14:28:53に生成されました。
+    <a href="http://www.doxygen.org/index.html">
+    <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.7.6.1 </li>
+   </ul>
+ </div>
+
+
+</body>
+</html>

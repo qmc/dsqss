@@ -1,0 +1,9 @@
+runtype = 1
+nmcse  = 10
+nmcsd  = 100
+nmcs   = 500
+nset   = 100
+nrep=8
+vf=1
+df=0.02
+outfile=qmc.log

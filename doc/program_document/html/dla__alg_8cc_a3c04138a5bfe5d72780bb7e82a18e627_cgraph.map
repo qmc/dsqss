@@ -1,0 +1,28 @@
+<map id="G" name="G">
+<area shape="rect" id="node3" href="$classXML_1_1Block.html#a88796becd473f212deb450ad1a31a893" title="XML::Block::NumberOfBlocks" alt="" coords="729,5,935,32"/>
+<area shape="rect" id="node5" href="$classXML_1_1Block.html#a8cf4db36c9f3123506d73e98c4a93464" title="XML::Block::getName" alt="" coords="755,56,909,83"/>
+<area shape="rect" id="node7" href="$classXML_1_1Block.html#afcd6370972fce7a0d9378c778f5f09c7" title="XML::Block::getInteger" alt="" coords="751,435,913,461"/>
+<area shape="rect" id="node11" href="$classSOURCE.html#af8b2b5aa28e95ab6c30d43fd63cb4723" title="SOURCE::load" alt="" coords="140,359,249,385"/>
+<area shape="rect" id="node35" href="$classVERTEX.html#aa6f8348a028e6d508a0d2571119d0463" title="VERTEX::ComputeEBASE" alt="" coords="107,548,283,575"/>
+<area shape="rect" id="node64" href="$classGENERAL.html#aac759501cf6c7895a70eecbef0226ae1" title="GENERAL::write" alt="" coords="135,599,255,625"/>
+<area shape="rect" id="node9" href="$classXML_1_1Block.html#a753440fc57aae094f400478d07277a73" title="XML::Block::getString" alt="" coords="1067,308,1224,335"/>
+<area shape="rect" id="node14" href="$classSOURCE.html#a075af34a843191d8a1dc1cb9db262c8b" title="SOURCE::V" alt="" coords="419,384,509,411"/>
+<area shape="rect" id="node16" href="$classVERTEX.html#af8b2b5aa28e95ab6c30d43fd63cb4723" title="VERTEX::load" alt="" coords="411,257,517,284"/>
+<area shape="rect" id="node18" href="$classArray.html#a5fd83b4910658540977272a168cfbdae" title="Array::init" alt="" coords="791,232,873,259"/>
+<area shape="rect" id="node20" href="$classVERTEX.html#ad737e867fc59a19cb4ec5fe1f5cc92ae" title="VERTEX::setINDX" alt="" coords="767,283,897,309"/>
+<area shape="rect" id="node22" href="$classArray.html#af3eb8ccfdf7db40cd0777ba00b810577" title="Array::index_system" alt="" coords="761,333,903,360"/>
+<area shape="rect" id="node24" href="$classArray.html#a46c36a9a7be294d4f647798d07c79c7e" title="Array::set_all" alt="" coords="781,384,883,411"/>
+<area shape="rect" id="node26" href="$classArray.html#af4b57d21919c42d55af03391f91a1c08" title="Array::size" alt="" coords="791,131,873,157"/>
+<area shape="rect" id="node32" href="$classXML_1_1Block.html#a0bf14d82466b0e2b1ebff36333d0ad25" title="XML::Block::getDouble" alt="" coords="749,181,915,208"/>
+<area shape="rect" id="node37" href="$classVERTEX.html#a5bf3f6148e8638d310911312eedb314a" title="VERTEX::ICG" alt="" coords="413,612,515,639"/>
+<area shape="rect" id="node39" href="$classInitialConfigurationGroup.html#ae0c5fed98c4283eb8d16f8e08a2e2dda" title="InitialConfigurationGroup::ResetWeight" alt="" coords="331,663,597,689"/>
+<area shape="rect" id="node41" href="$classInitialConfigurationGroup.html#a8d59b14bde1d74067ca8d8c92dfbea42" title="InitialConfigurationGroup::sum_of_all_weights" alt="" coords="677,485,987,512"/>
+<area shape="rect" id="node43" href="$classInitialConfigurationGroup.html#acb2fe234ee5fb671be3e252f7326ef83" title="InitialConfigurationGroup::ebase" alt="" coords="352,561,576,588"/>
+<area shape="rect" id="node45" href="$classInitialConfigurationGroup.html#adbfac79073326637e0d4dff67b2e1e05" title="InitialConfigurationGroup::number_of_diagonal_states" alt="" coords="653,688,1011,715"/>
+<area shape="rect" id="node47" href="$dla__alg_8h.html#ae7e84b92e5385c13642109f861c4386a" title="isKink" alt="" coords="1116,637,1175,664"/>
+<area shape="rect" id="node49" href="$classInitialConfigurationGroup.html#a921afdee3f0fba3c4e07d917a505575a" title="InitialConfigurationGroup::maximum_diagonal_weight" alt="" coords="655,739,1009,765"/>
+<area shape="rect" id="node52" href="$classInitialConfigurationGroup.html#a5600254c42d9f9f928ba52a058971195" title="InitialConfigurationGroup::minimum_diagonal_weight" alt="" coords="655,536,1009,563"/>
+<area shape="rect" id="node55" href="$classInitialConfigurationGroup.html#afc332c44c634a58a5812a0349d4197b5" title="InitialConfigurationGroup::maximum_offdiagonal_weight" alt="" coords="647,587,1017,613"/>
+<area shape="rect" id="node60" href="$classInitialConfigurationGroup.html#accd2600060dbaee3a3b41aed4034c63c" title="InitialConfigurationGroup::dump" alt="" coords="720,789,944,816"/>
+<area shape="rect" id="node62" href="$classArray.html#aecb7287b27cc6e843cee2ed2f8de8ade" title="Array::dump" alt="" coords="1097,789,1193,816"/>
+</map>

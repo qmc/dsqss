@@ -1,0 +1,16 @@
+html, body { background-color: white !important; }
+div.bodywrapper { margin: 0 !important; border-left: none !important; }
+
+div.related,
+div.footer,
+div.sphinxsidebar,
+div.body a.headerlink { display: none !important; }
+
+div.body * { page-break-inside: avoid !important; }
+div.body span[id^="document-"] ~ span[id^="document-"] ~ div.section h2 { page-break-before: always !important; }
+div.body h3, div.body h4, div.body h5, div.body h6 { page-break-after: avoid !important; }
+div.body h3 + *, div.body h4 + *, div.body h5 + *, div.body h6 + * { page-break-before: avoid !important; }
+div.body p.rubric { page-break-after: avoid !important; }
+div.body p.rubric + * { page-break-before: avoid !important; }
+
+/* その他色々 ... */

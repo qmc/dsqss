@@ -1,0 +1,546 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<title>DSQSS: xml.h ソースファイル</title>
+
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript">
+  $(document).ready(initResizable);
+</script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="text/javascript">
+  $(document).ready(function() { searchBox.OnSelectItem(0); });
+</script>
+
+</head>
+<body>
+<div id="top"><!-- do not remove this div! -->
+
+
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  
+  
+  <td style="padding-left: 0.5em;">
+   <div id="projectname">DSQSS
+   &#160;<span id="projectnumber">1.1</span>
+   </div>
+   
+  </td>
+  
+  
+  
+ </tr>
+ </tbody>
+</table>
+</div>
+
+<!-- 作成： Doxygen 1.7.6.1 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search",false,'検索');
+</script>
+  <div id="navrow1" class="tabs">
+    <ul class="tablist">
+      <li><a href="index.html"><span>メインページ</span></a></li>
+      <li><a href="namespaces.html"><span>ネームスペース</span></a></li>
+      <li><a href="annotated.html"><span>クラス</span></a></li>
+      <li class="current"><a href="files.html"><span>ファイル</span></a></li>
+      <li>
+        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <img id="MSearchSelect" src="search/mag_sel.png"
+               onmouseover="return searchBox.OnSearchSelectShow()"
+               onmouseout="return searchBox.OnSearchSelectHide()"
+               alt=""/>
+          <input type="text" id="MSearchField" value="検索" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><img id="MSearchCloseImg" border="0" src="search/close.png" alt=""/></a>
+          </span>
+        </div>
+      </li>
+    </ul>
+  </div>
+  <div id="navrow2" class="tabs2">
+    <ul class="tablist">
+      <li><a href="files.html"><span>ファイル一覧</span></a></li>
+      <li><a href="globals.html"><span>ファイルメンバ</span></a></li>
+    </ul>
+  </div>
+</div>
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+  initNavTree('xml_8h.html','');
+</script>
+<div id="doc-content">
+<div class="header">
+  <div class="headertitle">
+<div class="title">xml.h</div>  </div>
+</div><!--header-->
+<div class="contents">
+<a href="xml_8h.html">説明を見る。</a><div class="fragment"><pre class="fragment"><a name="l00001"></a>00001 
+<a name="l00002"></a>00002 <span class="comment">// Known bugs:</span>
+<a name="l00003"></a>00003 <span class="comment">// (1) Tags must be separated from other words by one or more spaces or </span>
+<a name="l00004"></a>00004 <span class="comment">//     line breaks. Otherwise they are not recognized.</span>
+<a name="l00005"></a>00005 <span class="comment">// (2) The comment identifiers &lt;!-- and --&gt; must be separated by spaces or</span>
+<a name="l00006"></a>00006 <span class="comment">//     line breaks, too. </span>
+<a name="l00007"></a>00007 
+<a name="l00008"></a>00008 <span class="preprocessor">#ifndef XML_H</span>
+<a name="l00009"></a>00009 <span class="preprocessor"></span><span class="preprocessor">#define XML_H</span>
+<a name="l00010"></a>00010 <span class="preprocessor"></span>
+<a name="l00011"></a>00011 <span class="preprocessor">#include &quot;<a class="code" href="io_8h.html">io.h</a>&quot;</span>
+<a name="l00012"></a>00012 <span class="preprocessor">#include &quot;<a class="code" href="array_8h.html">array.h</a>&quot;</span>
+<a name="l00013"></a>00013 
+<a name="l00014"></a><a class="code" href="namespaceXML.html">00014</a> <span class="keyword">namespace </span>XML {
+<a name="l00015"></a>00015 
+<a name="l00016"></a>00016 <span class="comment">//#######################################################################</span>
+<a name="l00017"></a>00017 
+<a name="l00018"></a>00018 <span class="keyword">class </span><a class="code" href="classXML_1_1Block.html">Block</a>;
+<a name="l00019"></a>00019 
+<a name="l00020"></a>00020 <span class="comment">//======================================================================</span>
+<a name="l00021"></a>00021 
+<a name="l00022"></a><a class="code" href="namespaceXML.html#a47c66d0e0cab28af3ee7cddbedf658b7">00022</a> <span class="keyword">inline</span> <span class="keywordtype">bool</span> <a class="code" href="namespaceXML.html#a47c66d0e0cab28af3ee7cddbedf658b7">isCommentOpening</a>(<span class="keyword">const</span> <span class="keywordtype">string</span>&amp; key) {
+<a name="l00023"></a>00023   <span class="keywordtype">string</span> sopen = <span class="stringliteral">&quot;&lt;!--&quot;</span>;
+<a name="l00024"></a>00024   <span class="keywordtype">int</span> n = key.length();
+<a name="l00025"></a>00025   <span class="keywordflow">if</span> ( n &lt; 4 ) <span class="keywordflow">return</span> <span class="keyword">false</span>;
+<a name="l00026"></a>00026   <span class="keywordflow">if</span> ( key.substr(0,4) == sopen ) <span class="keywordflow">return</span> <span class="keyword">true</span>;
+<a name="l00027"></a>00027   <span class="keywordflow">return</span> <span class="keyword">false</span>;
+<a name="l00028"></a>00028 }
+<a name="l00029"></a>00029 
+<a name="l00030"></a>00030 <span class="comment">//======================================================================</span>
+<a name="l00031"></a>00031 
+<a name="l00032"></a><a class="code" href="namespaceXML.html#aca68844ce580db07934916b326ce8c72">00032</a> <span class="keyword">inline</span> <span class="keywordtype">bool</span> <a class="code" href="namespaceXML.html#aca68844ce580db07934916b326ce8c72">isOpening</a>(<span class="keyword">const</span> <span class="keywordtype">string</span>&amp; key) {
+<a name="l00033"></a>00033   <span class="keywordtype">int</span> n = key.length();
+<a name="l00034"></a>00034   <span class="keywordflow">if</span> ( key[0] != <span class="charliteral">&#39;&lt;&#39;</span> ) <span class="keywordflow">return</span> <span class="keyword">false</span>;
+<a name="l00035"></a>00035   <span class="keywordflow">if</span> ( key[1] == <span class="charliteral">&#39;/&#39;</span> ) <span class="keywordflow">return</span> <span class="keyword">false</span>;
+<a name="l00036"></a>00036   <span class="keywordflow">if</span> ( key[n-1] != <span class="charliteral">&#39;&gt;&#39;</span> ) <span class="keywordflow">return</span> <span class="keyword">false</span>;
+<a name="l00037"></a>00037   <span class="keywordflow">return</span> <span class="keyword">true</span>;
+<a name="l00038"></a>00038 }
+<a name="l00039"></a>00039 
+<a name="l00040"></a>00040 <span class="comment">//======================================================================</span>
+<a name="l00041"></a>00041 
+<a name="l00042"></a><a class="code" href="namespaceXML.html#a75143a39b026f67d2cafc5b1fce0ee6a">00042</a> <span class="keyword">inline</span> <span class="keywordtype">bool</span> <a class="code" href="namespaceXML.html#a75143a39b026f67d2cafc5b1fce0ee6a">isClosing</a>(<span class="keyword">const</span> <span class="keywordtype">string</span>&amp; key) {
+<a name="l00043"></a>00043   <span class="keywordtype">int</span> n = key.length();
+<a name="l00044"></a>00044   <span class="keywordflow">if</span> ( key[0] != <span class="charliteral">&#39;&lt;&#39;</span> ) <span class="keywordflow">return</span> <span class="keyword">false</span>;
+<a name="l00045"></a>00045   <span class="keywordflow">if</span> ( key[1] != <span class="charliteral">&#39;/&#39;</span> ) <span class="keywordflow">return</span> <span class="keyword">false</span>;
+<a name="l00046"></a>00046   <span class="keywordflow">if</span> ( key[n-1] != <span class="charliteral">&#39;&gt;&#39;</span> ) <span class="keywordflow">return</span> <span class="keyword">false</span>;
+<a name="l00047"></a>00047   <span class="keywordflow">return</span> <span class="keyword">true</span>;
+<a name="l00048"></a>00048 }
+<a name="l00049"></a>00049 
+<a name="l00050"></a>00050 <span class="comment">//======================================================================</span>
+<a name="l00051"></a>00051 
+<a name="l00052"></a><a class="code" href="namespaceXML.html#a08bd6fcf584394a94bf4d1192c0c0679">00052</a> <span class="keyword">inline</span> <span class="keyword">const</span> <span class="keywordtype">string</span> <a class="code" href="namespaceXML.html#a08bd6fcf584394a94bf4d1192c0c0679">getOpeningName</a>(<span class="keyword">const</span> <span class="keywordtype">string</span>&amp; key) {
+<a name="l00053"></a>00053   <span class="keywordflow">if</span> ( !<a class="code" href="namespaceXML.html#aca68844ce580db07934916b326ce8c72">isOpening</a>(key) ) exit(0);
+<a name="l00054"></a>00054   <span class="keywordtype">int</span> n = key.length();
+<a name="l00055"></a>00055   <span class="keywordtype">string</span> ans = key.substr(1,n-2);
+<a name="l00056"></a>00056   <span class="keywordflow">return</span> ans;
+<a name="l00057"></a>00057 }
+<a name="l00058"></a>00058 
+<a name="l00059"></a>00059 <span class="comment">//======================================================================</span>
+<a name="l00060"></a>00060 
+<a name="l00061"></a><a class="code" href="namespaceXML.html#a60e911cc779e2ea6c5dfd0761f743470">00061</a> <span class="keyword">inline</span> <span class="keyword">const</span> <span class="keywordtype">string</span> <a class="code" href="namespaceXML.html#a60e911cc779e2ea6c5dfd0761f743470">getClosingName</a>(<span class="keyword">const</span> <span class="keywordtype">string</span>&amp; key) {
+<a name="l00062"></a>00062   <span class="keywordflow">if</span> ( ! <a class="code" href="namespaceXML.html#a75143a39b026f67d2cafc5b1fce0ee6a">isClosing</a>(key) ) exit(0);
+<a name="l00063"></a>00063   <span class="keywordtype">int</span> n = key.length();
+<a name="l00064"></a>00064   <span class="keywordtype">string</span> ans = key.substr(2,n-3);
+<a name="l00065"></a>00065   <span class="keywordflow">return</span> ans;
+<a name="l00066"></a>00066 }
+<a name="l00067"></a>00067 
+<a name="l00068"></a>00068 <span class="comment">//#######################################################################</span>
+<a name="l00069"></a>00069 
+<a name="l00070"></a><a class="code" href="classXML_1_1Block.html">00070</a> <span class="keyword">class </span><a class="code" href="classXML_1_1Block.html">Block</a> {
+<a name="l00071"></a>00071 
+<a name="l00072"></a>00072 <span class="keyword">private</span>:
+<a name="l00073"></a>00073 
+<a name="l00074"></a><a class="code" href="classXML_1_1Block.html#a7ee9065718e6628dc7791b756fa6c0f9">00074</a>   <span class="keywordtype">string</span> <a class="code" href="classXML_1_1Block.html#a7ee9065718e6628dc7791b756fa6c0f9">Name</a>; <span class="comment">// the name of the element</span>
+<a name="l00075"></a><a class="code" href="classXML_1_1Block.html#a7fa821b1c5ec7fcb601ff2c33f8b7a8e">00075</a>   <span class="keywordtype">string</span>* <a class="code" href="classXML_1_1Block.html#a7fa821b1c5ec7fcb601ff2c33f8b7a8e">Word</a>; <span class="comment">// the whole list of words to be processed</span>
+<a name="l00076"></a><a class="code" href="classXML_1_1Block.html#a0766f90d8e08bb3a1552b475330d9856">00076</a>   <span class="keywordtype">string</span> <a class="code" href="classXML_1_1Block.html#a0766f90d8e08bb3a1552b475330d9856">Open</a>; <span class="comment">// the key at which to start the process</span>
+<a name="l00077"></a><a class="code" href="classXML_1_1Block.html#a113f58a289651610eeb1de441b932ea3">00077</a>   <span class="keywordtype">string</span> <a class="code" href="classXML_1_1Block.html#a113f58a289651610eeb1de441b932ea3">Close</a>; <span class="comment">// the key at which to terminate the process</span>
+<a name="l00078"></a><a class="code" href="classXML_1_1Block.html#aa2aeb7caf23994848f08b47e1fed2f75">00078</a>   <span class="keywordtype">int</span> <a class="code" href="classXML_1_1Block.html#aa2aeb7caf23994848f08b47e1fed2f75">NB</a>; <span class="comment">// the number of subelements</span>
+<a name="l00079"></a><a class="code" href="classXML_1_1Block.html#ae5c449af13c0c4a299fb2176e917f6e4">00079</a>   <a class="code" href="classArray.html">Array&lt;Block&gt;</a> <a class="code" href="classXML_1_1Block.html#ae5c449af13c0c4a299fb2176e917f6e4">SubBlock</a>;
+<a name="l00080"></a><a class="code" href="classXML_1_1Block.html#a217a7470bca6f165e76b96955f24732b">00080</a>   <span class="keywordtype">int</span> <a class="code" href="classXML_1_1Block.html#a217a7470bca6f165e76b96955f24732b">NV</a>; <span class="comment">// the number of values</span>
+<a name="l00081"></a><a class="code" href="classXML_1_1Block.html#a93c5241ef537f405341bd1f753a60362">00081</a>   <a class="code" href="classArray.html">Array&lt;string&gt;</a> <a class="code" href="classXML_1_1Block.html#a93c5241ef537f405341bd1f753a60362">Value</a>;
+<a name="l00082"></a>00082 
+<a name="l00083"></a>00083 <span class="keyword">public</span>:
+<a name="l00084"></a>00084 
+<a name="l00085"></a>00085   <span class="keywordtype">void</span> <a class="code" href="classXML_1_1Block.html#ac15d5d5c09d2d256f6c5b1be6ed2f168">initialize</a>( <span class="keywordtype">string</span>* word , <span class="keyword">const</span> <span class="keywordtype">string</span>&amp; name = <span class="stringliteral">&quot;&quot;</span> );
+<a name="l00086"></a>00086   <span class="keywordtype">void</span> <a class="code" href="classXML_1_1Block.html#ac15d5d5c09d2d256f6c5b1be6ed2f168">initialize</a>( <span class="keyword">const</span> <span class="keywordtype">string</span>&amp; FNAME , <span class="keyword">const</span> <span class="keywordtype">string</span>&amp; name = <span class="stringliteral">&quot;&quot;</span> );
+<a name="l00087"></a>00087 
+<a name="l00088"></a><a class="code" href="classXML_1_1Block.html#a2984b94d5f2257fce95dfc75fbcfdd90">00088</a>   <a class="code" href="classXML_1_1Block.html#a2984b94d5f2257fce95dfc75fbcfdd90">Block</a> () {
+<a name="l00089"></a>00089     <a class="code" href="classXML_1_1Block.html#aa2aeb7caf23994848f08b47e1fed2f75">NB</a> = 0; 
+<a name="l00090"></a>00090     <a class="code" href="classXML_1_1Block.html#a217a7470bca6f165e76b96955f24732b">NV</a> = 0; 
+<a name="l00091"></a>00091   };
+<a name="l00092"></a>00092 
+<a name="l00093"></a><a class="code" href="classXML_1_1Block.html#a34e6ff0cc2ed9fb304398aa0ab8625ff">00093</a>   <a class="code" href="classXML_1_1Block.html#a34e6ff0cc2ed9fb304398aa0ab8625ff">Block</a> (<span class="keyword">const</span> <span class="keywordtype">string</span>&amp; FNAME, <span class="keyword">const</span> <span class="keywordtype">string</span>&amp; BNAME=<span class="stringliteral">&quot;&quot;</span>) {
+<a name="l00094"></a>00094     <a class="code" href="classXML_1_1Block.html#aa2aeb7caf23994848f08b47e1fed2f75">NB</a> = 0; 
+<a name="l00095"></a>00095     <a class="code" href="classXML_1_1Block.html#a217a7470bca6f165e76b96955f24732b">NV</a> = 0; 
+<a name="l00096"></a>00096     <a class="code" href="classXML_1_1Block.html#ac15d5d5c09d2d256f6c5b1be6ed2f168">initialize</a>(FNAME, BNAME);
+<a name="l00097"></a>00097   };
+<a name="l00098"></a>00098 
+<a name="l00099"></a><a class="code" href="classXML_1_1Block.html#a06b6fb79eca9133ea0d036865de71e1f">00099</a>   <a class="code" href="classXML_1_1Block.html#a06b6fb79eca9133ea0d036865de71e1f">~Block</a> () {
+<a name="l00100"></a>00100     <span class="comment">//    printf(&quot;*** Destroying XML::Block (%s)\n&quot;, Name.c_str());</span>
+<a name="l00101"></a>00101   };
+<a name="l00102"></a>00102 
+<a name="l00103"></a><a class="code" href="classXML_1_1Block.html#a88796becd473f212deb450ad1a31a893">00103</a>   <span class="keyword">const</span> <span class="keywordtype">int</span>&amp; <a class="code" href="classXML_1_1Block.html#a88796becd473f212deb450ad1a31a893">NumberOfBlocks</a>()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> <a class="code" href="classXML_1_1Block.html#aa2aeb7caf23994848f08b47e1fed2f75">NB</a>; };
+<a name="l00104"></a><a class="code" href="classXML_1_1Block.html#a6ff84751f9396dd7857e06b4b8ec0520">00104</a>   <span class="keyword">const</span> <span class="keywordtype">int</span>&amp; <a class="code" href="classXML_1_1Block.html#a6ff84751f9396dd7857e06b4b8ec0520">NumberOfValues</a>()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> <a class="code" href="classXML_1_1Block.html#a217a7470bca6f165e76b96955f24732b">NV</a>; };
+<a name="l00105"></a>00105   <span class="keywordtype">string</span> <a class="code" href="classXML_1_1Block.html#a6417a64c12cd4298a11851d6d20b56dd">getJoinedString</a>();
+<a name="l00106"></a>00106   <span class="keyword">const</span> <span class="keywordtype">string</span>&amp; <a class="code" href="classXML_1_1Block.html#a8cf4db36c9f3123506d73e98c4a93464">getName</a>() <span class="keyword">const</span>;
+<a name="l00107"></a>00107   <span class="keywordtype">bool</span> <a class="code" href="classXML_1_1Block.html#a0dd8335ab7f24fff9700ff9ff6ce187c">syntax_error</a>();
+<a name="l00108"></a>00108   <span class="keywordtype">void</span> <a class="code" href="classXML_1_1Block.html#aaa936da334e29618ece019bd8a9aa06f">read</a>();
+<a name="l00109"></a>00109   <span class="keywordtype">int</span> <a class="code" href="classXML_1_1Block.html#afcd6370972fce7a0d9378c778f5f09c7">getInteger</a>(<span class="keyword">const</span> <span class="keywordtype">int</span> i=0);
+<a name="l00110"></a>00110   <span class="keywordtype">double</span> <a class="code" href="classXML_1_1Block.html#a0bf14d82466b0e2b1ebff36333d0ad25">getDouble</a>(<span class="keyword">const</span> <span class="keywordtype">int</span> i=0);
+<a name="l00111"></a>00111   <span class="keywordtype">string</span>&amp; <a class="code" href="classXML_1_1Block.html#a753440fc57aae094f400478d07277a73">getString</a>(<span class="keyword">const</span> <span class="keywordtype">int</span> i=0);
+<a name="l00112"></a>00112   <a class="code" href="classXML_1_1Block.html">Block</a>&amp; <a class="code" href="classXML_1_1Block.html#a2f657970caf3ebf7f1dc9322329c4e93">getElement</a>(<span class="keyword">const</span> <span class="keywordtype">int</span> i);
+<a name="l00113"></a>00113   <a class="code" href="classXML_1_1Block.html">Block</a>&amp; <a class="code" href="classXML_1_1Block.html#a2f657970caf3ebf7f1dc9322329c4e93">getElement</a>(<span class="keyword">const</span> <span class="keywordtype">string</span>&amp; name);
+<a name="l00114"></a>00114   <a class="code" href="classXML_1_1Block.html">Block</a>&amp; <a class="code" href="classXML_1_1Block.html#a2f657970caf3ebf7f1dc9322329c4e93">getElement</a>(
+<a name="l00115"></a>00115     <span class="keyword">const</span> <span class="keywordtype">string</span>&amp; name, <span class="keyword">const</span> <span class="keywordtype">string</span>&amp; idkey, <span class="keyword">const</span> <span class="keywordtype">int</span> <span class="keywordtype">id</span> );
+<a name="l00116"></a><a class="code" href="classXML_1_1Block.html#a50626bafb37af5049408e69a4bf33a66">00116</a>   <a class="code" href="classXML_1_1Block.html">Block</a>&amp; <a class="code" href="classXML_1_1Block.html#a50626bafb37af5049408e69a4bf33a66">operator[] </a>(<span class="keyword">const</span> <span class="keywordtype">int</span>&amp; i) { <span class="keywordflow">return</span> <a class="code" href="classXML_1_1Block.html#ae5c449af13c0c4a299fb2176e917f6e4">SubBlock</a>[i]; };
+<a name="l00117"></a>00117   <a class="code" href="classXML_1_1Block.html">Block</a>&amp; <a class="code" href="classXML_1_1Block.html#a50626bafb37af5049408e69a4bf33a66">operator[] </a>(<span class="keyword">const</span> <span class="keywordtype">string</span>&amp; name);
+<a name="l00118"></a>00118   <span class="keywordtype">void</span> <a class="code" href="classXML_1_1Block.html#a56f8c189656c31387dca3bb42d2ffade">dump</a>(<span class="keyword">const</span> <span class="keywordtype">string</span>&amp; prompt=<span class="stringliteral">&quot;&quot;</span>);
+<a name="l00119"></a>00119 
+<a name="l00120"></a>00120 };
+<a name="l00121"></a>00121 
+<a name="l00122"></a>00122 <span class="comment">//======================================================================</span>
+<a name="l00123"></a>00123 
+<a name="l00124"></a><a class="code" href="classXML_1_1Block.html#a6417a64c12cd4298a11851d6d20b56dd">00124</a> <span class="keyword">inline</span> <span class="keywordtype">string</span> <a class="code" href="classXML_1_1Block.html#a6417a64c12cd4298a11851d6d20b56dd">Block::getJoinedString</a>() {
+<a name="l00125"></a>00125   <span class="keywordtype">string</span> s=<span class="stringliteral">&quot;&quot;</span>;
+<a name="l00126"></a>00126   <span class="keywordflow">if</span> ( <a class="code" href="classXML_1_1Block.html#a217a7470bca6f165e76b96955f24732b">NV</a> == 0 ) <span class="keywordflow">return</span> s;
+<a name="l00127"></a>00127   s = <a class="code" href="classXML_1_1Block.html#a93c5241ef537f405341bd1f753a60362">Value</a>[0];
+<a name="l00128"></a>00128   <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i=1; i&lt;<a class="code" href="classXML_1_1Block.html#a217a7470bca6f165e76b96955f24732b">NV</a>; i++) {
+<a name="l00129"></a>00129     s += <span class="stringliteral">&quot; &quot;</span>;
+<a name="l00130"></a>00130     s += <a class="code" href="classXML_1_1Block.html#a93c5241ef537f405341bd1f753a60362">Value</a>[i];
+<a name="l00131"></a>00131   }
+<a name="l00132"></a>00132   <span class="keywordflow">return</span> s;
+<a name="l00133"></a>00133 }
+<a name="l00134"></a>00134 
+<a name="l00135"></a>00135 <span class="comment">//======================================================================</span>
+<a name="l00136"></a>00136 
+<a name="l00137"></a><a class="code" href="classXML_1_1Block.html#a8cf4db36c9f3123506d73e98c4a93464">00137</a> <span class="keyword">inline</span> <span class="keyword">const</span> <span class="keywordtype">string</span>&amp; <a class="code" href="classXML_1_1Block.html#a8cf4db36c9f3123506d73e98c4a93464">Block::getName</a>()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> <a class="code" href="classXML_1_1Block.html#a7ee9065718e6628dc7791b756fa6c0f9">Name</a>; }
+<a name="l00138"></a>00138 
+<a name="l00139"></a>00139 <span class="comment">//======================================================================</span>
+<a name="l00140"></a>00140 
+<a name="l00141"></a><a class="code" href="classXML_1_1Block.html#ac15d5d5c09d2d256f6c5b1be6ed2f168">00141</a> <span class="keyword">inline</span> <span class="keywordtype">void</span> <a class="code" href="classXML_1_1Block.html#ac15d5d5c09d2d256f6c5b1be6ed2f168">Block::initialize</a>( <span class="keywordtype">string</span>* word , <span class="keyword">const</span> <span class="keywordtype">string</span>&amp; name ) {
+<a name="l00142"></a>00142 <span class="comment">//        printf(&quot;Block::initialize&gt; Pass 1\n&quot;);</span>
+<a name="l00143"></a>00143   <a class="code" href="classXML_1_1Block.html#a7ee9065718e6628dc7791b756fa6c0f9">Name</a> = name;
+<a name="l00144"></a>00144   <a class="code" href="classXML_1_1Block.html#a7fa821b1c5ec7fcb601ff2c33f8b7a8e">Word</a> = word;
+<a name="l00145"></a>00145   <span class="keywordflow">if</span> ( name == <span class="stringliteral">&quot;&quot;</span> ) {
+<a name="l00146"></a>00146     <a class="code" href="classXML_1_1Block.html#a0766f90d8e08bb3a1552b475330d9856">Open</a> = <span class="stringliteral">&quot;&quot;</span>;
+<a name="l00147"></a>00147     <a class="code" href="classXML_1_1Block.html#a113f58a289651610eeb1de441b932ea3">Close</a> = <span class="stringliteral">&quot;&quot;</span>;
+<a name="l00148"></a>00148   } <span class="keywordflow">else</span> {
+<a name="l00149"></a>00149     <a class="code" href="classXML_1_1Block.html#a0766f90d8e08bb3a1552b475330d9856">Open</a> = <span class="stringliteral">&quot;&lt;&quot;</span>+name+<span class="stringliteral">&quot;&gt;&quot;</span>;
+<a name="l00150"></a>00150     <a class="code" href="classXML_1_1Block.html#a113f58a289651610eeb1de441b932ea3">Close</a> = <span class="stringliteral">&quot;&lt;/&quot;</span>+name+<span class="stringliteral">&quot;&gt;&quot;</span>;
+<a name="l00151"></a>00151   }
+<a name="l00152"></a>00152   <a class="code" href="classXML_1_1Block.html#aaa936da334e29618ece019bd8a9aa06f">read</a>();
+<a name="l00153"></a>00153 }
+<a name="l00154"></a>00154 
+<a name="l00155"></a>00155 <span class="comment">//======================================================================</span>
+<a name="l00156"></a>00156 
+<a name="l00157"></a><a class="code" href="classXML_1_1Block.html#a8fafe89bccbf8b2852f0fabe6ab89784">00157</a> <span class="keywordtype">void</span> <a class="code" href="classXML_1_1Block.html#ac15d5d5c09d2d256f6c5b1be6ed2f168">Block::initialize</a>( <span class="keyword">const</span> <span class="keywordtype">string</span>&amp; FNAME , <span class="keyword">const</span> <span class="keywordtype">string</span>&amp; name ) {
+<a name="l00158"></a>00158 <span class="comment">//      printf(&quot;Block::initialize&gt; Pass 2\n&quot;); // koko</span>
+<a name="l00159"></a>00159 
+<a name="l00160"></a>00160   <a class="code" href="classFileReader.html">FileReader</a> F;
+<a name="l00161"></a>00161   F.<a class="code" href="classFileReader.html#afaa6fa79b325b002101f2ef5f8e4a7ca">open</a>(FNAME.c_str());
+<a name="l00162"></a>00162   <span class="keywordtype">int</span> NW;
+<a name="l00163"></a>00163   <span class="keywordtype">string</span>* W;
+<a name="l00164"></a>00164   F.<a class="code" href="classFileReader.html#a57c32ea7140a70b26940e9141f4e49e7">getWordList</a>( NW , W ); <span class="comment">//単語の数、最初の括弧&lt;algorithm&gt;</span>
+<a name="l00165"></a>00165   <a class="code" href="classXML_1_1Block.html#ac15d5d5c09d2d256f6c5b1be6ed2f168">initialize</a>( W , name );
+<a name="l00166"></a>00166   <span class="keyword">delete</span> [] W;
+<a name="l00167"></a>00167 }
+<a name="l00168"></a>00168 
+<a name="l00169"></a>00169 <span class="comment">//======================================================================</span>
+<a name="l00170"></a>00170 
+<a name="l00171"></a><a class="code" href="classXML_1_1Block.html#a0dd8335ab7f24fff9700ff9ff6ce187c">00171</a> <span class="keyword">inline</span> <span class="keywordtype">bool</span> <a class="code" href="classXML_1_1Block.html#a0dd8335ab7f24fff9700ff9ff6ce187c">Block::syntax_error</a>() {
+<a name="l00172"></a>00172   <a class="code" href="classXML_1_1Block.html#aa2aeb7caf23994848f08b47e1fed2f75">NB</a> = 0;
+<a name="l00173"></a>00173   <a class="code" href="classXML_1_1Block.html#a217a7470bca6f165e76b96955f24732b">NV</a> = 0;
+<a name="l00174"></a>00174   <span class="keywordtype">int</span> depth = 0;
+<a name="l00175"></a>00175   <span class="keywordtype">bool</span> open = <span class="keyword">false</span>;
+<a name="l00176"></a>00176   <span class="keywordtype">string</span> SkipTo = <span class="stringliteral">&quot;&quot;</span>;
+<a name="l00177"></a>00177   <span class="keywordtype">int</span> i=0;
+<a name="l00178"></a>00178   <span class="keywordflow">while</span>(<a class="code" href="classXML_1_1Block.html#a7fa821b1c5ec7fcb601ff2c33f8b7a8e">Word</a>[i] != <a class="code" href="io_8h.html#ad9a570ce8ac163e741fa610ba5d93c75">EOL</a>) {
+<a name="l00179"></a>00179     <span class="keywordtype">string</span>&amp; w = <a class="code" href="classXML_1_1Block.html#a7fa821b1c5ec7fcb601ff2c33f8b7a8e">Word</a>[i++];
+<a name="l00180"></a>00180     <span class="keywordflow">if</span> ( <a class="code" href="classXML_1_1Block.html#a7ee9065718e6628dc7791b756fa6c0f9">Name</a> == <span class="stringliteral">&quot;&quot;</span> ) {
+<a name="l00181"></a>00181       <span class="keywordflow">if</span> ( <a class="code" href="namespaceXML.html#aca68844ce580db07934916b326ce8c72">isOpening</a>(w) ) {
+<a name="l00182"></a>00182         <span class="keyword">const</span> <span class="keywordtype">string</span> name = <a class="code" href="namespaceXML.html#a08bd6fcf584394a94bf4d1192c0c0679">getOpeningName</a>(w);
+<a name="l00183"></a>00183         <a class="code" href="classXML_1_1Block.html#a7ee9065718e6628dc7791b756fa6c0f9">Name</a> = name;
+<a name="l00184"></a>00184         <a class="code" href="classXML_1_1Block.html#a0766f90d8e08bb3a1552b475330d9856">Open</a> = <span class="stringliteral">&quot;&lt;&quot;</span>+name+<span class="stringliteral">&quot;&gt;&quot;</span>;
+<a name="l00185"></a>00185         <a class="code" href="classXML_1_1Block.html#a113f58a289651610eeb1de441b932ea3">Close</a> = <span class="stringliteral">&quot;&lt;/&quot;</span>+name+<span class="stringliteral">&quot;&gt;&quot;</span>;
+<a name="l00186"></a>00186       }
+<a name="l00187"></a>00187     }
+<a name="l00188"></a>00188     <span class="keywordflow">if</span> ( w == <a class="code" href="classXML_1_1Block.html#a0766f90d8e08bb3a1552b475330d9856">Open</a> ) {
+<a name="l00189"></a>00189       depth++;
+<a name="l00190"></a>00190       open = <span class="keyword">true</span>;
+<a name="l00191"></a>00191       <span class="keywordflow">continue</span>;
+<a name="l00192"></a>00192     }
+<a name="l00193"></a>00193     <span class="keywordflow">if</span> ( ! open ) <span class="keywordflow">continue</span>;
+<a name="l00194"></a>00194     <span class="keywordflow">if</span> ( w == <a class="code" href="classXML_1_1Block.html#a113f58a289651610eeb1de441b932ea3">Close</a> ) {
+<a name="l00195"></a>00195       depth--;
+<a name="l00196"></a>00196       <span class="keywordflow">break</span>;
+<a name="l00197"></a>00197     }
+<a name="l00198"></a>00198     <span class="keywordflow">if</span> ( SkipTo != <span class="stringliteral">&quot;&quot;</span> &amp;&amp; w != SkipTo ) <span class="keywordflow">continue</span>;
+<a name="l00199"></a>00199     <span class="keywordflow">if</span> ( SkipTo != <span class="stringliteral">&quot;&quot;</span> &amp;&amp; w == SkipTo ) {
+<a name="l00200"></a>00200       depth--;
+<a name="l00201"></a>00201       SkipTo = <span class="stringliteral">&quot;&quot;</span>;
+<a name="l00202"></a>00202       <span class="keywordflow">continue</span>;
+<a name="l00203"></a>00203     }
+<a name="l00204"></a>00204     <span class="keywordflow">if</span> ( <a class="code" href="namespaceXML.html#a47c66d0e0cab28af3ee7cddbedf658b7">isCommentOpening</a>(w) ) {
+<a name="l00205"></a>00205 <span class="comment">//cout &lt;&lt; &quot;  ... beginning of a comment&quot; &lt;&lt; endl;</span>
+<a name="l00206"></a>00206       depth++;
+<a name="l00207"></a>00207       SkipTo = <span class="stringliteral">&quot;--&gt;&quot;</span>;
+<a name="l00208"></a>00208       <span class="keywordflow">continue</span>;
+<a name="l00209"></a>00209     }
+<a name="l00210"></a>00210     <span class="keywordflow">if</span> ( <a class="code" href="namespaceXML.html#aca68844ce580db07934916b326ce8c72">isOpening</a>(w) ) {
+<a name="l00211"></a>00211 <span class="comment">//cout &lt;&lt; &quot;  ... beginning of a subelement [&quot; &lt;&lt; w &lt;&lt; &quot;]&quot; &lt;&lt; endl;</span>
+<a name="l00212"></a>00212       depth++;
+<a name="l00213"></a>00213       <span class="keyword">const</span> <span class="keywordtype">string</span> name = <a class="code" href="namespaceXML.html#a08bd6fcf584394a94bf4d1192c0c0679">getOpeningName</a>(w);
+<a name="l00214"></a>00214 <span class="comment">//cout &lt;&lt; &quot;opening name : &quot; &lt;&lt; name &lt;&lt; endl;</span>
+<a name="l00215"></a>00215       SkipTo = <span class="stringliteral">&quot;&lt;/&quot;</span> + name + <span class="stringliteral">&quot;&gt;&quot;</span>;
+<a name="l00216"></a>00216       <a class="code" href="classXML_1_1Block.html#aa2aeb7caf23994848f08b47e1fed2f75">NB</a>++;
+<a name="l00217"></a>00217       <span class="keywordflow">continue</span>;
+<a name="l00218"></a>00218     }
+<a name="l00219"></a>00219     <span class="keywordflow">if</span> ( <a class="code" href="namespaceXML.html#a75143a39b026f67d2cafc5b1fce0ee6a">isClosing</a>(w) ) {
+<a name="l00220"></a>00220       printf(<span class="stringliteral">&quot;Block::read&gt; Error.\n&quot;</span>);
+<a name="l00221"></a>00221       printf(<span class="stringliteral">&quot;  An unexpected closing tag %s\n&quot;</span>, w.c_str());
+<a name="l00222"></a>00222       printf(<span class="stringliteral">&quot;  is detected in reading an element of name [%s].\n&quot;</span>, 
+<a name="l00223"></a>00223         <a class="code" href="classXML_1_1Block.html#a8cf4db36c9f3123506d73e98c4a93464">getName</a>().c_str());
+<a name="l00224"></a>00224       <span class="keywordflow">return</span> <span class="keyword">true</span>;
+<a name="l00225"></a>00225     }
+<a name="l00226"></a>00226 <span class="comment">//cout &lt;&lt; &quot;  ... a value&quot; &lt;&lt; endl;</span>
+<a name="l00227"></a>00227     <a class="code" href="classXML_1_1Block.html#a217a7470bca6f165e76b96955f24732b">NV</a>++;
+<a name="l00228"></a>00228   }
+<a name="l00229"></a>00229 
+<a name="l00230"></a>00230   <span class="keywordflow">if</span> ( depth != 0 ) {
+<a name="l00231"></a>00231     printf(<span class="stringliteral">&quot;Block::read&gt; Error.\n&quot;</span>);
+<a name="l00232"></a>00232     <span class="keywordtype">string</span> expected = SkipTo;
+<a name="l00233"></a>00233     <span class="keywordflow">if</span> ( expected == <span class="stringliteral">&quot;&quot;</span> ) {
+<a name="l00234"></a>00234       expected = <a class="code" href="classXML_1_1Block.html#a113f58a289651610eeb1de441b932ea3">Close</a>;
+<a name="l00235"></a>00235     }
+<a name="l00236"></a>00236     printf(<span class="stringliteral">&quot;  A missing closing tag %s\n&quot;</span>, expected.c_str());
+<a name="l00237"></a>00237     printf(<span class="stringliteral">&quot;  is detected in reading an element of name [%s].\n&quot;</span>, 
+<a name="l00238"></a>00238       <a class="code" href="classXML_1_1Block.html#a8cf4db36c9f3123506d73e98c4a93464">getName</a>().c_str());
+<a name="l00239"></a>00239     <span class="keywordflow">return</span> <span class="keyword">true</span>;
+<a name="l00240"></a>00240   }
+<a name="l00241"></a>00241 
+<a name="l00242"></a>00242   <span class="keywordflow">return</span> <span class="keyword">false</span>;
+<a name="l00243"></a>00243 
+<a name="l00244"></a>00244 }
+<a name="l00245"></a>00245 
+<a name="l00246"></a>00246 <span class="comment">//======================================================================</span>
+<a name="l00247"></a>00247 
+<a name="l00248"></a><a class="code" href="classXML_1_1Block.html#aaa936da334e29618ece019bd8a9aa06f">00248</a> <span class="keywordtype">void</span> <a class="code" href="classXML_1_1Block.html#aaa936da334e29618ece019bd8a9aa06f">Block::read</a>() {
+<a name="l00249"></a>00249 
+<a name="l00250"></a>00250 <span class="comment">//  printf(&quot;Block::read&gt; Pass 1\n&quot;);</span>
+<a name="l00251"></a>00251   <span class="keywordflow">if</span> ( <a class="code" href="classXML_1_1Block.html#a0dd8335ab7f24fff9700ff9ff6ce187c">syntax_error</a>() ) exit(0);
+<a name="l00252"></a>00252 
+<a name="l00253"></a>00253   <span class="keywordflow">if</span> ( <a class="code" href="classXML_1_1Block.html#a217a7470bca6f165e76b96955f24732b">NV</a> &gt; 0 ) <a class="code" href="classXML_1_1Block.html#a93c5241ef537f405341bd1f753a60362">Value</a>.<a class="code" href="classArray.html#a5fd83b4910658540977272a168cfbdae">init</a>(<span class="stringliteral">&quot;Value&quot;</span>,1,<a class="code" href="classXML_1_1Block.html#a217a7470bca6f165e76b96955f24732b">NV</a>);
+<a name="l00254"></a>00254   <span class="keywordflow">if</span> ( <a class="code" href="classXML_1_1Block.html#aa2aeb7caf23994848f08b47e1fed2f75">NB</a> &gt; 0 ) <a class="code" href="classXML_1_1Block.html#ae5c449af13c0c4a299fb2176e917f6e4">SubBlock</a>.<a class="code" href="classArray.html#a5fd83b4910658540977272a168cfbdae">init</a>(<span class="stringliteral">&quot;SubBlock&quot;</span>,1,<a class="code" href="classXML_1_1Block.html#aa2aeb7caf23994848f08b47e1fed2f75">NB</a>);
+<a name="l00255"></a>00255 
+<a name="l00256"></a>00256   <span class="keywordtype">bool</span> open = <span class="keyword">false</span>;
+<a name="l00257"></a>00257   <span class="keywordtype">string</span> SkipTo = <span class="stringliteral">&quot;&quot;</span>;
+<a name="l00258"></a>00258   <span class="keywordtype">int</span> ib = 0;
+<a name="l00259"></a>00259   <span class="keywordtype">int</span> iv = 0;
+<a name="l00260"></a>00260   <span class="keywordtype">int</span> i=0;
+<a name="l00261"></a>00261   <span class="keywordflow">while</span>(<span class="keyword">true</span>) {
+<a name="l00262"></a>00262     <span class="keywordtype">string</span>&amp; w = <a class="code" href="classXML_1_1Block.html#a7fa821b1c5ec7fcb601ff2c33f8b7a8e">Word</a>[i++];
+<a name="l00263"></a>00263 <span class="comment">//    cout &lt;&lt; &quot;### &quot; &lt;&lt; w &lt;&lt; endl;</span>
+<a name="l00264"></a>00264     <span class="keywordflow">if</span> ( w == <a class="code" href="classXML_1_1Block.html#a0766f90d8e08bb3a1552b475330d9856">Open</a> ) {
+<a name="l00265"></a>00265 <span class="comment">//printf(&quot;Opened. %s\n&quot;, w.c_str());</span>
+<a name="l00266"></a>00266       open = <span class="keyword">true</span>;
+<a name="l00267"></a>00267       <span class="keywordflow">continue</span>;
+<a name="l00268"></a>00268     }
+<a name="l00269"></a>00269     <span class="keywordflow">if</span> ( ! open ) <span class="keywordflow">continue</span>;
+<a name="l00270"></a>00270     <span class="keywordflow">if</span> ( w == <a class="code" href="classXML_1_1Block.html#a113f58a289651610eeb1de441b932ea3">Close</a> ) <span class="keywordflow">break</span>;
+<a name="l00271"></a>00271     <span class="keywordflow">if</span> ( SkipTo != <span class="stringliteral">&quot;&quot;</span> &amp;&amp; w != SkipTo ) <span class="keywordflow">continue</span>;
+<a name="l00272"></a>00272     <span class="keywordflow">if</span> ( SkipTo != <span class="stringliteral">&quot;&quot;</span> &amp;&amp; w == SkipTo ) {
+<a name="l00273"></a>00273       SkipTo = <span class="stringliteral">&quot;&quot;</span>;
+<a name="l00274"></a>00274       <span class="keywordflow">continue</span>;
+<a name="l00275"></a>00275     }
+<a name="l00276"></a>00276     <span class="keywordflow">if</span> ( <a class="code" href="namespaceXML.html#a47c66d0e0cab28af3ee7cddbedf658b7">isCommentOpening</a>(w) ) {
+<a name="l00277"></a>00277       SkipTo = <span class="stringliteral">&quot;--&gt;&quot;</span>;
+<a name="l00278"></a>00278       <span class="keywordflow">continue</span>;
+<a name="l00279"></a>00279     }
+<a name="l00280"></a>00280     <span class="keywordflow">if</span> ( <a class="code" href="namespaceXML.html#aca68844ce580db07934916b326ce8c72">isOpening</a>(w) ) {
+<a name="l00281"></a>00281       <span class="keyword">const</span> <span class="keywordtype">string</span> name = <a class="code" href="namespaceXML.html#a08bd6fcf584394a94bf4d1192c0c0679">getOpeningName</a>(w);
+<a name="l00282"></a>00282       <a class="code" href="classXML_1_1Block.html#ae5c449af13c0c4a299fb2176e917f6e4">SubBlock</a>[ib].initialize(&amp;w,name);
+<a name="l00283"></a>00283       ib++;
+<a name="l00284"></a>00284       SkipTo = <span class="stringliteral">&quot;&lt;/&quot;</span> + name + <span class="stringliteral">&quot;&gt;&quot;</span>;
+<a name="l00285"></a>00285       <span class="keywordflow">continue</span>;
+<a name="l00286"></a>00286     }
+<a name="l00287"></a>00287     <a class="code" href="classXML_1_1Block.html#a93c5241ef537f405341bd1f753a60362">Value</a>[iv] = w;
+<a name="l00288"></a>00288     iv++;
+<a name="l00289"></a>00289   }
+<a name="l00290"></a>00290 }
+<a name="l00291"></a>00291 
+<a name="l00292"></a>00292 <span class="comment">//======================================================================</span>
+<a name="l00293"></a>00293 
+<a name="l00294"></a><a class="code" href="classXML_1_1Block.html#a753440fc57aae094f400478d07277a73">00294</a> <span class="keyword">inline</span> <span class="keywordtype">string</span>&amp; <a class="code" href="classXML_1_1Block.html#a753440fc57aae094f400478d07277a73">Block::getString</a>(<span class="keyword">const</span> <span class="keywordtype">int</span> i) {
+<a name="l00295"></a>00295 <span class="preprocessor">#ifdef DEB</span>
+<a name="l00296"></a>00296 <span class="preprocessor"></span>  <span class="keywordflow">if</span> ( i &lt; 0 || i &gt;= <a class="code" href="classXML_1_1Block.html#a217a7470bca6f165e76b96955f24732b">NV</a> ) {
+<a name="l00297"></a>00297     printf(<span class="stringliteral">&quot;Block::getString&gt; Error.\n&quot;</span>);
+<a name="l00298"></a>00298     printf(<span class="stringliteral">&quot;  The argument (= %d) is out of the bounds [0,%d).\n&quot;</span>, i, <a class="code" href="classXML_1_1Block.html#a217a7470bca6f165e76b96955f24732b">NV</a>);
+<a name="l00299"></a>00299     exit(0);
+<a name="l00300"></a>00300   }
+<a name="l00301"></a>00301 <span class="preprocessor">#endif</span>
+<a name="l00302"></a>00302 <span class="preprocessor"></span>  <span class="keywordflow">return</span> <a class="code" href="classXML_1_1Block.html#a93c5241ef537f405341bd1f753a60362">Value</a>[i];
+<a name="l00303"></a>00303 }
+<a name="l00304"></a>00304 
+<a name="l00305"></a>00305 <span class="comment">//======================================================================</span>
+<a name="l00306"></a>00306 
+<a name="l00307"></a><a class="code" href="classXML_1_1Block.html#afcd6370972fce7a0d9378c778f5f09c7">00307</a> <span class="keyword">inline</span> <span class="keywordtype">int</span> <a class="code" href="classXML_1_1Block.html#afcd6370972fce7a0d9378c778f5f09c7">Block::getInteger</a>(<span class="keyword">const</span> <span class="keywordtype">int</span> i) {
+<a name="l00308"></a>00308 <span class="preprocessor">#ifdef DEB</span>
+<a name="l00309"></a>00309 <span class="preprocessor"></span>  <span class="keywordflow">if</span> ( i &lt; 0 || i &gt;= <a class="code" href="classXML_1_1Block.html#a217a7470bca6f165e76b96955f24732b">NV</a> ) {
+<a name="l00310"></a>00310     printf(<span class="stringliteral">&quot;Block::getInteger&gt; Error.\n&quot;</span>);
+<a name="l00311"></a>00311     printf(<span class="stringliteral">&quot;  The argument (= %d) is out of the bounds [0,%d).\n&quot;</span>, i, <a class="code" href="classXML_1_1Block.html#a217a7470bca6f165e76b96955f24732b">NV</a>);
+<a name="l00312"></a>00312     exit(0);
+<a name="l00313"></a>00313   }
+<a name="l00314"></a>00314 <span class="preprocessor">#endif</span>
+<a name="l00315"></a>00315 <span class="preprocessor"></span>  <span class="keywordtype">string</span>&amp; s = <a class="code" href="classXML_1_1Block.html#a753440fc57aae094f400478d07277a73">getString</a>(i);
+<a name="l00316"></a>00316   <span class="keywordflow">return</span> atoi(s.c_str());
+<a name="l00317"></a>00317 }
+<a name="l00318"></a>00318 
+<a name="l00319"></a>00319 <span class="comment">//======================================================================</span>
+<a name="l00320"></a>00320 
+<a name="l00321"></a><a class="code" href="classXML_1_1Block.html#a0bf14d82466b0e2b1ebff36333d0ad25">00321</a> <span class="keyword">inline</span> <span class="keywordtype">double</span> <a class="code" href="classXML_1_1Block.html#a0bf14d82466b0e2b1ebff36333d0ad25">Block::getDouble</a>(<span class="keyword">const</span> <span class="keywordtype">int</span> i) {
+<a name="l00322"></a>00322 <span class="preprocessor">#ifdef DEB</span>
+<a name="l00323"></a>00323 <span class="preprocessor"></span>  <span class="keywordflow">if</span> ( i &lt; 0 || i &gt;= <a class="code" href="classXML_1_1Block.html#a217a7470bca6f165e76b96955f24732b">NV</a> ) {
+<a name="l00324"></a>00324     printf(<span class="stringliteral">&quot;Block::getDouble&gt; Error.\n&quot;</span>);
+<a name="l00325"></a>00325     printf(<span class="stringliteral">&quot;  The argument (= %d) is out of the bounds [0,%d).\n&quot;</span>, i, <a class="code" href="classXML_1_1Block.html#a217a7470bca6f165e76b96955f24732b">NV</a>);
+<a name="l00326"></a>00326     exit(0);
+<a name="l00327"></a>00327   }
+<a name="l00328"></a>00328 <span class="preprocessor">#endif</span>
+<a name="l00329"></a>00329 <span class="preprocessor"></span>  <span class="keywordtype">string</span>&amp; s = <a class="code" href="classXML_1_1Block.html#a753440fc57aae094f400478d07277a73">getString</a>(i);
+<a name="l00330"></a>00330   <span class="keywordflow">return</span> (<span class="keywordtype">double</span>)atof(s.c_str());
+<a name="l00331"></a>00331 }
+<a name="l00332"></a>00332 
+<a name="l00333"></a>00333 <span class="comment">//======================================================================</span>
+<a name="l00334"></a>00334 
+<a name="l00335"></a><a class="code" href="classXML_1_1Block.html#a2f657970caf3ebf7f1dc9322329c4e93">00335</a> <span class="keyword">inline</span> <a class="code" href="classXML_1_1Block.html">Block</a>&amp; <a class="code" href="classXML_1_1Block.html#a2f657970caf3ebf7f1dc9322329c4e93">Block::getElement</a>(<span class="keyword">const</span> <span class="keywordtype">int</span> i) {
+<a name="l00336"></a>00336   <span class="keywordflow">return</span> <a class="code" href="classXML_1_1Block.html#ae5c449af13c0c4a299fb2176e917f6e4">SubBlock</a>[i];
+<a name="l00337"></a>00337 }
+<a name="l00338"></a>00338 
+<a name="l00339"></a>00339 <span class="comment">//======================================================================</span>
+<a name="l00340"></a>00340 
+<a name="l00341"></a><a class="code" href="classXML_1_1Block.html#a2cba77d8d02c4d53156914564a2f7544">00341</a> <span class="keyword">inline</span> <a class="code" href="classXML_1_1Block.html">Block</a>&amp; <a class="code" href="classXML_1_1Block.html#a2f657970caf3ebf7f1dc9322329c4e93">Block::getElement</a>(<span class="keyword">const</span> <span class="keywordtype">string</span>&amp; name) {
+<a name="l00342"></a>00342   <span class="keywordtype">int</span> ib;
+<a name="l00343"></a>00343   <span class="keywordflow">for</span> (ib=0; ib&lt;<a class="code" href="classXML_1_1Block.html#aa2aeb7caf23994848f08b47e1fed2f75">NB</a>; ib++) {
+<a name="l00344"></a>00344     <span class="keywordflow">if</span> ( name == <a class="code" href="classXML_1_1Block.html#ae5c449af13c0c4a299fb2176e917f6e4">SubBlock</a>[ib].<a class="code" href="classXML_1_1Block.html#a8cf4db36c9f3123506d73e98c4a93464">getName</a>() ) <span class="keywordflow">break</span>;
+<a name="l00345"></a>00345   }
+<a name="l00346"></a>00346   <span class="keywordflow">if</span> ( ib &lt; NB ) { 
+<a name="l00347"></a>00347     <span class="keywordflow">return</span> <a class="code" href="classXML_1_1Block.html#ae5c449af13c0c4a299fb2176e917f6e4">SubBlock</a>[ib];
+<a name="l00348"></a>00348   } <span class="keywordflow">else</span> {
+<a name="l00349"></a>00349     printf(<span class="stringliteral">&quot;Block::getElement&gt; Error.\n&quot;</span>);
+<a name="l00350"></a>00350     printf(<span class="stringliteral">&quot;  Tried to find a subblock &#39;%s&#39;,\n&quot;</span>,
+<a name="l00351"></a>00351       name.c_str());
+<a name="l00352"></a>00352     printf(<span class="stringliteral">&quot;  but no such block exists in a block &#39;%s&#39;.\n&quot;</span>, 
+<a name="l00353"></a>00353       <a class="code" href="classXML_1_1Block.html#a8cf4db36c9f3123506d73e98c4a93464">getName</a>().c_str());
+<a name="l00354"></a>00354     exit(0);
+<a name="l00355"></a>00355   }
+<a name="l00356"></a>00356 }
+<a name="l00357"></a>00357 
+<a name="l00358"></a>00358 <span class="comment">//======================================================================</span>
+<a name="l00359"></a>00359 
+<a name="l00360"></a><a class="code" href="classXML_1_1Block.html#a71041b2c54ee1aa101c0f4360bc15760">00360</a> <span class="keyword">inline</span> <a class="code" href="classXML_1_1Block.html">Block</a>&amp; <a class="code" href="classXML_1_1Block.html#a2f657970caf3ebf7f1dc9322329c4e93">Block::getElement</a>(
+<a name="l00361"></a>00361   <span class="keyword">const</span> <span class="keywordtype">string</span>&amp; name, <span class="keyword">const</span> <span class="keywordtype">string</span>&amp; idkey, <span class="keyword">const</span> <span class="keywordtype">int</span> <span class="keywordtype">id</span> ) {
+<a name="l00362"></a>00362   <span class="keywordtype">int</span> ib;
+<a name="l00363"></a>00363   <span class="keywordflow">for</span> (ib=0; ib&lt;<a class="code" href="classXML_1_1Block.html#aa2aeb7caf23994848f08b47e1fed2f75">NB</a>; ib++) {
+<a name="l00364"></a>00364     <span class="keywordflow">if</span> ( name == <a class="code" href="classXML_1_1Block.html#ae5c449af13c0c4a299fb2176e917f6e4">SubBlock</a>[ib].<a class="code" href="classXML_1_1Block.html#a8cf4db36c9f3123506d73e98c4a93464">getName</a>() ) {
+<a name="l00365"></a>00365       <a class="code" href="classXML_1_1Block.html">Block</a>&amp; E = <a class="code" href="classXML_1_1Block.html#ae5c449af13c0c4a299fb2176e917f6e4">SubBlock</a>[ib];
+<a name="l00366"></a>00366 <span class="comment">//    E.dump();</span>
+<a name="l00367"></a>00367       <span class="keywordtype">int</span> id0 = E[idkey].<a class="code" href="classXML_1_1Block.html#afcd6370972fce7a0d9378c778f5f09c7">getInteger</a>();
+<a name="l00368"></a>00368 <span class="comment">//    printf(&quot;id0 = %d, id = %d\n&quot;, id0, id);</span>
+<a name="l00369"></a>00369       <span class="keywordflow">if</span> ( id0 == <span class="keywordtype">id</span> ) <span class="keywordflow">break</span>;
+<a name="l00370"></a>00370     }
+<a name="l00371"></a>00371   }
+<a name="l00372"></a>00372   <span class="keywordflow">if</span> ( ib &lt; NB ) { 
+<a name="l00373"></a>00373     <span class="keywordflow">return</span> <a class="code" href="classXML_1_1Block.html#ae5c449af13c0c4a299fb2176e917f6e4">SubBlock</a>[ib];
+<a name="l00374"></a>00374   } <span class="keywordflow">else</span> {
+<a name="l00375"></a>00375     printf(<span class="stringliteral">&quot;Block::getElement&gt; Error.\n&quot;</span>);
+<a name="l00376"></a>00376     printf(<span class="stringliteral">&quot;  Tried to find a subblock &#39;%s&#39;,\n&quot;</span>,
+<a name="l00377"></a>00377       name.c_str());
+<a name="l00378"></a>00378     printf(<span class="stringliteral">&quot;  but no such block exists in a block &#39;%s&#39;.\n&quot;</span>, 
+<a name="l00379"></a>00379       <a class="code" href="classXML_1_1Block.html#a8cf4db36c9f3123506d73e98c4a93464">getName</a>().c_str());
+<a name="l00380"></a>00380     exit(0);
+<a name="l00381"></a>00381   }
+<a name="l00382"></a>00382 }
+<a name="l00383"></a>00383 
+<a name="l00384"></a>00384 <span class="comment">//======================================================================</span>
+<a name="l00385"></a>00385 
+<a name="l00386"></a><a class="code" href="classXML_1_1Block.html#ab99103ff807e030bfc68e27f1cbf10f4">00386</a> <a class="code" href="classXML_1_1Block.html">Block</a>&amp; <a class="code" href="classXML_1_1Block.html#a50626bafb37af5049408e69a4bf33a66">Block::operator[] </a>(<span class="keyword">const</span> <span class="keywordtype">string</span>&amp; name) {
+<a name="l00387"></a>00387   <a class="code" href="classXML_1_1Block.html">Block</a>&amp; B = <a class="code" href="classXML_1_1Block.html#a2f657970caf3ebf7f1dc9322329c4e93">getElement</a>(name);
+<a name="l00388"></a>00388   <span class="keywordflow">return</span> B;
+<a name="l00389"></a>00389 }
+<a name="l00390"></a>00390 
+<a name="l00391"></a>00391 <span class="comment">//======================================================================</span>
+<a name="l00392"></a>00392 
+<a name="l00393"></a><a class="code" href="classXML_1_1Block.html#a56f8c189656c31387dca3bb42d2ffade">00393</a> <span class="keyword">inline</span> <span class="keywordtype">void</span> <a class="code" href="classXML_1_1Block.html#a56f8c189656c31387dca3bb42d2ffade">Block::dump</a>(<span class="keyword">const</span> <span class="keywordtype">string</span>&amp; prompt) {
+<a name="l00394"></a>00394   <span class="keywordflow">if</span> ( <a class="code" href="classXML_1_1Block.html#a217a7470bca6f165e76b96955f24732b">NV</a> == 1 &amp;&amp; <a class="code" href="classXML_1_1Block.html#aa2aeb7caf23994848f08b47e1fed2f75">NB</a> == 0 ) {
+<a name="l00395"></a>00395     printf(<span class="stringliteral">&quot;%s&quot;</span>     , prompt.c_str());
+<a name="l00396"></a>00396     printf(<span class="stringliteral">&quot;&lt;%s&gt;&quot;</span>   , <a class="code" href="classXML_1_1Block.html#a7ee9065718e6628dc7791b756fa6c0f9">Name</a>.c_str());
+<a name="l00397"></a>00397     printf(<span class="stringliteral">&quot; %s&quot;</span>    , <a class="code" href="classXML_1_1Block.html#a93c5241ef537f405341bd1f753a60362">Value</a>[0].c_str());
+<a name="l00398"></a>00398     printf(<span class="stringliteral">&quot; &lt;/%s&gt;&quot;</span> , <a class="code" href="classXML_1_1Block.html#a7ee9065718e6628dc7791b756fa6c0f9">Name</a>.c_str());
+<a name="l00399"></a>00399     printf(<span class="stringliteral">&quot;\n&quot;</span>);
+<a name="l00400"></a>00400   } <span class="keywordflow">else</span> {
+<a name="l00401"></a>00401     printf(<span class="stringliteral">&quot;%s&lt;%s&gt;\n&quot;</span>, prompt.c_str(), <a class="code" href="classXML_1_1Block.html#a7ee9065718e6628dc7791b756fa6c0f9">Name</a>.c_str());
+<a name="l00402"></a>00402     <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i=0; i&lt;<a class="code" href="classXML_1_1Block.html#a217a7470bca6f165e76b96955f24732b">NV</a>; i++) {
+<a name="l00403"></a>00403       printf(<span class="stringliteral">&quot;%s  (%2d) %s\n&quot;</span>, prompt.c_str(), i, <a class="code" href="classXML_1_1Block.html#a93c5241ef537f405341bd1f753a60362">Value</a>[i].c_str());
+<a name="l00404"></a>00404     }
+<a name="l00405"></a>00405     <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i=0; i&lt;<a class="code" href="classXML_1_1Block.html#aa2aeb7caf23994848f08b47e1fed2f75">NB</a>; i++) {
+<a name="l00406"></a>00406 <span class="comment">//    printf(&quot;%s  subelement %2d:\n&quot;, prompt.c_str(), i);</span>
+<a name="l00407"></a>00407       <a class="code" href="classXML_1_1Block.html#ae5c449af13c0c4a299fb2176e917f6e4">SubBlock</a>[i].<a class="code" href="classArray.html#aecb7287b27cc6e843cee2ed2f8de8ade">dump</a>(prompt+<span class="stringliteral">&quot;  &quot;</span>);
+<a name="l00408"></a>00408     }
+<a name="l00409"></a>00409     printf(<span class="stringliteral">&quot;%s&lt;/%s&gt;\n&quot;</span>, prompt.c_str(), <a class="code" href="classXML_1_1Block.html#a7ee9065718e6628dc7791b756fa6c0f9">Name</a>.c_str());
+<a name="l00410"></a>00410   }
+<a name="l00411"></a>00411 }
+<a name="l00412"></a>00412 
+<a name="l00413"></a>00413 <span class="comment">//#######################################################################</span>
+<a name="l00414"></a>00414 
+<a name="l00415"></a>00415 } <span class="comment">// 先頭の namespace XML { と対になる } ．</span>
+<a name="l00416"></a>00416 
+<a name="l00417"></a>00417 <span class="preprocessor">#endif</span>
+</pre></div></div><!-- contents -->
+</div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>全て</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>クラス</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>ネームスペース</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>ファイル</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>関数</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>変数</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(6)"><span class="SelectionMark">&#160;</span>型定義</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(7)"><span class="SelectionMark">&#160;</span>列挙型の値</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(8)"><span class="SelectionMark">&#160;</span>フレンド</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(9)"><span class="SelectionMark">&#160;</span>マクロ定義</a></div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+  <div id="nav-path" class="navpath">
+    <ul>
+      <li class="navelem"><a class="el" href="xml_8h.html">xml.h</a>      </li>
+
+    <li class="footer">DSQSSに対してThu Jul 12 2012 14:28:53に生成されました。
+    <a href="http://www.doxygen.org/index.html">
+    <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.7.6.1 </li>
+   </ul>
+ </div>
+
+
+</body>
+</html>
