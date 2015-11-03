@@ -1,0 +1,8 @@
+#!/bin/sh
+#PBS -l nodes=1:ppn=12
+#PBS -q small
+#PBS -N rtype_0
+#PBS -j oe
+export PATH=/home2/u00300/Git/worm/worm/bin:$PATH
+cd $PBS_O_WORKDIR
+

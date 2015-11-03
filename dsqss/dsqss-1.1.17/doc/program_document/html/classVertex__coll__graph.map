@@ -1,0 +1,25 @@
+<map id="G" name="G">
+<area shape="rect" id="node14" href="$classBareSegment.html" title="BareSegment" alt="" coords="1285,197,1387,224"/>
+<area shape="rect" id="node17" href="$classSite.html" title="Site" alt="" coords="1168,603,1213,629"/>
+<area shape="rect" id="node52" href="$classRing.html" title="Ring\&lt; Vertex \&gt;" alt="" coords="1115,248,1224,275"/>
+<area shape="rect" id="node2" href="$classLinked.html" title="Linked\&lt; BareVertex \&gt;" alt="" coords="1191,863,1343,889"/>
+<area shape="rect" id="node4" href="$classBareVertex.html" title="BareVertex" alt="" coords="588,784,676,811"/>
+<area shape="rect" id="node6" href="$classArray.html" title="Array\&lt; Segment * \&gt;" alt="" coords="419,512,557,539"/>
+<area shape="rect" id="node8" href="$classIndexSystem.html" title="IndexSystem" alt="" coords="363,5,461,32"/>
+<area shape="rect" id="node25" href="$classArray.html" title="Array\&lt; SiteInitialConfiguration \&gt;" alt="" coords="833,300,1055,327"/>
+<area shape="rect" id="node30" href="$classArray.html" title="Array\&lt; ScatteringChannel \&gt;" alt="" coords="535,96,724,123"/>
+<area shape="rect" id="node37" href="$classArray.html" title="Array\&lt; int \&gt;" alt="" coords="188,300,281,327"/>
+<area shape="rect" id="node40" href="$classArray.html" title="Array\&lt; VertexInitialConfiguration * \&gt;" alt="" coords="564,300,809,327"/>
+<area shape="rect" id="node46" href="$classArray.html" title="Array\&lt; VertexInitialConfiguration \&gt;" alt="" coords="305,300,540,327"/>
+<area shape="rect" id="node58" href="$classArray.html" title="Array\&lt; double \&gt;" alt="" coords="85,147,205,173"/>
+<area shape="rect" id="node10" href="$classSegment.html" title="Segment" alt="" coords="1155,421,1229,448"/>
+<area shape="rect" id="node19" href="$classRing.html" title="Ring\&lt; Segment \&gt;" alt="" coords="1129,512,1255,539"/>
+<area shape="rect" id="node12" href="$classLinked.html" title="Linked\&lt; BareSegment \&gt;" alt="" coords="1129,300,1297,327"/>
+<area shape="rect" id="node50" href="$classInteraction.html" title="Interaction" alt="" coords="1047,693,1137,720"/>
+<area shape="rect" id="node23" href="$classSiteProperty.html" title="SiteProperty" alt="" coords="895,512,993,539"/>
+<area shape="rect" id="node28" href="$classSiteInitialConfiguration.html" title="SiteInitialConfiguration" alt="" coords="741,197,907,224"/>
+<area shape="rect" id="node43" href="$classVertexInitialConfiguration.html" title="VertexInitialConfiguration" alt="" coords="536,197,717,224"/>
+<area shape="rect" id="node33" href="$classScatteringChannel.html" title="ScatteringChannel" alt="" coords="561,5,697,32"/>
+<area shape="rect" id="node35" href="$classVertexProperty.html" title="VertexProperty" alt="" coords="349,421,461,448"/>
+<area shape="rect" id="node55" href="$classInteractionProperty.html" title="InteractionProperty" alt="" coords="195,512,336,539"/>
+</map>

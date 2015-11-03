@@ -1,0 +1,6 @@
+<map id="G" name="G">
+<area shape="rect" id="node3" href="$classInitialConfigurationGroup.html#a21991132691d4646e8ab528a6354612f" title="InitialConfigurationGroup::ScatteringProbability" alt="" coords="208,56,528,83"/>
+<area shape="rect" id="node5" href="$classVERTEX.html#aac173812b616dcf98703adad3c42ee5e" title="VERTEX::ComputeScatteringProbability" alt="" coords="584,5,848,32"/>
+<area shape="rect" id="node7" href="$classInitialConfiguration.html#a714c701ce54e9aae5e223329b3c8c9de" title="InitialConfiguration::InitialConfiguration" alt="" coords="580,56,852,83"/>
+<area shape="rect" id="node9" href="$classInitialConfiguration.html#a6e49a810dac0c0cca7b7ffd35cde9224" title="InitialConfiguration::~InitialConfiguration" alt="" coords="577,107,855,133"/>
+</map>

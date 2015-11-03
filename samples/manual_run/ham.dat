@@ -1,0 +1,10 @@
+np_triv_p=11
+triv_p=f
+triv_p_step=1.0
+M=2
+J=-1.0
+H=0.0
+G=-4.0
+D=1
+L=4
+B=4.0

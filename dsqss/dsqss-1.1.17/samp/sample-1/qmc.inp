@@ -1,0 +1,12 @@
+runtype = 0
+nmcse  = 1000
+nmcsd  = 1000
+nmcs   = 10000
+nset   = 10
+seed   = 31415
+nvermax   = 10000
+nsegmax   = 10000
+nrep=1
+algfile=algorithm.xml
+latfile=lattice.xml
+outfile=sample.log

@@ -1,0 +1,35 @@
+########################################################################
+##
+##  Plot.pl README
+##
+##                      2015.08.06  Naoki KAWASHIMA and Kenji HARADA
+##
+########################################################################
+
+Purpose:
+  - plotting data
+
+Input:
+  - data file (Arc/sample.tar.gz)
+  - condition file (plot.config)
+
+Output:
+  - input file for gnuplot (Plot/plot.gp)
+  - toc file (plot.toc) ... If this file exist, plot.pl will run faster
+  next time.)
+  - selected data (Plot/plot*.dat)
+  - pdf file (Plot/plot.pdf)
+  - postscript file (Plot/plot.ps)
+
+Usage:
+  $ ./plot.pl [-f plot.config]
+
+Note:
+  - Conditions for selecting the data can be specified in the condition
+  file (See "CONDITION" field in "plot.config")
+  - You can plot not only the raw data as they appear in the data file,
+  but also various functions of them. (See "YPLOT" field in
+  "plot2.config")
+  - In the condition file, "[XXX]" stands for the average value of
+  the quantity labeled as "XXX" in the data file, while "<XXX>" stands
+  for the error of the same quantity.

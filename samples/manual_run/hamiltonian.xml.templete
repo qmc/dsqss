@@ -1,0 +1,45 @@
+<Hamiltonian>
+  <General>
+    <Comment> SU(2) Heisenberg model with S=2/2 </Comment>
+    <NSTYPE> 1 </NSTYPE>
+    <NITYPE> 1 </NITYPE>
+    <NXMAX>  3 </NXMAX>
+  </General>
+
+  <Site>
+    <STYPE> 0 </STYPE>
+    <TTYPE> 0 </TTYPE>
+    <NX>   3 </NX>
+  </Site>
+
+  <Source>
+    <TTYPE> 0 </TTYPE>
+    <STYPE> 0 </STYPE>
+    <Weight> 0 1       0.7071067811865476 </Weight>
+    <Weight> 1 0       0.7071067811865476 </Weight>
+    <Weight> 1 2       0.7071067811865476 </Weight>
+    <Weight> 2 1       0.7071067811865476 </Weight>
+  </Source>
+
+  <Interaction>
+    <ITYPE> 0 </ITYPE>
+    <NBODY> 2 </NBODY>
+    <STYPE> 0 0 </STYPE>
+    <Weight> 0 0 0 0       ###int0000 </Weight>
+    <Weight> 1 0 0 1       ###int1001 </Weight>
+    <Weight> 2 2 0 0       ###int2200 </Weight>
+    <Weight> 2 1 0 1       ###int2101 </Weight>
+    <Weight> 0 1 1 0       ###int0110 </Weight>
+    <Weight> 1 2 1 0       ###int1210 </Weight>
+    <Weight> 1 0 1 2       ###int1012 </Weight>
+    <Weight> 2 1 1 2       ###int2112 </Weight>
+    <Weight> 0 1 2 1       ###int0121 </Weight>
+    <Weight> 0 0 2 2       ###int0022 </Weight>
+    <Weight> 1 2 2 1       ###int1221 </Weight>
+    <Weight> 2 2 2 2       ###int2222 </Weight>
+    <Weight> 0 0 1 1       ###int0011 </Weight>
+    <Weight> 1 1 0 0       ###int1100 </Weight>
+    <Weight> 1 1 2 2       ###int1122 </Weight>
+    <Weight> 2 2 1 1       ###int2211 </Weight>
+  </Interaction>
+</Hamiltonian>

@@ -1,0 +1,13 @@
+runtype   = 0
+nmcse     = 1000
+nmcsd     = 1000
+nmcs      = 10000
+nset      = 10
+seed      = 31415
+nvermax   = 10000
+nsegmax   = 10000
+nptp      = 1
+nrep      = 1
+algfile   = ###ALGFILE
+latfile   = lattice.xml
+outfile   = ###OUTFILE

@@ -1,0 +1,8 @@
+<map id="G" name="G">
+<area shape="rect" id="node3" href="$classVERTEX.html#a4d2943bb66a9923a6da9b065ca64984a" title="testKink" alt="" coords="189,48,261,75"/>
+<area shape="rect" id="node5" href="$classVERTEX.html#af0261ee9ed4d08c911429c30fba45bae" title="INDX" alt="" coords="432,11,485,38"/>
+<area shape="rect" id="node7" href="$classIndexSystem.html#a4f12ec2efb69b48e312e4ef7c400492c" title="IndexSystem::coord" alt="" coords="388,87,529,114"/>
+<area shape="rect" id="node11" href="$classVERTEX.html#a5bf3f6148e8638d310911312eedb314a" title="ICG" alt="" coords="203,150,248,176"/>
+<area shape="rect" id="node13" href="$classInitialConfigurationGroup.html#accd2600060dbaee3a3b41aed4034c63c" title="InitialConfigurationGroup::dump" alt="" coords="113,200,337,227"/>
+<area shape="rect" id="node15" href="$classArray.html#aecb7287b27cc6e843cee2ed2f8de8ade" title="Array::dump" alt="" coords="411,200,507,227"/>
+</map>

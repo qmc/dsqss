@@ -1,0 +1,6 @@
+<map id="G" name="G">
+<area shape="rect" id="node3" href="$classPool.html#ab9a7c933b10d42a302b840116eeb6019" title="Pool::pop" alt="" coords="157,5,240,32"/>
+<area shape="rect" id="node5" href="$classBareSegment.html#ae099821b76842236b9b8c75c3a516492" title="BareSegment::set" alt="" coords="135,56,263,83"/>
+<area shape="rect" id="node7" href="$classBareSegment.html#ae17cfa78e955d8aca494f699b454eb84" title="BareSegment::setONSITE" alt="" coords="111,107,287,133"/>
+<area shape="rect" id="node9" href="$classRing.html#ac94cf0e75ceced4953a73b93e8807889" title="Ring\&lt; Segment \&gt;::add_head" alt="" coords="101,157,296,184"/>
+</map>
