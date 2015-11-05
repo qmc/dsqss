@@ -39,7 +39,7 @@ Random RND;
 //####  Local Header Files
 //######################################################################
 
-inline void abort(char* s="") { printf("%s\n",s); exit(0); }
+inline void abort(const char* s="") { printf("%s\n",s); exit(0); }
 
 #ifdef DEB
 bool DEBUG=true;

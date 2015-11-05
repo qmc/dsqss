@@ -15,11 +15,11 @@ class Estimate {
 
 public:
 
-  const char* key;
+  std::string key;
   double value  ,s1;
   double error;
 
-  void set_key(string s) { key = s.c_str(); };
+  void set_key(std::string const &s) { key = s; };
 
   void reset() {
     key = "undefined"; 
@@ -29,7 +29,8 @@ public:
 
   Estimate() { reset(); };
 
-  Estimate(char* k) { set_key(k); reset(); };
+  Estimate(const char* k) { reset(); set_key(k); };
+  Estimate(std::string const& k) { reset(); set_key(k); };
 
   void operator =( Estimate E ) {
     value = E.value;
@@ -37,7 +38,7 @@ public:
   };
 
   void dump() {
-    printf(" %6s = %16.6e %16.6e\n", key, value, error);
+    printf(" %6s = %16.6e %16.6e\n", key.c_str(), value, error);
   };
 
 };
@@ -65,7 +66,7 @@ public:
     reset();
   };
 
-  Accumulator(char* k) : Estimate::Estimate(k) {
+  Accumulator(const char* k) : Estimate::Estimate(k) {
     reset();
   };
 
@@ -271,7 +272,7 @@ inline void Measurement::summary() {
 inline void Measurement::show(FILE* F) {
   for (int i=0; i<NPHY; i++) {
     fprintf(F,"R %-6s = %16.10e %16.10e\n", 
-	    PHY[i].key, PHY[i].value, PHY[i].error);
+	    PHY[i].key.c_str(), PHY[i].value, PHY[i].error);
   }
 }
 
@@ -285,7 +286,7 @@ inline void Measurement::dump() {
   }
   printf("\n");
   for (int i=0; i<=NPHY; i++) {
-    printf(" %s = phy[%2d] = %16.6f %16.6f\n", PHY[i].key, i, PHY[i].value, PHY[i].error);
+    printf(" %s = phy[%2d] = %16.6f %16.6f\n", PHY[i].key.c_str(), i, PHY[i].value, PHY[i].error);
   }
 }
 

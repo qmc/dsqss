@@ -337,8 +337,8 @@ VERTEX& SITE::V() {
 
 //######################################################################
 
-char* HFILE; // file name of the hamiltonian and the worm
-char* AFILE; // file name of algorithm data file
+const char* HFILE; // file name of the hamiltonian and the worm
+const char* AFILE; // file name of algorithm data file
 FileReader H;
 FILE* FALG;
 

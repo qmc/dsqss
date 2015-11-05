@@ -353,7 +353,7 @@ inline void Pool<C>::init(int N) {
 
   for (int i=0; i<N; i++) {
     C& x = *(new C);
-    add_tail(x);
+    this->add_tail(x);
   }
   size = N;
   size_max = N;
