@@ -31,7 +31,7 @@ case $COMPILER in
     esac;;
     FUJITSU)
     LIBS="-SSL2 "
-    OPT="-Kfast -Ksimd=2 -O3 -Nlst "
+    OPT="-Kfast -Ksimd=2 -O3 -Nlst -Xg"
     CRSS="--host --build "
     case $PARALLEL in
         YES)
