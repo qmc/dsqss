@@ -826,10 +826,10 @@ void Quantities::CondensateFraction(int mcs, GraphSpace::Vertex *world){
   values_S[magx+1] = atot;
   values_S[magx+2] = ctot;
 
-
+#ifdef CFOUT
   CorrelationFunction1();
   CorrelationFunction2(world);
-
+#endif
 #ifdef ATtime
   autocorrelation(mcs,values_S[magx]);
 #endif
