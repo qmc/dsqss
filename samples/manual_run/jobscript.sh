@@ -3,17 +3,8 @@
 #PBS -q small
 #PBS -N rtype_0
 #PBS -j oe
-export PATH=/home2/u00300/Git/worm/worm/bin:$PATH
+#PBS -V
+export PATH=$WORM_HOME:$PATH
 cd $PBS_O_WORKDIR
 
-dla inp_H0000.dat
-dla inp_H1000.dat
-dla inp_H2000.dat
-dla inp_H3000.dat
-dla inp_H4000.dat
-dla inp_H5000.dat
-dla inp_H6000.dat
-dla inp_H7000.dat
-dla inp_H8000.dat
-dla inp_H9000.dat
-dla inp_H10000.dat
+ls -1 inp_H*.dat | xargs -n 1 -P 11 dla
