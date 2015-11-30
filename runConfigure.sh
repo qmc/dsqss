@@ -8,7 +8,7 @@ COMPILER=INTEL
 #COMPILER=FUJITSU
 
 ######################################################
-# !!!!! Please check folloing compile commands !!!!! #
+# !!!!! Please check following compile commands !!!!! #
 ######################################################
 
 case $COMPILER in 
@@ -18,8 +18,8 @@ case $COMPILER in
     
     case $PARALLEL in
         YES)
-        CXX=mpic++
-        CC=mpic++
+        CXX=mpicxx
+        CC=mpicxx
         MULTI=-DMULTI;;
         NO)
         CXX=g++
@@ -73,7 +73,7 @@ esac
 #====================
 ROOTDIR=$PWD
 Dver=1.1.17
-Pver=1.1.2
+Pver=1.1.3
 BINDIR=$PWD/bin
 #====================
 #====================
