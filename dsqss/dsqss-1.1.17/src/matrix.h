@@ -24,10 +24,10 @@ using namespace std;
 
 //=============================================================================
 #ifdef  __INTEL_COMPILER
-#define CPPL_INT MKL_INT
+#define DSQSS_INT MKL_INT
 #define MKL_Complex16 std::complex<double>
 #else //__INTEL_COMPILER
-#define CPPL_INT int
+#define DSQSS_INT int
 #endif//__INTEL_COMPILER
 
 //=============================================================================
@@ -39,15 +39,15 @@ using namespace std;
 #else //__INTEL_COMPILER
 extern "C" {
 
-  void dsyev_( const char *jobz, const char *uplo, const CPPL_INT *N,
-               double *a, const CPPL_INT *lda, double *w, double *work,
-               const CPPL_INT *lwork, CPPL_INT *info );
+  void dsyev_( const char *jobz, const char *uplo, const DSQSS_INT *N,
+               double *a, const DSQSS_INT *lda, double *w, double *work,
+               const DSQSS_INT *lwork, DSQSS_INT *info );
   
-  void dgemm_( const char *transa, const char *transb, const CPPL_INT *M,
-               const CPPL_INT *N, const CPPL_INT *k, const double *alpha,
-               const double *a, const CPPL_INT *lda, const double *b,
-               const CPPL_INT *ldb, const double *beta, double *c,
-               const CPPL_INT *ldc );
+  void dgemm_( const char *transa, const char *transb, const DSQSS_INT *M,
+               const DSQSS_INT *N, const DSQSS_INT *k, const double *alpha,
+               const double *a, const DSQSS_INT *lda, const double *b,
+               const DSQSS_INT *ldb, const double *beta, double *c,
+               const DSQSS_INT *ldc );
  
 
 }
@@ -198,9 +198,9 @@ dgematrix operator*(const double &a, const dgematrix &A) {
 
 dgematrix operator*( const dgematrix& dA, const dgematrix& dB) {
 
-  CPPL_INT M = dA.m;
-  CPPL_INT N = dB.n;
-  CPPL_INT K = dA.n;
+  DSQSS_INT M = dA.m;
+  DSQSS_INT N = dB.n;
+  DSQSS_INT K = dA.n;
   double *A, *B, *C;
 
   A = new double [dA.m*dA.n];
@@ -226,8 +226,8 @@ dgematrix operator*( const dgematrix& dA, const dgematrix& dB) {
     }
   }
 
-  CPPL_INT lda = dA.m;
-  CPPL_INT ldb = dA.n;
+  DSQSS_INT lda = dA.m;
+  DSQSS_INT ldb = dA.n;
 
   //  cout<<"M, N, K ="<< M <<" "<<N<<" "<<K<<" "<<endl;
 
@@ -264,7 +264,7 @@ class dsymatrix{
   inline double & operator()(const int &i, const int &j) { return index[i+j*n]; };
   inline double operator()(const int &i, const int &j)const { return index[i+j*n]; };
 
-  CPPL_INT dsyev(vector<double>&);
+  DSQSS_INT dsyev(vector<double>&);
 
   dsymatrix(int N){
     n = N;
@@ -281,15 +281,15 @@ class dsymatrix{
 
 };
 
-CPPL_INT dsymatrix::dsyev(vector<double> &E){
+DSQSS_INT dsymatrix::dsyev(vector<double> &E){
 
     ////////////////////
-    CPPL_INT info;
+    DSQSS_INT info;
     char jobz = 'V';
     char uplo ='I';
-    CPPL_INT w_size=-1;
-    CPPL_INT size = n;
-    CPPL_INT size2=size*size;
+    DSQSS_INT w_size=-1;
+    DSQSS_INT size = n;
+    DSQSS_INT size2=size*size;
     double *work;
     work = new double[size*20];
     double *vr;

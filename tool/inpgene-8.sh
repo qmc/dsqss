@@ -14,7 +14,7 @@ rootpath=${WORM_HOME}
 inpfile=qmc.inp
 
 dver=1.1.17
-pver=1.1.2
+pver=1.1.3
 
 dsqsspath=$rootpath/dsqss/dsqss-$dver/src
 pmwapath=$rootpath/pmwa/pmwa-$pver/src
@@ -474,21 +474,21 @@ func_set_input_p(){
 
      echo  "RUNTYPE = $RUNTYPE" > $inpname
      echo  "NSET  = $NSET" >> $inpname    #the number of bins
-     echo  "NMCSE = $NMCSE" >> $inpname #thermalization
+     echo  "NMCSE = 100000" >> $inpname #thermalization
      echo  "NMCSD = $NMCSD" >> $inpname  #interval of bins
      echo  "NMCS  = $NMCS" >> $inpname  #the number of Monte Carlo samples.
-     echo  "NTEST = 10000" >> $inpname #the number of Monte Carlo Steps for the preparation of N_cycle
+     echo  "NTEST = 100000" >> $inpname #the number of Monte Carlo Steps for the preparation of N_cycle
      echo  "SEED  = $SEED" >> $inpname    #seed
      echo  "NC    = 0" >> $inpname     #0:all simulation, 1:preparation for Ncyc, 2:thermalization, 3:measurement
 
-     echo  "NVERMAX = 1000000" >> $inpname #the max number of vertices. 
+     echo  "NVERMAX = 10000000" >> $inpname #the max number of vertices. 
      echo  "NWORMAX = 1000" >> $inpname    # the max number of worms.
 
      echo  "algfile   = $ALGNAME" >> $inpname
      echo  "latfile   = $LATNAME" >> $inpname
      echo  "outfile   = $OUTNAME" >> $inpname
 
-     echo  "CB      = 0" >> $inpname   #initial state of the configuration: 1-> checker board, 0->random
+     echo  "CB      = 2" >> $inpname   #initial state of the configuration: 1-> checker board, 2->random, 0--> vacuum
 
      echo  "G       = $GG" >> $inpname  # the strenght of the transverse field for introducing worm.
      echo  "UBB     = 0" >> $inpname  #on-site interaction
@@ -636,7 +636,7 @@ if [ -z "$OD" ]; then
     PRODDIR=$OD
 fi
 
-ODIR=$rootpath/DATA/$OD
+ODIR=$PWD/DATA/$OD
 
 if [ ! -d $ODIR ]; then
 mkdir -p $ODIR
@@ -809,7 +809,7 @@ echo ""
 echo "> number of Monte Carlo step? (default=10000)"
 read NMCS
 if [ -z "$NMCS" ]; then 
-    NMCS=100000
+    NMCS=10000
 fi
 NMCSE=$NMCS
 NMCSD=$NMCS
