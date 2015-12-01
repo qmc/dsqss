@@ -102,10 +102,12 @@ ExtractDatFiles();
 
 # データファイルの読み取り
 
-$FILES=`cd $WORKDIR; ls`;
+$FILES=`cd $WORKDIR; ls -v`;
 @FLIST=split(/\s+/,$FILES);
 $PlotDatFiles="";
 foreach $f (@FLIST) {
+#    print "datafile=$f\n";
+
     chomp( $f ); 
     ReadOneFile( $f );
     WritePlottingData( $f );
