@@ -1,0 +1,75 @@
+#!/bin/bash
+
+
+# ++++ installation directory ++++
+INSTALL_DIR=${1}
+# ++++ installation directory ++++
+
+#====================
+#====================
+CC=${2}
+CXX=${3}
+LIBS=${4}
+OPT=${5}
+MULTI=${6}
+CF=${7}
+CRSS=${8}
+#====================
+#====================
+
+# ++++ current directory ++++
+CURDIR=$PWD
+# ++++ current directory ++++
+
+
+# ++++ macro options ++++
+#DEB=-DDEB 
+NORM=-DNORM 
+#MONITOR=-DMONITOR
+#CHANIJOB=-DCHAINJOB
+#GRAPHIC=-DGRAPHIC
+#PAPI=-PAPI
+
+# ++++ macro options ++++
+
+# ++++ blas lapack dir ++++
+
+# ++++ profiler option ++++
+PROF=
+#PROF="-pg"
+# ++++ PROFILER option ++++
+
+LDFLAGS=
+
+
+CPPFLAGS="${OPT} ${DEB} ${NORM} ${MONITOR} ${CHAINJOB} ${GRAPHIC} ${MULTI} ${CF} ${PAPI} ${KASHIWA} ${CPLADIR} ${LIBS}"
+CXXFLAGS="${OPT} ${DEBUG} ${CPPFLAGS} ${CPLADIR} ${PROF} ${PAPIDIR} ${LIBS}"
+
+
+# +++ option summary +++
+echo 
+echo "++++++ option summary ++++++"
+echo "CC       = $CC"                     #C compiler command
+echo "CXX      = $CXX"                    #C++ compiler command
+echo "CXXFLAGS = $CXXFLAGS"               #C++ compiler flags
+echo "CPPFLAGS = $CPPFLAGS"               #Preprocessor flags
+echo "LDFLAGS  = $LDFLAGS"                #Linker flags
+echo "LIBS     = $LIBS"                   #Libraries
+echo "INSTALL DIRECTORY = $INSTALL_DIR"   #installation directory
+echo "++++++ option summary ++++++"
+echo 
+
+# +++ option summary +++
+echo $INSTALL_DIR
+
+# +++  configure +++
+./configure $CRSS \
+   --prefix="${INSTALL_DIR}" \
+   LIBS="${LIBS}" \
+   CC=${CC} \
+   CXX=${CXX} \
+   CPPFLAGS="${CPPFLAGS}" \
+   CXXFLAGS="${CXXFLAGS}" \
+   LDFLAGS="${LDFLAGS}"
+   
+# +++  configure +++

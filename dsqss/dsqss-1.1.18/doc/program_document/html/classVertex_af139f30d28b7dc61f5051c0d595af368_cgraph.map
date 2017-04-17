@@ -1,0 +1,26 @@
+<map id="G" name="G">
+<area shape="rect" id="node3" href="$classVertex.html#a4bcd6ce7d04c38f8c4ff908d1fc50f86" title="reconnect" alt="" coords="111,233,193,260"/>
+<area shape="rect" id="node50" href="$classLinked.html#a1fcb45e5d2428352eb36b487d1d4eea3" title="Linked\&lt; BareSegment \&gt;::remove" alt="" coords="649,335,868,361"/>
+<area shape="rect" id="node52" href="$classPool.html#a16266a856a381253acfb30f16d454dc8" title="Pool::push" alt="" coords="715,385,803,412"/>
+<area shape="rect" id="node5" href="$classBareVertex.html#ab8e4e3e2a7bf18888b71bdf9dda0770b" title="BareVertex::size" alt="" coords="1112,5,1229,32"/>
+<area shape="rect" id="node11" href="$classBareVertex.html#a98eb474ad998a9410dfa9314f5fde041" title="BareVertex::S" alt="" coords="268,259,372,285"/>
+<area shape="rect" id="node13" href="$classSegment.html#a277571fe541fcc160810b255e95b0485" title="Segment::absorbNext" alt="" coords="244,208,396,235"/>
+<area shape="rect" id="node7" href="$classBareVertex.html#a89f52073f277db570768a03e323ea03c" title="BareVertex::NBODY" alt="" coords="1297,5,1439,32"/>
+<area shape="rect" id="node9" href="$classBareVertex.html#a8d6f4521b27f32080d7477cf8ee8a274" title="BareVertex::isTerminal" alt="" coords="1491,5,1651,32"/>
+<area shape="rect" id="node15" href="$classSegment.html#af7333ef3963f1e8c2e96640fbaff268b" title="Segment::next" alt="" coords="468,157,577,184"/>
+<area shape="rect" id="node17" href="$classBareSegment.html#ab5ed5bec1cfe54a48a31900c0abb7565" title="BareSegment::top" alt="" coords="457,208,588,235"/>
+<area shape="rect" id="node19" href="$classBareSegment.html#a635362aae790e5f25a11ec05b07a73e2" title="BareSegment::setTop" alt="" coords="447,259,599,285"/>
+<area shape="rect" id="node21" href="$classBareVertex.html#a47cbdd3b2353867017c68bba4a31f137" title="BareVertex::replace" alt="" coords="452,107,593,133"/>
+<area shape="rect" id="node48" href="$classSegment.html#af139f30d28b7dc61f5051c0d595af368" title="Segment::erase" alt="" coords="465,360,580,387"/>
+<area shape="rect" id="node23" href="$classBareVertex.html#a048a0e76331f88f3e5a3d91b77d8930b" title="BareVertex::setS" alt="" coords="697,157,820,184"/>
+<area shape="rect" id="node25" href="$classBareVertex.html#ae47d008095673061722c8c5ab1a01d2b" title="BareVertex::which" alt="" coords="692,107,825,133"/>
+<area shape="rect" id="node27" href="$classLinked.html#accd2600060dbaee3a3b41aed4034c63c" title="Linked::dump" alt="" coords="929,220,1036,247"/>
+<area shape="rect" id="node31" href="$classBareVertex.html#accd2600060dbaee3a3b41aed4034c63c" title="BareVertex::dump" alt="" coords="917,107,1048,133"/>
+<area shape="rect" id="node29" href="$matrix_8h.html#a7a9ca5f0e5c67fe68272326edd13cd7e" title="dump" alt="" coords="1143,283,1199,309"/>
+<area shape="rect" id="node33" href="$classBareVertex.html#ae3775081dae5d62a47eee5c62fa49995" title="BareVertex::type" alt="" coords="1109,107,1232,133"/>
+<area shape="rect" id="node39" href="$classBareVertex.html#aefa8641ce4aace27611b432185e74744" title="BareVertex::category" alt="" coords="1097,56,1244,83"/>
+<area shape="rect" id="node43" href="$classBareVertex.html#a4b87946890b3b3476f46a9208e52ff01" title="BareVertex::time" alt="" coords="1109,157,1232,184"/>
+<area shape="rect" id="node45" href="$classArray.html#af4b57d21919c42d55af03391f91a1c08" title="Array::size" alt="" coords="1129,232,1212,259"/>
+<area shape="rect" id="node35" href="$classBareVertex.html#aa25baa44795d12b3c58a54b1de379c35" title="BareVertex::property" alt="" coords="1295,56,1441,83"/>
+<area shape="rect" id="node37" href="$classVertexProperty.html#a4a716406d3d9d4fdbbe46f100e648f3b" title="VertexProperty::id" alt="" coords="1303,107,1433,133"/>
+</map>

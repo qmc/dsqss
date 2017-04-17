@@ -1,0 +1,700 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<title>DSQSS: クラス Algorithm</title>
+
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript">
+  $(document).ready(initResizable);
+</script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="text/javascript">
+  $(document).ready(function() { searchBox.OnSelectItem(0); });
+</script>
+
+</head>
+<body>
+<div id="top"><!-- do not remove this div! -->
+
+
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  
+  
+  <td style="padding-left: 0.5em;">
+   <div id="projectname">DSQSS
+   &#160;<span id="projectnumber">1.1</span>
+   </div>
+   
+  </td>
+  
+  
+  
+ </tr>
+ </tbody>
+</table>
+</div>
+
+<!-- 作成： Doxygen 1.7.6.1 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search",false,'検索');
+</script>
+  <div id="navrow1" class="tabs">
+    <ul class="tablist">
+      <li><a href="index.html"><span>メインページ</span></a></li>
+      <li><a href="namespaces.html"><span>ネームスペース</span></a></li>
+      <li class="current"><a href="annotated.html"><span>クラス</span></a></li>
+      <li><a href="files.html"><span>ファイル</span></a></li>
+      <li>
+        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <img id="MSearchSelect" src="search/mag_sel.png"
+               onmouseover="return searchBox.OnSearchSelectShow()"
+               onmouseout="return searchBox.OnSearchSelectHide()"
+               alt=""/>
+          <input type="text" id="MSearchField" value="検索" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><img id="MSearchCloseImg" border="0" src="search/close.png" alt=""/></a>
+          </span>
+        </div>
+      </li>
+    </ul>
+  </div>
+  <div id="navrow2" class="tabs2">
+    <ul class="tablist">
+      <li><a href="annotated.html"><span>構成</span></a></li>
+      <li><a href="classes.html"><span>構成索引</span></a></li>
+      <li><a href="inherits.html"><span>クラス階層</span></a></li>
+      <li><a href="functions.html"><span>構成メンバ</span></a></li>
+    </ul>
+  </div>
+</div>
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+  initNavTree('classAlgorithm.html','');
+</script>
+<div id="doc-content">
+<div class="header">
+  <div class="summary">
+<a href="#pub-methods">Public メソッド</a> &#124;
+<a href="#pub-attribs">Public 変数</a> &#124;
+<a href="#pri-attribs">Private 変数</a>  </div>
+  <div class="headertitle">
+<div class="title">クラス Algorithm</div>  </div>
+</div><!--header-->
+<div class="contents">
+<!-- doxytag: class="Algorithm" -->
+<p><code>#include &lt;<a class="el" href="algorithm_8hpp_source.html">algorithm.hpp</a>&gt;</code></p>
+<div class="dynheader">
+Algorithmのコラボレーション図</div>
+<div class="dyncontent">
+<div class="center"><img src="classAlgorithm__coll__graph.png" border="0" usemap="#Algorithm_coll__map" alt="Collaboration graph"/></div>
+<map name="Algorithm_coll__map" id="Algorithm_coll__map">
+<area shape="rect" id="node2" href="classArray.html" title="Array\&lt; VertexProperty \&gt;" alt="" coords="1372,348,1537,375"/><area shape="rect" id="node4" href="classIndexSystem.html" title="IndexSystem" alt="" coords="24,353,123,380"/><area shape="rect" id="node8" href="classArray.html" title="Array\&lt; int \&gt;" alt="" coords="897,343,991,369"/><area shape="rect" id="node11" href="classArray.html" title="Array\&lt; VertexInitialConfiguration * \&gt;" alt="" coords="821,179,1067,205"/><area shape="rect" id="node16" href="classArray.html" title="Array\&lt; ScatteringChannel \&gt;" alt="" coords="212,108,401,135"/><area shape="rect" id="node21" href="classArray.html" title="Array\&lt; VertexInitialConfiguration \&gt;" alt="" coords="827,229,1061,256"/><area shape="rect" id="node27" href="classArray.html" title="Array\&lt; Block \&gt;" alt="" coords="251,617,363,644"/><area shape="rect" id="node31" href="classArray.html" title="Array\&lt; string \&gt;" alt="" coords="251,567,363,593"/><area shape="rect" id="node34" href="classArray.html" title="Array\&lt; InteractionProperty \&gt;" alt="" coords="1608,409,1805,436"/><area shape="rect" id="node39" href="classArray.html" title="Array\&lt; double \&gt;" alt="" coords="427,468,547,495"/><area shape="rect" id="node44" href="classArray.html" title="Array\&lt; SiteProperty \&gt;" alt="" coords="1631,164,1783,191"/><area shape="rect" id="node48" href="classArray.html" title="Array\&lt; SiteInitialConfiguration \&gt;" alt="" coords="833,128,1055,155"/><area shape="rect" id="node6" href="classVertexProperty.html" title="VertexProperty" alt="" coords="1181,240,1293,267"/><area shape="rect" id="node36" href="classInteractionProperty.html" title="InteractionProperty" alt="" coords="1384,404,1525,431"/><area shape="rect" id="node46" href="classSiteProperty.html" title="SiteProperty" alt="" coords="1405,164,1504,191"/><area shape="rect" id="node14" href="classVertexInitialConfiguration.html" title="VertexInitialConfiguration" alt="" coords="571,201,752,228"/><area shape="rect" id="node51" href="classSiteInitialConfiguration.html" title="SiteInitialConfiguration" alt="" coords="579,100,744,127"/><area shape="rect" id="node19" href="classScatteringChannel.html" title="ScatteringChannel" alt="" coords="5,5,141,32"/><area shape="rect" id="node25" href="classXML_1_1Block.html" title="Block" alt="" coords="633,601,689,628"/></map>
+<center><span class="legend">[<a target="top" href="graph_legend.html">凡例</a>]</span></center></div>
+
+<p><a href="classAlgorithm-members.html">すべてのメンバ一覧</a></p>
+<table class="memberdecls">
+<tr><td colspan="2"><h2><a name="pub-methods"></a>
+Public メソッド</h2></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAlgorithm.html#a9d87d433316fa49fc92543bfaaf9c673">Algorithm</a> (char *FNAME)</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAlgorithm.html#afb1d7d5d4812264cfb23331bc6f8586d">Algorithm</a> ()</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAlgorithm.html#a8933124762bedb0f9b9cb441c837f499">~Algorithm</a> ()</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAlgorithm.html#aaa936da334e29618ece019bd8a9aa06f">read</a> ()</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAlgorithm.html#a25a40b6614565f755233080a384c35f1">initialize</a> ()</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAlgorithm.html#a48fa50633aea57fe76fbc09983142afb">initializer</a> (int i)</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAlgorithm.html#a5c08f14c62b827fdbd8f78bc8c692a91">set_i</a> (int n)</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAlgorithm.html#a5480948e21d656ff83ce9590587a02cd">set_alg</a> (int n)</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="el" href="classSiteProperty.html">SiteProperty</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAlgorithm.html#a77e852eb06c91d69d8890f8b54e54c81">getSiteProperty</a> (int i)</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="el" href="classInteractionProperty.html">InteractionProperty</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAlgorithm.html#af6931f368ca485f4d9e925a09ca9d3d3">getInteractionProperty</a> (int i)</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="el" href="classVertexProperty.html">VertexProperty</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAlgorithm.html#af86176dab320c56b2c82180cf0d3b52e">getVertexProperty</a> (int i)</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAlgorithm.html#accd2600060dbaee3a3b41aed4034c63c">dump</a> ()</td></tr>
+<tr><td colspan="2"><h2><a name="pub-attribs"></a>
+Public 変数</h2></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAlgorithm.html#a2dad84a8985d20913d523848ae5e40ea">NSTYPE</a></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAlgorithm.html#a28e1a55e45e45a80a49a8ae1f0e50bcb">NITYPE</a></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAlgorithm.html#ab6af66382562de2aa8b45b81e256d909">NVTYPE</a></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAlgorithm.html#a52b41a08e36114fbb78f5d900f0371b9">NXMAX</a></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAlgorithm.html#aa256bf25e61dfab4a2cbb8b55d1e33d1">WDIAG</a></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAlgorithm.html#aadcaf1664d8cdce04c73db2d1ae1cbd9">MXNIC1</a></td></tr>
+<tr><td colspan="2"><h2><a name="pri-attribs"></a>
+Private 変数</h2></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="el" href="classXML_1_1Block.html">XML::Block</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAlgorithm.html#ade0b597d45ab0fc6e9f8c68cf635773c">X</a></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="el" href="classArray.html">Array</a>&lt; <a class="el" href="classSiteProperty.html">SiteProperty</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAlgorithm.html#a3652efef65f27d3da5386afe454e44cc">SPROP</a></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="el" href="classArray.html">Array</a>&lt; <a class="el" href="classInteractionProperty.html">InteractionProperty</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAlgorithm.html#abe8469626e9fa43fb505dcfc2b3fd962">IPROP</a></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="el" href="classArray.html">Array</a>&lt; <a class="el" href="classVertexProperty.html">VertexProperty</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAlgorithm.html#a8c6e30371e5ffe73ff2d2116744d0487">VPROP</a></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAlgorithm.html#a61990b7f5388ef0010c75a5d80f58da9">ix</a></td></tr>
+</table>
+<hr/><a name="details" id="details"></a><h2>説明</h2>
+<div class="textblock">
+<p> <a class="el" href="algorithm_8hpp_source.html">algorithm.hpp</a> の <a class="el" href="algorithm_8hpp_source.html#l00198">198</a> 行で定義されています。</p>
+</div><hr/><h2>コンストラクタとデストラクタ</h2>
+<a class="anchor" id="a9d87d433316fa49fc92543bfaaf9c673"></a><!-- doxytag: member="Algorithm::Algorithm" ref="a9d87d433316fa49fc92543bfaaf9c673" args="(char *FNAME)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classAlgorithm.html">Algorithm</a> </td>
+          <td>(</td>
+          <td class="paramtype">char *&#160;</td>
+          <td class="paramname"><em>FNAME</em></td><td>)</td>
+          <td><code> [inline]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p> <a class="el" href="algorithm_8hpp_source.html">algorithm.hpp</a> の <a class="el" href="algorithm_8hpp_source.html#l00253">253</a> 行で定義されています。</p>
+
+<p><div class="dynheader">
+関数の呼び出しグラフ:</div>
+<div class="dyncontent">
+<div class="center"><img src="classAlgorithm_a9d87d433316fa49fc92543bfaaf9c673_cgraph.png" border="0" usemap="#classAlgorithm_a9d87d433316fa49fc92543bfaaf9c673_cgraph" alt=""/></div>
+<map name="classAlgorithm_a9d87d433316fa49fc92543bfaaf9c673_cgraph" id="classAlgorithm_a9d87d433316fa49fc92543bfaaf9c673_cgraph">
+<area shape="rect" id="node3" href="classArray.html#a215cee23ec0da9386f44a7108d8c5b57" title="Array::setLabel" alt="" coords="157,316,269,343"/><area shape="rect" id="node5" href="classXML_1_1Block.html#ac15d5d5c09d2d256f6c5b1be6ed2f168" title="XML::Block::initialize" alt="" coords="136,367,291,393"/><area shape="rect" id="node27" href="classXML_1_1Block.html#afcd6370972fce7a0d9378c778f5f09c7" title="XML::Block::getInteger" alt="" coords="387,505,549,532"/><area shape="rect" id="node31" href="classAlgorithm.html#aaa936da334e29618ece019bd8a9aa06f" title="read" alt="" coords="189,417,237,444"/><area shape="rect" id="node41" href="classAlgorithm.html#a25a40b6614565f755233080a384c35f1" title="initialize" alt="" coords="176,657,251,684"/><area shape="rect" id="node7" href="classXML_1_1Block.html#aaa936da334e29618ece019bd8a9aa06f" title="XML::Block::read" alt="" coords="404,213,532,240"/><area shape="rect" id="node9" href="classXML_1_1Block.html#a0dd8335ab7f24fff9700ff9ff6ce187c" title="XML::Block::syntax_error" alt="" coords="645,113,821,140"/><area shape="rect" id="node11" href="namespaceXML.html#aca68844ce580db07934916b326ce8c72" title="XML::isOpening" alt="" coords="1096,56,1216,83"/><area shape="rect" id="node13" href="namespaceXML.html#a08bd6fcf584394a94bf4d1192c0c0679" title="XML::getOpeningName" alt="" coords="877,5,1040,32"/><area shape="rect" id="node16" href="namespaceXML.html#a47c66d0e0cab28af3ee7cddbedf658b7" title="XML::isCommentOpening" alt="" coords="869,157,1048,184"/><area shape="rect" id="node22" href="classArray.html#a5fd83b4910658540977272a168cfbdae" title="Array::init" alt="" coords="692,303,775,329"/><area shape="rect" id="node18" href="namespaceXML.html#a75143a39b026f67d2cafc5b1fce0ee6a" title="XML::isClosing" alt="" coords="901,107,1016,133"/><area shape="rect" id="node20" href="classXML_1_1Block.html#a8cf4db36c9f3123506d73e98c4a93464" title="XML::Block::getName" alt="" coords="881,208,1036,235"/><area shape="rect" id="node29" href="classXML_1_1Block.html#a753440fc57aae094f400478d07277a73" title="XML::Block::getString" alt="" coords="655,455,812,481"/><area shape="rect" id="node34" href="classXML_1_1Block.html#a0bf14d82466b0e2b1ebff36333d0ad25" title="XML::Block::getDouble" alt="" coords="385,404,551,431"/><area shape="rect" id="node38" href="classXML_1_1Block.html#a88796becd473f212deb450ad1a31a893" title="XML::Block::NumberOfBlocks" alt="" coords="365,455,571,481"/><area shape="rect" id="node43" href="classSiteProperty.html#accd2600060dbaee3a3b41aed4034c63c" title="SiteProperty::dump" alt="" coords="397,556,539,583"/><area shape="rect" id="node45" href="classSiteInitialConfiguration.html#accd2600060dbaee3a3b41aed4034c63c" title="SiteInitialConfiguration::dump" alt="" coords="363,607,573,633"/><area shape="rect" id="node47" href="dla__alg_8h.html#ae7e84b92e5385c13642109f861c4386a" title="isKink" alt="" coords="439,657,497,684"/><area shape="rect" id="node49" href="classInteractionProperty.html#ac83b3ed9080c0fd8df9850468033a929" title="InteractionProperty::setVertexProperty" alt="" coords="339,708,597,735"/><area shape="rect" id="node51" href="classVertexProperty.html#accd2600060dbaee3a3b41aed4034c63c" title="VertexProperty::dump" alt="" coords="391,759,545,785"/><area shape="rect" id="node61" href="classVertexInitialConfiguration.html#accd2600060dbaee3a3b41aed4034c63c" title="VertexInitialConfiguration::dump" alt="" coords="356,809,580,836"/><area shape="rect" id="node53" href="classArray.html#af3eb8ccfdf7db40cd0777ba00b810577" title="Array::index_system" alt="" coords="663,733,804,760"/><area shape="rect" id="node55" href="classIndexSystem.html#af4b57d21919c42d55af03391f91a1c08" title="IndexSystem::size" alt="" coords="669,784,797,811"/><area shape="rect" id="node57" href="classIndexSystem.html#a4f12ec2efb69b48e312e4ef7c400492c" title="IndexSystem::coord" alt="" coords="663,835,804,861"/><area shape="rect" id="node59" href="classIndexSystem.html#abe81a2fadde630519c7abc1d05c463cf" title="IndexSystem::dimension" alt="" coords="648,683,819,709"/></map>
+</div>
+</p>
+
+</div>
+</div>
+<a class="anchor" id="afb1d7d5d4812264cfb23331bc6f8586d"></a><!-- doxytag: member="Algorithm::Algorithm" ref="afb1d7d5d4812264cfb23331bc6f8586d" args="()" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classAlgorithm.html">Algorithm</a> </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td><code> [inline]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p> <a class="el" href="algorithm_8hpp_source.html">algorithm.hpp</a> の <a class="el" href="algorithm_8hpp_source.html#l00274">274</a> 行で定義されています。</p>
+
+</div>
+</div>
+<a class="anchor" id="a8933124762bedb0f9b9cb441c837f499"></a><!-- doxytag: member="Algorithm::~Algorithm" ref="a8933124762bedb0f9b9cb441c837f499" args="()" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">~<a class="el" href="classAlgorithm.html">Algorithm</a> </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td><code> [inline]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p> <a class="el" href="algorithm_8hpp_source.html">algorithm.hpp</a> の <a class="el" href="algorithm_8hpp_source.html#l00673">673</a> 行で定義されています。</p>
+
+</div>
+</div>
+<hr/><h2>関数</h2>
+<a class="anchor" id="accd2600060dbaee3a3b41aed4034c63c"></a><!-- doxytag: member="Algorithm::dump" ref="accd2600060dbaee3a3b41aed4034c63c" args="()" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void <a class="el" href="classAlgorithm.html#accd2600060dbaee3a3b41aed4034c63c">dump</a> </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td><code> [inline]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p> <a class="el" href="algorithm_8hpp_source.html">algorithm.hpp</a> の <a class="el" href="algorithm_8hpp_source.html#l00241">241</a> 行で定義されています。</p>
+
+<p><div class="dynheader">
+関数の呼び出しグラフ:</div>
+<div class="dyncontent">
+<div class="center"><img src="classAlgorithm_accd2600060dbaee3a3b41aed4034c63c_cgraph.png" border="0" usemap="#classAlgorithm_accd2600060dbaee3a3b41aed4034c63c_cgraph" alt=""/></div>
+<map name="classAlgorithm_accd2600060dbaee3a3b41aed4034c63c_cgraph" id="classAlgorithm_accd2600060dbaee3a3b41aed4034c63c_cgraph">
+<area shape="rect" id="node3" href="classXML_1_1Block.html#a56f8c189656c31387dca3bb42d2ffade" title="XML::Block::dump" alt="" coords="112,5,248,32"/><area shape="rect" id="node5" href="classArray.html#aecb7287b27cc6e843cee2ed2f8de8ade" title="Array::dump" alt="" coords="296,5,392,32"/></map>
+</div>
+</p>
+
+</div>
+</div>
+<a class="anchor" id="af6931f368ca485f4d9e925a09ca9d3d3"></a><!-- doxytag: member="Algorithm::getInteractionProperty" ref="af6931f368ca485f4d9e925a09ca9d3d3" args="(int i)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classInteractionProperty.html">InteractionProperty</a>&amp; <a class="el" href="classAlgorithm.html#af6931f368ca485f4d9e925a09ca9d3d3">getInteractionProperty</a> </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>i</em></td><td>)</td>
+          <td><code> [inline]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p> <a class="el" href="algorithm_8hpp_source.html">algorithm.hpp</a> の <a class="el" href="algorithm_8hpp_source.html#l00238">238</a> 行で定義されています。</p>
+
+<p><div class="dynheader">
+呼出しグラフ:</div>
+<div class="dyncontent">
+<div class="center"><img src="classAlgorithm_af6931f368ca485f4d9e925a09ca9d3d3_icgraph.png" border="0" usemap="#classAlgorithm_af6931f368ca485f4d9e925a09ca9d3d3_icgraph" alt=""/></div>
+<map name="classAlgorithm_af6931f368ca485f4d9e925a09ca9d3d3_icgraph" id="classAlgorithm_af6931f368ca485f4d9e925a09ca9d3d3_icgraph">
+<area shape="rect" id="node3" href="classSimulation.html#af74c8e214d7baad751c4f397851d1344" title="Simulation::RepChangeF" alt="" coords="216,5,389,32"/><area shape="rect" id="node7" href="classLattice.html#aaa936da334e29618ece019bd8a9aa06f" title="Lattice::read" alt="" coords="253,56,352,83"/><area shape="rect" id="node5" href="classSimulation.html#a934fee6f68aa93d5eb03fe0a778bdc07" title="Simulation::Simulation" alt="" coords="439,5,601,32"/><area shape="rect" id="node9" href="classLattice.html#af90c7efc05e296555a50fdbacd4a1c62" title="Lattice::Lattice" alt="" coords="463,56,577,83"/></map>
+</div>
+</p>
+
+</div>
+</div>
+<a class="anchor" id="a77e852eb06c91d69d8890f8b54e54c81"></a><!-- doxytag: member="Algorithm::getSiteProperty" ref="a77e852eb06c91d69d8890f8b54e54c81" args="(int i)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classSiteProperty.html">SiteProperty</a>&amp; <a class="el" href="classAlgorithm.html#a77e852eb06c91d69d8890f8b54e54c81">getSiteProperty</a> </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>i</em></td><td>)</td>
+          <td><code> [inline]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p> <a class="el" href="algorithm_8hpp_source.html">algorithm.hpp</a> の <a class="el" href="algorithm_8hpp_source.html#l00237">237</a> 行で定義されています。</p>
+
+<p><div class="dynheader">
+呼出しグラフ:</div>
+<div class="dyncontent">
+<div class="center"><img src="classAlgorithm_a77e852eb06c91d69d8890f8b54e54c81_icgraph.png" border="0" usemap="#classAlgorithm_a77e852eb06c91d69d8890f8b54e54c81_icgraph" alt=""/></div>
+<map name="classAlgorithm_a77e852eb06c91d69d8890f8b54e54c81_icgraph" id="classAlgorithm_a77e852eb06c91d69d8890f8b54e54c81_icgraph">
+<area shape="rect" id="node3" href="classLattice.html#aaa936da334e29618ece019bd8a9aa06f" title="Lattice::read" alt="" coords="171,5,269,32"/><area shape="rect" id="node5" href="classLattice.html#af90c7efc05e296555a50fdbacd4a1c62" title="Lattice::Lattice" alt="" coords="317,5,432,32"/></map>
+</div>
+</p>
+
+</div>
+</div>
+<a class="anchor" id="af86176dab320c56b2c82180cf0d3b52e"></a><!-- doxytag: member="Algorithm::getVertexProperty" ref="af86176dab320c56b2c82180cf0d3b52e" args="(int i)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classVertexProperty.html">VertexProperty</a>&amp; <a class="el" href="classAlgorithm.html#af86176dab320c56b2c82180cf0d3b52e">getVertexProperty</a> </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>i</em></td><td>)</td>
+          <td><code> [inline]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p> <a class="el" href="algorithm_8hpp_source.html">algorithm.hpp</a> の <a class="el" href="algorithm_8hpp_source.html#l00239">239</a> 行で定義されています。</p>
+
+<p><div class="dynheader">
+呼出しグラフ:</div>
+<div class="dyncontent">
+<div class="center"><img src="classAlgorithm_af86176dab320c56b2c82180cf0d3b52e_icgraph.png" border="0" usemap="#classAlgorithm_af86176dab320c56b2c82180cf0d3b52e_icgraph" alt=""/></div>
+<map name="classAlgorithm_af86176dab320c56b2c82180cf0d3b52e_icgraph" id="classAlgorithm_af86176dab320c56b2c82180cf0d3b52e_icgraph">
+<area shape="rect" id="node3" href="classSimulation.html#af74c8e214d7baad751c4f397851d1344" title="Simulation::RepChangeF" alt="" coords="184,5,357,32"/><area shape="rect" id="node5" href="classSimulation.html#a934fee6f68aa93d5eb03fe0a778bdc07" title="Simulation::Simulation" alt="" coords="407,5,569,32"/></map>
+</div>
+</p>
+
+</div>
+</div>
+<a class="anchor" id="a25a40b6614565f755233080a384c35f1"></a><!-- doxytag: member="Algorithm::initialize" ref="a25a40b6614565f755233080a384c35f1" args="()" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void <a class="el" href="classAlgorithm.html#a25a40b6614565f755233080a384c35f1">initialize</a> </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p> <a class="el" href="algorithm_8hpp_source.html">algorithm.hpp</a> の <a class="el" href="algorithm_8hpp_source.html#l00495">495</a> 行で定義されています。</p>
+
+<p><div class="dynheader">
+関数の呼び出しグラフ:</div>
+<div class="dyncontent">
+<div class="center"><img src="classAlgorithm_a25a40b6614565f755233080a384c35f1_cgraph.png" border="0" usemap="#classAlgorithm_a25a40b6614565f755233080a384c35f1_cgraph" alt=""/></div>
+<map name="classAlgorithm_a25a40b6614565f755233080a384c35f1_cgraph" id="classAlgorithm_a25a40b6614565f755233080a384c35f1_cgraph">
+<area shape="rect" id="node3" href="classSiteProperty.html#accd2600060dbaee3a3b41aed4034c63c" title="SiteProperty::dump" alt="" coords="187,5,328,32"/><area shape="rect" id="node5" href="classSiteInitialConfiguration.html#accd2600060dbaee3a3b41aed4034c63c" title="SiteInitialConfiguration::dump" alt="" coords="152,56,363,83"/><area shape="rect" id="node7" href="dla__alg_8h.html#ae7e84b92e5385c13642109f861c4386a" title="isKink" alt="" coords="228,107,287,133"/><area shape="rect" id="node9" href="classInteractionProperty.html#ac83b3ed9080c0fd8df9850468033a929" title="InteractionProperty::setVertexProperty" alt="" coords="128,157,387,184"/><area shape="rect" id="node11" href="classVertexProperty.html#accd2600060dbaee3a3b41aed4034c63c" title="VertexProperty::dump" alt="" coords="180,208,335,235"/><area shape="rect" id="node21" href="classVertexInitialConfiguration.html#accd2600060dbaee3a3b41aed4034c63c" title="VertexInitialConfiguration::dump" alt="" coords="145,259,369,285"/><area shape="rect" id="node13" href="classArray.html#af3eb8ccfdf7db40cd0777ba00b810577" title="Array::index_system" alt="" coords="449,132,591,159"/><area shape="rect" id="node15" href="classIndexSystem.html#af4b57d21919c42d55af03391f91a1c08" title="IndexSystem::size" alt="" coords="456,183,584,209"/><area shape="rect" id="node17" href="classIndexSystem.html#a4f12ec2efb69b48e312e4ef7c400492c" title="IndexSystem::coord" alt="" coords="449,233,591,260"/><area shape="rect" id="node19" href="classIndexSystem.html#abe81a2fadde630519c7abc1d05c463cf" title="IndexSystem::dimension" alt="" coords="435,284,605,311"/></map>
+</div>
+</p>
+
+<p><div class="dynheader">
+呼出しグラフ:</div>
+<div class="dyncontent">
+<div class="center"><img src="classAlgorithm_a25a40b6614565f755233080a384c35f1_icgraph.png" border="0" usemap="#classAlgorithm_a25a40b6614565f755233080a384c35f1_icgraph" alt=""/></div>
+<map name="classAlgorithm_a25a40b6614565f755233080a384c35f1_icgraph" id="classAlgorithm_a25a40b6614565f755233080a384c35f1_icgraph">
+<area shape="rect" id="node3" href="classAlgorithm.html#a9d87d433316fa49fc92543bfaaf9c673" title="Algorithm" alt="" coords="128,5,211,32"/><area shape="rect" id="node5" href="classAlgorithm.html#a5480948e21d656ff83ce9590587a02cd" title="set_alg" alt="" coords="137,56,201,83"/><area shape="rect" id="node7" href="classSimulation.html#a934fee6f68aa93d5eb03fe0a778bdc07" title="Simulation::Simulation" alt="" coords="260,56,423,83"/></map>
+</div>
+</p>
+
+</div>
+</div>
+<a class="anchor" id="a48fa50633aea57fe76fbc09983142afb"></a><!-- doxytag: member="Algorithm::initializer" ref="a48fa50633aea57fe76fbc09983142afb" args="(int i)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void <a class="el" href="classAlgorithm.html#a48fa50633aea57fe76fbc09983142afb">initializer</a> </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>i</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p> <a class="el" href="algorithm_8hpp_source.html">algorithm.hpp</a> の <a class="el" href="algorithm_8hpp_source.html#l00358">358</a> 行で定義されています。</p>
+
+<p><div class="dynheader">
+関数の呼び出しグラフ:</div>
+<div class="dyncontent">
+<div class="center"><img src="classAlgorithm_a48fa50633aea57fe76fbc09983142afb_cgraph.png" border="0" usemap="#classAlgorithm_a48fa50633aea57fe76fbc09983142afb_cgraph" alt=""/></div>
+<map name="classAlgorithm_a48fa50633aea57fe76fbc09983142afb_cgraph" id="classAlgorithm_a48fa50633aea57fe76fbc09983142afb_cgraph">
+<area shape="rect" id="node3" href="classArray.html#a46c36a9a7be294d4f647798d07c79c7e" title="Array::set_all" alt="" coords="212,5,313,32"/><area shape="rect" id="node5" href="dla__alg_8h.html#ae7e84b92e5385c13642109f861c4386a" title="isKink" alt="" coords="233,56,292,83"/><area shape="rect" id="node7" href="classInteractionProperty.html#ac83b3ed9080c0fd8df9850468033a929" title="InteractionProperty::setVertexProperty" alt="" coords="133,107,392,133"/><area shape="rect" id="node9" href="classVertexProperty.html#accd2600060dbaee3a3b41aed4034c63c" title="VertexProperty::dump" alt="" coords="185,157,340,184"/><area shape="rect" id="node19" href="classVertexInitialConfiguration.html#accd2600060dbaee3a3b41aed4034c63c" title="VertexInitialConfiguration::dump" alt="" coords="151,208,375,235"/><area shape="rect" id="node11" href="classArray.html#af3eb8ccfdf7db40cd0777ba00b810577" title="Array::index_system" alt="" coords="455,81,596,108"/><area shape="rect" id="node13" href="classIndexSystem.html#af4b57d21919c42d55af03391f91a1c08" title="IndexSystem::size" alt="" coords="461,132,589,159"/><area shape="rect" id="node15" href="classIndexSystem.html#a4f12ec2efb69b48e312e4ef7c400492c" title="IndexSystem::coord" alt="" coords="455,183,596,209"/><area shape="rect" id="node17" href="classIndexSystem.html#abe81a2fadde630519c7abc1d05c463cf" title="IndexSystem::dimension" alt="" coords="440,233,611,260"/></map>
+</div>
+</p>
+
+<p><div class="dynheader">
+呼出しグラフ:</div>
+<div class="dyncontent">
+<div class="center"><img src="classAlgorithm_a48fa50633aea57fe76fbc09983142afb_icgraph.png" border="0" usemap="#classAlgorithm_a48fa50633aea57fe76fbc09983142afb_icgraph" alt=""/></div>
+<map name="classAlgorithm_a48fa50633aea57fe76fbc09983142afb_icgraph" id="classAlgorithm_a48fa50633aea57fe76fbc09983142afb_icgraph">
+<area shape="rect" id="node3" href="classSimulation.html#af74c8e214d7baad751c4f397851d1344" title="Simulation::RepChangeF" alt="" coords="133,5,307,32"/><area shape="rect" id="node5" href="classSimulation.html#a934fee6f68aa93d5eb03fe0a778bdc07" title="Simulation::Simulation" alt="" coords="356,5,519,32"/></map>
+</div>
+</p>
+
+</div>
+</div>
+<a class="anchor" id="aaa936da334e29618ece019bd8a9aa06f"></a><!-- doxytag: member="Algorithm::read" ref="aaa936da334e29618ece019bd8a9aa06f" args="()" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void <a class="el" href="classAlgorithm.html#aaa936da334e29618ece019bd8a9aa06f">read</a> </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p> <a class="el" href="algorithm_8hpp_source.html">algorithm.hpp</a> の <a class="el" href="algorithm_8hpp_source.html#l00308">308</a> 行で定義されています。</p>
+
+<p><div class="dynheader">
+関数の呼び出しグラフ:</div>
+<div class="dyncontent">
+<div class="center"><img src="classAlgorithm_aaa936da334e29618ece019bd8a9aa06f_cgraph.png" border="0" usemap="#classAlgorithm_aaa936da334e29618ece019bd8a9aa06f_cgraph" alt=""/></div>
+<map name="classAlgorithm_aaa936da334e29618ece019bd8a9aa06f_cgraph" id="classAlgorithm_aaa936da334e29618ece019bd8a9aa06f_cgraph">
+<area shape="rect" id="node3" href="classXML_1_1Block.html#afcd6370972fce7a0d9378c778f5f09c7" title="XML::Block::getInteger" alt="" coords="125,5,288,32"/><area shape="rect" id="node7" href="classXML_1_1Block.html#a0bf14d82466b0e2b1ebff36333d0ad25" title="XML::Block::getDouble" alt="" coords="124,56,289,83"/><area shape="rect" id="node10" href="classArray.html#a5fd83b4910658540977272a168cfbdae" title="Array::init" alt="" coords="165,107,248,133"/><area shape="rect" id="node12" href="classXML_1_1Block.html#a88796becd473f212deb450ad1a31a893" title="XML::Block::NumberOfBlocks" alt="" coords="104,157,309,184"/><area shape="rect" id="node14" href="classXML_1_1Block.html#a8cf4db36c9f3123506d73e98c4a93464" title="XML::Block::getName" alt="" coords="129,208,284,235"/><area shape="rect" id="node5" href="classXML_1_1Block.html#a753440fc57aae094f400478d07277a73" title="XML::Block::getString" alt="" coords="357,31,515,57"/></map>
+</div>
+</p>
+
+<p><div class="dynheader">
+呼出しグラフ:</div>
+<div class="dyncontent">
+<div class="center"><img src="classAlgorithm_aaa936da334e29618ece019bd8a9aa06f_icgraph.png" border="0" usemap="#classAlgorithm_aaa936da334e29618ece019bd8a9aa06f_icgraph" alt=""/></div>
+<map name="classAlgorithm_aaa936da334e29618ece019bd8a9aa06f_icgraph" id="classAlgorithm_aaa936da334e29618ece019bd8a9aa06f_icgraph">
+<area shape="rect" id="node3" href="classAlgorithm.html#a9d87d433316fa49fc92543bfaaf9c673" title="Algorithm" alt="" coords="104,5,187,32"/><area shape="rect" id="node5" href="classAlgorithm.html#a5480948e21d656ff83ce9590587a02cd" title="set_alg" alt="" coords="113,56,177,83"/><area shape="rect" id="node7" href="classSimulation.html#a934fee6f68aa93d5eb03fe0a778bdc07" title="Simulation::Simulation" alt="" coords="236,56,399,83"/></map>
+</div>
+</p>
+
+</div>
+</div>
+<a class="anchor" id="a5480948e21d656ff83ce9590587a02cd"></a><!-- doxytag: member="Algorithm::set_alg" ref="a5480948e21d656ff83ce9590587a02cd" args="(int n)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void <a class="el" href="classAlgorithm.html#a5480948e21d656ff83ce9590587a02cd">set_alg</a> </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>n</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p> <a class="el" href="algorithm_8hpp_source.html">algorithm.hpp</a> の <a class="el" href="algorithm_8hpp_source.html#l00277">277</a> 行で定義されています。</p>
+
+<p><div class="dynheader">
+関数の呼び出しグラフ:</div>
+<div class="dyncontent">
+<div class="center"><img src="classAlgorithm_a5480948e21d656ff83ce9590587a02cd_cgraph.png" border="0" usemap="#classAlgorithm_a5480948e21d656ff83ce9590587a02cd_cgraph" alt=""/></div>
+<map name="classAlgorithm_a5480948e21d656ff83ce9590587a02cd_cgraph" id="classAlgorithm_a5480948e21d656ff83ce9590587a02cd_cgraph">
+<area shape="rect" id="node3" href="classArray.html#a215cee23ec0da9386f44a7108d8c5b57" title="Array::setLabel" alt="" coords="141,191,253,218"/><area shape="rect" id="node5" href="classXML_1_1Block.html#ac15d5d5c09d2d256f6c5b1be6ed2f168" title="XML::Block::initialize" alt="" coords="120,242,275,269"/><area shape="rect" id="node27" href="classAlgorithm.html#aaa936da334e29618ece019bd8a9aa06f" title="read" alt="" coords="428,293,476,319"/><area shape="rect" id="node40" href="classAlgorithm.html#a25a40b6614565f755233080a384c35f1" title="initialize" alt="" coords="160,495,235,522"/><area shape="rect" id="node7" href="classXML_1_1Block.html#aaa936da334e29618ece019bd8a9aa06f" title="XML::Block::read" alt="" coords="388,115,516,142"/><area shape="rect" id="node9" href="classXML_1_1Block.html#a0dd8335ab7f24fff9700ff9ff6ce187c" title="XML::Block::syntax_error" alt="" coords="644,141,820,167"/><area shape="rect" id="node11" href="namespaceXML.html#aca68844ce580db07934916b326ce8c72" title="XML::isOpening" alt="" coords="1109,90,1229,117"/><area shape="rect" id="node13" href="namespaceXML.html#a08bd6fcf584394a94bf4d1192c0c0679" title="XML::getOpeningName" alt="" coords="891,90,1053,117"/><area shape="rect" id="node16" href="namespaceXML.html#a47c66d0e0cab28af3ee7cddbedf658b7" title="XML::isCommentOpening" alt="" coords="883,39,1061,66"/><area shape="rect" id="node22" href="classArray.html#a5fd83b4910658540977272a168cfbdae" title="Array::init" alt="" coords="691,191,773,218"/><area shape="rect" id="node18" href="namespaceXML.html#a75143a39b026f67d2cafc5b1fce0ee6a" title="XML::isClosing" alt="" coords="915,191,1029,218"/><area shape="rect" id="node20" href="classXML_1_1Block.html#a8cf4db36c9f3123506d73e98c4a93464" title="XML::Block::getName" alt="" coords="895,242,1049,269"/><area shape="rect" id="node29" href="classXML_1_1Block.html#afcd6370972fce7a0d9378c778f5f09c7" title="XML::Block::getInteger" alt="" coords="651,343,813,370"/><area shape="rect" id="node33" href="classXML_1_1Block.html#a0bf14d82466b0e2b1ebff36333d0ad25" title="XML::Block::getDouble" alt="" coords="649,394,815,421"/><area shape="rect" id="node37" href="classXML_1_1Block.html#a88796becd473f212deb450ad1a31a893" title="XML::Block::NumberOfBlocks" alt="" coords="629,293,835,319"/><area shape="rect" id="node31" href="classXML_1_1Block.html#a753440fc57aae094f400478d07277a73" title="XML::Block::getString" alt="" coords="893,369,1051,395"/><area shape="rect" id="node42" href="classSiteProperty.html#accd2600060dbaee3a3b41aed4034c63c" title="SiteProperty::dump" alt="" coords="381,597,523,623"/><area shape="rect" id="node44" href="classSiteInitialConfiguration.html#accd2600060dbaee3a3b41aed4034c63c" title="SiteInitialConfiguration::dump" alt="" coords="347,647,557,674"/><area shape="rect" id="node46" href="dla__alg_8h.html#ae7e84b92e5385c13642109f861c4386a" title="isKink" alt="" coords="423,394,481,421"/><area shape="rect" id="node48" href="classInteractionProperty.html#ac83b3ed9080c0fd8df9850468033a929" title="InteractionProperty::setVertexProperty" alt="" coords="323,445,581,471"/><area shape="rect" id="node50" href="classVertexProperty.html#accd2600060dbaee3a3b41aed4034c63c" title="VertexProperty::dump" alt="" coords="375,495,529,522"/><area shape="rect" id="node60" href="classVertexInitialConfiguration.html#accd2600060dbaee3a3b41aed4034c63c" title="VertexInitialConfiguration::dump" alt="" coords="340,546,564,573"/><area shape="rect" id="node52" href="classArray.html#af3eb8ccfdf7db40cd0777ba00b810577" title="Array::index_system" alt="" coords="661,546,803,573"/><area shape="rect" id="node54" href="classIndexSystem.html#af4b57d21919c42d55af03391f91a1c08" title="IndexSystem::size" alt="" coords="668,597,796,623"/><area shape="rect" id="node56" href="classIndexSystem.html#a4f12ec2efb69b48e312e4ef7c400492c" title="IndexSystem::coord" alt="" coords="661,445,803,471"/><area shape="rect" id="node58" href="classIndexSystem.html#abe81a2fadde630519c7abc1d05c463cf" title="IndexSystem::dimension" alt="" coords="647,495,817,522"/></map>
+</div>
+</p>
+
+<p><div class="dynheader">
+呼出しグラフ:</div>
+<div class="dyncontent">
+<div class="center"><img src="classAlgorithm_a5480948e21d656ff83ce9590587a02cd_icgraph.png" border="0" usemap="#classAlgorithm_a5480948e21d656ff83ce9590587a02cd_icgraph" alt=""/></div>
+<map name="classAlgorithm_a5480948e21d656ff83ce9590587a02cd_icgraph" id="classAlgorithm_a5480948e21d656ff83ce9590587a02cd_icgraph">
+<area shape="rect" id="node3" href="classSimulation.html#a934fee6f68aa93d5eb03fe0a778bdc07" title="Simulation::Simulation" alt="" coords="121,5,284,32"/></map>
+</div>
+</p>
+
+</div>
+</div>
+<a class="anchor" id="a5c08f14c62b827fdbd8f78bc8c692a91"></a><!-- doxytag: member="Algorithm::set_i" ref="a5c08f14c62b827fdbd8f78bc8c692a91" args="(int n)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void <a class="el" href="classAlgorithm.html#a5c08f14c62b827fdbd8f78bc8c692a91">set_i</a> </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>n</em></td><td>)</td>
+          <td><code> [inline]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p> <a class="el" href="algorithm_8hpp_source.html">algorithm.hpp</a> の <a class="el" href="algorithm_8hpp_source.html#l00233">233</a> 行で定義されています。</p>
+
+<p><div class="dynheader">
+呼出しグラフ:</div>
+<div class="dyncontent">
+<div class="center"><img src="classAlgorithm_a5c08f14c62b827fdbd8f78bc8c692a91_icgraph.png" border="0" usemap="#classAlgorithm_a5c08f14c62b827fdbd8f78bc8c692a91_icgraph" alt=""/></div>
+<map name="classAlgorithm_a5c08f14c62b827fdbd8f78bc8c692a91_icgraph" id="classAlgorithm_a5c08f14c62b827fdbd8f78bc8c692a91_icgraph">
+<area shape="rect" id="node3" href="classSimulation.html#a934fee6f68aa93d5eb03fe0a778bdc07" title="Simulation::Simulation" alt="" coords="105,5,268,32"/></map>
+</div>
+</p>
+
+</div>
+</div>
+<hr/><h2>変数</h2>
+<a class="anchor" id="abe8469626e9fa43fb505dcfc2b3fd962"></a><!-- doxytag: member="Algorithm::IPROP" ref="abe8469626e9fa43fb505dcfc2b3fd962" args="" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classArray.html">Array</a>&lt;<a class="el" href="classInteractionProperty.html">InteractionProperty</a>&gt; <a class="el" href="classAlgorithm.html#abe8469626e9fa43fb505dcfc2b3fd962">IPROP</a><code> [private]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p> <a class="el" href="algorithm_8hpp_source.html">algorithm.hpp</a> の <a class="el" href="algorithm_8hpp_source.html#l00204">204</a> 行で定義されています。</p>
+
+</div>
+</div>
+<a class="anchor" id="a61990b7f5388ef0010c75a5d80f58da9"></a><!-- doxytag: member="Algorithm::ix" ref="a61990b7f5388ef0010c75a5d80f58da9" args="" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int <a class="el" href="classAlgorithm.html#a61990b7f5388ef0010c75a5d80f58da9">ix</a><code> [private]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p> <a class="el" href="algorithm_8hpp_source.html">algorithm.hpp</a> の <a class="el" href="algorithm_8hpp_source.html#l00208">208</a> 行で定義されています。</p>
+
+</div>
+</div>
+<a class="anchor" id="aadcaf1664d8cdce04c73db2d1ae1cbd9"></a><!-- doxytag: member="Algorithm::MXNIC1" ref="aadcaf1664d8cdce04c73db2d1ae1cbd9" args="" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int <a class="el" href="classAlgorithm.html#aadcaf1664d8cdce04c73db2d1ae1cbd9">MXNIC1</a></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p> <a class="el" href="algorithm_8hpp_source.html">algorithm.hpp</a> の <a class="el" href="algorithm_8hpp_source.html#l00231">231</a> 行で定義されています。</p>
+
+</div>
+</div>
+<a class="anchor" id="a28e1a55e45e45a80a49a8ae1f0e50bcb"></a><!-- doxytag: member="Algorithm::NITYPE" ref="a28e1a55e45e45a80a49a8ae1f0e50bcb" args="" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int <a class="el" href="classAlgorithm.html#a28e1a55e45e45a80a49a8ae1f0e50bcb">NITYPE</a></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p> <a class="el" href="algorithm_8hpp_source.html">algorithm.hpp</a> の <a class="el" href="algorithm_8hpp_source.html#l00221">221</a> 行で定義されています。</p>
+
+</div>
+</div>
+<a class="anchor" id="a2dad84a8985d20913d523848ae5e40ea"></a><!-- doxytag: member="Algorithm::NSTYPE" ref="a2dad84a8985d20913d523848ae5e40ea" args="" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int <a class="el" href="classAlgorithm.html#a2dad84a8985d20913d523848ae5e40ea">NSTYPE</a></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p> <a class="el" href="algorithm_8hpp_source.html">algorithm.hpp</a> の <a class="el" href="algorithm_8hpp_source.html#l00220">220</a> 行で定義されています。</p>
+
+</div>
+</div>
+<a class="anchor" id="ab6af66382562de2aa8b45b81e256d909"></a><!-- doxytag: member="Algorithm::NVTYPE" ref="ab6af66382562de2aa8b45b81e256d909" args="" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int <a class="el" href="classAlgorithm.html#ab6af66382562de2aa8b45b81e256d909">NVTYPE</a></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p> <a class="el" href="algorithm_8hpp_source.html">algorithm.hpp</a> の <a class="el" href="algorithm_8hpp_source.html#l00222">222</a> 行で定義されています。</p>
+
+</div>
+</div>
+<a class="anchor" id="a52b41a08e36114fbb78f5d900f0371b9"></a><!-- doxytag: member="Algorithm::NXMAX" ref="a52b41a08e36114fbb78f5d900f0371b9" args="" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int <a class="el" href="classAlgorithm.html#a52b41a08e36114fbb78f5d900f0371b9">NXMAX</a></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p> <a class="el" href="algorithm_8hpp_source.html">algorithm.hpp</a> の <a class="el" href="algorithm_8hpp_source.html#l00223">223</a> 行で定義されています。</p>
+
+</div>
+</div>
+<a class="anchor" id="a3652efef65f27d3da5386afe454e44cc"></a><!-- doxytag: member="Algorithm::SPROP" ref="a3652efef65f27d3da5386afe454e44cc" args="" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classArray.html">Array</a>&lt;<a class="el" href="classSiteProperty.html">SiteProperty</a>&gt; <a class="el" href="classAlgorithm.html#a3652efef65f27d3da5386afe454e44cc">SPROP</a><code> [private]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p> <a class="el" href="algorithm_8hpp_source.html">algorithm.hpp</a> の <a class="el" href="algorithm_8hpp_source.html#l00203">203</a> 行で定義されています。</p>
+
+</div>
+</div>
+<a class="anchor" id="a8c6e30371e5ffe73ff2d2116744d0487"></a><!-- doxytag: member="Algorithm::VPROP" ref="a8c6e30371e5ffe73ff2d2116744d0487" args="" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classArray.html">Array</a>&lt;<a class="el" href="classVertexProperty.html">VertexProperty</a>&gt; <a class="el" href="classAlgorithm.html#a8c6e30371e5ffe73ff2d2116744d0487">VPROP</a><code> [private]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p> <a class="el" href="algorithm_8hpp_source.html">algorithm.hpp</a> の <a class="el" href="algorithm_8hpp_source.html#l00205">205</a> 行で定義されています。</p>
+
+</div>
+</div>
+<a class="anchor" id="aa256bf25e61dfab4a2cbb8b55d1e33d1"></a><!-- doxytag: member="Algorithm::WDIAG" ref="aa256bf25e61dfab4a2cbb8b55d1e33d1" args="" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">double <a class="el" href="classAlgorithm.html#aa256bf25e61dfab4a2cbb8b55d1e33d1">WDIAG</a></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p> <a class="el" href="algorithm_8hpp_source.html">algorithm.hpp</a> の <a class="el" href="algorithm_8hpp_source.html#l00224">224</a> 行で定義されています。</p>
+
+</div>
+</div>
+<a class="anchor" id="ade0b597d45ab0fc6e9f8c68cf635773c"></a><!-- doxytag: member="Algorithm::X" ref="ade0b597d45ab0fc6e9f8c68cf635773c" args="" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classXML_1_1Block.html">XML::Block</a> <a class="el" href="classAlgorithm.html#ade0b597d45ab0fc6e9f8c68cf635773c">X</a><code> [private]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p> <a class="el" href="algorithm_8hpp_source.html">algorithm.hpp</a> の <a class="el" href="algorithm_8hpp_source.html#l00202">202</a> 行で定義されています。</p>
+
+</div>
+</div>
+<hr/>このクラスの説明は次のファイルから生成されました:<ul>
+<li><a class="el" href="algorithm_8hpp_source.html">algorithm.hpp</a></li>
+</ul>
+</div><!-- contents -->
+</div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>全て</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>クラス</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>ネームスペース</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>ファイル</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>関数</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>変数</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(6)"><span class="SelectionMark">&#160;</span>型定義</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(7)"><span class="SelectionMark">&#160;</span>列挙型の値</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(8)"><span class="SelectionMark">&#160;</span>フレンド</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(9)"><span class="SelectionMark">&#160;</span>マクロ定義</a></div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+  <div id="nav-path" class="navpath">
+    <ul>
+      <li class="navelem"><a class="el" href="classAlgorithm.html">Algorithm</a>      </li>
+
+    <li class="footer">DSQSSに対してThu Jul 12 2012 14:28:53に生成されました。
+    <a href="http://www.doxygen.org/index.html">
+    <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.7.6.1 </li>
+   </ul>
+ </div>
+
+
+</body>
+</html>
