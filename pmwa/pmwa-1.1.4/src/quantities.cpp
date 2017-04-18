@@ -254,12 +254,13 @@ Quantities::~Quantities(){
   for( int i=0; i<Lsize; i++ ) values_L[i]=0;
   for( int i=0; i<Nq*2; i++ ) MCmean_S[i]=0;
   for( int i=0; i<Lsize*2; i++ ) MCmean_L[i]=0;
+#ifdef SF
   for (int isf=0; isf<NSF; isf++) 
     for(int it=0;it<Ntau;it++)
       MCmean_SF[isf][it]=0;
   //  for( int i=0; i<Nq*2*PR->Npara; i++ ) RNDmean_S[i]=0;
   //  for( int i=0; i<Lsize*PR->Npara; i++ ) RNDmean_L[i]=0;
-
+#endif
 }
 
 #ifdef SF
