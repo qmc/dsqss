@@ -1,7 +1,0 @@
-<map id="G" name="G">
-<area shape="rect" id="node3" href="$classINTERACTION.html#a075af34a843191d8a1dc1cb9db262c8b" title="V" alt="" coords="160,5,197,32"/>
-<area shape="rect" id="node5" href="$classArray.html#ae017ed3e4402ecd80fa6e86f10575574" title="Array::isDefined" alt="" coords="120,56,237,83"/>
-<area shape="rect" id="node7" href="$classArray.html#af3eb8ccfdf7db40cd0777ba00b810577" title="Array::index_system" alt="" coords="108,107,249,133"/>
-<area shape="rect" id="node9" href="$classIndexSystem.html#af4b57d21919c42d55af03391f91a1c08" title="IndexSystem::size" alt="" coords="115,157,243,184"/>
-<area shape="rect" id="node11" href="$classIndexSystem.html#a4f12ec2efb69b48e312e4ef7c400492c" title="IndexSystem::coord" alt="" coords="108,208,249,235"/>
-</map>

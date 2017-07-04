@@ -1,6 +1,0 @@
-<map id="G" name="G">
-<area shape="rect" id="node3" href="$classAccumulator.html#ad20897c5c8bd47f5d4005989bead0e55" title="Accumulator::reset" alt="" coords="167,5,305,32"/>
-<area shape="rect" id="node5" href="$classEstimate.html#a008cb52188d81d9bafe43227b5b02032" title="Estimate::set_key" alt="" coords="172,56,300,83"/>
-<area shape="rect" id="node7" href="$classLattice.html#a7fc0278ace84ded48e0f4c8189db1c02" title="Lattice::I" alt="" coords="199,107,273,133"/>
-<area shape="rect" id="node9" href="$classInteraction.html#ac929f04449d488399477c6bd97043a3f" title="Interaction::property" alt="" coords="161,157,311,184"/>
-</map>

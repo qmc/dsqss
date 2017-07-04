@@ -1,8 +1,0 @@
-<map id="G" name="G">
-<area shape="rect" id="node3" href="$classXML_1_1Block.html#afcd6370972fce7a0d9378c778f5f09c7" title="XML::Block::getInteger" alt="" coords="125,5,288,32"/>
-<area shape="rect" id="node7" href="$classXML_1_1Block.html#a0bf14d82466b0e2b1ebff36333d0ad25" title="XML::Block::getDouble" alt="" coords="124,56,289,83"/>
-<area shape="rect" id="node10" href="$classArray.html#a5fd83b4910658540977272a168cfbdae" title="Array::init" alt="" coords="165,107,248,133"/>
-<area shape="rect" id="node12" href="$classXML_1_1Block.html#a88796becd473f212deb450ad1a31a893" title="XML::Block::NumberOfBlocks" alt="" coords="104,157,309,184"/>
-<area shape="rect" id="node14" href="$classXML_1_1Block.html#a8cf4db36c9f3123506d73e98c4a93464" title="XML::Block::getName" alt="" coords="129,208,284,235"/>
-<area shape="rect" id="node5" href="$classXML_1_1Block.html#a753440fc57aae094f400478d07277a73" title="XML::Block::getString" alt="" coords="357,31,515,57"/>
-</map>

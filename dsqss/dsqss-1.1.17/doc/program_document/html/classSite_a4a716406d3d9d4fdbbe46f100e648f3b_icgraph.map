@@ -1,7 +1,0 @@
-<map id="G" name="G">
-<area shape="rect" id="node3" href="$classLattice.html#a25a40b6614565f755233080a384c35f1" title="Lattice::initialize" alt="" coords="97,5,223,32"/>
-<area shape="rect" id="node7" href="$classInteraction.html#accd2600060dbaee3a3b41aed4034c63c" title="Interaction::dump" alt="" coords="93,56,227,83"/>
-<area shape="rect" id="node5" href="$classLattice.html#af90c7efc05e296555a50fdbacd4a1c62" title="Lattice::Lattice" alt="" coords="275,5,389,32"/>
-<area shape="rect" id="node9" href="$classLattice.html#accd2600060dbaee3a3b41aed4034c63c" title="Lattice::dump" alt="" coords="279,56,385,83"/>
-<area shape="rect" id="node11" href="$classSimulation.html#a9eaa33a0fc1eacd0d8279cb8138f09dc" title="Simulation::dump" alt="" coords="439,56,569,83"/>
-</map>

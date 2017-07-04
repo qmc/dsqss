@@ -1,8 +1,0 @@
-<map id="G" name="G">
-<area shape="rect" id="node3" href="$classBareVertex.html#af4e0d0ded90cee82c5aff7860a75f710" title="NLEG" alt="" coords="113,5,169,32"/>
-<area shape="rect" id="node9" href="$classBareVertex.html#a0c4008a4756ed8a7ae8dc5b34100773e" title="X" alt="" coords="123,56,160,83"/>
-<area shape="rect" id="node5" href="$classBareVertex.html#a89f52073f277db570768a03e323ea03c" title="NBODY" alt="" coords="244,5,313,32"/>
-<area shape="rect" id="node7" href="$classBareVertex.html#a8d6f4521b27f32080d7477cf8ee8a274" title="isTerminal" alt="" coords="388,5,473,32"/>
-<area shape="rect" id="node11" href="$classBareVertex.html#a98eb474ad998a9410dfa9314f5fde041" title="S" alt="" coords="260,56,297,83"/>
-<area shape="rect" id="node13" href="$classBareSegment.html#aafabadb78034330e508ebff9c58e0839" title="BareSegment::X" alt="" coords="219,107,339,133"/>
-</map>

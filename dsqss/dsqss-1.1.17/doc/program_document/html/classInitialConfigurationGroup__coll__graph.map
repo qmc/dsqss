@@ -1,8 +1,0 @@
-<map id="G" name="G">
-<area shape="rect" id="node2" href="$classVERTEX.html" title="VERTEX" alt="" coords="139,200,208,227"/>
-<area shape="rect" id="node16" href="$classInitialConfiguration.html" title="InitialConfiguration" alt="" coords="167,291,308,317"/>
-<area shape="rect" id="node4" href="$classArray.html" title="Array\&lt; int \&gt;" alt="" coords="243,96,336,123"/>
-<area shape="rect" id="node6" href="$classIndexSystem.html" title="IndexSystem" alt="" coords="164,5,263,32"/>
-<area shape="rect" id="node9" href="$classArray.html" title="Array\&lt; double \&gt;" alt="" coords="5,96,125,123"/>
-<area shape="rect" id="node13" href="$classArray.html" title="Array\&lt; InitialConfiguration \&gt;" alt="" coords="159,381,356,408"/>
-</map>

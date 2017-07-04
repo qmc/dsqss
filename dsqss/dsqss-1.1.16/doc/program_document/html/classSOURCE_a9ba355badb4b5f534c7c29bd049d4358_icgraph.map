@@ -1,8 +1,0 @@
-<map id="G" name="G">
-<area shape="rect" id="node3" href="$classVERTEX.html#ab97c868b9eb83616652ff0552d24ccd8" title="VERTEX::Grouping" alt="" coords="169,5,305,32"/>
-<area shape="rect" id="node5" href="$classInitialConfiguration.html#a2cb856f19317a1d31a3c4670a914dfea" title="InitialConfiguration::worm_weight" alt="" coords="121,56,353,83"/>
-<area shape="rect" id="node7" href="$classInitialConfiguration.html#a513541c0b2800a99c35352af29ac8f32" title="InitialConfiguration::weight" alt="" coords="403,31,595,57"/>
-<area shape="rect" id="node13" href="$classInitialConfiguration.html#accd2600060dbaee3a3b41aed4034c63c" title="InitialConfiguration::dump" alt="" coords="405,81,592,108"/>
-<area shape="rect" id="node9" href="$classInitialConfiguration.html#afe93e17ac89cd97917811068ba2af214" title="InitialConfiguration::isValid" alt="" coords="643,31,835,57"/>
-<area shape="rect" id="node11" href="$classInitialConfiguration.html#aac759501cf6c7895a70eecbef0226ae1" title="InitialConfiguration::write" alt="" coords="884,31,1065,57"/>
-</map>

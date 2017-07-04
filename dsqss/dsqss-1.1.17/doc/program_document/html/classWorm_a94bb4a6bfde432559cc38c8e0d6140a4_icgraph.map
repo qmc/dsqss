@@ -1,8 +1,0 @@
-<map id="G" name="G">
-<area shape="rect" id="node3" href="$classSimulation.html#a21c85af3fce569db26807c9c42a7a685" title="Simulation::MoveHead" alt="" coords="133,31,296,57"/>
-<area shape="rect" id="node5" href="$classSimulation.html#a646ba83afbaf2013960493daa6268ff5" title="Simulation::Cycle" alt="" coords="344,31,475,57"/>
-<area shape="rect" id="node7" href="$classSimulation.html#ae5cc367fde8543dc44b660055f7694bf" title="Simulation::set_NCYC" alt="" coords="524,5,681,32"/>
-<area shape="rect" id="node11" href="$classSimulation.html#a948f644fec100a1ad661e30ff9f4a314" title="Simulation::Sweep" alt="" coords="535,56,671,83"/>
-<area shape="rect" id="node9" href="$classSimulation.html#a934fee6f68aa93d5eb03fe0a778bdc07" title="Simulation::Simulation" alt="" coords="732,5,895,32"/>
-<area shape="rect" id="node13" href="$classSimulation.html#a498dbdb73c8f6d58c9147cd07dce3362" title="Simulation::Set" alt="" coords="755,56,872,83"/>
-</map>
