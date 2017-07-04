@@ -2,7 +2,7 @@
 mpipath=/usr/bin 
 mpipath=/usr/bin 
 #mpipath=$HOME/local/bin #nec
-binpath=../src #../bin
+binpath=../../../bin
 inpfile=qmc.inp
 outfile=dla.log
 
@@ -136,8 +136,10 @@ done
 irep=0
 
 if [ $RUNTYPE -eq 0 ];then
+    echo "RUNTYPE: $RUNTYPE"
+    echo "MM: $MM\t JJ: $JJ\t FF: $FF"
     $binpath/hamgen_H $MM $JJ $FF
-    $binpath/lattgene $DD $LL $BB
+    $binpath/lattgene_C $DD $LL $BB
     $binpath/dla_alg
 
     rm $inpfile &>/dev/null
@@ -163,7 +165,8 @@ if [ $RUNTYPE -eq 0 ];then
 fi
 
 if [ $RUNTYPE -eq 1 ];then
-    
+    echo "RUNTYPE: $RUNTYPE"
+    echo "MM: $MM\t JJ: $JJ\t FF: $FF"
     while [ $irep -lt $NREP ];
     do 
 #+++++++++++++++
@@ -172,7 +175,7 @@ if [ $RUNTYPE -eq 1 ];then
 #	FF=`echo "scale=5; $XF/0.5 "  | bc`
 	
 	$binpath/hamgen_H $MM $JJ $XF
-	$binpath/lattgene $DD $LL $BB
+	$binpath/lattgene_C $DD $LL $BB
 	$binpath/dla_alg
 	cp algorithm.xml $irep.xml
 	
@@ -206,8 +209,10 @@ fi
 
 ####===================== RUNTYPE = 2 ===========================###
 if [ $RUNTYPE -eq 2 ];then
+    echo "RUNTYPE: $RUNTYPE"
+    echo "MM: $MM\t JJ: $JJ\t FF: $FF"
     $binpath/hamgen_H $MM $JJ $FF
-    $binpath/lattgene $DD $LL $BB
+    $binpath/lattgene_P $DD $LL $BB
     $binpath/dla_alg
 
     while [ $irep -lt $NREP ];
