@@ -1,6 +1,0 @@
-<map id="G" name="G">
-<area shape="rect" id="node3" href="$classAccumulator.html#ae61a6809c42dbd6bda26b5af6a5962c1" title="Accumulator::acc_get_value" alt="" coords="161,5,356,32"/>
-<area shape="rect" id="node5" href="$classAccumulator.html#a67465f7cc23572e0f2511ae44c4dab44" title="Accumulator::acc_put_value" alt="" coords="161,56,356,83"/>
-<area shape="rect" id="node7" href="$classAccumulator.html#a5c8cd506f864868b13ce88b8b9bca4c0" title="Accumulator::acc_get_error" alt="" coords="163,107,355,133"/>
-<area shape="rect" id="node9" href="$classAccumulator.html#a050ef6d0c1d3e81226e03d59773d90ab" title="Accumulator::acc_put_error" alt="" coords="161,157,356,184"/>
-</map>

@@ -1,8 +1,0 @@
-<map id="G" name="G">
-<area shape="rect" id="node3" href="$classInput.html#a02fd73d861ef2e4aabb38c0c9ff82947" title="Input::init" alt="" coords="140,5,223,32"/>
-<area shape="rect" id="node5" href="$classParameter.html#a02fd73d861ef2e4aabb38c0c9ff82947" title="init" alt="" coords="160,56,203,83"/>
-<area shape="rect" id="node7" href="$classParameter.html#ab2e21c4ffa4eb42b8edce26a2568887c" title="trim" alt="" coords="159,107,204,133"/>
-<area shape="rect" id="node9" href="$classParameter.html#af2ec6f8d375cf8bd64a15ff8ee2f26f3" title="numcheck" alt="" coords="139,157,224,184"/>
-<area shape="rect" id="node11" href="$classParameter.html#a9af0ea9156424d67ff61b612ea568cbf" title="set_value" alt="" coords="143,208,220,235"/>
-<area shape="rect" id="node13" href="$classParameter.html#accd2600060dbaee3a3b41aed4034c63c" title="dump" alt="" coords="153,259,209,285"/>
-</map>

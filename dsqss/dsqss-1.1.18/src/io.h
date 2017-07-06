@@ -143,7 +143,7 @@ public:
   };
 
   bool read() {
-    bool b = INS.getline( LINE, BLEN);
+    bool b = (bool)INS.getline( LINE, BLEN);
     if ( b ) { IL++; }
     return b;
   };
