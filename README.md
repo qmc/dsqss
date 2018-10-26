@@ -1,4 +1,4 @@
 # DSQSS
 Discrete Space Quantum Systems Solver
 
-see https://github.com/qmc/dsqss/wiki
+Main repository has been moved to [issp-center-dev/dsqss](https://github.com/issp-center-dev/dsqss)
